@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script src="/js/base.js"></script>
+  <script src="/js/lenis.js"></script>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/style-guide.css">  
+</head>
+
+<body>
+
+  <div id="include-svgs" class="display-none"></div>
+
+  <header class="header">
+    <div class="nav wrap">  
+      <div class="nav_section">
+        <button class="btn--darkmode" id="darkmodeToggle" type="button">
+            <span class="theme-icon-light display-none">
+              <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/> </svg>
+            </span>
+            <span class="theme-icon-dark display-none">
+              <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/> </svg> 
+            </span>
+        </button>        
+        <div id="navBurger" onclick="toggleSidenav()"><span></span><span></span></div>                 
+      </div>      
+      <a class="nav_logo" href="/index.html">Logo</a>      
+    </div>       
+    <div id="include-navlinks"></div>
+  </header>
+
+  <main class="main main--styles wrap">
+
+    <!-- Styles Nav -->
+    <nav class="styles-nav">
+
+      <div class="styles-nav_links" id="stylesNav">
+        <a class="styles-nav_link link-sm" href="#styles-typefaces">Typefaces</a>
+        <a class="styles-nav_link link-sm" href="#styles-typescale">Typescale</a>
+        <a class="styles-nav_link link-sm" href="#styles-headings">Headings</a>
+        <a class="styles-nav_link link-sm" href="#styles-other">Type Other</a>
+        <a class="styles-nav_link link-sm" href="#styles-colors">Colors</a>
+        <a class="styles-nav_link link-sm" href="#styles-alerts">Alerts</a>
+        <a class="styles-nav_link link-sm" href="#styles-shades">Shades</a>
+        <a class="styles-nav_link link-sm" href="#styles-gradients">Gradients</a>
+        <a class="styles-nav_link link-sm" href="#styles-shadows">Shadows</a>
+        <a class="styles-nav_link link-sm" href="#styles-spacing">Spacing</a>        
+        <a class="styles-nav_link link-sm" href="#styles-icons">Icons</a>
+        <a class="styles-nav_link link-sm" href="#styles-buttons">Buttons</a>
+        <a class="styles-nav_link link-sm" href="#styles-forms">Forms</a>
+        <a class="styles-nav_link link-sm" href="#styles-darkmode">Dark Mode</a>
+      </div>
+
+    </nav>
+
+    <!-- Styles Body -->
+    <div class="styles-body">
+
+
+
+      <!-- Typefaces -->
+      <section class="styles-group" id="styles-typefaces">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Typefaces</h2> 
+        </heading>
+
+        <section class="styles-group_content">
+
+          <div class="grid-md">
+
+            <section class="style-item text-sans">
+
+              <h3 class="style-item_heading">Sans Serif</h3>
+
+              <section class="style-sub-item">
+                <h3 class="heading-sm">Work Sans</h3>
+                <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+              </section>
+
+              <section class="style-sub-item">
+                <p class="font-bold">Sans Serif Bold</p>                              
+                <p class="font-medium">Sans Serif Medium</p>                             
+                <p class="font-light">Sans Serif Light</p>                               
+              </section>
+
+            </section>
+
+            <section class="style-item text-serif">
+
+              <h3 class="style-item_heading">Serif</h3>
+
+                <div class="style-sub-item">
+                  <h3 class="heading-sm">Frank Ruhl Libre</h3>
+                  <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                </div>
+
+                <div class="style-sub-item">
+                <p class="font-bold">Serif Bold</p>                              
+                <p class="font-medium">Serif Medium</p>                             
+                <p class="font-light">Serif Light</p>                               
+                </div>
+
+            </section>
+
+            <section class="style-item text-mono">
+
+              <h3 class="style-item_heading">Monospace</h3> 
+
+              <div class="style-sub-item">
+                <h3 class="heading-sm">Roboto Mono</h3>
+                <p class="text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+              </div>   
+
+              <div class="style-sub-item">
+                <p class="font-bold">Monospace Bold</p>                              
+                <p class="font-medium">Monospace Medium</p>                             
+                <p class="font-light">Monospace Light</p>                               
+              </div>
+
+            </section>  
+
+          </div>
+
+        </section>
+
+      </section> 
+
+      <!-- Type Scale -->
+      <section class="styles-group" id="styles-typescale">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Type Scale</h2> 
+        </heading>
+
+        <section class="styles-group_content">
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text-3xl</h3>
+            <p class="text-3xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+            Labore repellat cum assumenda sit.</p>                                
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text-2xl</h3>               
+            <p class="text-2xl">TLorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+              Labore repellat cum assumenda sit.</p>                               
+          </section> 
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text-xl</h3> 
+            <p class="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+              Labore repellat cum assumenda sit.</p>                              
+          </section> 
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text-lg</h3>
+            <p class="text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+              Labore repellat cum assumenda sit.</p>                                
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text</h3> 
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+              Labore repellat cum assumenda sit.</p>                                            
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text-sm</h3>
+            <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+              Labore repellat cum assumenda sit.</p>                                              
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">.text-xs</h3> 
+            <p class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+              Labore repellat cum assumenda sit.</p>                               
+          </section>  
+
+        </section>
+
+      </section>
+
+      <!-- Headings -->
+      <section class="styles-group" id="styles-headings">
+       
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Headings</h2> 
+        </heading>
+
+        <section class="styles-group_content">
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.headline-xl</h3> 
+              <div class="headline-xl">Headline XL</div>                                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.headline-lg</h3> 
+              <div class="headline-lg">Headline LG</div>                                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.headline</h3> 
+              <div class="headline">Headline MD</div>                              
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.heading-xl</h3> 
+              <div class="heading-xl">Heading XL</div>                               
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.heading-lg</h3> 
+              <div class="heading-lg">Heading LG</div>                               
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.heading</h3>
+              <div class="heading">Heading MD</div>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.heading-sm</h3>
+              <div class="heading-sm">Heading SM</div>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.heading-xs</h3> 
+              <div class="heading-xs">Heading XS</div>                               
+            </section>
+
+          </div>
+
+        </section>
+
+      </section> 
+
+      <!-- Other -->
+      <section class="styles-group" id="styles-type-other">
+       
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Other</h2> 
+        </heading>
+
+        <section class="styles-group_content">
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.link-sm</h3> 
+              <a class="link-sm">Link SM</a>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.link</h3> 
+              <a class="link">Link</a>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.link-lg</h3> 
+              <a class="link-lg">Link LG</a>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.line-through</h3> 
+              <p class="text-sm line-through">Line Through</p>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.underline</h3> 
+              <p class="text-sm underline">Underline</p>                                              
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.highlight</h3> 
+              <p class="text-sm"><span class="highlight">Highlight</span></p>                                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.caption</h3> 
+              <p class="link-sm">Caption </p>                                               
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.caption-lg</h3>
+              <p class="link">Large caption</p>                                              
+            </section>
+
+          </div>  
+
+        </section>
+
+      </section>        
+                    
+      <!-- Colors -->
+      <section class="styles-group " id="styles-colors">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Colors</h2> 
+        </heading>
+        
+        <div class="styles-group_content">
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-primary </h3>  
+              <div class="style-swatch style-swatch-color-primary"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-primary-2 </h3> 
+              <div class="style-swatch style-swatch-color-primary-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-primary-3 </h3> 
+              <div class="style-swatch style-swatch-color-primary-3"></div>                             
+            </section> 
+
+          </div>
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-secondary </h3>  
+              <div class="style-swatch style-swatch-color-secondary"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-secondary-2 </h3> 
+              <div class="style-swatch style-swatch-color-secondary-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-secondary-3 </h3> 
+              <div class="style-swatch style-swatch-color-secondary-2"></div>                             
+            </section>
+
+          </div>
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-tertiary </h3>  
+              <div class="style-swatch style-swatch-color-tertiary"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-tertiary-2 </h3> 
+              <div class="style-swatch style-swatch-color-tertiary-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-tertiary-3 </h3> 
+              <div class="style-swatch style-swatch-color-tertiary-3"></div>                             
+            </section>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Alerts -->
+      <section class="styles-group" id="styles-alerts">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Alerts</h2> 
+        </heading>
+
+        <div class="styles-group_content">
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-error </h3>  
+              <div class="style-swatch style-swatch-error-1"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --error-light </h3> 
+              <div class="style-swatch style-swatch-error-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --error-dark </h3> 
+              <div class="style-swatch style-swatch-error-3"></div>                             
+            </section>
+
+          </div>
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-warning </h3>  
+              <div class="style-swatch style-swatch-warning-1"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --warning-light </h3> 
+              <div class="style-swatch style-swatch-warning-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --warning-dark </h3> 
+              <div class="style-swatch style-swatch-warning-3"></div>                             
+            </section>
+
+          </div> 
+
+          <div class="grid-lg">
+            <section class="style-item">
+              <h3 class="style-item_heading"> --color-success </h3>  
+              <div class="style-swatch style-swatch-success-1"></div>                            
+            </section>
+            <section class="style-item">
+              <h3 class="style-item_heading"> --success-light </h3> 
+              <div class="style-swatch style-swatch-success-2"></div>                             
+            </section>
+            <section class="style-item">
+              <h3 class="style-item_heading"> --success-dark </h3> 
+              <div class="style-swatch style-swatch-success-3"></div>                             
+            </section>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Shades -->
+      <section class="styles-group" id="styles-shades">
+       
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Shades</h2> 
+        </heading>
+
+        <div class="styles-group_content"> 
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --black </h3>  
+              <div class="style-swatch style-swatch-shade-black"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --white </h3> 
+              <div class="style-swatch style-swatch-shade-white border-light"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-1 </h3>  
+              <div class="style-swatch style-swatch-shade-1"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-2 </h3> 
+              <div class="style-swatch style-swatch-shade-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-3 </h3> 
+              <div class="style-swatch style-swatch-shade-3"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-4 </h3> 
+              <div class="style-swatch style-swatch-shade-4"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-5 </h3> 
+              <div class="style-swatch style-swatch-shade-5"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-6 </h3>  
+              <div class="style-swatch style-swatch-shade-6"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-7 </h3> 
+              <div class="style-swatch style-swatch-shade-7"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-8 </h3> 
+              <div class="style-swatch style-swatch-shade-8"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-9 </h3> 
+              <div class="style-swatch style-swatch-shade-9 border-light"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shade-10 </h3> 
+              <div class="style-swatch style-swatch-shade-10"></div>                             
+            </section>            
+          </div> 
+
+        </div> 
+
+      </section>
+
+      <!-- Gradients -->
+      <section class="styles-group" id="styles-gradients">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Gradients</h2> 
+        </heading>
+
+        <section class="styles-group_content"> 
+
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --gradient-1 </h3>  
+              <div class="style-swatch gradient-1"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --gradient-2 </h3> 
+              <div class="style-swatch gradient-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --gradient-3 </h3>  
+              <div class="style-swatch gradient-3"></div>                            
+            </section>
+
+          </div>
+
+        </section>  
+        
+      </section>
+
+      <!-- Shadows -->
+      <section class="styles-group" id="styles-shadows">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Shadows</h2> 
+        </heading>
+
+        <section class="styles-group_content"> 
+
+          <div class="grid-lg">
+
+            <section class="style-item ">
+              <h3 class="style-item_heading"> --shadow-1 </h3>  
+              <div class="style-swatch shadow-1"></div>                            
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shadow-2 </h3> 
+              <div class="style-swatch shadow-2"></div>                             
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading"> --shadow-3 </h3>  
+              <div class="style-swatch shadow-3"></div>                            
+            </section>
+
+          </div>   
+
+        </section>  
+
+      </section>        
+
+      <!-- Sizing -->
+      <section class="styles-group" id="styles-spacing">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Sizing</h2> 
+        </heading>
+
+        <section class="styles-group_content">
+
+          <div class="grid-xl">
+
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-xs</h3>
+              <div class="style-item_spacer styles_spacer-xs"></div>                                             
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-sm</h3>
+              <div class="style-item_spacer styles_spacer-sm"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-base</h3>
+              <div class="style-item_spacer styles_spacer-md"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-lg</h3>
+              <div class="style-item_spacer styles_spacer-lg"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-xl</h3>
+              <div class="style-item_spacer styles_spacer-xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-2xl</h3>
+              <div class="style-item_spacer styles_spacer-2xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-3xl</h3>
+              <div class="style-item_spacer styles_spacer-3xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-4xl</h3>
+              <div class="style-item_spacer styles_spacer-4xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-5xl</h3>
+              <div class="style-item_spacer styles_spacer-5xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-6xl</h3>
+              <div class="style-item_spacer styles_spacer-6xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-7xl</h3>
+              <div class="style-item_spacer styles_spacer-7xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-8xl</h3>
+              <div class="style-item_spacer styles_spacer-8xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-9xl</h3>
+              <div class="style-item_spacer styles_spacer-9xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-10xl</h3>
+              <div class="style-item_spacer styles_spacer-10xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-11xl</h3>
+              <div class="style-item_spacer styles_spacer-11xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-12xl</h3>
+              <div class="style-item_spacer styles_spacer-12xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-13xl</h3>
+              <div class="style-item_spacer styles_spacer-13xl"></div>
+            </section>
+            
+            <section class="style-item">
+              <h3 class="style-item_heading">--size-14xl</h3>
+              <div class="style-item_spacer styles_spacer-14xl"></div>
+            </section>
+            
+          </div>
+
+        </section>
+
+      </section>
+
+      <!-- Icons -->
+      <section  class="styles-group" id="styles-icons">
+
+        <header class="styles-group_header">
+          <h2 class="styles-heading heading">Icons<br></h2>
+        </header>
+
+        <div class="styles-group_content styles-group_content--spaced">
+
+          <div class="grid-xl">
+
+            <section class="style-item">
+              <h3 class="style-item_heading">icon-site</h3>
+              <span class="icon-site icon--lg">favorite</span>
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">icon-social</h3>
+              <span class="icon-social icon--lg"></span>
+            </section>
+          </div> 
+                
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading">icon--sm</h3>
+              <span class="icon-site icon--sm ">favorite</span>
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">icon</h3>
+              <span class="icon-site">favorite</span>
+            </section>
+
+            <section class="style-item">
+              <h3 class="style-item_heading">icon--lg</h3>
+              <span class="icon-site icon--lg ">favorite</span>
+            </section>
+
+          </div>
+
+          <!-- Icons Site -->
+          <div class="styles-sub-group">
+
+            <header class="styles-sub-group_header">
+              <h3 class="styles-sub-heading "> site icons - 
+                <a class="link-inline" href="https://fonts.google.com/icons" target="_blank">Material icons                 
+                </a>
+              </h3>
+            </header>   
+
+            <div class="grid-xs">
+              <span class="icon-site">chevron_left</span>
+              <span class="icon-site">chevron_right</span>
+              <span class="icon-site">arrow_drop_down</span>
+              <span class="icon-site">keyboard_arrow_down</span>
+              <span class="icon-site">favorite</span>
+              <span class="icon-site">search</span>
+              <span class="icon-site">close</span>
+              <span class="icon-site">menu</span>
+              <span class="icon-site">done</span>
+              <span class="icon-site">sort</span>
+              <span class="icon-site">share</span>
+              <span class="icon-site">hive</span>
+              <span class="icon-site">woman</span>
+              <span class="icon-site">person</span>
+              <span class="icon-site">face</span>
+              <span class="icon-site">eco</span>
+              <span class="icon-site">pets</span>
+              <span class="icon-site">man</span>
+              <span class="icon-site">female</span>
+              <span class="icon-site">circle</span>
+              <span class="icon-site">rocket</span>          
+            </div>
+
+          </div>
+
+          <!-- Icons Social -->
+          <div class="styles-sub-group">
+
+            <div class="styles-sub-group_header">
+              <h3 class="styles-sub-heading"> site icons </h3>
+            </div>    
+
+            <div class="grid-xs">
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+              <span class="icon-social"></span>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Buttons -->
+      <section   class="styles-group " id="styles-buttons">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Buttons</h2> 
+        </heading>
+
+        <div class="styles-group_content styles-group_content--spaced">
+
+          <!-- Button Sizes -->
+          <div class="grid-lg">
+
+            <section class="style-item">
+              <h3 class="style-item_heading">.btn</h3>
+              <button class="btn btn--primary">Click Me</button>
+            </section>
+        
+            <section class="style-item">
+              <h3 class="style-item_heading">.btn--sm</h3>
+              <button class="btn btn--sm btn--primary">Click Me</button>
+            </section>
+        
+            <section class="style-item">
+              <h3 class="style-item_heading">.btn--xs</h3>
+              <button class="btn btn--xs btn--primary">Click Me</button>
+            </section>
+
+          </div>
+
+          <!-- Button Colors -->
+          <div class="grid-lg">
+
+            <section class="style-item">
+              
+              <h3 class="style-item_heading"> .btn--primary</h3>
+
+              <button class="btn btn--primary">Click Me
+                <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor"/>
+                </svg>
+              </button> 
+
+            </section>
+
+            <section class="style-item">
+
+              <h3 class="style-item_heading"> .btn--secondary</h3>
+
+              <button class="btn btn--secondary">Click Me
+                <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor"/>
+                </svg>
+              </button> 
+
+            </section>
+
+            <section class="style-item">
+
+              <h3 class="style-item_heading"> .btn--tertiary</h3>
+
+              <button class="btn btn--tertiary">Click Me
+                <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor"/>
+                </svg>
+              </button> 
+
+            </section>
+
+          </div>
+
+          <!-- Button Icons -->
+          <div class="grid-lg">
+
+            <section class="style-item">
+
+              <h3 class="style-item_heading">.btn--icon</h3>
+
+              <button class="btn btn--icon btn--primary">
+                <span class="icon-site icon--lg">settings</span>
+              </button>
+
+            </section>
+        
+            <section class="style-item">
+
+              <h3 class="style-item_heading">.btn--icon-sm</h3>
+
+              <button class="btn btn--icon-sm btn--primary">
+                <span class="icon-site icon--sm">settings</span>
+              </button>
+
+            </section>
+        
+            <section class="style-item">
+
+              <h3 class="style-item_heading">.btn--icon-xs</h3>
+
+              <button class="btn btn--icon-xs btn--secondary">
+                <span class="icon-site icon--xs">settings</span>
+              </button>
+
+            </section>
+
+          </div>
+          
+        </div>   
+
+      </section>
+
+      <!-- Forms -->
+      <section class="styles-group" id="styles-forms">
+
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Forms</h2> 
+        </heading>
+
+        <section class="styles-group_content">
+
+          <section class="style-item">
+
+            <h3 class="style-item_heading">Search Form &#40Horizontal&#41</h3> 
+
+            <form data-theme="invert" class="form">
+              <h2 class="form_title heading-sm">Search</h2> 
+              <div class="form_items_horzontal"> 
+                <div class="form_item form_item--stretch">
+                  <label class="form_label form_label--title visually-hidden" for="search_query">Search Query</label>
+                  <input class="form_input" type="search" id="search_query" name="search_query" required>
+                </div>
+                <div class="form_item form_item--btn">
+                  <button class="form_btn btn btn--form" type="submit">Search</button>
+                </div>
+              </div>
+
+            </form>
+
+          </section>
+
+          <section class="style-item">
+
+            <h3 class="style-item_heading">Search Form</h3>
+
+            <form class="form">
+              <h2 class="form_title heading-sm">Search</h2>
+                <div class="form_item">
+                  <label class="form_label visually-hidden" for="search_query">Search Query</label>
+                  <input class="form_input" type="search" id="search_query" name="search_query" required>
+                </div>                   
+                <div class="form_item form_item--btn">
+                  <button class="form_btn btn btn--form" type="submit">Search</button>
+                </div>
+            </form>  
+
+          </section>
+
+          <section class="style-item">
+
+            <h3 class="style-item_heading">Subscription Form</h3> 
+
+            <form class="form exclude-theme">
+              <h2 class="form_title heading-sm">Subscribe to Our Newsletter</h2>
+              <div class="form_item">
+                <label class="form_label" for="sub_name">Name:</label>
+                <input class="form_input" type="text" id="sub_name" name="sub_name" required>
+              </div>
+              <div class="form_item">
+                <label class="form_label" for="sub_email">Email:</label>
+                <input class="form_input" type="email" id="sub_email" name="sub_email" required>
+              </div>  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Subscribe</button>
+              </div>
+            </form> 
+             
+          </section>
+
+          <section class="style-item">
+
+            <h3 class="style-item_heading">Form with toggle's</h3>
+
+            <form class="form exclude-theme">
+              <h2 class="form_title heading-sm">Form Title</h2>                  
+              <div class="form_item">
+                <label class="form_label" for="name">Name:</label>
+                <input class="form_input" type="text" id="name" name="name" required>
+              </div>  
+              <div class="form_item">
+                <label class="form_label">Gender:</label>
+                <div class="form_radio-group">
+                  <input class="form_radio" type="radio" id="male" name="gender" value="male">
+                  <label class="form_radio-label" for="male">Male</label>
+                  <input class="form_radio" type="radio" id="female" name="gender" value="female">
+                  <label class="form_radio-label" for="female">Female</label>                    
+                  <input class="form_radio" type="radio" id="other" name="gender" value="other">
+                  <label class="form_radio-label" for="other">Other</label>
+                </div>
+              </div>  
+              <div class="form_item form_item--horizontal">                   
+                <div class="form_toggle">
+                  <input class="form_toggle-input" type="checkbox" id="newsletter1" name="newsletter1" value="subscribe">
+                  <label class="form_toggle-label" for="newsletter1"></label>
+                </div>
+                <label class="form_label" for="newsletter">Subscribe to newsletter</label>
+              </div>  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Submit</button>
+              </div>  
+            </form>
+
+          </section>
+
+          <section class="style-item">
+
+            <h3 class="style-item_heading">Form with dropdown</h3>
+
+            <form class="form exclude-theme">
+              <h2 class="form_title heading-sm">Form Title</h2>
+              
+              <div class="form_item">
+                  <label class="form_label" for="name">Name:</label>
+                  <input class="form_input" type="text" id="name" name="name" required>
+              </div>  
+              <div class="form_item">
+                <label class="form_label" for="address">Address:</label>
+                <input class="form_input" type="text" id="address" name="address" required>
+              </div>                  
+              <div class="form_item">
+                <label for="options" class="form_label">Options:</label>
+                <select id="options" name="options" class="form_select">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </select>
+              </div>                   
+              <div class="form_item form_item--horizontal">                
+                <div class="form_toggle">                        
+                    <input class="form_toggle-input" type="checkbox" id="newsletter2" name="newsletter2" value="subscribe">
+                    <label class="form_toggle-label" for="newsletter2"></label>
+                </div>
+                <label class="form_label">Subscribe to newsletter</label>
+              </div>                  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Submit</button>
+              </div>  
+            </form>
+
+          </section> 
+
+        </section>
+
+      </section>  
+
+
+
+    </div>
+  </main>
+
+  <script defer>
+    includeHTML('include-header', '/includes/navlinks.html');
+    includeHTML('include-navlinks', '/includes/navlinks.html');
+    includeHTML('include-footer', '/includes/footer.html');
+    includeHTML('include-svgs', '/includes/svgs.html');
+    includeHTML('include-sidenav', '/includes/sidenav.html');
+  </script>
+  <script src="/js/base-footer.js" defer></script>
+  <script src="/js/footer.js" defer></script>
+
+</body>
+</html>
+
+
+

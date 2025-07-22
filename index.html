@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script src="/js/base.js"></script>
+  <script src="/js/lenis.js"></script>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <div id="include-svgs" class="display-none"></div>
+
+  <header class="header">
+    <div class="nav wrap">  
+      <div class="nav_section">
+        <button class="btn--darkmode" id="darkmodeToggle" type="button">
+            <span class="theme-icon-light display-none">
+              <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/> </svg>
+            </span>
+            <span class="theme-icon-dark display-none">
+              <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/> </svg> 
+            </span>
+        </button>        
+        <div id="navBurger" onclick="toggleSidenav()"><span></span><span></span></div>                 
+      </div>      
+      <a class="nav_logo" href="/index.html">Logo</a>      
+    </div>       
+    <div id="include-navlinks"></div>
+  </header>
+
+
+  <main class="main wrap">
+
+
+</main>
+
+<script defer>
+    includeHTML('include-navlinks', 'includes/navlinks.html');
+    includeHTML('include-footer', 'includes/footer.html');
+    includeHTML('include-svgs', 'includes/svgs.html');
+    includeHTML('include-sidenav', 'includes/sidenav.html');
+</script>
+
+<script src="js/base-footer.js" defer></script>
+  <script src="js/footer.js" defer></script>
+
+</body>
+</html>
