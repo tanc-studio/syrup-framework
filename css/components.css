@@ -221,7 +221,8 @@ button {
     width: 100%;
     max-width: 40rem;
     padding: var(--size-4xl);
-    background-color: var(--color-primary-2);
+    background-color: var(--bg-color-primary);
+    color: var(--text-shade-black);
     font-family: var(--text-sans);
     font-size: var(--text-xs);
 }
@@ -268,6 +269,7 @@ button {
 
 .form_label {
     font-weight: var(--text-medium);
+    color: var(--text-shade-black);
     display: block;
 }
 
@@ -278,6 +280,9 @@ button {
     padding: var(--size-sm);
     margin-top: var(--size-xs);
     flex-wrap: 1;
+    background-color: var(--bg-shade-white);
+    color: var(--text-shade-black);
+    border: 1px solid var(--input);
 }
 
 .form_input:focus {
@@ -293,7 +298,8 @@ button {
     margin-top: var(--size-xs);
     border: 1px solid var(--input);
     appearance: none;
-    background-color: var(--white);
+    background-color: var(--bg-shade-white);
+    color: var(--text-shade-black);
 }
 
 .form_select:focus {
@@ -334,17 +340,18 @@ button {
     padding: .25rem;
     border-radius: 50vw;
     flex: 1;
-    background-color: var(--white);
+    background-color: var(--bg-shade-white);
+    color: var(--text-shade-black);
     cursor: pointer;
 }
 
 .form_radio:checked + .form_radio-label {
-    background-color:var(--shade-7);
-    color: var(--white);
+    background-color: var(--bg-shade-dark-grey);
+    color: var(--text-shade-white);
 }
 
 .form_radio-label:hover {
-    background-color:var(--shade-1);
+    background-color: var(--bg-shade-light-grey);
 }
  
 .form_toggle {
@@ -360,7 +367,7 @@ button {
 .form_toggle-label {
     width: 1rem;
     height: 1rem;
-    background-color: var(--shade-3);
+    background-color: var(--bg-shade-light-grey);
     border-radius: 50vw;
     cursor: pointer;
     position: relative;
@@ -368,7 +375,126 @@ button {
 }
 
 .form_toggle-input:checked+.form_toggle-label {
-    background-color: var(--success-3);
+    background-color: var(--bg-success);
+}
+
+
+/* Tabs ---------------------------------------- */
+.tabs {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.tabs_nav {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: var(--size-lg);
+}
+
+.tabs_button {
+    font-size: var(--text-sm);
+    font-weight: var(--text-medium);
+    letter-spacing: var(--text-spacing-xs);
+    padding: var(--size-base) var(--size-lg);
+    border: none;
+    background: none;
+    color: var(--text-shade-dark-grey);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.tabs_button:hover {
+    color: var(--text-shade-black);
+}
+
+.tabs_button:focus-visible {
+    outline: 2px solid var(--focus-color, #0066cc);
+    outline-offset: 2px;
+}
+
+.tabs_button--active {
+    color: var(--text-shade-black);
+    border-bottom-color: var(--text-shade-black);
+}
+
+.tabs_content {
+    min-height: 8rem;
+}
+
+.tabs_panel {
+    display: none;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.tabs_panel--active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tabs Variants */
+.tabs--pills .tabs_nav {
+    border-bottom: none;
+    gap: var(--size-xs);
+    margin-bottom: var(--size-lg);
+}
+
+.tabs--pills .tabs_button {
+    border-radius: var(--border-radius-md);
+    border-bottom: none;
+    background-color: var(--shade-1);
+    color: var(--text-shade-dark-grey);
+}
+
+.tabs--pills .tabs_button:hover {
+    background-color: var(--shade-2);
+    color: var(--text-shade-black);
+}
+
+.tabs--pills .tabs_button--active {
+    background-color: var(--text-shade-black);
+    color: var(--text-shade-white);
+    border-bottom: none;
+}
+
+.tabs--vertical {
+    display: flex;
+    gap: var(--size-lg);
+}
+
+.tabs--vertical .tabs_nav {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 1px solid var(--border-light);
+    margin-bottom: 0;
+    margin-right: var(--size-lg);
+    min-width: 12rem;
+}
+
+.tabs--vertical .tabs_button {
+    text-align: left;
+    border-bottom: none;
+    border-right: 2px solid transparent;
+}
+
+.tabs--vertical .tabs_button--active {
+    border-bottom: none;
+    border-right-color: var(--text-shade-black);
+}
+
+.tabs--vertical .tabs_content {
+    flex: 1;
 }
 
 

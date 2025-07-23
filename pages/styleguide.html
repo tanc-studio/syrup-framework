@@ -22,8 +22,7 @@
 <body>
 
   <div id="include-svgs" class="display-none"></div>
-
-  <header class="header">
+  <header data-theme="exclude-dark" class="header">
     <div class="nav wrap">  
       <div class="nav_section">
         <button class="btn--darkmode" id="darkmodeToggle" type="button">
@@ -45,7 +44,6 @@
 
     <!-- Styles Nav -->
     <nav class="styles-nav">
-
       <div class="styles-nav_links" id="stylesNav">
         <a class="styles-nav_link link-sm" href="#styles-typefaces">Typefaces</a>
         <a class="styles-nav_link link-sm" href="#styles-typescale">Typescale</a>
@@ -62,13 +60,10 @@
         <a class="styles-nav_link link-sm" href="#styles-forms">Forms</a>
         <a class="styles-nav_link link-sm" href="#styles-darkmode">Dark Mode</a>
       </div>
-
     </nav>
 
     <!-- Styles Body -->
     <div class="styles-body">
-
-
 
       <!-- Typefaces -->
       <section class="styles-group" id="styles-typefaces">
@@ -936,18 +931,14 @@
 
       <!-- Forms -->
       <section class="styles-group" id="styles-forms">
-
         <heading class="styles-group_header"> 
           <h2 class="styles-heading heading">Forms</h2> 
         </heading>
-
         <section class="styles-group_content">
 
           <section class="style-item">
-
             <h3 class="style-item_heading">Search Form &#40Horizontal&#41</h3> 
-
-            <form data-theme="invert" class="form">
+            <form data-theme="exclude-dark" class="form">
               <h2 class="form_title heading-sm">Search</h2> 
               <div class="form_items_horzontal"> 
                 <div class="form_item form_item--stretch">
@@ -960,14 +951,11 @@
               </div>
 
             </form>
-
           </section>
-
+          
           <section class="style-item">
-
             <h3 class="style-item_heading">Search Form</h3>
-
-            <form class="form">
+            <form data-theme="invert" class="form">
               <h2 class="form_title heading-sm">Search</h2>
                 <div class="form_item">
                   <label class="form_label visually-hidden" for="search_query">Search Query</label>
@@ -977,14 +965,11 @@
                   <button class="form_btn btn btn--form" type="submit">Search</button>
                 </div>
             </form>  
-
           </section>
 
           <section class="style-item">
-
             <h3 class="style-item_heading">Subscription Form</h3> 
-
-            <form class="form exclude-theme">
+            <form class="form">
               <h2 class="form_title heading-sm">Subscribe to Our Newsletter</h2>
               <div class="form_item">
                 <label class="form_label" for="sub_name">Name:</label>
@@ -997,14 +982,11 @@
               <div class="form_item form_item--btn">
                 <button class="form_btn btn btn--form" type="submit">Subscribe</button>
               </div>
-            </form> 
-             
+            </form>            
           </section>
 
           <section class="style-item">
-
             <h3 class="style-item_heading">Form with toggle's</h3>
-
             <form class="form exclude-theme">
               <h2 class="form_title heading-sm">Form Title</h2>                  
               <div class="form_item">
@@ -1033,14 +1015,11 @@
                 <button class="form_btn btn btn--form" type="submit">Submit</button>
               </div>  
             </form>
-
           </section>
 
           <section class="style-item">
-
             <h3 class="style-item_heading">Form with dropdown</h3>
-
-            <form class="form exclude-theme">
+            <form data-theme="invert" class="form">
               <h2 class="form_title heading-sm">Form Title</h2>
               
               <div class="form_item">
@@ -1070,12 +1049,135 @@
                 <button class="form_btn btn btn--form" type="submit">Submit</button>
               </div>  
             </form>
-
           </section> 
 
         </section>
-
       </section>  
+
+      <!-- Tabs -->
+      <section class="styles-group" id="styles-forms">
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Tabs</h2> 
+        </heading>
+        <section class="styles-group_content">
+
+        <section class="style-item">
+          <h3 class="style-item_heading">Tabs</h3> 
+
+        </section>
+          
+        <!-- Default Tabs -->
+        <section class="style-item">
+          <h3 class="style-item_heading">Default Tabs</h3>
+          <div class="tabs">
+            <nav class="tabs_nav" role="tablist">
+              <button class="tabs_button tabs_button--active" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1">
+                Overview
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2">
+                Features
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">
+                Documentation
+              </button>
+            </nav>
+            <div class="tabs_content">
+              <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="tab-1" id="panel-1">
+                <h4 class="heading-sm">Overview</h4>
+                <p class="text-sm">This is the overview section with general information about the product. It provides a high-level summary of what users can expect.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="tab-2" id="panel-2">
+                <h4 class="heading-sm">Features</h4>
+                <p class="text-sm">Here you'll find detailed information about all the features and capabilities available in this product.</p>
+                <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                  <li>Feature one with detailed description</li>
+                  <li>Feature two with additional benefits</li>
+                  <li>Feature three with use cases</li>
+                </ul>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="tab-3" id="panel-3">
+                <h4 class="heading-sm">Documentation</h4>
+                <p class="text-sm">Complete documentation and guides to help you get started quickly and efficiently.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pills Tabs -->
+        <section class="style-item">
+          <h3 class="style-item_heading">Pills Tabs</h3>
+          <div class="tabs tabs--pills">
+            <nav class="tabs_nav" role="tablist">
+              <button class="tabs_button tabs_button--active" role="tab" aria-selected="true" aria-controls="pills-panel-1" id="pills-tab-1">
+                Home
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="pills-panel-2" id="pills-tab-2">
+                About
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="pills-panel-3" id="pills-tab-3">
+                Contact
+              </button>
+            </nav>
+            <div class="tabs_content">
+              <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="pills-tab-1" id="pills-panel-1">
+                <h4 class="heading-sm">Welcome Home</h4>
+                <p class="text-sm">This is the home section with a warm welcome message and introduction to our services.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-2" id="pills-panel-2">
+                <h4 class="heading-sm">About Us</h4>
+                <p class="text-sm">Learn more about our company, mission, and the team behind our products.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-3" id="pills-panel-3">
+                <h4 class="heading-sm">Get in Touch</h4>
+                <p class="text-sm">Find all the ways you can reach out to us for support, questions, or collaboration.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vertical Tabs -->
+        <section class="style-item">
+          <h3 class="style-item_heading">Vertical Tabs</h3>
+          <div class="tabs tabs--vertical">
+            <nav class="tabs_nav" role="tablist">
+              <button class="tabs_button tabs_button--active" role="tab" aria-selected="true" aria-controls="vertical-panel-1" id="vertical-tab-1">
+                Settings
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="vertical-panel-2" id="vertical-tab-2">
+                Privacy
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="vertical-panel-3" id="vertical-tab-3">
+                Security
+              </button>
+              <button class="tabs_button" role="tab" aria-selected="false" aria-controls="vertical-panel-4" id="vertical-tab-4">
+                Notifications
+              </button>
+            </nav>
+            <div class="tabs_content">
+              <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="vertical-tab-1" id="vertical-panel-1">
+                <h4 class="heading-sm">General Settings</h4>
+                <p class="text-sm">Configure your general application preferences and default behaviors.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-2" id="vertical-panel-2">
+                <h4 class="heading-sm">Privacy Controls</h4>
+                <p class="text-sm">Manage your privacy settings and control what information is shared.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-3" id="vertical-panel-3">
+                <h4 class="heading-sm">Security Options</h4>
+                <p class="text-sm">Set up two-factor authentication and other security measures to protect your account.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-4" id="vertical-panel-4">
+                <h4 class="heading-sm">Notification Preferences</h4>
+                <p class="text-sm">Choose which notifications you want to receive and how you want to receive them.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        </section>
+      </section>  
+
 
 
 
