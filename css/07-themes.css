@@ -1,0 +1,158 @@
+@layer themes {
+  /* Dark Theme Overrides */
+  [data-theme='dark'],
+  [data-theme='exclude-dark'],
+  [data-theme='light'] [data-theme='invert'] {
+    
+    /* Text Colors */
+    --text-shade-white: var(--shade-10);
+    --text-shade-off-white: var(--shade-9);
+    --text-shade-light-grey: var(--shade-6);
+    --text-shade-dark-grey: var(--shade-3);
+    --text-shade-black: var(--shade-2);
+    --text-disabled: var(--shade-9);
+    --text-error: var(--error-1);
+    --text-warning: var(--warning-2);
+    --text-success: var(--success-3);
+
+    /* Link Colors */
+    --link-shade-primary: var(--shade-2);
+    --link-shade-primary-hover: var(--white);
+    --link-shade-primary-visited: var(--shade-6);
+    --link-shade-primary-active: var(--shade-6);
+    --link-color-primary: var(--color-primary-2);
+    --link-color-primary-hover: var(--color-primary-3);
+    --link-color-primary-visited: var(--color-primary);
+    --link-color-primary-active: var(--color-primary);
+    
+    /* Background Colors */
+    --bg-shade-white: var(--shade-9);
+    --bg-shade-off-white: var(--shade-8);
+    --bg-shade-light-grey: var(--shade-5);
+    --bg-shade-dark-grey: var(--shade-2);
+    --bg-shade-black: var(--shade-1);
+    --bg-color-primary: var(--shade-8);
+    --bg-color-secondary: var(--color-secondary-3);
+    --bg-color-tertiary: var(--color-tertiary-3);
+    --bg-color-primary-hover: var(--color-primary-2);
+    --bg-color-secondary-hover: var(--color-secondary-2);
+    --bg-color-tertiary-hover: var(--color-secondary-2);
+    --bg-success: var(--success-1);
+    --bg-warning: var(--warning-1);
+    --bg-error: var(--error-1);
+    --bg-disabled: var(--shade-9);
+
+    /* Border Colors */
+    --border-dark: var(--shade-4);
+    --border-light: var(--shade-6);
+    --border-focus: var(--white);
+
+    /* Form Colors */
+    --input-bg: var(--shade-8);
+    --input-border: var(--shade-7);
+    --input-text: var(--shade-2);
+    --input-focus: var(--white);
+
+    /* Shadows & Effects */
+    --shadow-1: 0 1px 12px 0 var(--shade-6);
+    --shadow-2: 0 1px 8px 0 var(--shade-4);
+    --shadow-3: 0 1px 12px 0 var(--shade-2);
+    --gradient-1: linear-gradient(90deg, var(--color-primary) 0%, var(--bg-shade-white) 100%);
+    --gradient-2: linear-gradient(90deg, var(--color-secondary) 0%, var(--bg-shade-white) 100%);
+    --gradient-3: linear-gradient(90deg, var(--color-tertiary) 0%, var(--bg-shade-white) 100%);
+
+    /* Button Colors */
+    --btn-primary: var(--color-primary-2); 
+    --btn-primary-text: var(--shade-10); 
+    --btn-primary-border: var(--btn-primary);
+    --btn-primary-hover: transparent;
+    --btn-primary-text-hover: var(--color-primary-2); 
+    --btn-primary-border-hover: var(--btn-primary-hover);
+    
+    --btn-secondary: transparent;
+    --btn-secondary-text: var(--color-primary-2);
+    --btn-secondary-border: var(--color-primary-2); 
+    --btn-secondary-hover: var(--color-primary-2);
+    --btn-secondary-text-hover: var(--shade-7);
+    --btn-secondary-border-hover: var(--color-primary-2);
+    
+    --btn-tertiary: var(--shade-2);
+    --btn-tertiary-text: var(--shade-8);
+    --btn-tertiary-border: var(--shade-2);
+    --btn-tertiary-hover: var(--color-primary-2);
+    --btn-tertiary-text-hover: var(--shade-8); 
+    --btn-tertiary-border-hover: var(--color-primary-2);
+    
+    --btn-form: var(--shade-9); 
+    --btn-form-text: var(--color-primary-2);
+    --btn-form-border: var(--shade-9); 
+    --btn-form-hover: var(--color-primary-2);
+    --btn-form-text-hover: var(--shade-9);  
+    --btn-form-border-hover: var(--shade-9);  
+  }
+
+  /* Theme Transition Elements */
+  body,
+  .header,
+  .nav,
+  .btn,
+  .form,
+  .form_input,
+  .form_select,
+  .tabs_button,
+  [class*="bg-"],
+  [class*="text-"],
+  [class*="border-"],
+  [class*="style-swatch"] {
+    transition: 
+      background-color var(--theme-transition),
+      color var(--theme-transition),
+      border-color var(--theme-transition),
+      box-shadow var(--theme-transition),
+      fill var(--theme-transition),
+      stroke var(--theme-transition);
+  }
+
+  /* Theme Exclusions */
+  [data-theme='exclude-dark'] {
+    /* Force light theme styles regardless of parent theme */
+  }
+
+  [data-theme='exclude-light'] {
+    /* Force dark theme styles regardless of parent theme */
+  }
+
+  [data-theme='invert'] {
+    /* Invert the current theme */
+  }
+
+  /* High Contrast Theme (Future Enhancement) */
+  @media (prefers-contrast: high) {
+    :root {
+      --text-shade-black: var(--black);
+      --bg-shade-white: var(--white);
+      --border-dark: var(--black);
+      --shadow-1: 0 2px 8px 0 var(--black);
+      --shadow-2: 0 4px 12px 0 var(--black);
+      --shadow-3: 0 6px 16px 0 var(--black);
+    }
+  }
+
+  /* Reduced Motion Theme */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --theme-transition: 0ms;
+      --hover-transition: 0ms;
+      --focus-transition: 0ms;
+    }
+    
+    *,
+    *:before,
+    *:after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

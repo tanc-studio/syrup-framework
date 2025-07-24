@@ -7,7 +7,7 @@
   .icon-social {
     font-family: 'ICONS SOCIAL';
     line-height: 1em;
-  
+
 }
 
   .icon-site {
@@ -280,8 +280,8 @@ button {
     padding: var(--size-sm);
     margin-top: var(--size-xs);
     flex-wrap: 1;
-    background-color: var(--bg-shade-white);
-    color: var(--text-shade-black);
+    background-color: white;
+    color:  black;
     border: 1px solid var(--input);
 }
 

@@ -185,8 +185,10 @@ a { text-decoration: none; cursor: pointer; }
     --page-padding: var(--size-4xl);   
     --nav-height: 2.5rem;
     --nav-tray-width: 12rem;
-}
 
+
+    --theme-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 :root,
 [data-theme='exclude-light'],
@@ -356,43 +358,32 @@ a { text-decoration: none; cursor: pointer; }
 
 
 
-/* Darkmode Loading fix!!!! */
-.theme-loading {
-    visibility: hidden;
+body,
+.header,
+.nav,
+.btn,
+.form,
+.form_input,
+.form_select,
+.tabs_button,
+[class*="bg-"],
+[class*="text-"],
+[class*="border-"],
+[class*="style-swatch"] {
+    transition: 
+        background-color var(--theme-transition),
+        color var(--theme-transition),
+        border-color var(--theme-transition),
+        box-shadow var(--theme-transition),
+        fill var(--theme-transition),
+        stroke var(--theme-transition);
 }
 
-/* Performant Dark/Light Mode Transitions */
-:root {
-    /* Transition only color-related custom properties for performance */
-    transition-property: 
-        --text-shade-white, --text-shade-off-white, --text-shade-light-grey, 
-        --text-shade-dark-grey, --text-shade-black, --text-disabled, --text-error, 
-        --text-warning, --text-success, --link-shade-primary, --link-shade-primary-hover, 
-        --link-shade-primary-visited, --link-shade-primary-active, --link-color-primary, 
-        --link-color-primary-hover, --link-color-primary-visited, --link-color-primary-active,
-        --bg-shade-white, --bg-shade-off-white, --bg-shade-light-grey, --bg-shade-dark-grey, 
-        --bg-shade-black, --bg-color-primary, --bg-color-secondary, --bg-color-tertiary,
-        --bg-color-primary-hover, --bg-color-secondary-hover, --bg-color-tertiary-hover,
-        --bg-success, --bg-warning, --bg-error, --bg-disabled, --shadow-1, --shadow-2, 
-        --shadow-3, --btn-primary, --btn-primary-text, --btn-primary-border, 
-        --btn-primary-hover, --btn-primary-text-hover, --btn-primary-border-hover,
-        --btn-secondary, --btn-secondary-text, --btn-secondary-border, --btn-secondary-hover,
-        --btn-secondary-text-hover, --btn-secondary-border-hover, --btn-tertiary, 
-        --btn-tertiary-text, --btn-tertiary-border, --btn-tertiary-hover, 
-        --btn-tertiary-text-hover, --btn-tertiary-border-hover, --btn-form, 
-        --btn-form-text, --btn-form-border, --btn-form-hover, --btn-form-text-hover, 
-        --btn-form-border-hover, --border-dark, --border-light, --input, --focus;
-    transition-duration: 0.7s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+/* Keep your loading class - it's smart! */
+.theme-loading,
+.theme-loading * {
+    transition: none !important;
 }
-
-/* Ensure all elements inherit the smooth transitions */
-*, *::before, *::after {
-    transition-property: background-color, color, border-color, box-shadow, fill, stroke;
-    transition-duration: inherit;
-    transition-timing-function: inherit;
-}
-
 
 
 /* Typography ------------------------------------- */

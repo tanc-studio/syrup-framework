@@ -214,3 +214,179 @@ class TabsManager {
 
 // Initialize tabs manager
 const tabsManager = new TabsManager();
+
+// Styles Navigation Toggle Functionality
+class StylesNavManager {
+    constructor() {
+        this.isOpen = false;
+        this.timeline = null;
+        this.init();
+    }
+
+    init() {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.initializeStylesNav();
+        });
+    }
+
+    initializeStylesNav() {
+        const toggleButton = document.querySelector('.btn-triangle.btn--style');
+        const stylesNav = document.querySelector('.styles-nav_links');
+        const navLinks = document.querySelectorAll('.styles-nav_link');
+        
+        if (!toggleButton || !stylesNav || !navLinks.length) return;
+
+        // Set initial state for links on desktop (visible)
+        if (window.innerWidth > 900) {
+            gsap.set(navLinks, { opacity: 1, transform: 'translateY(0)' });
+        }
+
+        toggleButton.addEventListener('click', () => {
+            this.toggleStylesNav(stylesNav, toggleButton, navLinks);
+        });
+
+        // Handle nav link clicks
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (this.isOpen) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const href = link.getAttribute('href');
+                    this.closeStylesNav(stylesNav, toggleButton, navLinks, () => {
+                        // Wait a moment after menu closes, then scroll to section
+                        setTimeout(() => {
+                            const targetElement = document.querySelector(href);
+                            if (targetElement) {
+                                // Calculate offset (10rem = 160px assuming 16px base font)
+                                const offset = -160;
+                                
+                                // Use Lenis scroll if available, otherwise fallback to manual scroll
+                                if (window.lenis) {
+                                    window.lenis.scrollTo(targetElement, {
+                                        offset: offset,
+                                        duration: 1.2,
+                                        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t))
+                                    });
+                                } else {
+                                    // Manual scroll with offset
+                                    const elementPosition = targetElement.offsetTop;
+                                    const offsetPosition = elementPosition + offset;
+                                    
+                                    window.scrollTo({
+                                        top: offsetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }
+                        }, 300);
+                    });
+                }
+            });
+        });
+
+        // Close nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!toggleButton.contains(e.target) && !stylesNav.contains(e.target) && this.isOpen) {
+                this.closeStylesNav(stylesNav, toggleButton, navLinks);
+            }
+        });
+
+        // Close nav when pressing escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isOpen) {
+                this.closeStylesNav(stylesNav, toggleButton, navLinks);
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                gsap.set(navLinks, { opacity: 1, transform: 'translateY(0)' });
+                this.isOpen = false;
+                toggleButton.classList.remove('active');
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    toggleStylesNav(stylesNav, toggleButton, navLinks) {
+        if (this.isOpen) {
+            this.closeStylesNav(stylesNav, toggleButton, navLinks);
+        } else {
+            this.openStylesNav(stylesNav, toggleButton, navLinks);
+        }
+    }
+
+    openStylesNav(stylesNav, toggleButton, navLinks) {
+        this.isOpen = true;
+        toggleButton.classList.add('active');
+        toggleButton.setAttribute('aria-expanded', 'true');
+        stylesNav.classList.add('open');
+
+        // Kill any existing timeline
+        if (this.timeline) this.timeline.kill();
+
+        // Create new timeline
+        this.timeline = gsap.timeline();
+
+        // Animate container
+        this.timeline.to(stylesNav, {
+            maxHeight: '500px',
+            paddingTop: '5rem',
+            paddingLeft: '1rem',
+            paddingRight: '1rem',
+            paddingBottom: '1rem',
+            duration: 0.4,
+            ease: 'power2.out'
+        });
+
+        // Animate links with stagger
+        this.timeline.to(navLinks, {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            stagger: 0.05,
+            ease: 'power2.out'
+        }, '-=0.2');
+    }
+
+    closeStylesNav(stylesNav, toggleButton, navLinks, callback = null) {
+        this.isOpen = false;
+        toggleButton.classList.remove('active');
+        toggleButton.setAttribute('aria-expanded', 'false');
+
+        // Kill any existing timeline
+        if (this.timeline) this.timeline.kill();
+
+        // Create new timeline
+        this.timeline = gsap.timeline({
+            onComplete: () => {
+                stylesNav.classList.remove('open');
+                if (callback) callback();
+            }
+        });
+
+        // Animate links out with stagger (reverse order)
+        this.timeline.to(navLinks, {
+            opacity: 0,
+            y: -20,
+            duration: 0.2,
+            stagger: -0.03,
+            ease: 'power2.in'
+        });
+
+        // Animate container
+        this.timeline.to(stylesNav, {
+            maxHeight: '0px',
+            paddingTop: '0rem',
+            paddingLeft: '1rem',
+            paddingRight: '0rem',
+            paddingBottom: '0rem',
+            duration: 0.3,
+            ease: 'power2.in'
+        }, '-=0.1');
+    }
+}
+
+// Initialize styles nav manager
+const stylesNavManager = new StylesNavManager();

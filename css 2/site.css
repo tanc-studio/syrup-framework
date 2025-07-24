@@ -1,6 +1,5 @@
 
 /* Header ---------------------------------- */
-
 .header {
     position: fixed;
     top: 0;
@@ -11,51 +10,8 @@
     background-color: var(--bg-shade-white);
 }
 
-/* Theme Toggle Button */
-.btn--darkmode {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-
-    border-radius: var(--border-radius-sm);
-    transition: background-color 0.2s ease;
-    display: flex;
-    align-items: bottom;
-    justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.btn--darkmode:hover {
-    background-color: var(--bg-shade-light-grey);
-}
-
-
-
-/* Show/hide theme icons based on current theme */
-:root .theme-icon-dark,
-[data-theme="light"] .theme-icon-dark {
-    display: none;
-}
-
-:root .theme-icon-light,
-[data-theme="light"] .theme-icon-light {
-    display: block;
-}
-
-[data-theme="dark"] .theme-icon-light {
-    display: none;
-}
-
-[data-theme="dark"] .theme-icon-dark {
-    display: block;
-}
-
-
 
 /* Nav ------------------------------------------ */
-
 .nav {
     height: var(--nav-height); 
     width: 100%;
@@ -159,7 +115,6 @@
     font-weight: var(--text-normal);
     color: var(--text-shade-off-white);
 }
-
 
 
 /* Footer --------------------------------------- */

@@ -1,0 +1,88 @@
+@layer reset {
+  /* CSS Reset - Extracted from your base.css */
+  html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
+  address, em, img, small, b, u, i, dl, dt, dd, ol, ul, li,
+  article, aside, figure, figcaption, footer, header, menu, nav {
+    margin: 0; 
+    padding: 0;  
+    border: 0; 
+    vertical-align: baseline; 
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth; 
+    color: var(--text-shade-black);
+  }
+
+  ol, ul {
+    list-style: none;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  img {
+    display: block; 
+    width: 100%;
+  }
+
+  a { 
+    text-decoration: none; 
+    cursor: pointer; 
+    color: var(--text-shade-black);
+  }
+
+  /* Typography Helpers */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p, li, figcaption {
+    max-width: 70ch; 
+    text-wrap: pretty;
+  }
+
+  /* Font Face Declarations */
+  @font-face {
+    font-family: 'GeistVF';
+    src: url('/fonts/GeistVF.ttf') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto Mono';
+    src: url('../fonts/RobotoMono-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'ICONS SOCIAL';
+    src: url('../fonts/SocialIcons.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MATERIAL ICONS';
+    src: url('../fonts/MaterialIconsRound-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Prevent Flash of Unstyled Content During Theme Changes */
+  .theme-loading,
+  .theme-loading * {
+    transition: none !important;
+  }
+}
