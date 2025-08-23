@@ -7,7 +7,7 @@ async function includeHTML(elementId, filePath) {
         let html = await response.text();
         element.innerHTML = html;
     } catch (error) {
-        console.warn(y `Could not load ${filePath}:`, error);
+        console.warn(`Could not load ${filePath}:`, error);
     }
 }
 
@@ -29,10 +29,12 @@ function animateImage() {
     }, 4000); // Adjust time as needed
 }
 
-// Only trigger animation if the image exists
-if (document.querySelector('.card_img')) {
-    animateImage();
-}
+// Only trigger animation if the image exists and DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.card_img')) {
+        animateImage();
+    }
+});
 
 // Theme Switching Functionality
 class ThemeManager {
