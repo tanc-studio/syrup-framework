@@ -1,3 +1,15 @@
+/*
+===============================================
+THEMES
+===============================================
+
+Dark Theme Overrides
+Theme Transition Elements
+Theme Exclusions
+High Contrast Theme
+Reduced Motion Theme
+*/
+
 @layer themes {
   /* Dark Theme Overrides */
   [data-theme='dark'],

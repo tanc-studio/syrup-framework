@@ -1,3 +1,21 @@
+/*
+===============================================
+SITE (User Layer)
+===============================================
+
+Header & Navigation
+Burger Menu
+Navigation Tray
+Footer
+Main Content
+Page Animations
+Loading States
+Custom Scrollbar
+Print Styles
+Responsive Navigation
+Responsive Queries
+*/
+
 @layer user {
   
   /* Header & Navigation */
