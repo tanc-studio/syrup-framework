@@ -2,7 +2,6 @@
 /*
 ===============================================
 UTILITIES
-===============================================
 
 Positioning
 Visibility & Display
@@ -30,8 +29,8 @@ Cursor
 User Select
 Responsive
 
+===============================================
 */
-
 
 @layer utilities {
   /* Positioning Utilities */
