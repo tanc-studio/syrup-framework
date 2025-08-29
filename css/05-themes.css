@@ -11,6 +11,96 @@ Reduced Motion Theme
 */
 
 @layer themes {
+  :root,
+  [data-theme='exclude-light'],
+  [data-theme='dark'] [data-theme='invert'] {
+    /* Text Colors */
+    --text-shade-white: var(--shade-1);
+    --text-shade-off-white: var(--shade-2);
+    --text-shade-light-grey: var(--shade-5);
+    --text-shade-dark-grey: var(--shade-8);
+    --text-shade-black: var(--shade-9);
+    --text-disabled: var(--shade-1);
+    --text-error: var(--error-3);
+    --text-warning: var(--warning-2);
+    --text-success: var(--success-1);
+
+    /* Link Colors */
+    --link-shade-primary: var(--black);
+    --link-shade-primary-hover: var(--shade-9);
+    --link-shade-primary-visited: var(--shade-6);
+    --link-shade-primary-active: var(--shade-6);
+    --link-color-primary: var(--color-primary-3);
+    --link-color-primary-hover: var(--color-primary-2);
+    --link-color-primary-visited: var(--color-primary-2);
+    --link-color-primary-active: var(--color-primary-2);
+
+    /* Background Colors */  
+    --bg-shade-white: var(--white);
+    --bg-shade-off-white: var(--shade-1);
+    --bg-shade-light-grey: var(--shade-3);
+    --bg-shade-dark-grey: var(--shade-7);
+    --bg-shade-black: var(--shade-9);
+    --bg-color-primary: var(--color-primary);
+    --bg-color-secondary: var(--color-secondary);
+    --bg-color-tertiary: var(--color-tertiary);
+    --bg-color-primary-hover: var(--color-primary-2);
+    --bg-color-secondary-hover: var(--color-secondary-2);
+    --bg-color-tertiary-hover: var(--color-tertiary-2);
+    --bg-success: var(--success-3);
+    --bg-warning: var(--warning-3);
+    --bg-error: var(--error-3);
+    --bg-disabled: var(--shade-1);
+
+    /* Border Colors */
+    --border-dark: var(--black);
+    --border-light: var(--shade-2);
+    --border-focus: var(--black);
+
+    /* Form Colors */
+    --input-bg: var(--white);
+    --input-border: var(--shade-4);
+    --input-text: var(--black);
+    --input-focus: var(--black);
+
+    /* Shadows & Effects */
+    --shadow-1: 0 1px 12px 0 var(--shade-2);
+    --shadow-2: 0 1px 12px 0 var(--shade-4);
+    --shadow-3: 0 1px 12px 0 var(--shade-6);
+    --gradient-1: linear-gradient(90deg, var(--color-primary) 0%, var(--bg-shade-white) 100%);
+    --gradient-2: linear-gradient(90deg, var(--color-secondary) 0%, var(--bg-shade-white) 100%);
+    --gradient-3: linear-gradient(90deg, var(--color-tertiary) 0%, var(--bg-shade-white) 100%);
+
+    /* Button Token System */
+    --btn-primary: var(--shade-10); 
+    --btn-primary-text: var(--color-primary-2);
+    --btn-primary-border: var(--btn-primary);
+    --btn-primary-hover: var(--color-primary-2);
+    --btn-primary-text-hover: var(--black); 
+    --btn-primary-border-hover: var(--btn-primary);
+    
+    --btn-secondary: var(--color-primary-2);
+    --btn-secondary-text: var(--shade-7);
+    --btn-secondary-border: var(--shade-6); 
+    --btn-secondary-hover: var(--shade-10);
+    --btn-secondary-text-hover: var(--color-primary-2); 
+    --btn-secondary-border-hover: var(--shade-6); 
+    
+    --btn-tertiary: transparent;
+    --btn-tertiary-text: var(--shade-8);
+    --btn-tertiary-border: var(--shade-6);
+    --btn-tertiary-hover: var(--shade-8);
+    --btn-tertiary-text-hover: var(--white); 
+    --btn-tertiary-border-hover: var(--shade-6); 
+    
+    --btn-form: var(--shade-9); 
+    --btn-form-text: var(--color-primary-2);
+    --btn-form-border: var(--shade-9); 
+    --btn-form-hover: var(--color-primary-2);
+    --btn-form-text-hover: var(--shade-9);  
+    --btn-form-border-hover: var(--shade-9);  
+  }
+  
   /* Dark Theme Overrides */
   [data-theme='dark'],
   [data-theme='exclude-dark'],
@@ -125,18 +215,7 @@ Reduced Motion Theme
       stroke var(--theme-transition);
   }
 
-  /* Theme Exclusions */
-  [data-theme='exclude-dark'] {
-    /* Force light theme styles regardless of parent theme */
-  }
 
-  [data-theme='exclude-light'] {
-    /* Force dark theme styles regardless of parent theme */
-  }
-
-  [data-theme='invert'] {
-    /* Invert the current theme */
-  }
 
   /* High Contrast Theme (Future Enhancement) */
   @media (prefers-contrast: high) {

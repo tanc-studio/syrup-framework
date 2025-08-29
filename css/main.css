@@ -2,20 +2,13 @@
 /* Layer Definitions - Define the order */
 @layer reset, base, layout, components, utilities, themes, user;
 
-@import '01-settings.css';    
-@import '02-reset.css';   
-@import '03-elements.css';
-@import '04-layout.css'; 
-@import '05-components.css';
-@import '06-utilities.css'; 
-@import '07-themes.css';
-@import '08-site.css';
-/* @import 'components/cards.css'; */
-/* @import 'components/modals.css'; */
-/* @import 'components/alerts.css'; */
-/* @import 'components/breadcrumbs.css'; */
-/* @import 'components/pagination.css'; */
-/* @import 'components/tooltips.css'; */
+@import '01-base.css';     
+@import '02-layout.css'; 
+@import '03-components.css';
+@import '04-utilities.css'; 
+@import '05-themes.css';
+@import '06-site.css';
+
 
 /*
  * Layer Structure:

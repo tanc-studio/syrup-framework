@@ -1,0 +1,360 @@
+
+@layer reset {
+  :root { 
+    /* Color Palette */
+    --color-primary: hsl(60, 90%, 90%);
+    --color-primary-2: hsl(60, 80%, 95%);
+    --color-primary-3: hsl(60, 90%, 80%);
+    --color-secondary: hsl(120, 90%, 92%);
+    --color-secondary-2: hsl(120, 90%, 95%);
+    --color-secondary-3: hsl(120, 90%, 90%);
+    --color-tertiary: hsl(160, 90%, 88%);
+    --color-tertiary-2: hsl(160, 90%, 95%);
+    --color-tertiary-3: hsl(160, 90%, 85%);
+    
+    /* Status Colors */
+    --error-1: hsl(351, 90%, 85%);
+    --error-2: hsl(351, 90%, 70%);
+    --error-3: hsl(351, 90%, 50%);
+    --warning-1: hsl(38, 90%, 85%);
+    --warning-2: hsl(40, 80%, 74%);
+    --warning-3: hsl(38, 90%, 70%);
+    --success-1: hsl(100, 90%, 85%);
+    --success-2: hsl(100, 90%, 70%);
+    --success-3: hsl(100, 90%, 50%);
+    
+    /* Neutral Shades */
+    --white: hsl(0, 0%, 100%);
+    --shade-1: hsl(0, 0%, 95%);
+    --shade-2: hsl(0, 0%, 85%);
+    --shade-3: hsl(0, 0%, 75%);
+    --shade-4: hsl(0, 0%, 60%);
+    --shade-5: hsl(0, 0%, 50%);
+    --shade-6: hsl(0, 0%, 40%);
+    --shade-7: hsl(0, 0%, 30%);
+    --shade-8: hsl(0, 0%, 20%);
+    --shade-9: hsl(0, 0%, 10%);
+    --shade-10: hsl(0, 0%, 5%);
+    --black: hsl(0, 0%, 0%);
+
+    /* Fluid Sizing Scale */
+    --size-3xs: clamp(0.15rem, 0.1vw + 0.13rem, 0.175rem);
+    --size-2xs: clamp(0.22rem, 0.15vw + 0.19rem, 0.25rem);
+    --size-xs: clamp(0.44rem, 0.3vw + 0.38rem, 0.5rem);
+    --size-sm: clamp(0.66rem, 0.45vw + 0.56rem, 0.75rem);
+    --size-base: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+    --size-lg: clamp(1.09rem, 0.75vw + 0.94rem, 1.25rem);
+    --size-xl: clamp(1.31rem, 0.9vw + 1.13rem, 1.5rem);
+    --size-2xl: clamp(1.75rem, 1.2vw + 1.5rem, 2rem);
+    --size-3xl: clamp(2.19rem, 1.5vw + 1.88rem, 2.5rem);
+    --size-4xl: clamp(2.63rem, 1.8vw + 2.25rem, 3rem);
+    --size-5xl: clamp(3.06rem, 2.1vw + 2.63rem, 3.5rem);
+    --size-6xl: clamp(3.5rem, 2.4vw + 3rem, 4rem);
+    --size-7xl: clamp(4.38rem, 3vw + 3.75rem, 5rem);
+    --size-8xl: clamp(5.25rem, 3.6vw + 4.5rem, 6rem);
+    --size-9xl: clamp(6.56rem, 4.5vw + 5.63rem, 7.5rem);
+    --size-10xl: clamp(8.75rem, 6vw + 7.5rem, 10rem);
+    --size-11xl: clamp(10.94rem, 7.5vw + 9.38rem, 12.5rem);
+    --size-12xl: clamp(13.13rem, 9vw + 11.25rem, 15rem);
+    --size-13xl: clamp(15.31rem, 10.5vw + 13.13rem, 17.5rem);
+    --size-14xl: clamp(17.5rem, 12vw + 15rem, 20rem);
+    --size-15xl: clamp(19.69rem, 13.5vw + 16.88rem, 22.5rem);
+
+    /* Typography Families */
+    --text-serif: "Frank Ruhl Libre", serif;
+    --text-mono: "Roboto Mono", monospace;
+    --text-sans: "GeistVF", sans-serif;
+
+    /* Typography Scale */
+    --text-2xs: clamp(0.65rem, 0.2vw + 0.61rem, 0.7rem);
+    --text-xs: clamp(0.75rem, 0.25vw + 0.7rem, 0.8rem);
+    --text-sm: clamp(0.85rem, 0.3vw + 0.79rem, 0.9rem);
+    --text-base: clamp(0.95rem, 0.35vw + 0.88rem, 1rem);
+    --text-lg: clamp(1.1rem, 0.4vw + 1.02rem, 1.2rem);
+    --text-xl: clamp(1.25rem, 0.45vw + 1.16rem, 1.4rem);
+    --text-2xl: clamp(1.4rem, 0.5vw + 1.3rem, 1.6rem);
+    --text-3xl: clamp(1.55rem, 0.55vw + 1.44rem, 1.8rem);
+    --text-4xl: clamp(1.7rem, 0.6vw + 1.58rem, 2rem);
+    --text-5xl: clamp(1.85rem, 0.65vw + 1.72rem, 2.2rem);
+
+    /* Typography Spacing */
+    --text-spacing-xs: -0.016em;
+    --text-spacing-sm: -0.008em;
+    --text-spacing-md: 0.008em;
+    --text-spacing-lg: 0.018em;
+    --text-spacing-xl: 0.03em;
+  
+    /* Typography Weights */
+    --text-bold: 500;
+    --text-medium: 400;
+    --text-normal: 350;
+    --text-light: 200;
+
+    /* Line Heights */
+    --line-height-xs: 1;
+    --line-height-sm: 1.25;
+    --line-height-md: 1.5;
+    --line-height-lg: 1.75;
+    --line-height-xl: 2;
+
+    /* Border Properties */
+    --border-radius-xs: 0.15rem;
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.50rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1.00rem;   
+    --border-width-sm: 1px;
+    --border-width-md: 1.5px;
+    --border-width-lg: 2px;
+
+    /* Layout & Spacing */
+    --gap-xs: var(--size-xs);
+    --gap-sm: var(--size-base);
+    --gap-md: var(--size-2xl);
+    --gap-lg: var(--size-6xl);
+    --gap-xl: var(--size-8xl);
+
+    /* Container Widths */
+    --site-margin: 3vw;
+    --wrap-flush: calc(100% - var(--site-margin) * 2);
+    --wrap: calc(min(100%, 1400px) - var(--site-margin) * 2);
+    --wrap-sm: calc(min(100%, 1000px) - var(--site-margin) * 2);
+    --wrap-xs: calc(min(100%, 800px) - var(--site-margin) * 2);
+
+    /* Component Sizing */
+    --nav-height: 3rem;
+    --nav-tray-width: 12rem;
+    --page-padding: var(--size-4xl);
+
+    /* Transitions */
+    --theme-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --hover-transition: 0.2s ease;
+    --focus-transition: 0.15s ease;
+  }
+}
+
+
+@layer reset {
+  /* CSS Reset - Extracted from your base.css */
+  html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
+  address, em, img, small, b, u, i, dl, dt, dd, ol, ul, li,
+  article, aside, figure, figcaption, footer, header, menu, nav {
+    margin: 0; 
+    padding: 0;  
+    border: 0; 
+    vertical-align: baseline; 
+  }
+
+  *, *:before, *:after {box-sizing: border-box;}
+  html {color: var(--text-shade-black);}
+  ol, ul {list-style: none;}
+  address {font-style: normal;}
+  img {display: block; width: 100%;}
+
+  a { 
+    text-decoration: none; 
+    cursor: pointer; 
+    color: var(--text-shade-black);
+  }
+
+  /* Typography Helpers */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p, li, figcaption {
+    max-width: 70ch; 
+    text-wrap: pretty;
+  }
+
+  /* Font Face Declarations */
+  @font-face {
+    font-family: 'GeistVF';
+    src: url('/fonts/GeistVF.ttf') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto Mono';
+    src: url('../fonts/RobotoMono-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'ICONS SOCIAL';
+    src: url('../fonts/SocialIcons.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MATERIAL ICONS';
+    src: url('../fonts/MaterialIconsRound-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Prevent Flash of Unstyled Content During Theme Changes */
+  .theme-loading,
+  .theme-loading * {
+    transition: none !important;
+  }
+}
+
+
+/*
+===============================================
+ELEMENTS (Base)
+===============================================
+
+Body
+Typography Elements
+Heading Styles
+Link Styles
+Inline Links
+Captions
+Text Decorations
+*/
+
+@layer base {
+  /* Base Element Styles */
+  
+  body {
+    font-family: var(--text-sans); 
+    background-color: var(--bg-shade-white);
+    line-height: var(--line-height-md); 
+    color: var(--text-shade-black);
+    transition: 
+    background-color var(--theme-transition),
+    color var(--theme-transition);
+  }
+
+  /* Typography Elements */
+  .headline-xl {
+    font-size: var(--text-5xl); 
+    letter-spacing: var(--text-spacing-xs);         
+  }
+
+  .headline-lg {
+    font-size: var(--text-4xl); 
+    letter-spacing: var(--text-spacing-xs);         
+  }
+
+  .text-3xl, .headline {
+    font-size: var(--text-3xl);
+    letter-spacing: var(--text-spacing-xs);  
+  }
+
+  .text-2xl, .heading-xl {
+    font-size: var(--text-2xl);
+  }
+
+  .text-xl, .heading-lg {
+    font-size: var(--text-xl);
+  }
+
+  .text-lg, .heading {
+    font-size: var(--text-lg);
+  }
+
+  .text, .link, .heading-sm, .caption {
+    font-size: var(--text-base);
+  }
+
+  .text-sm, .link-sm, .heading-xs, .caption-sm {
+    font-size: var(--text-sm);
+  }
+
+  .text-xs, .heading-2xs, .link-xs {
+    font-size: var(--text-xs);
+    font-weight: var(--text-normal);
+    letter-spacing: var(--text-spacing-lg);
+  }
+
+  .text-2xs, .link-2xs {
+    font-size: var(--text-2xs);
+    font-weight: var(--text-normal);
+    letter-spacing: var(--text-spacing-xl);
+  }
+
+  /* Heading Styles */
+  .heading-2xs,  
+  .heading-xs,  
+  .heading-sm, 
+  .heading, 
+  .heading-lg, 
+  .heading-xl, 
+  .heading-2xl,
+  .headline,
+  .headline-lg { 
+    font-weight: var(--text-bold);
+  }
+
+  /* Link Styles */
+  .link-sm, 
+  .link, 
+  .link-lg {
+    font-weight: var(--text-medium);
+    color: var(--text-shade-light-grey);
+    transition: opacity var(--hover-transition);
+    cursor: pointer;
+  } 
+
+  .link-sm:hover, 
+  .link:hover, 
+  .link-lg:hover {
+    opacity: 0.4;
+  }
+
+  .link-inline {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;    
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .link-inline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .link-inline:hover::after,
+  .link-inline:focus::after {
+    opacity: 1;
+  }
+
+  /* Caption Styles */
+  .caption-sm, .caption {
+    text-transform: uppercase;
+    font-weight: var(--text-bold);
+    letter-spacing: var(--text-spacing-lg);
+    line-height: var(--line-height-md);    
+  }
+
+  .caption-sm {
+    font-size: var(--text-2xs);
+  
+  }
+
+  /* Text Decorations */
+  .highlight {background-color: var(--color-primary-3);}
+  .underline {text-decoration: underline;}
+  .line-through {text-decoration: line-through;}
+
+}
+
