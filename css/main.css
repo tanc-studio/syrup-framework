@@ -9,16 +9,13 @@
 @import '05-components.css';
 @import '06-utilities.css'; 
 @import '07-themes.css';
-@import '08-site.css'; 
+@import '08-site.css';
 /* @import 'components/cards.css'; */
 /* @import 'components/modals.css'; */
 /* @import 'components/alerts.css'; */
 /* @import 'components/breadcrumbs.css'; */
 /* @import 'components/pagination.css'; */
 /* @import 'components/tooltips.css'; */
-
-
-@import 'style-guide.css';
 
 /*
  * Layer Structure:
