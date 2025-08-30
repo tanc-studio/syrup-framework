@@ -1,18 +1,7 @@
-/*
-===============================================
-THEMES
-===============================================
-
-Dark Theme Overrides
-Theme Transition Elements
-Theme Exclusions
-High Contrast Theme
-Reduced Motion Theme
-*/
-
 @layer themes {
+  /* Lightmode */
   :root,
-  [data-theme='exclude-light'],
+  [data-theme='only-light'],
   [data-theme='dark'] [data-theme='invert'] {
     /* Text Colors */
     --text-shade-white: var(--shade-1);
@@ -103,7 +92,7 @@ Reduced Motion Theme
   
   /* Dark Theme Overrides */
   [data-theme='dark'],
-  [data-theme='exclude-dark'],
+  [data-theme='only-dark'],
   [data-theme='light'] [data-theme='invert'] {
     
     /* Text Colors */
@@ -192,6 +181,8 @@ Reduced Motion Theme
     --btn-form-text-hover: var(--shade-9);  
     --btn-form-border-hover: var(--shade-9);  
   }
+
+
 
   /* Theme Transition Elements */
   body,

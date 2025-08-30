@@ -76,6 +76,130 @@
     <!-- Styles Body -->
     <div class="styles-body">
 
+      <section class="styles-group" id="styles-forms">
+        <heading class="styles-group_header"> 
+          <h2 class="styles-heading heading">Forms</h2> 
+        </heading>
+        <section class="styles-group_content">
+
+          <section class="style-item">
+            <h3 class="style-item_heading">Search Form &#40Horizontal&#41</h3> 
+            <form data-theme="invert" class="form">
+              <h2 class="form_title heading-sm">Search</h2> 
+              <div class="form_items_horzontal"> 
+                <div class="form_item form_item--stretch">
+                  <label class="form_label form_label--title visually-hidden" for="search_query">Search Query</label>
+                  <input class="form_input" type="search" id="search_query" name="search_query" required>
+                </div>
+                <div class="form_item form_item--btn">
+                  <button class="form_btn btn btn--form" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
+          </section>
+          
+          <section class="style-item">
+            <h3 class="style-item_heading">Search Formdddd</h3>
+            <form data-theme="only-light" class="form">
+              <h2 class="form_title heading-sm">Search</h2>
+                <div class="form_item">
+                  <label class="form_label visually-hidden" for="search_query">Search Query</label>
+                  <input class="form_input" type="search" id="search_query" name="search_query" required>
+                </div>                   
+                <div class="form_item form_item--btn">
+                  <button class="form_btn btn btn--form" type="submit">Search</button>
+                </div>
+            </form>  
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">Subscription Form</h3> 
+            <form class="form">
+              <h2 class="form_title heading-sm">Subscribe to Our Newsletter</h2>
+              <div class="form_item">
+                <label class="form_label" for="sub_name">Name:</label>
+                <input class="form_input" type="text" id="sub_name" name="sub_name" required>
+              </div>
+              <div class="form_item">
+                <label class="form_label" for="sub_email">Email:</label>
+                <input class="form_input" type="email" id="sub_email" name="sub_email" required>
+              </div>  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Subscribe</button>
+              </div>
+            </form>            
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">Form with toggle's (Exclude Theme)</h3>
+            <form class="form">
+              <h2 class="form_title heading-sm">Form Title</h2>                  
+              <div class="form_item">
+                <label class="form_label" for="name">Name:</label>
+                <input class="form_input" type="text" id="name" name="name" required>
+              </div>  
+              <div class="form_item">
+                <label class="form_label">Gender:</label>
+                <div class="form_radio-group">
+                  <input class="form_radio" type="radio" id="male" name="gender" value="male">
+                  <label class="form_radio-label" for="male">Male</label>
+                  <input class="form_radio" type="radio" id="female" name="gender" value="female">
+                  <label class="form_radio-label" for="female">Female</label>                    
+                  <input class="form_radio" type="radio" id="other" name="gender" value="other">
+                  <label class="form_radio-label" for="other">Other</label>
+                </div>
+              </div>  
+              <div class="form_item form_item--horizontal">                   
+                <div class="form_toggle">
+                  <input class="form_toggle-input" type="checkbox" id="newsletter1" name="newsletter1" value="subscribe">
+                  <label class="form_toggle-label" for="newsletter1"></label>
+                </div>
+                <label class="form_label" for="newsletter">Subscribe to newsletter</label>
+              </div>  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Submit</button>
+              </div>  
+            </form>
+          </section>
+
+          <section class="style-item">
+            <h3 class="style-item_heading">Form with dropdown</h3>
+            <form class="form">
+              <h2 class="form_title heading-sm">Form Title</h2>
+              
+              <div class="form_item">
+                  <label class="form_label" for="name">Name:</label>
+                  <input class="form_input" type="text" id="name" name="name" required>
+              </div>  
+              <div class="form_item">
+                <label class="form_label" for="address">Address:</label>
+                <input class="form_input" type="text" id="address" name="address" required>
+              </div>                  
+              <div class="form_item">
+                <label for="options" class="form_label">Options:</label>
+                <select id="options" name="options" class="form_select">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </select>
+              </div>                   
+              <div class="form_item form_item--horizontal">                
+                <div class="form_toggle">                        
+                    <input class="form_toggle-input" type="checkbox" id="newsletter2" name="newsletter2" value="subscribe">
+                    <label class="form_toggle-label" for="newsletter2"></label>
+                </div>
+                <label class="form_label">Subscribe to newsletter</label>
+              </div>                  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Submit</button>
+              </div>  
+            </form>
+          </section> 
+
+        </section>
+      </section>  
+
+
       <!-- Typefaces -->
       <section class="styles-group" id="styles-typefaces">
 
@@ -941,129 +1065,6 @@
       </section>
 
       <!-- Forms -->
-      <section class="styles-group" id="styles-forms">
-        <heading class="styles-group_header"> 
-          <h2 class="styles-heading heading">Forms</h2> 
-        </heading>
-        <section class="styles-group_content">
-
-          <section class="style-item">
-            <h3 class="style-item_heading">Search Form &#40Horizontal&#41</h3> 
-            <form data-theme="exclude-dark" class="form">
-              <h2 class="form_title heading-sm">Search</h2> 
-              <div class="form_items_horzontal"> 
-                <div class="form_item form_item--stretch">
-                  <label class="form_label form_label--title visually-hidden" for="search_query">Search Query</label>
-                  <input class="form_input" type="search" id="search_query" name="search_query" required>
-                </div>
-                <div class="form_item form_item--btn">
-                  <button class="form_btn btn btn--form" type="submit">Search</button>
-                </div>
-              </div>
-
-            </form>
-          </section>
-          
-          <section class="style-item">
-            <h3 class="style-item_heading">Search Form</h3>
-            <form data-theme="invert" class="form">
-              <h2 class="form_title heading-sm">Search</h2>
-                <div class="form_item">
-                  <label class="form_label visually-hidden" for="search_query">Search Query</label>
-                  <input class="form_input" type="search" id="search_query" name="search_query" required>
-                </div>                   
-                <div class="form_item form_item--btn">
-                  <button class="form_btn btn btn--form" type="submit">Search</button>
-                </div>
-            </form>  
-          </section>
-
-          <section class="style-item">
-            <h3 class="style-item_heading">Subscription Form</h3> 
-            <form class="form">
-              <h2 class="form_title heading-sm">Subscribe to Our Newsletter</h2>
-              <div class="form_item">
-                <label class="form_label" for="sub_name">Name:</label>
-                <input class="form_input" type="text" id="sub_name" name="sub_name" required>
-              </div>
-              <div class="form_item">
-                <label class="form_label" for="sub_email">Email:</label>
-                <input class="form_input" type="email" id="sub_email" name="sub_email" required>
-              </div>  
-              <div class="form_item form_item--btn">
-                <button class="form_btn btn btn--form" type="submit">Subscribe</button>
-              </div>
-            </form>            
-          </section>
-
-          <section class="style-item">
-            <h3 class="style-item_heading">Form with toggle's</h3>
-            <form class="form exclude-theme">
-              <h2 class="form_title heading-sm">Form Title</h2>                  
-              <div class="form_item">
-                <label class="form_label" for="name">Name:</label>
-                <input class="form_input" type="text" id="name" name="name" required>
-              </div>  
-              <div class="form_item">
-                <label class="form_label">Gender:</label>
-                <div class="form_radio-group">
-                  <input class="form_radio" type="radio" id="male" name="gender" value="male">
-                  <label class="form_radio-label" for="male">Male</label>
-                  <input class="form_radio" type="radio" id="female" name="gender" value="female">
-                  <label class="form_radio-label" for="female">Female</label>                    
-                  <input class="form_radio" type="radio" id="other" name="gender" value="other">
-                  <label class="form_radio-label" for="other">Other</label>
-                </div>
-              </div>  
-              <div class="form_item form_item--horizontal">                   
-                <div class="form_toggle">
-                  <input class="form_toggle-input" type="checkbox" id="newsletter1" name="newsletter1" value="subscribe">
-                  <label class="form_toggle-label" for="newsletter1"></label>
-                </div>
-                <label class="form_label" for="newsletter">Subscribe to newsletter</label>
-              </div>  
-              <div class="form_item form_item--btn">
-                <button class="form_btn btn btn--form" type="submit">Submit</button>
-              </div>  
-            </form>
-          </section>
-
-          <section class="style-item">
-            <h3 class="style-item_heading">Form with dropdown</h3>
-            <form class="form">
-              <h2 class="form_title heading-sm">Form Title</h2>
-              
-              <div class="form_item">
-                  <label class="form_label" for="name">Name:</label>
-                  <input class="form_input" type="text" id="name" name="name" required>
-              </div>  
-              <div class="form_item">
-                <label class="form_label" for="address">Address:</label>
-                <input class="form_input" type="text" id="address" name="address" required>
-              </div>                  
-              <div class="form_item">
-                <label for="options" class="form_label">Options:</label>
-                <select id="options" name="options" class="form_select">
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                </select>
-              </div>                   
-              <div class="form_item form_item--horizontal">                
-                <div class="form_toggle">                        
-                    <input class="form_toggle-input" type="checkbox" id="newsletter2" name="newsletter2" value="subscribe">
-                    <label class="form_toggle-label" for="newsletter2"></label>
-                </div>
-                <label class="form_label">Subscribe to newsletter</label>
-              </div>                  
-              <div class="form_item form_item--btn">
-                <button class="form_btn btn btn--form" type="submit">Submit</button>
-              </div>  
-            </form>
-          </section> 
-
-        </section>
-      </section>  
 
       <!-- Tabs -->
       <section class="styles-group" id="styles-forms">

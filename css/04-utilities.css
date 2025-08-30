@@ -1,37 +1,3 @@
-
-/*
-===============================================
-UTILITIES
-
-Positioning
-Visibility & Display
-Overflow
-Border
-Border Radius
-Background
-Gradient
-Shadow
-Text Color
-Font Family
-Font Weight
-Text Alignment
-Margin
-Padding
-Width & Height
-Z-Index
-Opacity
-Transform
-Grid (Legacy)
-Transition
-Focus
-Hover
-Cursor
-User Select
-Responsive
-
-===============================================
-*/
-
 @layer utilities {
   /* Positioning Utilities */
   .position-relative {position: relative;}

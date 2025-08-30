@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  
     // Theme handling
     function initializeTheme() {
         const toggle = document.getElementById("darkmodeToggle");
