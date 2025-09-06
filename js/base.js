@@ -141,7 +141,7 @@ class TabsManager {
         const tabContainers = document.querySelectorAll('.tabs');
         
         tabContainers.forEach(container => {
-            const buttons = container.querySelectorAll('.tabs_button');
+            const buttons = container.querySelectorAll('.tab');
             const panels = container.querySelectorAll('.tabs_panel');
             
             // Set up click handlers
@@ -157,23 +157,23 @@ class TabsManager {
             });
             
             // Initialize first tab as active if none are active
-            if (!container.querySelector('.tabs_button--active')) {
+            if (!container.querySelector('.tab--active')) {
                 this.switchTab(container, 0);
             }
         });
     }
 
     switchTab(container, activeIndex) {
-        const buttons = container.querySelectorAll('.tabs_button');
+        const buttons = container.querySelectorAll('.tab');
         const panels = container.querySelectorAll('.tabs_panel');
         
         // Remove active classes
-        buttons.forEach(button => button.classList.remove('tabs_button--active'));
+        buttons.forEach(button => button.classList.remove('tab--active'));
         panels.forEach(panel => panel.classList.remove('tabs_panel--active'));
         
         // Add active classes
         if (buttons[activeIndex]) {
-            buttons[activeIndex].classList.add('tabs_button--active');
+            buttons[activeIndex].classList.add('tab--active');
         }
         if (panels[activeIndex]) {
             panels[activeIndex].classList.add('tabs_panel--active');

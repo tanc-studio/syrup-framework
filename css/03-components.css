@@ -1,39 +1,36 @@
 /* Icons ---------------------------------------- */
-[class^="icon"] {
+.icon {
     fill: currentColor;
     font-size: 1.5rem;
 }
 
-.icon-social {
+.icon--xs {font-size: 1rem;}
+.icon--sm {font-size: 1.25rem;}
+.icon--lg {font-size: 1.5rem;}
+
+.icon--social {
     font-family: 'ICONS SOCIAL';
     line-height: 1em;
 }
 
-.icon-site {
+.icon--site {
     font-family: 'MATERIAL ICONS';
     line-height: 1em;
 }
 
-.icon--xs {
-    font-size: 1.25rem;
-}
-
-.icon--sm {
-    font-size: 1.25rem;
-}
-
-.icon--lg {
-    font-size: 1.5rem;
+.icon-svg {
+    width: 1em;
+    height: 1em;
 }
 
 .icon-svg--sm {
-width: 1em;
-height: 1em;
+    width: 1em;
+    height: 1em;
 }
 
 .icon-svg--lg {
-width: 2em;
-height: 2em;
+    width: 2em;
+    height: 2em;
 }
 
 .icon--darkmode {
@@ -57,23 +54,46 @@ button {
 }
 
 .btn {  
-    font-size: var(--text-base);
-    font-weight: var(--text-medium);
-    letter-spacing: var(--text-spacing-xs);
-    white-space: nowrap;
-    height: 3.5rem;
-    padding: 0 2rem;
-    border-radius: 50vw;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: .5em;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 50vw;
+    font-size: var(--text);
+    font-weight: var(--text-medium);
+    letter-spacing: var(--text-spacing-xs);
+    white-space: nowrap;
     cursor: pointer;
     transition: background-color .2s ease, color .2s ease, transform .15s ease;
 }
 
+.btn--triangle {
+    width: 1.2rem;
+    /* height: 1.3rem; */
+    padding: 0;
+    gap: 0;
+    border-radius: 0;
+    overflow: hidden;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.btn--darkmode {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1000;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: none;
+    gap: 0;
+}
+
 .btn:focus-visible {
-    outline: 2px solid var(--focus-color, #0066cc);
+    outline: 2px solid var(--focus-color);
     outline-offset: 2px;
 }
 
@@ -115,7 +135,7 @@ button {
 }
 
 .btn--icon-sm {
-    font-size: var(--text-base);
+    font-size: var(--text);
     padding: 0;
     width: 2.5rem;
     height: 2.5rem;
@@ -128,21 +148,14 @@ button {
     height: 2rem;
 }
 
-.btn--round {
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    padding: 0;
-}
-
-.btn--round-sm {
+.btn-round--sm {
     border-radius: 50%;
     width: 2.75rem;
     height: 2.75rem;
     padding: 0;
 }
 
-.btn--round-xs {
+.btn-round--xs {
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
@@ -197,23 +210,7 @@ button {
     background-color: var(--btn-form-hover);
 }
 
-.btn-darkmode {
-    width: 1.3rem;
-    height: 1.3rem;
-    padding: 0;
-    overflow: hidden;
-    z-index: 1000;
-    cursor: pointer;
-}
 
-.btn-triangle {
-    width: 1.4rem;
-    height: 1.3rem;
-    padding: 0;
-    overflow: hidden;
-    z-index: 1000;
-    cursor: pointer;
-}
 
 
 /* Toggle  -------------------------------------- */
@@ -229,12 +226,12 @@ button {
     max-width: 40rem;
     padding: var(--size-4xl);
     background-color: var(--bg-color-primary);
-    color: var(--text-shade-black);
     font-family: var(--text-sans);
     font-size: var(--text-xs);
+    color: var(--text-shade-black);
 }
 
-.form_items_horzontal {
+.form_items--horzontal {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -243,7 +240,7 @@ button {
     align-items: baseline;   
 }
 
-.form_items_horzontal .form_item {
+.form_items--horzontal .form_item {
     margin-top: 0;
 }
 
@@ -299,7 +296,7 @@ button {
     display: block;
     font-size: var(--text-sm);
     width: 100%;
-    padding: var(--size-base);
+    padding: var(--size);
     margin-top: var(--size-xs);
     border: 1px solid var(--input);
     appearance: none;
@@ -322,7 +319,7 @@ button {
     content: '\f107'; 
     position: absolute;
     top: 0;
-    right: var(--size-base);
+    right: var(--size);
     font-family: 'FontAwesome';
     height: 100%;
     display: flex;
@@ -395,11 +392,11 @@ button {
     margin-bottom: var(--size-lg);
 }
 
-.tabs_button {
+.tab {
     font-size: var(--text-sm);
     font-weight: var(--text-medium);
     letter-spacing: var(--text-spacing-xs);
-    padding: var(--size-base) var(--size-lg);
+    padding: var(--size) var(--size-lg);
     border: none;
     background: none;
     color: var(--text-shade-dark-grey);
@@ -409,16 +406,16 @@ button {
     white-space: nowrap;
 }
 
-.tabs_button:hover {
+.tab:hover {
     color: var(--text-shade-black);
 }
 
-.tabs_button:focus-visible {
+.tab:focus-visible {
     outline: 2px solid var(--focus-color, #0066cc);
     outline-offset: 2px;
 }
 
-.tabs_button--active {
+.tab--active {
     color: var(--text-shade-black);
     border-bottom-color: var(--text-shade-black);
 }
@@ -454,19 +451,19 @@ button {
     margin-bottom: var(--size-lg);
 }
 
-.tabs--pills .tabs_button {
+.tabs--pills .tab {
     border-radius: var(--border-radius-md);
     border-bottom: none;
     background-color: var(--shade-1);
     color: var(--text-shade-dark-grey);
 }
 
-.tabs--pills .tabs_button:hover {
+.tabs--pills .tab:hover {
     background-color: var(--shade-2);
     color: var(--text-shade-black);
 }
 
-.tabs--pills .tabs_button--active {
+.tabs--pills .tab--active {
     background-color: var(--text-shade-black);
     color: var(--text-shade-white);
     border-bottom: none;
@@ -486,13 +483,13 @@ button {
     min-width: 12rem;
 }
 
-.tabs--vertical .tabs_button {
+.tabs--vertical .tab {
     text-align: left;
     border-bottom: none;
     border-right: 2px solid transparent;
 }
 
-.tabs--vertical .tabs_button--active {
+.tabs--vertical .tab--active {
     border-bottom: none;
     border-right-color: var(--text-shade-black);
 }

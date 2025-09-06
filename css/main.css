@@ -12,10 +12,10 @@
 
 /*
  * Layer Structure:
- * 1. base     - CSS reset, Element defaults, typography
- * 2. layout   - Grid systems, containers, positioning
+ * 1. base - CSS reset, Element defaults, typography
+ * 2. layout - Grid systems, containers, positioning
  * 3. components - Buttons, forms, navigation, etc.
  * 4. utilities - Display, spacing, color helpers
  * 5. themes - Dark mode, theme variations
- * 6. Custom - Space for framework consumers
+ * 6. Custom - Project custom CSS
  */

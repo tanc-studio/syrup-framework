@@ -273,7 +273,7 @@ Swatches
 .styles_spacer-2xs { width: var(--size-2xs);}
 .styles_spacer-xs { width: var(--size-xs);}
 .styles_spacer-sm { width: var(--size-sm);}
-.styles_spacer-md { width: var(--size-base);}
+.styles_spacer-md { width: var(--size);}
 .styles_spacer-lg { width: var(--size-lg);}
 .styles_spacer-xl { width: var(--size-xl);}
 .styles_spacer-2xl { width: var(--size-2xl);}
