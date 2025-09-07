@@ -69,7 +69,7 @@
   .text-error {color: var(--error-3);}
   .text-muted {color: var(--text-shade-dark-grey);}
 
-    /* Font Family Utilities */
+  /* Font Family Utilities */
   .text-sans {font-family: var(--text-sans);}
   .text-serif {font-family: var(--text-serif);}
   .text-mono {font-family: var(--text-mono);}

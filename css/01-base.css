@@ -130,7 +130,7 @@
     --page-padding: var(--size-4xl);
 
     /* Transitions */
-    --theme-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --theme-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --hover-transition: 0.2s ease;
     --focus-transition: 0.15s ease;
   }
@@ -204,13 +204,9 @@
     transition: none !important;
   }
 
-/*
-===============================================
-ELEMENTS (Base)
-===============================================
-*/
 
-
+/* Base - Elements 
+--------------------------------------------- */
   body {
     font-family: var(--text-sans); 
     background-color: var(--bg-shade-white);

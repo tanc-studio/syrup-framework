@@ -187,7 +187,7 @@
   /* Theme Transition Elements */
   body,
   .header,
-  .nav,
+  .sg-nav,
   .btn,
   .form,
   .form_input,
@@ -196,7 +196,7 @@
   [class*="bg-"],
   [class*="text-"],
   [class*="border-"],
-  [class*="style-swatch"] {
+  [class*=".sg-swatch"] {
     transition: 
       background-color var(--theme-transition),
       color var(--theme-transition),
@@ -232,7 +232,7 @@
     *:before,
     *:after {
       animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
+      animation-iteration-count:  0.01ms !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }

@@ -233,8 +233,8 @@ class StylesNavManager {
 
     initializeStylesNav() {
         const toggleButton = document.querySelector('.btn-triangle.btn--style');
-        const stylesNav = document.querySelector('.styles-nav_links');
-        const navLinks = document.querySelectorAll('.styles-nav_link');
+        const stylesNav = document.querySelector('.sg-nav_links');
+        const navLinks = document.querySelectorAll('.sg-nav_link');
         
         if (!toggleButton || !stylesNav || !navLinks.length) return;
 
@@ -390,5 +390,5 @@ class StylesNavManager {
     }
 }
 
-// Initialize styles nav manager
+// Initialize sg nav manager
 const stylesNavManager = new StylesNavManager();

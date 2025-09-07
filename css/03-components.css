@@ -1,4 +1,5 @@
-/* Icons ---------------------------------------- */
+/* Icons 
+--------------------------------------------- */
 .icon {
     fill: currentColor;
     font-size: 1.5rem;
@@ -39,7 +40,8 @@
 
 
 
-/* Buttons -------------------------------------- */
+/* Buttons 
+--------------------------------------------- */
 button {
     appearance: none;
     background: none;
@@ -66,7 +68,22 @@ button {
     letter-spacing: var(--text-spacing-xs);
     white-space: nowrap;
     cursor: pointer;
-    transition: background-color .2s ease, color .2s ease, transform .15s ease;
+}
+
+.btn--sm {
+    font-size: var(--text-sm);
+    height: 2.75rem;
+    padding: 0 1.5rem;
+    gap: .75em;
+}
+
+.btn--xs {
+    font-size: var(--text-2xs);
+    letter-spacing: var(--text-spacing-xl);
+    height: 2rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    gap: .75em;
 }
 
 .btn--triangle {
@@ -111,22 +128,6 @@ button {
     transform: none !important;
 }
 
-.btn--sm {
-    font-size: var(--text-sm);
-    height: 2.75rem;
-    padding: 0 1.5rem;
-    gap: .75em;
-}
-
-.btn--xs {
-    font-size: var(--text-2xs);
-    letter-spacing: var(--text-spacing-xl);
-    height: 2rem;
-    padding: 0 1rem;
-    text-transform: uppercase;
-    gap: .75em;
-}
-
 .btn--icon {
     font-size: var(--text-lg);
     padding: 0;
@@ -146,20 +147,6 @@ button {
     padding: 0;
     width: 2rem;
     height: 2rem;
-}
-
-.btn-round--sm {
-    border-radius: 50%;
-    width: 2.75rem;
-    height: 2.75rem;
-    padding: 0;
-}
-
-.btn-round--xs {
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    padding: 0;
 }
 
 .btn--primary {
@@ -211,15 +198,15 @@ button {
 }
 
 
-
-
-/* Toggle  -------------------------------------- */
+/* Toggle 
+--------------------------------------------- */
 .toggle {
     cursor: pointer;
 }
 
 
-/* Form  ---------------------------------------- */
+/* Form 
+--------------------------------------------- */
 .form {
     position: relative;
     width: 100%;
@@ -380,7 +367,8 @@ button {
 }
 
 
-/* Tabs ---------------------------------------- */
+/* Tabs 
+--------------------------------------------- */
 .tabs {
     width: 100%;
     max-width: 40rem;
