@@ -13,6 +13,7 @@
     display: flex;
     gap: var(--size-2xl);
     margin-bottom: 6rem;
+    /* background: RED; */
     /* padding-top: calc(var(--nav-height) + var(--size-lg)); */
 
 }
@@ -60,7 +61,7 @@
     min-width: calc(var(--nav-tray-width) + 2rem);
 }
 
-.sg-nav_links {
+.sg-styles-nav_links {
     position: sticky; 
     top: 0;
     padding-top: 9.5rem;
@@ -70,18 +71,15 @@
     gap: var(--gap-xs);
 }
 
-.sg-nav_link:first-of-type {
+.sg-styles-nav_link:first-of-type {
     border-top: solid 1px var(--border-dark);
     padding-top: 1.1rem;
 }
 
-.sg-nav_link:hover {
+.sg-styles-nav_link:hover {
     opacity: 1;
 }
 
-.sg-nav_link {
-    color: var(--dm-black);
-}
 
 
 /* Styles 
@@ -128,7 +126,6 @@
     font-size: var(--text-2xs);
     font-weight: var(--text-medium);
 }
-
 
 /* Style item */
 .sg-item {
@@ -289,40 +286,117 @@
         justify-content: end;
     }
 
-    .sg-nav_mobile-trigger {
+    .sg-styles-nav_burger {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: relative;
+        margin-left: 1rem;
+    }
+    
+
+    /* Style Guide links Nav  
+    --------------------------------------------- */
+
+    /* Hamburger menu */
+    .sg-styles-nav_burger_line,
+    .sg-styles-nav_burger_line::before,
+    .sg-styles-nav_burger_line::after {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: var(--bg-shade-black);
+        transition: transform 0.5s, background-color 0.3s;
+    }
+    
+    .sg-styles-nav_burger_line::before,
+    .sg-styles-nav_burger_line::after {
+        content: '';
+        right: 0;
+    }
+    
+    .sg-styles-nav_burger_line::before {
+        transform: translateY(-6px);
+    }
+    
+    .sg-styles-nav_burger_line::after {
+        transform: translateY(6px);
+    }
+    
+    /* Hamburger animation when active */
+    .sg-styles-nav_burger.active .sg-styles-nav_burger_line {
+        background-color: transparent;
+    }
+    
+    .sg-styles-nav_burger.active .sg-styles-nav_burger_line::before {
+        transform: translateY(0) rotate(45deg);
+    }
+    
+    .sg-styles-nav_burger.active .sg-styles-nav_burger_line::after {
+        transform: translateY(0) rotate(-45deg);
     }
 
-    .sg-nav_links {
+
+
+  /* Styles Links Nav */
+    .sg-styles-nav {
+        position: fixed;
+        top: var(--nav-height);
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - var(--nav-height));
+        background-color: var(--bg-shade-white);
+        overflow-y: auto;
+        z-index: 99;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sg-styles-nav.open {
+        right: 0;
+    }
+    
+    .sg-styles-nav_links {
+        padding: 6rem 1.75rem;
+    }
+    
+    /* Overlay backdrop when mobile nav is open */
+    .nav-backdrop {
+        display: none;
         position: fixed;
         top: var(--nav-height);
         left: 0;
-        right: 0;
-        max-height: 0;
-        padding-top: 0rem;
-        padding-left: 1rem;
-        background-color: var(--bg-shade-white);
-        overflow: hidden;
-        z-index: 99;
-    }
-
-    .sg-nav_links.open {
-        min-height: 100%;
-        padding-left: 1.5rem;
-        padding-top: 5rem;
-    }
-
-    .sg-nav_link {
-        padding: var(--size-xs) 0;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 98;
         opacity: 0;
-        transform: translateY(-20px);
+        transition: opacity 0.3s ease;
+    }
+    
+    .nav-backdrop.active {
+        display: block;
+        opacity: 1;
     }
 
-    .sg-nav_link:last-child {
+    .sg-styles-nav_link {
+        height: 2rem;
+        padding: 0;
+        transform: translateY(-20px);
+        display: flex;
+        align-items: center;
+    }
+
+    .sg-styles-nav_link:last-child {
         border-bottom: none;
     }
 
-    .sg-nav_link:first-of-type {
+    .sg-styles-nav_link:first-of-type {
         border-top: none;
         padding-top: 0;
     }

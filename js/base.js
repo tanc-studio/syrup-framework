@@ -233,8 +233,8 @@ class StylesNavManager {
 
     initializeStylesNav() {
         const toggleButton = document.querySelector('.btn-triangle.btn--style');
-        const stylesNav = document.querySelector('.sg-nav_links');
-        const navLinks = document.querySelectorAll('.sg-nav_link');
+        const stylesNav = document.querySelector('.sg-styles-nav_links');
+        const navLinks = document.querySelectorAll('.sg-styles-nav_link');
         
         if (!toggleButton || !stylesNav || !navLinks.length) return;
 
@@ -392,3 +392,106 @@ class StylesNavManager {
 
 // Initialize sg nav manager
 const stylesNavManager = new StylesNavManager();
+
+// Mobile Navigation Manager
+class MobileNavManager {
+    constructor() {
+        this.isOpen = false;
+        this.init();
+    }
+
+    init() {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.initializeMobileNav();
+        });
+    }
+
+    initializeMobileNav() {
+        const mobileToggle = document.getElementById('mobileTrigger');
+        const stylesNav = document.querySelector('.sg-styles-nav');
+        
+        // Create backdrop element if it doesn't exist
+        let backdrop = document.querySelector('.nav-backdrop');
+        if (!backdrop) {
+            backdrop = document.createElement('div');
+            backdrop.className = 'nav-backdrop';
+            document.body.appendChild(backdrop);
+        }
+        
+        if (!mobileToggle || !stylesNav) return;
+
+        mobileToggle.addEventListener('click', () => {
+            this.toggleMobileNav(mobileToggle, stylesNav);
+        });
+
+        // Close nav when clicking a link (for mobile)
+        const navLinks = document.querySelectorAll('.sg-styles-nav_link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900 && this.isOpen) {
+                    this.closeMobileNav(mobileToggle, stylesNav);
+                }
+            });
+        });
+
+        // Close nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 900 && this.isOpen && 
+                !mobileToggle.contains(e.target) && 
+                !stylesNav.contains(e.target)) {
+                this.closeMobileNav(mobileToggle, stylesNav);
+            }
+        });
+
+        // Close nav when pressing escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isOpen) {
+                this.closeMobileNav(mobileToggle, stylesNav);
+            }
+        });
+    }
+
+    toggleMobileNav(mobileToggle, stylesNav) {
+        if (this.isOpen) {
+            this.closeMobileNav(mobileToggle, stylesNav);
+        } else {
+            this.openMobileNav(mobileToggle, stylesNav);
+        }
+    }
+
+    openMobileNav(mobileToggle, stylesNav) {
+        this.isOpen = true;
+        mobileToggle.classList.add('active');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        stylesNav.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when nav is open
+        
+        // Show backdrop
+        const backdrop = document.querySelector('.nav-backdrop');
+        if (backdrop) {
+            backdrop.classList.add('active');
+            
+            // Add click event to backdrop to close nav
+            backdrop.addEventListener('click', () => {
+                this.closeMobileNav(mobileToggle, stylesNav);
+            }, { once: true });
+        }
+    }
+
+    closeMobileNav(mobileToggle, stylesNav) {
+        this.isOpen = false;
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        stylesNav.classList.remove('open');
+        document.body.style.overflow = ''; // Re-enable scrolling
+        
+        // Hide backdrop
+        const backdrop = document.querySelector('.nav-backdrop');
+        if (backdrop) {
+            backdrop.classList.remove('active');
+        }
+    }
+}
+
+// Initialize mobile nav manager
+const mobileNavManager = new MobileNavManager();
