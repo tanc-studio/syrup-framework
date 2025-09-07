@@ -71,6 +71,10 @@
     gap: var(--gap-xs);
 }
 
+.sg-styles-nav_link {
+    color: var(--bg-shade-black);
+}
+
 .sg-styles-nav_link:first-of-type {
     border-top: solid 1px var(--border-dark);
     padding-top: 1.1rem;
@@ -78,6 +82,7 @@
 
 .sg-styles-nav_link:hover {
     opacity: 1;
+    color: var(--bg-shade-dark-grey);
 }
 
 
@@ -353,7 +358,7 @@
         background-color: var(--bg-shade-white);
         overflow-y: auto;
         z-index: 99;
-        transition: right 0.3s ease-in-out;
+        transition: right 0.5s ease-out;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     }
 
