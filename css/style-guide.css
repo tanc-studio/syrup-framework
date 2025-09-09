@@ -271,6 +271,31 @@
 
 
 
+/* Desktop styles for navigation */
+@media only screen and (min-width: 901px) {
+    .sg-styles-nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        overflow-y: visible;
+        z-index: auto;
+        transition: none;
+        box-shadow: none;
+        right: auto;
+    }
+    
+    .sg-styles-nav_links {
+        position: sticky;
+        top: 0;
+        padding-top: 9.5rem;
+        min-width: var(--nav-tray-width);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xs);
+    }
+}
+
 @media only screen and (max-width: 900px) {
 
     .main--sg {

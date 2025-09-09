@@ -277,6 +277,10 @@
     letter-spacing: var(--text-spacing-xl);
   }
 
+  .test {
+    background-color: blue;
+  }
+
   /* Heading Styles */
   .heading-2xs,  
   .heading-xs,  

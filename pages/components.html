@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components - Syrup Design System</title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/style-guide.css">
+  <script src="/js/lenis.js"></script>
+  <script src="/js/base.js"></script>
+</head>
+
+<body class="body body--sg">
+
+  <div id="include-svgs" class="display-none"></div>
+
+  <header class="sg-header">
+
+    <div class="sg-nav wrap"> 
+      <!-- Logo -->
+      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>  
+
+      <div class="sg-nav_section">
+        <!-- Buttons -->             
+        <button class="btn btn--darkmode" id="darkmodeToggle" type="button">
+          <span class="theme-icon-light display-none">
+            <svg class="icon icon--darkmode"  viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg>
+          </span>
+          <span class="theme-icon-dark display-none">
+            <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg> 
+          </span>
+        </button>
+
+        <button class="btn sg-styles-nav_burger" id="mobileTrigger" type="button">
+          <span class="sg-styles-nav_burger_line"></span>
+        </button>
+          
+
+      </div>
+    </div>       
+  </header>
+
+  <main class="main main--sg wrap">
+
+    <!-- Styles Nav -->
+    <nav class="sg-styles-nav">
+      <div class="sg-styles-nav_links" id="stylesNav">
+        <a class="sg-styles-nav_link link-sm" href="#sg-buttons">Buttons</a>
+        <a class="sg-styles-nav_link link-sm" href="#sg-forms">Forms</a>
+        <a class="sg-styles-nav_link link-sm" href="#sg-tabs">Tabs</a>
+        <div class="sg-styles-nav_divider"></div>
+        <a class="sg-styles-nav_link link-sm" href="/pages/base.html">Base</a>
+        <a class="sg-styles-nav_link link-sm" href="/pages/utilities.html">Utilities</a>
+        <a class="sg-styles-nav_link link-sm" href="/pages/styleguide.html">Full Guide</a>
+      </div>
+    </nav>
+
+    <!-- Styles Body -->
+    <div class="sg-body">
+
+      <!-- Buttons -->
+      <section class="sg-group " id="sg-buttons">
+
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Buttons</h2> 
+        </heading>
+
+        <div class="sg-group_content sg-group_content--spaced">
+
+          <!-- Button Sizes -->
+          <div class="grid-lg">
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.btn</h3>
+              <button class="btn btn--primary">Click Me</button>
+            </section>
+        
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.btn--sm</h3>
+              <button class="btn btn--sm btn--primary">Click Me</button>
+            </section>
+        
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.btn--xs</h3>
+              <button class="btn btn--xs btn--primary">Click Me</button>
+            </section>
+
+          </div>
+
+          <!-- Button Colors -->
+          <div class="grid-lg">
+
+            <section class="sg-item">
+              
+              <h3 class="sg-item_heading"> .btn--primary</h3>
+
+              <button class="btn btn--primary">Click Me
+                <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor"/>
+                </svg>
+              </button> 
+
+            </section>
+
+            <section class="sg-item">
+
+              <h3 class="sg-item_heading"> .btn--secondary</h3>
+
+              <button class="btn btn--secondary">Click Me
+                <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor"/>
+                </svg>
+              </button> 
+
+            </section>
+
+            <section class="sg-item">
+
+              <h3 class="sg-item_heading"> .btn--tertiary</h3>
+
+              <button class="btn btn--tertiary">Click Me
+                <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor"/>
+                </svg>
+              </button> 
+
+            </section>
+
+          </div>
+
+          <!-- Button Icons -->
+          <div class="grid-lg">
+
+            <section class="sg-item">
+
+              <h3 class="sg-item_heading">.btn--icon</h3>
+
+              <button class="btn btn--icon btn--primary">
+                <span class="icon icon--site icon--lg">settings</span>
+              </button>
+
+            </section>
+        
+            <section class="sg-item">
+
+              <h3 class="sg-item_heading">.btn--icon-sm</h3>
+
+              <button class="btn btn--icon-sm btn--primary">
+                <span class="icon icon--site icon--sm">settings</span>
+              </button>
+
+            </section>
+        
+            <section class="sg-item">
+
+              <h3 class="sg-item_heading">.btn--icon-xs</h3>
+
+              <button class="btn btn--icon-xs btn--secondary">
+                <span class="icon icon--site icon--xs">settings</span>
+              </button>
+
+            </section>
+
+          </div>
+          
+        </div>   
+
+      </section>
+      <!-- Forms -->
+      <section class="sg-group" id="sg-forms">
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Forms</h2> 
+        </heading>
+        <section class="sg-group_content">
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Search Form &#40Horizontal&#41</h3> 
+            <form data-theme="only-dark" class="form">
+              <h2 class="form_title heading-sm">Search</h2> 
+              <div class="form_items form_items--horzontal"> 
+                <div class="form_item form_item--stretch">
+                  <label class="form_label form_label--title visually-hidden" for="search_query">Search Query</label>
+                  <input class="form_input" type="search" id="search_query" name="search_query" required>
+                </div>
+                <div class="form_item form_item--btn">
+                  <button class="form_btn btn btn--secondary" type="submit">Search</button>
+                </div>
+              </div>
+
+            </form>
+          </section>
+          
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Search Form</h3>
+            <form data-theme="invert" class="form">
+              <h2 class="form_title heading-sm">Search</h2>
+                <div class="form_item">
+                  <label class="form_label visually-hidden" for="search_query">Search Query</label>
+                  <input class="form_input" type="search" id="search_query" name="search_query" required>
+                </div>                   
+                <div class="form_item form_item--btn">
+                  <button class="form_btn btn btn--secondary" type="submit">Search</button>
+                </div>
+            </form>  
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Subscription Form</h3> 
+            <form class="form">
+              <h2 class="form_title heading-sm">Subscribe to Our Newsletter</h2>
+              <div class="form_item">
+                <label class="form_label" for="sub_name">Name:</label>
+                <input class="form_input" type="text" id="sub_name" name="sub_name" required>
+              </div>
+              <div class="form_item">
+                <label class="form_label" for="sub_email">Email:</label>
+                <input class="form_input" type="email" id="sub_email" name="sub_email" required>
+              </div>  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Subscribe</button>
+              </div>
+            </form>            
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Form with toggle's</h3>
+            <form class="form exclude-theme">
+              <h2 class="form_title heading-sm">Form Title</h2>                  
+              <div class="form_item">
+                <label class="form_label" for="name">Name:</label>
+                <input class="form_input" type="text" id="name" name="name" required>
+              </div>  
+              <div class="form_item">
+                <label class="form_label">Gender:</label>
+                <div class="form_radio-group">
+                  <input class="form_radio" type="radio" id="male" name="gender" value="male">
+                  <label class="form_radio-label" for="male">Male</label>
+                  <input class="form_radio" type="radio" id="female" name="gender" value="female">
+                  <label class="form_radio-label" for="female">Female</label>                    
+                  <input class="form_radio" type="radio" id="other" name="gender" value="other">
+                  <label class="form_radio-label" for="other">Other</label>
+                </div>
+              </div>  
+              <div class="form_item">
+                <label class="form_label">Interests:</label>
+                <div class="form_checkbox-group">
+                  <input class="form_checkbox" type="checkbox" id="sports" name="interests" value="sports">
+                  <label class="form_checkbox-label" for="sports">Sports</label>
+                  <input class="form_checkbox" type="checkbox" id="music" name="interests" value="music">
+                  <label class="form_checkbox-label" for="music">Music</label>
+                  <input class="form_checkbox" type="checkbox" id="travel" name="interests" value="travel">
+                  <label class="form_checkbox-label" for="travel">Travel</label>
+                </div>
+              </div>  
+              <div class="form_item form_item--btn">
+                <button class="form_btn btn btn--form" type="submit">Submit</button>
+              </div>
+            </form>            
+          </section>
+
+        </section>
+      </section>
+      <!-- Tabs -->
+      <section class="sg-group" id="sg-tabs">
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Tabs</h2> 
+        </heading>
+        <section class="sg-group_content">
+
+        <!-- Horizontal Tabs -->
+        <section class="sg-item">
+          <h3 class="sg-item_heading">Horizontal Tabs</h3>
+          <div class="tabs">
+            <nav class="tabs_nav" role="tablist">
+              <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="pills-panel-1" id="pills-tab-1">
+                Home
+              </button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="pills-panel-2" id="pills-tab-2">
+                About
+              </button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="pills-panel-3" id="pills-tab-3">
+                Contact
+              </button>
+            </nav>
+            <div class="tabs_content">
+              <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="pills-tab-1" id="pills-panel-1">
+                <h4 class="heading-sm">Welcome Home</h4>
+                <p class="text-sm">This is the home section with a warm welcome message and introduction to our services.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-2" id="pills-panel-2">
+                <h4 class="heading-sm">About Us</h4>
+                <p class="text-sm">Learn more about our company, mission, and the team behind our products.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-3" id="pills-panel-3">
+                <h4 class="heading-sm">Get in Touch</h4>
+                <p class="text-sm">Find all the ways you can reach out to us for support, questions, or collaboration.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vertical Tabs -->
+        <section class="sg-item">
+          <h3 class="sg-item_heading">Vertical Tabs</h3>
+          <div class="tabs tabs--vertical">
+            <nav class="tabs_nav" role="tablist">
+              <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="vertical-panel-1" id="vertical-tab-1">
+                Settings
+              </button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-2" id="vertical-tab-2">
+                Privacy
+              </button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-3" id="vertical-tab-3">
+                Security
+              </button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-4" id="vertical-tab-4">
+                Notifications
+              </button>
+            </nav>
+            <div class="tabs_content">
+              <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="vertical-tab-1" id="vertical-panel-1">
+                <h4 class="heading-sm">General Settings</h4>
+                <p class="text-sm">Configure your general application preferences and default behaviors.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-2" id="vertical-panel-2">
+                <h4 class="heading-sm">Privacy Controls</h4>
+                <p class="text-sm">Manage your privacy settings and control what information is shared.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-3" id="vertical-panel-3">
+                <h4 class="heading-sm">Security Options</h4>
+                <p class="text-sm">Set up two-factor authentication and other security measures to protect your account.</p>
+              </div>
+              <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-4" id="vertical-panel-4">
+                <h4 class="heading-sm">Notification Preferences</h4>
+                <p class="text-sm">Choose which notifications you want to receive and how you want to receive them.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        </section>
+      </section>  
+    </div>
+
+  </main>
+
+  <script defer>
+    includeHTML('include-header', '/includes/navlinks.html');
+    includeHTML('include-navlinks', '/includes/navlinks.html');
+    includeHTML('include-footer', '/includes/footer.html');
+    includeHTML('include-svgs', '/includes/svgs.html');
+    includeHTML('include-sidenav', '/includes/sidenav.html');
+  </script>
+  <script src="/js/base-footer.js" defer></script>
+  <script src="/js/footer.js" defer></script>
+
+</body>
+
+</html>

@@ -250,38 +250,45 @@ class StylesNavManager {
         // Handle nav link clicks
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                if (this.isOpen) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const href = link.getAttribute('href');
-                    this.closeStylesNav(stylesNav, toggleButton, navLinks, () => {
-                        // Wait a moment after menu closes, then scroll to section
-                        setTimeout(() => {
-                            const targetElement = document.querySelector(href);
-                            if (targetElement) {
-                                // Calculate offset (10rem = 160px assuming 16px base font)
-                                const offset = -160;
-                                
-                                // Use Lenis scroll if available, otherwise fallback to manual scroll
-                                if (window.lenis) {
-                                    window.lenis.scrollTo(targetElement, {
-                                        offset: offset,
-                                        duration: 1.2,
-                                        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t))
-                                    });
-                                } else {
-                                    // Manual scroll with offset
-                                    const elementPosition = targetElement.offsetTop;
-                                    const offsetPosition = elementPosition + offset;
+                const href = link.getAttribute('href');
+                
+                // Only handle anchor links (starting with #) for smooth scrolling
+                // External links should navigate normally
+                if (href.startsWith('#')) {
+                    // Only prevent default behavior if navigation is collapsible and open
+                    // On desktop (>900px), navigation should always be clickable
+                    if (this.isOpen && window.innerWidth <= 900) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.closeStylesNav(stylesNav, toggleButton, navLinks, () => {
+                            // Wait a moment after menu closes, then scroll to section
+                            setTimeout(() => {
+                                const targetElement = document.querySelector(href);
+                                if (targetElement) {
+                                    // Calculate offset (10rem = 160px assuming 16px base font)
+                                    const offset = -160;
                                     
-                                    window.scrollTo({
-                                        top: offsetPosition,
-                                        behavior: 'smooth'
-                                    });
+                                    // Use Lenis scroll if available, otherwise fallback to manual scroll
+                                    if (window.lenis) {
+                                        window.lenis.scrollTo(targetElement, {
+                                            offset: offset,
+                                            duration: 1.2,
+                                            easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t))
+                                        });
+                                    } else {
+                                        // Manual scroll with offset
+                                        const elementPosition = targetElement.offsetTop;
+                                        const offsetPosition = elementPosition + offset;
+                                        
+                                        window.scrollTo({
+                                            top: offsetPosition,
+                                            behavior: 'smooth'
+                                        });
+                                    }
                                 }
-                            }
-                        }, 300);
-                    });
+                            }, 300);
+                        });
+                    }
                 }
             });
         });
@@ -424,15 +431,7 @@ class MobileNavManager {
             this.toggleMobileNav(mobileToggle, stylesNav);
         });
 
-        // Close nav when clicking a link (for mobile)
-        const navLinks = document.querySelectorAll('.sg-styles-nav_link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 900 && this.isOpen) {
-                    this.closeMobileNav(mobileToggle, stylesNav);
-                }
-            });
-        });
+        // Note: Link click handling is managed by StylesNavManager
 
         // Close nav when clicking outside
         document.addEventListener('click', (e) => {
