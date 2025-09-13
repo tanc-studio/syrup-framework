@@ -1,4 +1,8 @@
 @layer utilities {
+  .highlight {background-color: var(--color-primary-3);}
+  .underline {text-decoration: underline;}
+  .line-through {text-decoration: line-through;}
+
   /* Positioning Utilities */
   .position-relative {position: relative;}
   .position-sticky {position: sticky; top: 0;}

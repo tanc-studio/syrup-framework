@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base - Syrup Design System</title>
+  <title>Test</title>
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
@@ -18,16 +18,20 @@
 
 <body class="body body--sg">
 
-  <div id="include-svgs" class="display-none"></div>
-
+  <!-- Header -->
   <header class="sg-header">
-
     <div class="sg-nav wrap"> 
       <!-- Logo -->
-      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>  
-
+      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>
+      <!-- Nav Right -->
       <div class="sg-nav_section">
-        <!-- Buttons -->             
+        <!-- Nav Sections -->  
+        <div class="sg-nav-sections" id="include-sg-nav-sections"></div>       
+        <!-- Burger -->
+        <button class="btn sg-groups-nav_burger" id="mobileTrigger" type="button">
+          <span class="sg-groups-nav_burger_line"></span>
+        </button>
+        <!-- Darkmode -->
         <button class="btn btn--darkmode" id="darkmodeToggle" type="button">
           <span class="theme-icon-light display-none">
             <svg class="icon icon--darkmode"  viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg>
@@ -37,38 +41,27 @@
           </span>
         </button>
 
-        <button class="btn sg-styles-nav_burger" id="mobileTrigger" type="button">
-          <span class="sg-styles-nav_burger_line"></span>
-        </button>
-          
-
       </div>
     </div>       
   </header>
-s
+
+  <!-- Main -->
   <main class="main main--sg wrap">
 
     <!-- Styles Nav -->
-    <nav class="sg-styles-nav">
-      <div class="sg-styles-nav_links" id="stylesNav">
-
-        <a class="sg-styles-nav_link link-sm" href="#sg-typefaces">Typefaces</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-type-scale">Type Scale</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-headings">Headings</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-other">Other</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-colors">Colors</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-alerts">Alerts</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-shades">Shades</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-gradients">Gradients</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-shadows">Shadows</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-sizing">Sizing</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-icons">Icons</a>
-
-        <div class="sg-styles-nav_divider test"></div>
-        <a class="sg-styles-nav_link link-sm" href="/pages/components.html">Components</a>
-        <a class="sg-styles-nav_link link-sm" href="/pages/utilities.html">Utilities</a>
-        <a class="sg-styles-nav_link link-sm" href="/pages/styleguide.html">Full Guide</a>
-        
+    <nav class="sg-groups-nav">
+      <div class="sg-groups-nav_links text-sm" id="stylesNav">
+        <a class="sg-groups-nav_link" href="#sg-typefaces">Typefaces</a>
+        <a class="sg-groups-nav_link" href="#sg-typescale">Typescale</a>
+        <a class="sg-groups-nav_link" href="#sg-headings">Headings</a>
+        <a class="sg-groups-nav_link" href="#sg-type-other">Type Other</a>
+        <a class="sg-groups-nav_link" href="#sg-colors">Colors</a>
+        <a class="sg-groups-nav_link" href="#sg-alerts">Alerts</a>
+        <a class="sg-groups-nav_link" href="#sg-shades">Shades</a>
+        <a class="sg-groups-nav_link" href="#sg-gradients">Gradients</a>
+        <a class="sg-groups-nav_link" href="#sg-shadows">Shadows</a>
+        <a class="sg-groups-nav_link" href="#sg-spacing">Spacing</a>
+        <a class="sg-groups-nav_link" href="#sg-utilities">Utilities</a>        
       </div>
     </nav>
 
@@ -77,64 +70,49 @@ s
 
       <!-- Typefaces -->
       <section class="sg-group" id="sg-typefaces">
-
         <heading class="sg-group_header"> 
           <h2 class="sg-heading heading">Typefaces</h2> 
         </heading>
-
         <section class="sg-group_content">
-
           <div class="grid-md">
 
             <section class="sg-item text-sans">
-
               <h3 class="sg-item_heading">Sans Serif</h3>
-
               <section class="sg-sub-item">
                 <h3 class="heading-sm">Work Sans</h3>
-                <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
               </section>
-
               <section class="sg-sub-item">
                 <p class="font-bold">Sans Serif Bold</p>                              
                 <p class="font-medium">Sans Serif Medium</p>                             
                 <p class="font-light">Sans Serif Light</p>                               
               </section>
-
             </section>
 
             <section class="sg-item text-serif">
-
               <h3 class="sg-item_heading">Serif</h3>
-
-                <div class="sg-sub-item">
-                  <h3 class="heading-sm">Frank Ruhl Libre</h3>
-                  <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
-                </div>
-
-                <div class="sg-sub-item">
+              <div class="sg-sub-item">
+                <h3 class="heading-sm">Frank Ruhl Libre</h3>
+                <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+              </div>
+              <div class="sg-sub-item">
                 <p class="font-bold">Serif Bold</p>                              
                 <p class="font-medium">Serif Medium</p>                             
                 <p class="font-light">Serif Light</p>                               
-                </div>
-
+              </div>
             </section>
 
             <section class="sg-item text-mono">
-
               <h3 class="sg-item_heading">Monospace</h3> 
-
               <div class="sg-sub-item">
                 <h3 class="heading-sm">Roboto Mono</h3>
-                <p class="text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                <p class="text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
               </div>   
-
               <div class="sg-sub-item">
                 <p class="font-bold">Monospace Bold</p>                              
                 <p class="font-medium">Monospace Medium</p>                             
                 <p class="font-light">Monospace Light</p>                               
               </div>
-
             </section>  
 
           </div>
@@ -151,47 +129,51 @@ s
 
         <section class="sg-group_content">
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text-3xl</h3>
-            <p class="text-3xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-            Labore repellat cum assumenda sit.</p>                                
-          </section>
+          <div class="grid-xl">
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text-2xl</h3>               
-            <p class="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-              Labore repellat cum assumenda sit.</p>                               
-          </section> 
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text-3xl</h3>
+              <p class="text-3xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, ullam minus assumenda nobis tempore nulla aut eveniet.
+              </p>                                
+            </section>
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text-xl</h3> 
-            <p class="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-              Labore repellat cum assumenda sit.</p>                              
-          </section> 
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text-2xl</h3>               
+              <p class="text-2xl">Lorem, ipsum dolor sit amet atione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+                Labore repellat cum assumenda sit.</p>                               
+            </section> 
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text-lg</h3>
-            <p class="text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-              Labore repellat cum assumenda sit.</p>                                
-          </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text-xl</h3> 
+              <p class="text-xl">Lorem, ipsum dolor sit amet quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+                Labore repellat cum assumenda sit.</p>                              
+            </section> 
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text</h3> 
-            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-              Labore repellat cum assumenda sit.</p>                                            
-          </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text-lg</h3>
+              <p class="text-lg">Lorem, ipsum dolor sit amet cing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+                Labore repellat cum assumenda sit.</p>                                
+            </section>
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text-sm</h3>
-            <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-              Labore repellat cum assumenda sit.</p>                                              
-          </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text</h3> 
+              <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+                Labore repellat cum assumenda sit.</p>                                            
+            </section>
 
-          <section class="sg-item">
-            <h3 class="sg-item_heading">.text-xs</h3> 
-            <p class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-              Labore repellat cum assumenda sit.</p>                               
-          </section>  
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text-sm</h3>
+              <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+                Labore repellat cum assumenda sit.</p>                                              
+            </section>
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">.text-xs</h3> 
+              <p class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
+                Labore repellat cum assumenda sit.</p>                               
+            </section> 
+          
+          </div>
 
         </section>
 
@@ -203,7 +185,7 @@ s
           <h2 class="sg-heading heading">Headings</h2> 
         </heading>
 
-        <section class="sg-group_content">
+        <section class="sg-group_content ">
 
           <div class="grid-lg">
 
@@ -256,7 +238,7 @@ s
       <section class="sg-group" id="sg-type-other">
        
         <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Other</h2> 
+          <h2 class="sg-heading heading">Text Other</h2> 
         </heading>
 
         <section class="sg-group_content">
@@ -264,43 +246,13 @@ s
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.link-sm</h3> 
-              <a class="link-sm">Link SM</a>                                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.link</h3> 
-              <a class="link">Link</a>                                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.link-lg</h3> 
-              <a class="link-lg">Link LG</a>                                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.line-through</h3> 
-              <p class="text-sm line-through">Line Through</p>                                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.underline</h3> 
-              <p class="text-sm underline">Underline</p>                                              
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.highlight</h3> 
-              <p class="text-sm"><span class="highlight">Highlight</span></p>                                             
-            </section>
-
-            <section class="sg-item">
               <h3 class="sg-item_heading">.caption</h3> 
-              <p class="link-sm">Caption </p>                                               
+              <a class="caption">Caption</a>                                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.caption-lg</h3>
-              <p class="link">Large caption</p>                                              
+              <h3 class="sg-item_heading">.eybrow</h3> 
+              <a class="eyebrow">eyebrow</a>                                             
             </section>
 
           </div>  
@@ -685,114 +637,198 @@ s
         </section>
 
       </section>
-      <!-- Icons -->
-      <section  class="sg-group" id="sg-icons">
+      <!-- Utilities -->
+      <section class="sg-group" id="sg-utilities">
+       
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Utilities</h2> 
+        </heading>
 
-        <header class="sg-group_header">
-          <h2 class="sg-heading heading">Icons<br></h2>
-        </header>
+        <section class="sg-group_content">
 
-        <div class="sg-group_content sg-group_content--spaced">
-
-          <div class="grid-xl">
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">icon--site</h3>
-              <span class="icon icon--site icon--lg">favorite</span>
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">icon--social</h3>
-              <span class="icon icon--social icon--lg"></span>
-            </section>
-          </div> 
-                
-          <div class="grid-lg">
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">icon--sm</h3>
-              <span class="icon icon--site icon--sm ">favorite</span>
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">icon</h3>
-              <span class="icon icon--site">favorite</span>
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">icon--lg</h3>
-              <span class="icon icon--site icon--lg">favorite</span>
-            </section>
-
-          </div>
-
-          <!-- Icons Site -->
           <div class="sg-sub-group">
 
             <header class="sg-sub-group_header">
-              <h3 class="sg-sub-heading "> site icons - 
-                <a class="link-inline" href="https://fonts.google.com/icons" target="_blank">Material icons                 
-                </a>
-              </h3>
-            </header>   
+              <h3 class="sg-sub-heading heading">Text</h3>
+            </header>
 
-            <div class="grid-xs">
-              <span class="icon icon--site">chevron_left</span>
-              <span class="icon icon--site">chevron_right</span>
-              <span class="icon icon--site">arrow_drop_down</span>
-              <span class="icon icon--site">keyboard_arrow_down</span>
-              <span class="icon icon--site">favorite</span>
-              <span class="icon icon--site">search</span>
-              <span class="icon icon--site">close</span>
-              <span class="icon icon--site">menu</span>
-              <span class="icon icon--site">done</span>
-              <span class="icon icon--site">sort</span>
-              <span class="icon icon--site">share</span>
-              <span class="icon icon--site">hive</span>
-              <span class="icon icon--site">woman</span>
-              <span class="icon icon--site">person</span>
-              <span class="icon icon--site">face</span>
-              <span class="icon icon--site">eco</span>
-              <span class="icon icon--site">pets</span>
-              <span class="icon icon--site">man</span>
-              <span class="icon icon--site">female</span>
-              <span class="icon icon--site">circle</span>
-              <span class="icon icon--site">rocket</span>          
-            </div>
+            <div class="grid-lg">
+
+              <section class="sg-item">
+                <h3 class="sg-item_heading">.line-through</h3> 
+                <p class="text-sm line-through">Line Through</p>                                             
+              </section>
+
+              <section class="sg-item">
+                <h3 class="sg-item_heading">.underline</h3> 
+                <p class="text-sm underline">Underline</p>                                              
+              </section>
+
+              <section class="sg-item">
+                <h3 class="sg-item_heading">.highlight</h3> 
+                <p class="text-sm"><span class="highlight">Highlight</span></p>                                             
+              </section>
+
+
+            </div>  
 
           </div>
 
-          <!-- Icons Social -->
-          <div class="sg-sub-group">
+        </section>
 
-            <div class="sg-sub-group_header">
-              <h3 class="sg-sub-heading"> social icons </h3>
-            </div>    
 
-            <div class="grid-xs">
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
+
+      </section>    
+      <!-- Layout -->
+      <section class="sg-group" id="sg-layout">
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Layout</h2> 
+        </heading>
+
+        <section class="sg-group_content">
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Flex Utilities</h3>
+            <div class="sg-demo-grid">
+              <div class="flex flex--center">
+                <div class="sg-demo-box">.flex--center</div>
+              </div>
+              <div class="flex flex--between">
+                <div class="sg-demo-box">.flex--between</div>
+                <div class="sg-demo-box">.flex--between</div>
+              </div>
+              <div class="flex flex--around">
+                <div class="sg-demo-box">.flex--around</div>
+                <div class="sg-demo-box">.flex--around</div>
+              </div>
             </div>
+          </section>
 
-          </div>
-        </div>
-
+        </section>
       </section>
-    </div>
+      <!-- Positioning -->
+      <section class="sg-group" id="sg-positioning">
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Positioning</h2> 
+        </heading>
+        <section class="sg-group_content">
 
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Position Classes</h3>
+            <div class="sg-code-block">
+              <code>.position-relative</code> - Sets position: relative<br>
+              <code>.position-absolute</code> - Sets position: absolute<br>
+              <code>.position-fixed</code> - Sets position: fixed<br>
+              <code>.position-sticky</code> - Sets position: sticky
+            </div>
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Z-Index Utilities</h3>
+            <div class="sg-code-block">
+              <code>.z-index-1</code> - Sets z-index: 1<br>
+              <code>.z-index-10</code> - Sets z-index: 10<br>
+              <code>.z-index-100</code> - Sets z-index: 100<br>
+              <code>.z-index-1000</code> - Sets z-index: 1000
+            </div>
+          </section>
+
+        </section>
+      </section>
+      <!-- Display -->
+      <section class="sg-group" id="sg-display">
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Display</h2> 
+        </heading>
+        <section class="sg-group_content">
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Display Utilities</h3>
+            <div class="sg-code-block">
+              <code>.display-block</code> - Sets display: block<br>
+              <code>.display-inline</code> - Sets display: inline<br>
+              <code>.display-inline-block</code> - Sets display: inline-block<br>
+              <code>.display-flex</code> - Sets display: flex<br>
+              <code>.display-grid</code> - Sets display: grid<br>
+              <code>.display-none</code> - Sets display: none
+            </div>
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Visibility Utilities</h3>
+            <div class="sg-code-block">
+              <code>.visible</code> - Sets visibility: visible<br>
+              <code>.invisible</code> - Sets visibility: hidden<br>
+              <code>.visually-hidden</code> - Hides element visually but keeps it accessible
+            </div>
+          </section>
+
+        </section>
+      </section>
+      <!-- Spacing -->
+      <section class="sg-group" id="sg-spacing">
+        <heading class="sg-group_header"> 
+          <h2 class="sg-heading heading">Spacing</h2> 
+        </heading>
+        <section class="sg-group_content">
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Margin Utilities</h3>
+            <div class="sg-code-block">
+              <code>.margin-0</code> - Sets margin: 0<br>
+              <code>.margin-xs</code> - Sets margin: var(--size-xs)<br>
+              <code>.margin-sm</code> - Sets margin: var(--size-sm)<br>
+              <code>.margin-md</code> - Sets margin: var(--size-md)<br>
+              <code>.margin-lg</code> - Sets margin: var(--size-lg)<br>
+              <code>.margin-xl</code> - Sets margin: var(--size-xl)
+            </div>
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Padding Utilities</h3>
+            <div class="sg-code-block">
+              <code>.padding-0</code> - Sets padding: 0<br>
+              <code>.padding-xs</code> - Sets padding: var(--size-xs)<br>
+              <code>.padding-sm</code> - Sets padding: var(--size-sm)<br>
+              <code>.padding-md</code> - Sets padding: var(--size-md)<br>
+              <code>.padding-lg</code> - Sets padding: var(--size-lg)<br>
+              <code>.padding-xl</code> - Sets padding: var(--size-xl)
+            </div>
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Directional Spacing</h3>
+            <div class="sg-code-block">
+              <code>.margin-top-sm</code> - Sets margin-top: var(--size-sm)<br>
+              <code>.margin-bottom-lg</code> - Sets margin-bottom: var(--size-lg)<br>
+              <code>.padding-left-md</code> - Sets padding-left: var(--size-md)<br>
+              <code>.padding-right-xs</code> - Sets padding-right: var(--size-xs)
+            </div>
+          </section>
+
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Auto Margins</h3>
+            <div class="sg-code-block">
+              <code>.margin-auto</code> - Sets margin: auto<br>
+              <code>.margin-x-auto</code> - Sets margin-left and margin-right to auto<br>
+              <code>.margin-y-auto</code> - Sets margin-top and margin-bottom to auto
+            </div>
+          </section>
+
+        </section>
+      </section>
+
+    </div>
+ 
   </main>
 
+  <!-- Footer -->
+  <footer class="sg-footer">
+  </footer>
+
+  <!-- Scripts -->
   <script defer>
+    includeHTML('include-sg-nav-sections', '/includes/sg-nav-sections.html');
     includeHTML('include-header', '/includes/navlinks.html');
     includeHTML('include-navlinks', '/includes/navlinks.html');
     includeHTML('include-footer', '/includes/footer.html');
@@ -801,7 +837,10 @@ s
   </script>
   <script src="/js/base-footer.js" defer></script>
   <script src="/js/footer.js" defer></script>
-
+  <div id="include-svgs" class="display-none"></div>
 </body>
 
 </html>
+
+
+

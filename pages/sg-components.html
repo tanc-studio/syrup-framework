@@ -18,16 +18,20 @@
 
 <body class="body body--sg">
 
-  <div id="include-svgs" class="display-none"></div>
-
+  <!-- Header -->
   <header class="sg-header">
-
     <div class="sg-nav wrap"> 
       <!-- Logo -->
-      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>  
-
+      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>
+      <!-- Nav Right -->
       <div class="sg-nav_section">
-        <!-- Buttons -->             
+        <!-- Nav Sections -->  
+        <div class="sg-nav-sections" id="include-sg-nav-sections"></div>   
+        <!-- Burger -->
+        <button class="btn sg-groups-nav_burger" id="mobileTrigger" type="button">
+          <span class="sg-groups-nav_burger_line"></span>
+        </button>    
+        <!-- Darkmode -->
         <button class="btn btn--darkmode" id="darkmodeToggle" type="button">
           <span class="theme-icon-light display-none">
             <svg class="icon icon--darkmode"  viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg>
@@ -37,33 +41,159 @@
           </span>
         </button>
 
-        <button class="btn sg-styles-nav_burger" id="mobileTrigger" type="button">
-          <span class="sg-styles-nav_burger_line"></span>
-        </button>
-          
-
       </div>
     </div>       
   </header>
 
+  <!-- Main -->
   <main class="main main--sg wrap">
 
     <!-- Styles Nav -->
-    <nav class="sg-styles-nav">
-      <div class="sg-styles-nav_links" id="stylesNav">
-        <a class="sg-styles-nav_link link-sm" href="#sg-buttons">Buttons</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-forms">Forms</a>
-        <a class="sg-styles-nav_link link-sm" href="#sg-tabs">Tabs</a>
-        <div class="sg-styles-nav_divider"></div>
-        <a class="sg-styles-nav_link link-sm" href="/pages/base.html">Base</a>
-        <a class="sg-styles-nav_link link-sm" href="/pages/utilities.html">Utilities</a>
-        <a class="sg-styles-nav_link link-sm" href="/pages/styleguide.html">Full Guide</a>
+    <nav class="sg-groups-nav">
+      <div class="sg-groups-nav_links" id="stylesNav">
+        <a class="sg-groups-nav_link" href="#sg-icons">Icons</a>
+        <a class="sg-groups-nav_link" href="#sg-buttons">Buttons</a>
+        <a class="sg-groups-nav_link" href="#sg-forms">Forms</a>
+        <a class="sg-groups-nav_link" href="#sg-tabs">Tabs</a>
       </div>
     </nav>
 
     <!-- Styles Body -->
     <div class="sg-body">
+      <!-- Icons -->
+      <section  class="sg-group" id="sg-icons">
 
+        <header class="sg-group_header">
+          <h2 class="sg-heading heading">Icons<br></h2>
+        </header>
+
+        <div class="sg-group_content">
+
+          <div class="grid-xl">
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">icon--site</h3>
+              <span class="icon icon--site icon--lg">favorite</span>
+            </section>
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">icon--social</h3>
+              <span class="icon icon--social icon--lg"></span>
+            </section>
+          </div> 
+                
+          <div class="grid-lg">
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">icon--sm</h3>
+              <span class="icon icon--site icon--sm ">favorite</span>
+            </section>
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">icon</h3>
+              <span class="icon icon--site">favorite</span>
+            </section>
+
+            <section class="sg-item">
+              <h3 class="sg-item_heading">icon--lg</h3>
+              <span class="icon icon--site icon--lg">favorite</span>
+            </section>
+
+          </div>
+
+          <!-- Icons Site -->
+          <div class="sg-sub-group">
+
+            <header class="sg-sub-group_header">
+              <h3 class="sg-sub-heading "> Site icons - 
+                <a class="link-inline" href="https://fonts.google.com/icons" target="_blank">Material icons                 
+                </a>
+              </h3>
+            </header>   
+
+            <div class="grid-xs">
+              <span class="icon icon--site">chevron_left</span>
+              <span class="icon icon--site">chevron_right</span>
+              <span class="icon icon--site">arrow_drop_down</span>
+              <span class="icon icon--site">keyboard_arrow_down</span>
+              <span class="icon icon--site">favorite</span>
+              <span class="icon icon--site">search</span>
+              <span class="icon icon--site">close</span>
+              <span class="icon icon--site">menu</span>
+              <span class="icon icon--site">done</span>
+              <span class="icon icon--site">sort</span>
+              <span class="icon icon--site">share</span>
+              <span class="icon icon--site">hive</span>
+              <span class="icon icon--site">woman</span>
+              <span class="icon icon--site">person</span>
+              <span class="icon icon--site">face</span>
+              <span class="icon icon--site">eco</span>
+              <span class="icon icon--site">pets</span>
+              <span class="icon icon--site">man</span>
+              <span class="icon icon--site">female</span>
+              <span class="icon icon--site">circle</span>
+              <span class="icon icon--site">rocket</span>          
+            </div>
+
+          </div>
+
+          <!-- Icons Social -->
+          <div class="sg-sub-group">
+
+            <div class="sg-sub-group_header">
+              <h3 class="sg-sub-heading"> Site icons - Icon Font </h3>
+            </div>    
+
+            <div class="grid-xs">
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
       <!-- Buttons -->
       <section class="sg-group " id="sg-buttons">
 
@@ -350,7 +480,13 @@
 
   </main>
 
+  <!-- Footer -->
+  <footer class="sg-footer">
+  </footer>
+
+  <!-- Scripts -->
   <script defer>
+    includeHTML('include-sg-nav-sections', '/includes/sg-nav-sections.html');
     includeHTML('include-header', '/includes/navlinks.html');
     includeHTML('include-navlinks', '/includes/navlinks.html');
     includeHTML('include-footer', '/includes/footer.html');
@@ -359,6 +495,7 @@
   </script>
   <script src="/js/base-footer.js" defer></script>
   <script src="/js/footer.js" defer></script>
+  <div id="include-svgs" class="display-none"></div>
 
 </body>
 

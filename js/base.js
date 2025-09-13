@@ -233,8 +233,8 @@ class StylesNavManager {
 
     initializeStylesNav() {
         const toggleButton = document.querySelector('.btn-triangle.btn--style');
-        const stylesNav = document.querySelector('.sg-styles-nav_links');
-        const navLinks = document.querySelectorAll('.sg-styles-nav_link');
+        const stylesNav = document.querySelector('.sg-groups-nav_links');
+        const navLinks = document.querySelectorAll('.sg-groups-nav_link');
         
         if (!toggleButton || !stylesNav || !navLinks.length) return;
 
@@ -415,7 +415,7 @@ class MobileNavManager {
 
     initializeMobileNav() {
         const mobileToggle = document.getElementById('mobileTrigger');
-        const stylesNav = document.querySelector('.sg-styles-nav');
+        const stylesNav = document.querySelector('.sg-groups-nav');
         
         // Create backdrop element if it doesn't exist
         let backdrop = document.querySelector('.nav-backdrop');
