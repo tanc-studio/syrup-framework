@@ -1,5 +1,17 @@
-/* Icons 
---------------------------------------------- */
+  .caption-sm, .caption {
+    text-transform: uppercase;
+    font-weight: var(--text-bold);
+    letter-spacing: var(--text-spacing-lg);
+    line-height: var(--line-height-md);    
+  }
+
+  .caption-sm {
+    font-size: var(--text-2xs);
+  }
+
+
+
+/* Icons ---------------------------------------------- */
 .icon {
     fill: currentColor;
     font-size: 1.5rem;
@@ -40,8 +52,7 @@
 
 
 
-/* Buttons 
---------------------------------------------- */
+/* Buttons --------------------------------------------- */
 button {
     appearance: none;
     background: none;
@@ -109,9 +120,20 @@ button {
     gap: 0;
 }
 
+/* Focus fallback for older browsers */
+.btn:focus {
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* Modern focus-visible support */
+.btn:focus:not(:focus-visible) {
+    outline: none;
+}
+
 .btn:focus-visible {
-    outline: 2px solid var(--focus-color);
-    outline-offset: 2px;
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
 }
 
 .btn:active:not(:disabled) {
@@ -194,15 +216,13 @@ button {
 }
 
 
-/* Toggle 
---------------------------------------------- */
+/* Toggle --------------------------------------------- */
 .toggle {
     cursor: pointer;
 }
 
 
-/* Form 
---------------------------------------------- */
+/* Form ----------------------------------------------- */
 .form {
     position: relative;
     width: 100%;
@@ -253,12 +273,15 @@ button {
     margin-bottom: 0;
 }
 
+/* Form Label  */
 .form_label {
     font-weight: var(--text-medium);
+    padding-bottom: var(--size-2xs);
     color: var(--text-shade-black);
     display: block;
 }
 
+/* Form Input  */
 .form_input {
     font-size: 1rem;
     width: 100%;
@@ -269,12 +292,19 @@ button {
     background-color: white;
     color:  black;
     border: 1px solid var(--input);
+    transition: border-color var(--focus-transition), box-shadow var(--focus-transition), outline var(--focus-transition);
 }
 
 .form_input:focus {
     outline: none;
+    border-color: var(--focus-ring-color);
+    box-shadow: 0 0 0 var(--focus-ring-offset) var(--focus-ring-color);
 }
 
+.form_input:focus-visible {
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+}
+/* Form Select  */
 .form_select {
     display: block;
     font-size: var(--text-sm);
@@ -285,11 +315,18 @@ button {
     appearance: none;
     background-color: var(--bg-shade-white);
     color: var(--text-shade-black);
+    transition: border-color var(--focus-transition), box-shadow var(--focus-transition), outline var(--focus-transition);
 }
 
 .form_select:focus {
-    border: 1px solid var(--focus); 
+    border-color: var(--focus-ring-color);
     outline: none;
+    box-shadow: 0 0 0 var(--focus-ring-color);
+}
+
+.form_select:focus-visible {
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
 }
 
 .form_select-wrapper {
@@ -310,6 +347,12 @@ button {
     pointer-events: none;
 }
 
+.form_checkbox-group {
+    margin-top: var(--size-xs);
+    display: flex;
+    gap: var(--gap-xs);
+}
+/* Form Radio */
 .form_radio-group {
     margin-top: var(--size-xs);
     display: flex;
@@ -338,7 +381,12 @@ button {
 .form_radio-label:hover {
     background-color: var(--bg-shade-light-grey);
 }
- 
+
+.form_radio:focus-visible + .form_radio-label {
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
+ /* Form Toggle */
 .form_toggle {
     display: flex;
     align-items: center;
@@ -362,9 +410,13 @@ button {
     background-color: var(--bg-success);
 }
 
+.form_toggle-input:focus-visible + .form_toggle-label {
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
 
-/* Tabs 
---------------------------------------------- */
+
+/* Tabs --------------------------------------------- */
 .tabs {
     width: 100%;
     max-width: 40rem;
@@ -394,9 +446,20 @@ button {
     color: var(--text-shade-black);
 }
 
+/* Focus fallback for older browsers */
+.tab:focus {
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* Modern focus-visible support */
+.tab:focus:not(:focus-visible) {
+    outline: none;
+}
+
 .tab:focus-visible {
-    outline: 2px solid var(--focus-color, #0066cc);
-    outline-offset: 2px;
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
 }
 
 .tab--active {

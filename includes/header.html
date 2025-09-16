@@ -9,7 +9,12 @@
             <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/> </svg> 
           </span>
       </button>        
-      <div id="navBurger" onclick="toggleSidenav()"><span></span><span></span></div>                 
+      <button id="navBurger" class="nav-dropdown" onclick="toggleSidenav()" type="button">
+        <span class="nav-dropdown_text">Go to</span>
+        <svg class="nav-dropdown_arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>                 
     </div>      
     <a class="nav_logo" href="/index.html">syrup</a>      
   </div>       

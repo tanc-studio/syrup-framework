@@ -22,17 +22,20 @@
   <header class="sg-header">
     <div class="sg-nav wrap"> 
       <!-- Logo -->
-      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>
+      <a class="sg-nav_logo" href="/index.html">syrup</a>
       <!-- Nav Right -->
       <div class="sg-nav_section">
         <!-- Nav Sections -->  
-        <div class="sg-nav-sections" id="include-sg-nav-sections"></div>       
-        <!-- Burger -->
-        <button class="btn sg-groups-nav_burger" id="mobileTrigger" type="button">
-          <span class="sg-groups-nav_burger_line"></span>
+        <div class="sg-nav-sections" id="include-sg-nav-links"></div>       
+        <!-- Dropdown Toggle -->
+        <button class="sg-groups-nav_dropdown btn" id="mobileTrigger" type="button">
+          <span class="sg-groups-nav_dropdown_text">Go to</span>
+          <svg class="sg-groups-nav_dropdown_arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
         <!-- Darkmode -->
-        <button class="btn btn--darkmode" id="darkmodeToggle" type="button">
+        <button class="sg-groups-nav_darkmode btn btn--darkmode" id="darkmodeToggle" type="button">
           <span class="theme-icon-light display-none">
             <svg class="icon icon--darkmode"  viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg>
           </span>
@@ -60,8 +63,6 @@
         <a class="sg-groups-nav_link" href="#sg-shades">Shades</a>
         <a class="sg-groups-nav_link" href="#sg-gradients">Gradients</a>
         <a class="sg-groups-nav_link" href="#sg-shadows">Shadows</a>
-        <a class="sg-groups-nav_link" href="#sg-spacing">Spacing</a>
-        <a class="sg-groups-nav_link" href="#sg-utilities">Utilities</a>        
       </div>
     </nav>
 
@@ -83,9 +84,9 @@
                 <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
               </section>
               <section class="sg-sub-item">
-                <p class="font-bold">Sans Serif Bold</p>                              
-                <p class="font-medium">Sans Serif Medium</p>                             
-                <p class="font-light">Sans Serif Light</p>                               
+                <p class="text-bold">Sans Serif Bold</p>                              
+                <p class="text-medium">Sans Serif Medium</p>                             
+                <p class="text-light">Sans Serif Light</p>                               
               </section>
             </section>
 
@@ -96,9 +97,9 @@
                 <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
               </div>
               <div class="sg-sub-item">
-                <p class="font-bold">Serif Bold</p>                              
-                <p class="font-medium">Serif Medium</p>                             
-                <p class="font-light">Serif Light</p>                               
+                <p class="text-bold">Serif Bold</p>                              
+                 <p class="text-medium">Serif Medium</p>                             
+                 <p class="text-light">Serif Light</p>                               
               </div>
             </section>
 
@@ -109,9 +110,9 @@
                 <p class="text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
               </div>   
               <div class="sg-sub-item">
-                <p class="font-bold">Monospace Bold</p>                              
-                <p class="font-medium">Monospace Medium</p>                             
-                <p class="font-light">Monospace Light</p>                               
+                <p class="text-bold">Monospace Bold</p>                              
+                 <p class="text-medium">Monospace Medium</p>                             
+                 <p class="text-light">Monospace Light</p>                               
               </div>
             </section>  
 
@@ -270,60 +271,48 @@
         <div class="sg-group_content">
 
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-primary </h3>  
-              <div class="sg-swatch sg-swatch-color-primary"></div>                            
+              <h3 class="sg-item_heading">.bg-primary</h3>  
+              <div class="sg-swatch bg-primary"></div>                            
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-primary-2 </h3> 
-              <div class="sg-swatch sg-swatch-color-primary-2"></div>                             
+              <h3 class="sg-item_heading"> .bg-primary-2 </h3> 
+              <div class="sg-swatch bg-primary-2"></div>                             
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-primary-3 </h3> 
-              <div class="sg-swatch sg-swatch-color-primary-3"></div>                             
+              <h3 class="sg-item_heading"> .bg-primary-3 </h3> 
+              <div class="sg-swatch bg-primary-3"></div>                             
             </section> 
-
           </div>
 
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-secondary </h3>  
-              <div class="sg-swatch sg-swatch-color-secondary"></div>                            
+              <h3 class="sg-item_heading">.bg-secondary</h3>  
+              <div class="sg-swatch bg-secondary"></div>                            
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-secondary-2 </h3> 
-              <div class="sg-swatch sg-swatch-color-secondary-2"></div>                             
+              <h3 class="sg-item_heading"> .bg-secondary-2 </h3> 
+              <div class="sg-swatch bg-secondary-2"></div>                             
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-secondary-3 </h3> 
-              <div class="sg-swatch sg-swatch-color-secondary-2"></div>                             
+              <h3 class="sg-item_heading"> .bg-primary-3 </h3> 
+              <div class="sg-swatch bg-secondary-3"></div>                             
             </section>
-
           </div>
 
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-tertiary </h3>  
-              <div class="sg-swatch sg-swatch-color-tertiary"></div>                            
+              <h3 class="sg-item_heading">.bg-tertiary</h3>  
+              <div class="sg-swatch bg-tertiary"></div>                            
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-tertiary-2 </h3> 
-              <div class="sg-swatch sg-swatch-color-tertiary-2"></div>                             
+              <h3 class="sg-item_heading">.bg-tertiary-2</h3> 
+              <div class="sg-swatch bg-tertiary-2"></div>                             
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-tertiary-3 </h3> 
-              <div class="sg-swatch sg-swatch-color-tertiary-3"></div>                             
+              <h3 class="sg-item_heading">.bg-tertiary-3</h3> 
+              <div class="sg-swatch bg-tertiary-3"></div>                             
             </section>
-
           </div>
 
         </div>
@@ -341,18 +330,18 @@
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-error </h3>  
-              <div class="sg-swatch sg-swatch-error-1"></div>                            
+              <h3 class="sg-item_heading">.bg-success-1</h3>  
+              <div class="sg-swatch bg-success-1"></div>                            
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --error-light </h3> 
-              <div class="sg-swatch sg-swatch-error-2"></div>                             
+              <h3 class="sg-item_heading"> .bg-success-2 </h3> 
+              <div class="sg-swatch bg-success-2"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --error-dark </h3> 
-              <div class="sg-swatch sg-swatch-error-3"></div>                             
+              <h3 class="sg-item_heading">.bg-success-3 </h3> 
+              <div class="sg-swatch bg-success-3"></div>                             
             </section>
 
           </div>
@@ -360,34 +349,35 @@
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-warning </h3>  
-              <div class="sg-swatch sg-swatch-warning-1"></div>                            
+              <h3 class="sg-item_heading">.bg-warning-1</h3>  
+              <div class="sg-swatch bg-warning-1"></div>                            
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --warning-light </h3> 
-              <div class="sg-swatch sg-swatch-warning-2"></div>                             
+              <h3 class="sg-item_heading"> .bg-warning-2 </h3> 
+              <div class="sg-swatch bg-warning-2"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --warning-dark </h3> 
-              <div class="sg-swatch sg-swatch-warning-3"></div>                             
+              <h3 class="sg-item_heading">.bg-warning-3 </h3> 
+              <div class="sg-swatch bg-warning-3"></div>                             
             </section>
 
           </div> 
 
           <div class="grid-lg">
+
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --color-success </h3>  
-              <div class="sg-swatch sg-swatch-success-1"></div>                            
+              <h3 class="sg-item_heading">.bg-error-1</h3>  
+              <div class="sg-swatch bg-error-1"></div>                            
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --success-light </h3> 
-              <div class="sg-swatch sg-swatch-success-2"></div>                             
+              <h3 class="sg-item_heading">.bg-error-2</h3>  
+              <div class="sg-swatch bg-error-2"></div>                             
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --success-dark </h3> 
-              <div class="sg-swatch sg-swatch-success-3"></div>                             
+              <h3 class="sg-item_heading">.bg-error-3</h3>  
+              <div class="sg-swatch bg-error-3"></div>                             
             </section>
           </div>
 
@@ -406,64 +396,40 @@
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --black </h3>  
-              <div class="sg-swatch sg-swatch-shade-black"></div>                            
+              <h3 class="sg-item_heading">.bg-black</h3>  
+              <div class="sg-swatch bg-black"></div>                            
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --white </h3> 
-              <div class="sg-swatch sg-swatch-shade-white border-light"></div>                             
+              <h3 class="sg-item_heading">.bg-off-black</h3>  
+              <div class="sg-swatch bg-off-black"></div>                            
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-1 </h3>  
-              <div class="sg-swatch sg-swatch-shade-1"></div>                            
+              <h3 class="sg-item_heading">.bg-dark-grey</h3> 
+              <div class="sg-swatch bg-dark-grey"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-2 </h3> 
-              <div class="sg-swatch sg-swatch-shade-2"></div>                             
+              <h3 class="sg-item_heading">.bg-grey</h3> 
+              <div class="sg-swatch bg-grey"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-3 </h3> 
-              <div class="sg-swatch sg-swatch-shade-3"></div>                             
+              <h3 class="sg-item_heading">.bg-dark-grey</h3> 
+              <div class="sg-swatch bg-dark-grey"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-4 </h3> 
-              <div class="sg-swatch sg-swatch-shade-4"></div>                             
+              <h3 class="sg-item_heading">.bg-off-white</h3> 
+              <div class="sg-swatch bg-off-white"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-5 </h3> 
-              <div class="sg-swatch sg-swatch-shade-5"></div>                             
+              <h3 class="sg-item_heading">.bg-white</h3> 
+              <div class="sg-swatch bg-white border-light"></div>                             
             </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-6 </h3>  
-              <div class="sg-swatch sg-swatch-shade-6"></div>                            
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-7 </h3> 
-              <div class="sg-swatch sg-swatch-shade-7"></div>                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-8 </h3> 
-              <div class="sg-swatch sg-swatch-shade-8"></div>                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-9 </h3> 
-              <div class="sg-swatch sg-swatch-shade-9 border-light"></div>                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> --shade-10 </h3> 
-              <div class="sg-swatch sg-swatch-shade-10"></div>                             
-            </section>            
+               
           </div> 
 
         </div> 
@@ -481,18 +447,18 @@
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --gradient-1 </h3>  
-              <div class=".sg-swatch gradient-1"></div>                            
+              <h3 class="sg-item_heading">.bg-gradient-1 </h3>  
+              <div class=".sg-swatch bg-gradient-1"></div>                            
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --gradient-2 </h3> 
-              <div class=".sg-swatch gradient-2"></div>                             
+              <h3 class="sg-item_heading">.bg-gradient-2</h3> 
+              <div class=".sg-swatch bg-gradient-2"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --gradient-3 </h3>  
-              <div class=".sg-swatch gradient-3"></div>                            
+              <h3 class="sg-item_heading">.bg-gradient-3</h3>  
+              <div class=".sg-swatch bg-gradient-3"></div>                            
             </section>
 
           </div>
@@ -512,314 +478,26 @@
           <div class="grid-lg">
 
             <section class="sg-item ">
-              <h3 class="sg-item_heading"> --shadow-1 </h3>  
-              <div class=".sg-swatch shadow-1"></div>                            
+              <h3 class="sg-item_heading">.bg-shadow-1 </h3>  
+              <div class=".sg-swatch bg-shadow-1"></div>                            
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shadow-2 </h3> 
-              <div class=".sg-swatch shadow-2"></div>                             
+              <h3 class="sg-item_heading">.bg-shadow-2 </h3> 
+              <div class=".sg-swatch bg-shadow-2"></div>                             
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading"> --shadow-3 </h3>  
-              <div class=".sg-swatch shadow-3"></div>                            
+              <h3 class="sg-item_heading">.bg-shadow-3 </h3>  
+              <div class=".sg-swatch bg-shadow-3"></div>                            
             </section>
 
           </div>   
 
         </section>  
 
-      </section>        
-      <!-- Sizing -->
-      <section class="sg-group" id="sg-spacing">
-
-        <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Sizing</h2> 
-        </heading>
-
-        <section class="sg-group_content">
-
-          <div class="grid-xl">
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-xs</h3>
-              <div class="sg-item_spacer sg-spacer-xs"></div>                                             
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-sm</h3>
-              <div class="sg-item_spacer sg-spacer-sm"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size</h3>
-              <div class="sg-item_spacer sg-spacer-md"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-lg</h3>
-              <div class="sg-item_spacer sg-spacer-lg"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-xl</h3>
-              <div class="sg-item_spacer sg-spacer-xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-2xl</h3>
-              <div class="sg-item_spacer sg-spacer-2xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-3xl</h3>
-              <div class="sg-item_spacer sg-spacer-3xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-4xl</h3>
-              <div class="sg-item_spacer sg-spacer-4xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-5xl</h3>
-              <div class="sg-item_spacer sg-spacer-5xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-6xl</h3>
-              <div class="sg-item_spacer sg-spacer-6xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-7xl</h3>
-              <div class="sg-item_spacer sg-spacer-7xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-8xl</h3>
-              <div class="sg-item_spacer sg-spacer-8xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-9xl</h3>
-              <div class="sg-item_spacer sg-spacer-9xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-10xl</h3>
-              <div class="sg-item_spacer sg-spacer-10xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-11xl</h3>
-              <div class="sg-item_spacer sg-spacer-11xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-12xl</h3>
-              <div class="sg-item_spacer sg-spacer-12xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-13xl</h3>
-              <div class="sg-item_spacer sg-spacer-13xl"></div>
-            </section>
-            
-            <section class="sg-item">
-              <h3 class="sg-item_heading">--size-14xl</h3>
-              <div class="sg-item_spacer sg-spacer-14xl"></div>
-            </section>
-            
-          </div>
-
-        </section>
-
-      </section>
-      <!-- Utilities -->
-      <section class="sg-group" id="sg-utilities">
-       
-        <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Utilities</h2> 
-        </heading>
-
-        <section class="sg-group_content">
-
-          <div class="sg-sub-group">
-
-            <header class="sg-sub-group_header">
-              <h3 class="sg-sub-heading heading">Text</h3>
-            </header>
-
-            <div class="grid-lg">
-
-              <section class="sg-item">
-                <h3 class="sg-item_heading">.line-through</h3> 
-                <p class="text-sm line-through">Line Through</p>                                             
-              </section>
-
-              <section class="sg-item">
-                <h3 class="sg-item_heading">.underline</h3> 
-                <p class="text-sm underline">Underline</p>                                              
-              </section>
-
-              <section class="sg-item">
-                <h3 class="sg-item_heading">.highlight</h3> 
-                <p class="text-sm"><span class="highlight">Highlight</span></p>                                             
-              </section>
-
-
-            </div>  
-
-          </div>
-
-        </section>
-
-
-
-      </section>    
-      <!-- Layout -->
-      <section class="sg-group" id="sg-layout">
-        <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Layout</h2> 
-        </heading>
-
-        <section class="sg-group_content">
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Flex Utilities</h3>
-            <div class="sg-demo-grid">
-              <div class="flex flex--center">
-                <div class="sg-demo-box">.flex--center</div>
-              </div>
-              <div class="flex flex--between">
-                <div class="sg-demo-box">.flex--between</div>
-                <div class="sg-demo-box">.flex--between</div>
-              </div>
-              <div class="flex flex--around">
-                <div class="sg-demo-box">.flex--around</div>
-                <div class="sg-demo-box">.flex--around</div>
-              </div>
-            </div>
-          </section>
-
-        </section>
-      </section>
-      <!-- Positioning -->
-      <section class="sg-group" id="sg-positioning">
-        <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Positioning</h2> 
-        </heading>
-        <section class="sg-group_content">
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Position Classes</h3>
-            <div class="sg-code-block">
-              <code>.position-relative</code> - Sets position: relative<br>
-              <code>.position-absolute</code> - Sets position: absolute<br>
-              <code>.position-fixed</code> - Sets position: fixed<br>
-              <code>.position-sticky</code> - Sets position: sticky
-            </div>
-          </section>
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Z-Index Utilities</h3>
-            <div class="sg-code-block">
-              <code>.z-index-1</code> - Sets z-index: 1<br>
-              <code>.z-index-10</code> - Sets z-index: 10<br>
-              <code>.z-index-100</code> - Sets z-index: 100<br>
-              <code>.z-index-1000</code> - Sets z-index: 1000
-            </div>
-          </section>
-
-        </section>
-      </section>
-      <!-- Display -->
-      <section class="sg-group" id="sg-display">
-        <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Display</h2> 
-        </heading>
-        <section class="sg-group_content">
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Display Utilities</h3>
-            <div class="sg-code-block">
-              <code>.display-block</code> - Sets display: block<br>
-              <code>.display-inline</code> - Sets display: inline<br>
-              <code>.display-inline-block</code> - Sets display: inline-block<br>
-              <code>.display-flex</code> - Sets display: flex<br>
-              <code>.display-grid</code> - Sets display: grid<br>
-              <code>.display-none</code> - Sets display: none
-            </div>
-          </section>
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Visibility Utilities</h3>
-            <div class="sg-code-block">
-              <code>.visible</code> - Sets visibility: visible<br>
-              <code>.invisible</code> - Sets visibility: hidden<br>
-              <code>.visually-hidden</code> - Hides element visually but keeps it accessible
-            </div>
-          </section>
-
-        </section>
-      </section>
-      <!-- Spacing -->
-      <section class="sg-group" id="sg-spacing">
-        <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Spacing</h2> 
-        </heading>
-        <section class="sg-group_content">
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Margin Utilities</h3>
-            <div class="sg-code-block">
-              <code>.margin-0</code> - Sets margin: 0<br>
-              <code>.margin-xs</code> - Sets margin: var(--size-xs)<br>
-              <code>.margin-sm</code> - Sets margin: var(--size-sm)<br>
-              <code>.margin-md</code> - Sets margin: var(--size-md)<br>
-              <code>.margin-lg</code> - Sets margin: var(--size-lg)<br>
-              <code>.margin-xl</code> - Sets margin: var(--size-xl)
-            </div>
-          </section>
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Padding Utilities</h3>
-            <div class="sg-code-block">
-              <code>.padding-0</code> - Sets padding: 0<br>
-              <code>.padding-xs</code> - Sets padding: var(--size-xs)<br>
-              <code>.padding-sm</code> - Sets padding: var(--size-sm)<br>
-              <code>.padding-md</code> - Sets padding: var(--size-md)<br>
-              <code>.padding-lg</code> - Sets padding: var(--size-lg)<br>
-              <code>.padding-xl</code> - Sets padding: var(--size-xl)
-            </div>
-          </section>
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Directional Spacing</h3>
-            <div class="sg-code-block">
-              <code>.margin-top-sm</code> - Sets margin-top: var(--size-sm)<br>
-              <code>.margin-bottom-lg</code> - Sets margin-bottom: var(--size-lg)<br>
-              <code>.padding-left-md</code> - Sets padding-left: var(--size-md)<br>
-              <code>.padding-right-xs</code> - Sets padding-right: var(--size-xs)
-            </div>
-          </section>
-
-          <section class="sg-item">
-            <h3 class="sg-item_heading">Auto Margins</h3>
-            <div class="sg-code-block">
-              <code>.margin-auto</code> - Sets margin: auto<br>
-              <code>.margin-x-auto</code> - Sets margin-left and margin-right to auto<br>
-              <code>.margin-y-auto</code> - Sets margin-top and margin-bottom to auto
-            </div>
-          </section>
-
-        </section>
-      </section>
-
+      </section>          
     </div>
- 
   </main>
 
   <!-- Footer -->
@@ -828,7 +506,7 @@
 
   <!-- Scripts -->
   <script defer>
-    includeHTML('include-sg-nav-sections', '/includes/sg-nav-sections.html');
+    includeHTML('include-sg-nav-links', '/includes/sg-nav-links.html');
     includeHTML('include-header', '/includes/navlinks.html');
     includeHTML('include-navlinks', '/includes/navlinks.html');
     includeHTML('include-footer', '/includes/footer.html');

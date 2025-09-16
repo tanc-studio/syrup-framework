@@ -22,21 +22,24 @@
   <header class="sg-header">
     <div class="sg-nav wrap"> 
       <!-- Logo -->
-      <a class="sg-nav_logo heading-lg" href="/index.html">Syrup</a>
+      <a class="sg-nav_logo u-heading-lg" href="/index.html">syrup</a>
       <!-- Nav Right -->
       <div class="sg-nav_section">
         <!-- Nav Sections -->  
-        <div class="sg-nav-sections" id="include-sg-nav-sections"></div>   
-        <!-- Burger -->
-        <button class="btn sg-groups-nav_burger" id="mobileTrigger" type="button">
-          <span class="sg-groups-nav_burger_line"></span>
+        <div class="sg-nav-sections" id="include-sg-nav-links"></div>   
+        <!-- Dropdown Toggle -->
+        <button class="sg-groups-nav_dropdown btn " id="mobileTrigger" type="button">
+          <span class="sg-groups-nav_dropdown_text">Go to</span>
+          <svg class="sg-groups-nav_dropdown_arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>    
         <!-- Darkmode -->
-        <button class="btn btn--darkmode" id="darkmodeToggle" type="button">
-          <span class="theme-icon-light display-none">
+        <button class="sg-groups-nav_darkmode btn btn--darkmode" id="darkmodeToggle" type="button">
+          <span class="theme-icon-light u-display-none">
             <svg class="icon icon--darkmode"  viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg>
           </span>
-          <span class="theme-icon-dark display-none">
+          <span class="theme-icon-dark u-display-none">
             <svg class="icon icon--darkmode" height="100%" width="100%" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/> </svg> 
           </span>
         </button>
@@ -198,7 +201,7 @@
       <section class="sg-group " id="sg-buttons">
 
         <heading class="sg-group_header"> 
-          <h2 class="sg-heading heading">Buttons</h2> 
+          <h2 class="sg-heading ">Buttons</h2> 
         </heading>
 
         <div class="sg-group_content sg-group_content--spaced">
@@ -311,24 +314,23 @@
 
           <section class="sg-item">
             <h3 class="sg-item_heading">Search Form &#40Horizontal&#41</h3> 
-            <form data-theme="only-dark" class="form">
+            <form class="form" data-theme="only-dark">
               <h2 class="form_title heading-sm">Search</h2> 
               <div class="form_items form_items--horzontal"> 
                 <div class="form_item form_item--stretch">
-                  <label class="form_label form_label--title visually-hidden" for="search_query">Search Query</label>
+                  <label class="form_label visually-hidden" for="search_query">Search Query</label>
                   <input class="form_input" type="search" id="search_query" name="search_query" required>
                 </div>
                 <div class="form_item form_item--btn">
                   <button class="form_btn btn btn--secondary" type="submit">Search</button>
                 </div>
               </div>
-
             </form>
           </section>
           
           <section class="sg-item">
             <h3 class="sg-item_heading">Search Form</h3>
-            <form data-theme="invert" class="form">
+            <form class="form" data-theme="invert">
               <h2 class="form_title heading-sm">Search</h2>
                 <div class="form_item">
                   <label class="form_label visually-hidden" for="search_query">Search Query</label>
@@ -420,16 +422,16 @@
             </nav>
             <div class="tabs_content">
               <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="pills-tab-1" id="pills-panel-1">
-                <h4 class="heading-sm">Welcome Home</h4>
-                <p class="text-sm">This is the home section with a warm welcome message and introduction to our services.</p>
+                <h4u-heading-heading-sm">Welcome Home</h4>
+                <pu-text-s="u-text-sm">This is the home section with a warm welcome message and introduction to our services.</p>
               </div>
               <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-2" id="pills-panel-2">
-                <h4 class="heading-sm">About Us</h4>
-                <p class="text-sm">Learn more about our company, mission, and the team behind our products.</p>
+                <u-heading-u-heading-sm">About Us</h4>
+                u-text-ass="u-text-sm">Learn more about our company, mission, and the team behind our products.</p>
               </div>
               <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-3" id="pills-panel-3">
-                <h4 class="heading-sm">Get in Touch</h4>
-                <p class="text-sm">Find all the ways you can reach out to us for support, questions, or collaboration.</p>
+               u-heading-="u-heading-sm">Get in Touch</h4>
+              u-text-class="u-text-sm">Find all the ways you can reach out to us for support, questions, or collaboration.</p>
               </div>
             </div>
           </div>
@@ -455,20 +457,20 @@
             </nav>
             <div class="tabs_content">
               <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="vertical-tab-1" id="vertical-panel-1">
-                <h4 class="heading-sm">General Settings</h4>
-                <p class="text-sm">Configure your general application preferences and default behaviors.</p>
+             u-heading-ss="u-heading-sm">General Settings</h4>
+            u-text-p class="u-text-sm">Configure your general application preferences and default behaviors.</p>
               </div>
               <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-2" id="vertical-panel-2">
-                <h4 class="heading-sm">Privacy Controls</h4>
-                <p class="text-sm">Manage your privacy settings and control what information is shared.</p>
+           u-heading-lass="u-heading-sm">Privacy Controls</h4>
+          u-text- <p class="u-text-sm">Manage your privacy settings and control what information is shared.</p>
               </div>
               <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-3" id="vertical-panel-3">
-                <h4 class="heading-sm">Security Options</h4>
-                <p class="text-sm">Set up two-factor authentication and other security measures to protect your account.</p>
+         u-heading- class="u-heading-sm">Security Options</h4>
+        u-text-   <p class="u-text-sm">Set up two-factor authentication and other security measures to protect your account.</p>
               </div>
               <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-4" id="vertical-panel-4">
-                <h4 class="heading-sm">Notification Preferences</h4>
-                <p class="text-sm">Choose which notifications you want to receive and how you want to receive them.</p>
+       u-heading-h4 class="u-heading-sm">Notification Preferences</h4>
+      u-text-     <p class="u-text-sm">Choose which notifications you want to receive and how you want to receive them.</p>
               </div>
             </div>
           </div>
@@ -486,7 +488,7 @@
 
   <!-- Scripts -->
   <script defer>
-    includeHTML('include-sg-nav-sections', '/includes/sg-nav-sections.html');
+    includeHTML('include-sg-nav-links', '/includes/sg-nav-links.html');
     includeHTML('include-header', '/includes/navlinks.html');
     includeHTML('include-navlinks', '/includes/navlinks.html');
     includeHTML('include-footer', '/includes/footer.html');
@@ -495,7 +497,7 @@
   </script>
   <script src="/js/base-footer.js" defer></script>
   <script src="/js/footer.js" defer></script>
-  <div id="include-svgs" class="display-none"></div>
+  <div id=u-nclude-svgs" class="u-display-none"></div>
 
 </body>
 

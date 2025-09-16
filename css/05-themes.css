@@ -10,9 +10,9 @@
     --text-shade-dark-grey: var(--shade-8);
     --text-shade-black: var(--shade-9);
     --text-disabled: var(--shade-1);
-    --text-error: var(--error-3);
-    --text-warning: var(--warning-2);
-    --text-success: var(--success-1);
+    --text-error: var(--color-error-3);
+    --text-warning: var(--color-warning-2);
+    --text-success: var(--color-success-1);
 
     /* Link Colors */
     --link-shade-primary: var(--black);
@@ -28,23 +28,34 @@
     --bg-shade-white: var(--white);
     --bg-shade-off-white: var(--shade-1);
     --bg-shade-light-grey: var(--shade-3);
+    --bg-shade-grey: var(--shade-5);
     --bg-shade-dark-grey: var(--shade-7);
-    --bg-shade-black: var(--shade-9);
+    --bg-shade-off-black: var(--black);
+    --bg-shade-black: var(--black);
+
     --bg-color-primary: var(--color-primary);
+    --bg-color-primary-2: var(--color-primary-2);
+    --bg-color-primary-3: var(--color-primary-3);
     --bg-color-secondary: var(--color-secondary);
+    --bg-color-secondary-2: var(--color-secondary-2);
+    --bg-color-secondary-3: var(--color-secondary-3);
     --bg-color-tertiary: var(--color-tertiary);
-    --bg-color-primary-hover: var(--color-primary-2);
-    --bg-color-secondary-hover: var(--color-secondary-2);
-    --bg-color-tertiary-hover: var(--color-tertiary-2);
-    --bg-success: var(--success-3);
-    --bg-warning: var(--warning-3);
-    --bg-error: var(--error-3);
+    --bg-color-tertiary-2: var(--color-tertiary-2);
+    --bg-color-tertiary-3: var(--color-tertiary-3);
+    
+    --bg-success: var(--color-success-3);
+    --bg-warning: var(--color-warning-3);
+    --bg-error: var(--color-error-3);
     --bg-disabled: var(--shade-1);
 
     /* Border Colors */
-    --border-dark: var(--black);
+    --border-dark: var(--shade-9);
     --border-light: var(--shade-2);
-    --border-focus: var(--black);
+    --border-focus: var(--focus-ring-color-alt);
+
+    /* Focus Ring Colors - Light Theme */
+    --focus-ring-color: var(--shade-5);
+    --focus-ring-color-alt: var(--shade-8);
 
     /* Form Colors */
     --input-bg: var(--white);
@@ -53,9 +64,9 @@
     --input-focus: var(--black);
 
     /* Shadows & Effects */
-    --shadow-1: 0 1px 12px 0 var(--shade-2);
-    --shadow-2: 0 1px 12px 0 var(--shade-4);
-    --shadow-3: 0 1px 12px 0 var(--shade-6);
+    --shadow-1: 0 1px 6px 0 var(--shade-2);
+    --shadow-2: 0 1px 6px 0 var(--shade-3);
+    --shadow-3: 0 1px 8px 0 var(--shade-5);
     --gradient-1: linear-gradient(90deg, var(--color-primary) 0%, var(--bg-shade-white) 100%);
     --gradient-2: linear-gradient(90deg, var(--color-secondary) 0%, var(--bg-shade-white) 100%);
     --gradient-3: linear-gradient(90deg, var(--color-tertiary) 0%, var(--bg-shade-white) 100%);
@@ -87,7 +98,8 @@
     --btn-form-border: var(--shade-9); 
     --btn-form-hover: var(--color-primary-2);
     --btn-form-text-hover: var(--shade-9);  
-    --btn-form-border-hover: var(--shade-9);  
+    --btn-form-border-hover: var(--shade-9);    
+
   }
   
   /* Dark Theme Overrides */
@@ -101,10 +113,10 @@
     --text-shade-light-grey: var(--shade-6);
     --text-shade-dark-grey: var(--shade-3);
     --text-shade-black: var(--shade-2);
+    --text-error: var(--color-error-1);
+    --text-warning: var(--color-warning-2);
+    --text-success: var(--color-success-3);
     --text-disabled: var(--shade-9);
-    --text-error: var(--error-1);
-    --text-warning: var(--warning-2);
-    --text-success: var(--success-3);
 
     /* Link Colors */
     --link-shade-primary: var(--shade-2);
@@ -118,26 +130,39 @@
     
     /* Background Colors */
     --bg-shade-white: var(--shade-9);
-    --bg-shade-off-white: var(--shade-8);
+    --bg-shade-off-white: var(--shade-9);
     --bg-shade-light-grey: var(--shade-5);
-    --bg-shade-dark-grey: var(--shade-2);
+    --bg-shade-grey: var(--shade-5);
+    --bg-shade-dark-grey: var(--shade-3);
+    --bg-shade-off-black: var(--shade-2);
     --bg-shade-black: var(--shade-1);
-    --bg-color-primary: var(--shade-8);
-    --bg-color-secondary: var(--color-secondary-3);
-    --bg-color-tertiary: var(--color-tertiary-3);
-    --bg-color-primary-hover: var(--color-primary-2);
-    --bg-color-secondary-hover: var(--color-secondary-2);
-    --bg-color-tertiary-hover: var(--color-secondary-2);
-    --bg-success: var(--success-1);
-    --bg-warning: var(--warning-1);
-    --bg-error: var(--error-1);
+
+    --bg-color-primary:  var(--shade-8);
+    --bg-color-primary-2:var(--shade-8);
+    --bg-color-primary-3: vvar(--shade-8);
+    --bg-color-secondary: var(--color-secondary);
+    --bg-color-secondary-2: var(--color-secondary-2);
+    --bg-color-secondary-3: var(--color-secondary-3);
+    --bg-color-tertiary: var(--color-tertiary);
+    --bg-color-tertiary-2: var(--color-tertiary-2);
+    --bg-color-tertiary-3: var(--color-tertiary-3);
+
+    --bg-success: var(--color-success-1);
+    --bg-warning: var(--color-warning-1);
+    --bg-error: var(--color-error-1);
     --bg-disabled: var(--shade-9);
 
     /* Border Colors */
     --border-dark: var(--shade-4);
     --border-light: var(--shade-6);
-    --border-focus: var(--white);
+    --border-focus: var(--focus-ring-color-inverse);
 
+    /* Focus Ring Colors - Dark Theme */
+    --focus-ring-color: var(--color-primary );
+    --focus-ring-color-alt: var(--shade-2);
+    --focus-ring-color-inverse: var(--shade-2);
+
+    
     /* Form Colors */
     --input-bg: var(--shade-8);
     --input-border: var(--shade-7);
@@ -174,7 +199,7 @@
     --btn-tertiary-text-hover: var(--shade-8); 
     --btn-tertiary-border-hover: var(--color-primary-2);
     
-    --btn-form: var(--shade-9); 
+    --btn-form: var(--shade-10); 
     --btn-form-text: var(--color-primary-2);
     --btn-form-border: var(--shade-9); 
     --btn-form-hover: var(--color-primary-2);
@@ -208,7 +233,7 @@
 
 
 
-  /* High Contrast Theme (Future Enhancement) */
+  /* High Contrast Theme */
   @media (prefers-contrast: high) {
     :root {
       --text-shade-black: var(--black);
@@ -217,6 +242,18 @@
       --shadow-1: 0 2px 8px 0 var(--black);
       --shadow-2: 0 4px 12px 0 var(--black);
       --shadow-3: 0 6px 16px 0 var(--black);
+      
+      /* High contrast focus states */
+      --focus-ring-color: var(--black);
+      --focus-ring-color-alt: var(--black);
+      --focus-ring-color-inverse: var(--white);
+      --focus-ring-width: 3px;
+    }
+    
+    [data-theme="dark"] {
+      --focus-ring-color: var(--white);
+      --focus-ring-color-alt: var(--white);
+      --focus-ring-color-inverse: var(--black);
     }
   }
 
