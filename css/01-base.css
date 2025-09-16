@@ -248,6 +248,9 @@
     background-color: var(--bg-shade-white);
     line-height: var(--line-height-md); 
     color: var(--text-shade-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
