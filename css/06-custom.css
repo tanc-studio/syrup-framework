@@ -1,46 +1,9 @@
 @layer user {
 
-  .sg-widget {
-    position: fixed;
-    bottom: 10vh;
-    right: 2rem;
-    width: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    z-index: 1920;
-    background-color: var(--bg-shade-white);
-    border: 1px solid var(--border-dark);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
 
-  .sg-widget_link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--bg-shade-black);
-    color: var(--text-shade-white);
-    text-decoration: none;
-    border-radius: 0.25rem;
-    font-weight: 400;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-  }
-
-  .sg-widget_link:hover {
-    background-color: var(--bg-shade-dark-grey);
-    transform: translateY(-1px);
-  }
-
+/* ------------------------------------------------- */
+/* Header & Nav */
   
-/* Header & Nav 
---------------------------------------------- */
   .header {
     position: fixed;
     top: 0;
@@ -74,8 +37,9 @@
   }
 
 
-/* Burger 
---------------------------------------------- */
+/* ------------------------------------------------- */
+/* Burger */
+
   .burger {
     position: relative;
     background-color: brown;
@@ -114,8 +78,9 @@
   }
 
 
-/* Nav Tray 
---------------------------------------------- */
+/* ------------------------------------------------- */
+/* Nav Tray */
+
   .nav-tray {
     position: fixed;
     top: var(--nav-height); 
@@ -155,72 +120,70 @@
   }
 
 
-/* main 
---------------------------------------------- */
+/* ------------------------------------------------- */
+/* main */
+
   .main {
     min-height: 100vh;
   }
 
 
-/* Footer
---------------------------------------------- */
-  .footer {
-    height: var(--nav-height);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--color-primary);
-    transition: background-color var(--theme-transition);
-  }
+/* ------------------------------------------------- */
+/* Footer */
 
-  .footer_inner {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    background-color: var(--shade-8);
-    transition: background-color var(--theme-transition);
-  }
+.footer {
+  height: var(--nav-height);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  transition: background-color var(--theme-transition);
+}
 
-  .footer_links {
-    height: 100%;
-    background-color: var(--shade-4);
-    width: 100%;
-    transition: background-color var(--theme-transition);
-  }
+.footer_inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background-color: var(--neutral-8);
+  transition: background-color var(--theme-transition);
+}
 
-  
-/* Responsive 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+.footer_links {
+  height: 100%;
+  background-color: var(--neutral-4);
+  width: 100%;
+  transition: background-color var(--theme-transition);
+}
 
 
-/* Responsive - 1100
---------------------------------------------- */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* max 1100 */
+
 @media only screen and (max-width: 1100px) {
 
   :root {
     --nav-tray-width: 12rem; 
   }
-
 }
 
 
-/* Responsive - 899
---------------------------------------------- */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* max 899 */
+
 @media only screen and (max-width: 899px) {
 
   .nav_section {
     width: auto;
     gap: 2rem;
   }
-
 }
 
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* max 600 */
 
-/* Responsive - 600
---------------------------------------------- */
   @media only screen and (max-width: 600px) {
     
   .nav-tray_links {
@@ -236,9 +199,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
   .nav-tray_inner {
     height: 100vh;
   }
-
 }
-
 
 }
 

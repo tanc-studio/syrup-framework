@@ -1,17 +1,8 @@
-  .caption-sm, .caption {
-    text-transform: uppercase;
-    font-weight: var(--text-bold);
-    letter-spacing: var(--text-spacing-lg);
-    line-height: var(--line-height-md);    
-  }
-
-  .caption-sm {
-    font-size: var(--text-2xs);
-  }
 
 
+/* ------------------------------------------------- */
+/* Icons */
 
-/* Icons ---------------------------------------------- */
 .icon {
     fill: currentColor;
     font-size: 1.5rem;
@@ -51,8 +42,9 @@
 }
 
 
+/* ------------------------------------------------- */
+/* Buttons */
 
-/* Buttons --------------------------------------------- */
 button {
     appearance: none;
     background: none;
@@ -70,11 +62,12 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: .5em;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 50vw;
-    font-size: var(--text);
+    gap: var(--gap-xs);
+    height: var(--size-4xl);
+    padding: 0 var(--size-xl);
+    font-family: var(--text-sans);
+    border-radius: var(--border-radius-round);
+    font-size: var(--text-base);
     font-weight: var(--text-medium);
     letter-spacing: var(--text-spacing-xs);
     white-space: nowrap;
@@ -216,13 +209,32 @@ button {
 }
 
 
-/* Toggle --------------------------------------------- */
+/* ------------------------------------------------- */
+/* Caption */
+
+.caption-sm, .caption {
+text-transform: uppercase;
+font-weight: var(--text-bold);
+letter-spacing: var(--text-spacing-lg);
+line-height: var(--line-height-md);    
+}
+
+.caption-sm {
+font-size: var(--text-2xs);
+}
+
+
+/* ------------------------------------------------- */
+/* Toggle */
+
 .toggle {
     cursor: pointer;
 }
 
 
-/* Form ----------------------------------------------- */
+/* ------------------------------------------------- */
+/* Forms */
+
 .form {
     position: relative;
     width: 100%;
@@ -230,7 +242,7 @@ button {
     padding: var(--size-4xl);
     background-color: var(--bg-color-primary);
     font-family: var(--text-sans);
-    font-size: var(--text-xs);
+    font-size: var(--text-sm);
     color: var(--text-shade-black);
 }
 
@@ -283,9 +295,10 @@ button {
 
 /* Form Input  */
 .form_input {
-    font-size: 1rem;
+    font-size: var(--text);
     width: 100%;
     min-width: 15rem; 
+    height: var(--size-4xl);
     padding: var(--size-sm);
     margin-top: var(--size-xs);
     flex-wrap: 1;
@@ -416,7 +429,9 @@ button {
 }
 
 
-/* Tabs --------------------------------------------- */
+/* ------------------------------------------------- */
+/* Tabs */
+
 .tabs {
     width: 100%;
     max-width: 40rem;
@@ -430,16 +445,19 @@ button {
 
 .tab {
     font-size: var(--text-sm);
-    font-weight: var(--text-medium);
+    font-weight: var(--text-bold);
     letter-spacing: var(--text-spacing-xs);
-    padding: var(--size) var(--size-lg);
+    padding: var(--size-sm) var(--size-lg);
     border: none;
-    background: none;
     color: var(--text-shade-dark-grey);
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
     white-space: nowrap;
+}
+
+.tabs--horizontal .tab:first-child {
+    padding-left: 0;
 }
 
 .tab:hover {
@@ -501,12 +519,12 @@ button {
 .tabs--pills .tab {
     border-radius: var(--border-radius-md);
     border-bottom: none;
-    background-color: var(--shade-1);
+    background-color: var(--neutral-1);
     color: var(--text-shade-dark-grey);
 }
 
 .tabs--pills .tab:hover {
-    background-color: var(--shade-2);
+    background-color: var(--neutral-2);
     color: var(--text-shade-black);
 }
 

@@ -7,14 +7,19 @@
     width: 100%;
 }
 
-/* main -------------------------------------------- */
+
+/* ------------------------------------------------- */
+/* Main */
+
 .main--sg {
     display: flex;
     gap: var(--size-2xl);
 }
 
 
-/* Header ------------------------------------------ */
+/* ------------------------------------------------- */
+/* Header */
+
 .sg-header {
     position: fixed;
     top: 0;
@@ -28,7 +33,9 @@
 }
 
 
-/* Nav --------------------------------------------- */
+/* ------------------------------------------------- */
+/* Nav */
+
 
 /* Styles Nav */
 .sg-nav {
@@ -103,7 +110,9 @@
 }
 
 
-/* Styles --------------------------------------------- */
+/* ------------------------------------------------- */
+/* Styles */
+
 .sg-group {
     border-top: solid 1px var(--border-dark);
     display: flex;
@@ -169,11 +178,11 @@
 
 .sg-item_heading {
     font-family: var(--text-mono);
-    font-size: var(--text-2xs);
+    font-size: var(--text-xs);
     font-weight: var(--text-medium);
     color: var(--grey-70);
     min-width: var(--size-8xl);
-    /* margin-bottom: var(--size-sm); */
+    margin-bottom: var(--size-sm);
     align-self: flex-start;
 }
 
@@ -221,7 +230,6 @@
     background-color: var(--bg-shade-light-grey);
 }
 
-
 /* Style Swatches */
 [class*="sg-swatch"] { 
     width: 100%;
@@ -229,9 +237,8 @@
 }
 
 
-
-/*  Footer 
---------------------------------------------- */
+/* ------------------------------------------------- */
+/* Footer */
 
 .sg-footer {
     position: static;
@@ -239,7 +246,8 @@
 }
 
 
-/* Media Queries ---------------------------------- */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* Media Queries */
 
 @media only screen and (max-width: 900px) {
 
@@ -277,7 +285,6 @@
         margin-right: calc(-1 * var(--site-margin));
     }
 
-
     .sg-groups-nav_dropdown_text {
         font-size: var(--text-sm);
         font-weight: var(--text-medium);
@@ -293,7 +300,6 @@
     .sg-groups-nav_dropdown.active .sg-groups-nav_dropdown_arrow {
         transform: rotate(180deg);
     }
-
 
 
   /* Styles Links Nav */

@@ -28,23 +28,23 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
 
-    --shade-1: hsl(0, 0%, 95%);
-    --shade-2: hsl(0, 0%, 85%);
-    --shade-3: hsl(0, 0%, 75%);
-    --shade-4: hsl(0, 0%, 60%);
-    --shade-5: hsl(0, 0%, 50%);
-    --shade-6: hsl(0, 0%, 40%);
-    --shade-7: hsl(0, 0%, 30%);
-    --shade-8: hsl(0, 0%, 20%);
-    --shade-9: hsl(0, 0%, 10%);
-    --shade-10: hsl(0, 0%, 5%);
+    --neutral-1: hsl(0, 0%, 95%);
+    --neutral-2: hsl(0, 0%, 85%);
+    --neutral-3: hsl(0, 0%, 75%);
+    --neutral-4: hsl(0, 0%, 60%);
+    --neutral-5: hsl(0, 0%, 50%);
+    --neutral-6: hsl(0, 0%, 40%);
+    --neutral-7: hsl(0, 0%, 30%);
+    --neutral-8: hsl(0, 0%, 20%);
+    --neutral-9: hsl(0, 0%, 10%);
+    --neutral-10: hsl(0, 0%, 5%);
 
     /* Fluid Sizing Scale */
     --size-3xs: clamp(0.15rem, 0.1vw + 0.13rem, 0.175rem);
     --size-2xs: clamp(0.22rem, 0.15vw + 0.19rem, 0.25rem);
     --size-xs: clamp(0.44rem, 0.3vw + 0.38rem, 0.5rem);
     --size-sm: clamp(0.66rem, 0.45vw + 0.56rem, 0.75rem);
-    --size: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+    --size-base: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
     --size-lg: clamp(1.09rem, 0.75vw + 0.94rem, 1.25rem);
     --size-xl: clamp(1.31rem, 0.9vw + 1.13rem, 1.5rem);
     --size-2xl: clamp(1.75rem, 1.2vw + 1.5rem, 2rem);
@@ -68,17 +68,17 @@
     --text-sans: "GeistVF", sans-serif;
 
     /* Typography Scale */
-    --text-2xs: clamp(0.65rem, 0.2vw + 0.61rem, 0.7rem);
-    --text-xs: clamp(0.75rem, 0.25vw + 0.7rem, 0.8rem);
-    --text-sm: clamp(0.85rem, 0.3vw + 0.79rem, 0.9rem);
-    --text: clamp(0.95rem, 0.35vw + 0.88rem, 1rem);
-    --text-lg: clamp(1.1rem, 0.4vw + 1.02rem, 1.2rem);
-    --text-xl: clamp(1.25rem, 0.45vw + 1.16rem, 1.4rem);
-    --text-2xl: clamp(1.4rem, 0.5vw + 1.3rem, 1.6rem);
-    --text-3xl: clamp(1.55rem, 0.55vw + 1.44rem, 1.8rem);
-    --text-4xl: clamp(1.7rem, 0.6vw + 1.58rem, 2rem);
-    --text-5xl: clamp(1.85rem, 0.65vw + 1.72rem, 2.2rem);
+    --text-xs: clamp(0.71rem, -0.03vi + 0.72rem, 0.69rem);
+    --text-sm: clamp(0.82rem, 0.03vi + 0.81rem, 0.83rem);
+    --text-base: clamp(0.94rem, 0.11vi + 0.91rem, 1rem);
+    --text-lg: clamp(1.08rem, 0.22vi + 1.02rem, 1.2rem);
+    --text-xl: clamp(1.24rem, 0.36vi + 1.15rem, 1.44rem);
+    --text-2xl: clamp(1.43rem, 0.55vi + 1.29rem, 1.73rem);
+    --text-3xl: clamp(1.64rem, 0.79vi + 1.44rem, 2.07rem);
+    --text-4xl: clamp(1.89rem, 1.1vi + 1.61rem, 2.49rem);
+    --text-5xl: clamp(2.17rem, 1.49vi + 1.8rem, 2.99rem);
 
+    
     /* Typography Spacing */
     --text-spacing-xs: -0.016em;
     --text-spacing-sm: -0.008em;
@@ -104,24 +104,24 @@
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.50rem;
     --border-radius-lg: 0.75rem;
-    --border-radius-xl: 1.00rem;   
+    --border-radius-round: 50vw;   
     
     --border-thin: 1px;
     --border-thick: 1.5px;
 
     /* Layout & Spacing */
     --gap-xs: var(--size-xs);
-    --gap-sm: var(--size);
+    --gap-sm: var(--size-base);
     --gap-md: var(--size-xl);
     --gap-lg: var(--size-2xl);
     --gap-xl: var(--size-4xl);
 
     /* Container Widths */
     --site-margin: 3vw;
-    --wrap-flush: calc(100% - var(--site-margin) * 2);
-    --wrap: calc(min(100%, 1400px) - var(--site-margin) * 2);
-    --wrap-sm: calc(min(100%, 1000px) - var(--site-margin) * 2);
-    --wrap-xs: calc(min(100%, 800px) - var(--site-margin) * 2);
+    --container-flush: calc(100% - var(--site-margin) * 2);
+    --container: calc(min(100%, 1400px) - var(--site-margin) * 2);
+    --container-sm: calc(min(100%, 1000px) - var(--site-margin) * 2);
+    --container-xs: calc(min(100%, 800px) - var(--site-margin) * 2);
 
     /* Component Sizing */
     --nav-height: 3rem;
@@ -240,9 +240,10 @@
     }
   }
 
+  
+/* ------------------------------------------------- */
+/* Elements */
 
-/* Base - Elements 
---------------------------------------------- */
   body {
     font-family: var(--text-sans); 
     background-color: var(--bg-shade-white);
@@ -253,4 +254,47 @@
     text-rendering: optimizeLegibility;
   }
 }
+
+
+/* ------------------------------------------------- */
+/* SG Widget */
+
+.sg-widget {
+position: fixed;
+bottom: 10vh;
+left: 2rem;
+width: 2rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+z-index: 1920;
+background-color: var(--bg-shade-white);
+border: 1px solid var(--border-dark);
+border-radius: 0.5rem;
+padding: 0.5rem;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sg-widget_link {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 1rem;
+height: 1rem;
+background-color: var(--bg-shade-black);
+color: var(--text-shade-white);
+text-decoration: none;
+border-radius: 0.25rem;
+font-weight: 400;
+font-size: 1rem;
+transition: all 0.2s ease;
+}
+
+.sg-widget_link:hover {
+background-color: var(--bg-shade-dark-grey);
+transform: translateY(-1px);
+}
+
 
