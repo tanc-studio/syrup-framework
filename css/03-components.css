@@ -1,5 +1,3 @@
-
-
 /* ------------------------------------------------- */
 /* Icons */
 
@@ -8,9 +6,17 @@
     font-size: 1.5rem;
 }
 
-.icon--xs {font-size: 1rem;}
-.icon--sm {font-size: 1.25rem;}
-.icon--lg {font-size: 1.5rem;}
+.icon--xs {
+    font-size: 1rem;
+}
+
+.icon--sm {
+    font-size: 1.25rem;
+}
+
+.icon--lg {
+    font-size: 1.5rem;
+}
 
 .icon--social {
     font-family: 'ICONS SOCIAL';
@@ -58,7 +64,7 @@ button {
     user-select: none;
 }
 
-.btn {  
+.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +168,7 @@ button {
 
 .btn--primary {
     color: var(--btn-primary-text);
-    border: solid var(--btn-primary-border) 1px; 
+    border: solid var(--btn-primary-border) 1px;
     background-color: var(--btn-primary);
 }
 
@@ -174,7 +180,7 @@ button {
 
 .btn--secondary {
     color: var(--btn-secondary-text);
-    border: solid var(--btn-secondary-border) 1px; 
+    border: solid var(--btn-secondary-border) 1px;
     background-color: var(--btn-secondary);
 }
 
@@ -186,7 +192,7 @@ button {
 
 .btn--tertiary {
     color: var(--btn-tertiary-text);
-    border: solid var(--btn-tertiary-border) 1px; 
+    border: solid var(--btn-tertiary-border) 1px;
     background-color: var(--btn-tertiary);
 }
 
@@ -198,7 +204,7 @@ button {
 
 .btn--form {
     color: var(--btn-form-text);
-    border: solid var(--btn-form-border) 1px; 
+    border: solid var(--btn-form-border) 1px;
     background-color: var(--btn-form);
 }
 
@@ -212,15 +218,16 @@ button {
 /* ------------------------------------------------- */
 /* Caption */
 
-.caption-sm, .caption {
-text-transform: uppercase;
-font-weight: var(--text-bold);
-letter-spacing: var(--text-spacing-lg);
-line-height: var(--line-height-md);    
+.caption-sm,
+.caption {
+    text-transform: uppercase;
+    font-weight: var(--text-bold);
+    letter-spacing: var(--text-spacing-lg);
+    line-height: var(--line-height-md);
 }
 
 .caption-sm {
-font-size: var(--text-2xs);
+    font-size: var(--text-2xs);
 }
 
 
@@ -246,16 +253,16 @@ font-size: var(--text-2xs);
     color: var(--text-shade-black);
 }
 
-.form_items--horzontal {
+.form_items--horizontal {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap-md);
     row-gap: var(--gap-xs);
-    align-items: baseline;   
+    align-items: baseline;
 }
 
-.form_items--horzontal .form_item {
+.form_items--horizontal .form_item {
     margin-top: 0;
 }
 
@@ -297,13 +304,13 @@ font-size: var(--text-2xs);
 .form_input {
     font-size: var(--text);
     width: 100%;
-    min-width: 15rem; 
+    min-width: 15rem;
     height: var(--size-4xl);
     padding: var(--size-sm);
     margin-top: var(--size-xs);
-    flex-wrap: 1;
+    flex: 1;
     background-color: white;
-    color:  black;
+    color: black;
     border: 1px solid var(--input);
     transition: border-color var(--focus-transition), box-shadow var(--focus-transition), outline var(--focus-transition);
 }
@@ -317,6 +324,7 @@ font-size: var(--text-2xs);
 .form_input:focus-visible {
     outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
 }
+
 /* Form Select  */
 .form_select {
     display: block;
@@ -347,9 +355,9 @@ font-size: var(--text-2xs);
     display: inline-block;
     width: 100%;
 }
-    
+
 .form_select-wrapper::after {
-    content: '\f107'; 
+    content: '\f107';
     position: absolute;
     top: 0;
     right: var(--size);
@@ -365,6 +373,7 @@ font-size: var(--text-2xs);
     display: flex;
     gap: var(--gap-xs);
 }
+
 /* Form Radio */
 .form_radio-group {
     margin-top: var(--size-xs);
@@ -386,7 +395,7 @@ font-size: var(--text-2xs);
     cursor: pointer;
 }
 
-.form_radio:checked + .form_radio-label {
+.form_radio:checked+.form_radio-label {
     background-color: var(--bg-shade-dark-grey);
     color: var(--text-shade-white);
 }
@@ -395,18 +404,20 @@ font-size: var(--text-2xs);
     background-color: var(--bg-shade-light-grey);
 }
 
-.form_radio:focus-visible + .form_radio-label {
+.form_radio:focus-visible+.form_radio-label {
     outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
     outline-offset: var(--focus-ring-offset);
 }
- /* Form Toggle */
+
+/* Form Toggle */
 .form_toggle {
     display: flex;
     align-items: center;
 }
 
 .form_toggle-input {
-    display: none; height: 1rem;
+    display: none;
+    height: 1rem;
 }
 
 .form_toggle-label {
@@ -423,7 +434,7 @@ font-size: var(--text-2xs);
     background-color: var(--bg-success);
 }
 
-.form_toggle-input:focus-visible + .form_toggle-label {
+.form_toggle-input:focus-visible+.form_toggle-label {
     outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
     outline-offset: var(--focus-ring-offset);
 }
@@ -503,6 +514,7 @@ font-size: var(--text-2xs);
         opacity: 0;
         transform: translateY(4px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -564,3 +576,56 @@ font-size: var(--text-2xs);
 }
 
 
+
+/* ------------------------------------------------- */
+/* Card */
+
+.card {
+    /* Custom Properties */
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    /* Display & Positioning */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    /* Box Model */
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+
+    /* Visual */
+    background: var(--bg-shade-white);
+    box-shadow: var(--card-shadow);
+
+    /* Interaction */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card--flat {
+    box-shadow: none;
+    border: 1px solid var(--border-light);
+}
+
+.card--primary {
+    border-color: var(--color-primary);
+    background-color: var(--bg-primary-2);
+}
+
+.card_header {
+    margin-bottom: var(--size-md);
+    padding-bottom: var(--size-sm);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.card_body {
+    flex: 1;
+    margin-bottom: var(--size-md);
+}
+
+.card_footer {
+    margin-top: auto;
+    padding-top: var(--size-sm);
+    border-top: 1px solid var(--border-light);
+}
