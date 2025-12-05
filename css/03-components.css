@@ -1,10 +1,6 @@
 /* ------------------------------------------------- */
 /* Icons */
 
-.icon {
-    fill: currentColor;
-    font-size: 1.5rem;
-}
 
 .icon--xs {
     font-size: 1rem;
@@ -14,8 +10,14 @@
     font-size: 1.25rem;
 }
 
-.icon--lg {
+.icon {
+    fill: currentColor;
     font-size: 1.5rem;
+}
+
+
+.icon--lg {
+    font-size: 1.75rem;
 }
 
 .icon--social {
