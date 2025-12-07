@@ -59,7 +59,7 @@
       </div>
     </nav>
 
-    <!-- Styles Body -->
+    <!-- Components Body -->
     <div class="sg-body">
       <!-- Icons -->
       <section class="sg-group" id="sg-icons">
@@ -503,7 +503,20 @@
 
           <div class="grid-md">
             <!-- Basic Card -->
+
             <article class="card">
+              <div class="card_header">
+                <h3 class="heading-sm">Basic Card</h3>
+              </div>
+              <div class="card_body">
+                <p class="text-sm">This is a standard card component with header, body, and footer sections.</p>
+              </div>
+              <div class="card_footer">
+                <button class="btn btn--sm btn--secondary">Action</button>
+              </div>
+            </article>
+
+            <article class="card" data-theme="only-dark">
               <div class="card_header">
                 <h3 class="heading-sm">Basic Card</h3>
               </div>
@@ -517,6 +530,18 @@
 
             <!-- Flat Card -->
             <article class="card card--flat">
+              <div class="card_header">
+                <h3 class="heading-sm">Flat Card</h3>
+              </div>
+              <div class="card_body">
+                <p class="text-sm">A flat variation without shadow, useful for bordered content areas.</p>
+              </div>
+              <div class="card_footer">
+                <button class="btn btn--sm btn--tertiary">Details</button>
+              </div>
+            </article>
+
+            <article class="card card--flat"  data-theme="invert">
               <div class="card_header">
                 <h3 class="heading-sm">Flat Card</h3>
               </div>
@@ -567,9 +592,10 @@
     includeHTML('include-svgs', '/includes/svgs.html');
     includeHTML('include-sidenav', '/includes/sidenav.html');
   </script>
+
   <script src="/js/base-footer.js" defer></script>
   <script src="/js/footer.js" defer></script>
-  <div id=u-nclude-svgs" class="u-display-none"></div>
+
 
 </body>
 
