@@ -203,7 +203,7 @@
 
 }
 
-.sg-item-container {
+.sg-item-wrap {
     min-height: 3rem;
     padding: 1rem 2rem;
     border: none;
@@ -465,11 +465,7 @@
         flex-direction: row-reverse;
 
     }
-
-    .grid-xl {
-        grid-template-columns: 1fr;
-    }
-
+    
     .grid-auto-col-sm {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -481,18 +477,21 @@
     #sg-spacing .sg-item:last-of-type {
         display: none;
     }
+
+    .sg-grid--icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+
+    .sg-grid--icons  > *:nth-child(4n+1) {
+        justify-self: start;
+    }
+    
+    .sg-grid--icons  > *:nth-child(4n) {
+        justify-self: end; 
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

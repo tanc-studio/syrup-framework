@@ -3,15 +3,15 @@
 /* ------------------------------------------------- */
 /* Container */
 
-[class*="container"] {
+[class*="wrap"] {
   margin: 0 auto;
 }
 
-.container {
-  max-width: var(--container);
+.wrap {
+  max-width: var(--wrap);
 }
 
-.container-md {
+.wrap-md {
   max-width: 800px;
 }
 
@@ -25,13 +25,13 @@
   gap: var(--gap-lg);
 }
 
-.grid-xl {grid-template-columns: repeat(auto-fit, minmax(min(100%,25rem),1fr));}
+.grid-xl {grid-template-columns: repeat(auto-fill, minmax(min(100%,24rem),1fr));}
 .grid-lg {grid-template-columns: repeat(auto-fit, minmax(min(100%,16rem),1fr));}
 .grid-md {grid-template-columns: repeat(auto-fit, minmax(min(100%,12rem),1fr));}
-.grid-sm {grid-template-columns: repeat(auto-fit, minmax(min(100%,9rem),1fr));}
+.grid-sm {grid-template-columns: repeat(auto-fit, minmax(min(100%,8rem),1fr));}
 .grid-xs {grid-template-columns: repeat(auto-fit, minmax(min(100%,6rem),1fr));}
 
-.grid-container {
+.grid-wrap {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(auto-fit, minmax(min(100%,25rem),1fr));

@@ -64,9 +64,9 @@
     --input-focus: var(--black);
 
     /* Shadows & Effects */
-    --shadow-1: 0 1px 6px 0 var(--neutral-2);
-    --shadow-2: 0 1px 6px 0 var(--neutral-3);
-    --shadow-3: 0 1px 8px 0 var(--neutral-5);
+    --shadow-1: 0 1px 3px 0 var(--neutral-2);
+    --shadow-2: 0 1px 3px 0 var(--neutral-3);
+    --shadow-3: 0 1px 6px 0 var(--neutral-5);
     --gradient-1: linear-gradient(90deg, var(--color-primary) 0%, var(--bg-shade-white) 100%);
     --gradient-2: linear-gradient(90deg, var(--color-secondary) 0%, var(--bg-shade-white) 100%);
     --gradient-3: linear-gradient(90deg, var(--color-tertiary) 0%, var(--bg-shade-white) 100%);
@@ -170,9 +170,9 @@
     --input-focus: var(--white);
 
     /* Shadows & Effects */
-    --shadow-1: 0 1px 12px 0 var(--neutral-6);
-    --shadow-2: 0 1px 8px 0 var(--neutral-4);
-    --shadow-3: 0 1px 12px 0 var(--neutral-2);
+    --shadow-1: 0 4px 8px 0 var(--neutral-6);
+    --shadow-2: 0 4px 8px 0 var(--neutral-4);
+    --shadow-3: 0 1px 8px 0 var(--neutral-2);
     --gradient-1: linear-gradient(90deg, var(--color-primary) 0%, var(--bg-shade-white) 100%);
     --gradient-2: linear-gradient(90deg, var(--color-secondary) 0%, var(--bg-shade-white) 100%);
     --gradient-3: linear-gradient(90deg, var(--color-tertiary) 0%, var(--bg-shade-white) 100%);
@@ -230,7 +230,6 @@
       fill var(--theme-transition),
       stroke var(--theme-transition);
   }
-
 
 
   /* High Contrast Theme */

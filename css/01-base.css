@@ -77,7 +77,6 @@
     --text-3xl: clamp(1.64rem, 0.79vi + 1.44rem, 2.07rem);
     --text-4xl: clamp(1.89rem, 1.1vi + 1.61rem, 2.49rem);
     --text-5xl: clamp(2.17rem, 1.49vi + 1.8rem, 2.99rem);
-
     
     /* Typography Spacing */
     --text-spacing-xs: -0.016em;
@@ -117,11 +116,11 @@
     --gap-xl: var(--size-4xl);
 
     /* Container Widths */
-    --site-margin: 3vw;
-    --container-flush: calc(100% - var(--site-margin) * 2);
-    --container: calc(min(100%, 1400px) - var(--site-margin) * 2);
-    --container-sm: calc(min(100%, 1000px) - var(--site-margin) * 2);
-    --container-xs: calc(min(100%, 800px) - var(--site-margin) * 2);
+    --site-margin: 5vw;
+    --wrap-flush: calc(100% - var(--site-margin) * 2);
+    --wrap: calc(min(100%, 1400px) - var(--site-margin) * 2);
+    --wrap-sm: calc(min(100%, 1000px) - var(--site-margin) * 2);
+    --wrap-xs: calc(min(100%, 800px) - var(--site-margin) * 2);
 
     /* Component Sizing */
     --nav-height: 3rem;

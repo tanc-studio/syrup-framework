@@ -615,19 +615,34 @@ button {
 /* Card */
 
 .card {
-    /* Custom Properties */
-    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     position: relative;
     color: var(--text-shade-black);
     width: 100%;
-    padding: 1.5rem;
+    padding:var(--size-xl);
     border: 1px solid var(--border-light);
     border-radius: var(--border-radius-lg);
     background: var(--bg-shade-white);
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--shadow-2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card_header {    
+    padding-bottom: var(--size-sm);
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: var(--size-xl);
+}
+
+.card_body {
+    margin-bottom: var(--size-xl);
+}
+
+.card_footer {
+    padding-top: var(--size-xl);
+    margin-top: auto;
+    margin-bottom: var(--size-lg);
+    border-top: 1px solid var(--border-light);
 }
 
 .card--flat {
@@ -637,22 +652,5 @@ button {
 
 .card--primary {
     border-color: var(--color-primary);
-    background-color: var(--bg-primary-2);
-}
-
-.card_header {
-    margin-bottom: var(--size-xl);
-    padding-bottom: var(--size-sm);
-    border-bottom: 1px solid var(--border-light);
-}
-
-.card_body {
-    flex: 1;
-    margin-bottom: var(--size-md);
-}
-
-.card_footer {
-    margin-top: auto;
-    padding-top: var(--size-sm);
-    border-top: 1px solid var(--border-light);
+    background-color: var(--bg-primary-3);
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +11,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/style-guide.css">
-  <script src="/js/lenis.js"></script>
-  <script src="/js/base.js"></script>
+  <script src="/js/syrup.js"></script>
+  <script src="/js/styleguide.js" defer></script>
 </head>
-
 <body class="body body--sg">
 
   <!-- Header -->
   <header class="sg-header">
-    <div class="sg-nav container"> 
+    <div class="sg-nav wrap"> 
       <!-- Logo -->
       <a class="sg-nav_logo" href="/index.html">syrup</a>
       <!-- Nav Right -->
@@ -44,9 +42,7 @@
   </header>
 
   <!-- Main -->
-  <main class="main main--sg container">
-
-    <!-- Styles Nav -->
+  <main class="main main--sg wrap">
     <nav class="sg-groups-nav">
       <div class="sg-groups-nav_links text-sm" id="stylesNav">
         <a class="sg-groups-nav_link" href="#sg-typefaces">Typefaces</a>
@@ -60,13 +56,11 @@
         <a class="sg-groups-nav_link" href="#sg-shadows">Shadows</a>
       </div>
     </nav>
-
-    <!-- Styles Body -->
     <div class="sg-body">
 
       <!-- Typefaces -->
       <section class="sg-group" id="sg-typefaces">
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Typefaces</h2> 
         </heading>
         <section class="sg-group_content">
@@ -110,21 +104,17 @@
                  <p class="text-light">Monospace Light</p>                               
               </div>
             </section>  
-
+            
           </div>
-
         </section>
-
       </section> 
+
       <!-- Type Scale -->
       <section class="sg-group" id="sg-typescale">
-
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Type Scale</h2> 
         </heading>
-
         <section class="sg-group_content">
-
           <div class="grid-xl">
 
             <section class="sg-item">
@@ -176,20 +166,15 @@
             </section> 
           
           </div>
-
         </section>
-
       </section>
+
       <!-- Headings -->
       <section class="sg-group" id="sg-headings">
-
-       
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Headings</h2> 
         </heading>
-
-        <section class="sg-group_content ">
-
+        <section class="sg-group_content">
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -231,21 +216,16 @@
               <h3 class="sg-item_heading">.heading-xs</h3> 
               <div class="heading-xs">Heading XS</div>                               
             </section>
-
           </div>
-
         </section>
-
       </section> 
+
       <!-- Other -->
       <section class="sg-group" id="sg-type-other">
-       
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Text Other</h2> 
         </heading>
-
         <section class="sg-group_content">
-
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -258,21 +238,18 @@
               <a class="eyebrow">eyebrow</a>                                             
             </section>
 
-          </div>  
-
+          </div>
         </section>
+      </section>   
 
-      </section>                           
       <!-- Colors -->
-      <section class="sg-group " id="sg-colors">
-
-        <heading class="sg-group_header"> 
+      <section class="sg-group" id="sg-colors">
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Colors</h2> 
         </heading>
-        
         <div class="sg-group_content">
-
           <div class="grid-lg">
+
             <section class="sg-item">
               <h3 class="sg-item_heading">.bg-primary</h3>  
               <div class="sg-swatch bg-primary"></div>                            
@@ -285,9 +262,10 @@
               <h3 class="sg-item_heading"> .bg-primary-3 </h3> 
               <div class="sg-swatch bg-primary-3"></div>                             
             </section> 
-          </div>
 
+          </div>
           <div class="grid-lg">
+            
             <section class="sg-item">
               <h3 class="sg-item_heading">.bg-secondary</h3>  
               <div class="sg-swatch bg-secondary"></div>                            
@@ -300,9 +278,10 @@
               <h3 class="sg-item_heading"> .bg-primary-3 </h3> 
               <div class="sg-swatch bg-secondary-3"></div>                             
             </section>
-          </div>
 
+          </div>
           <div class="grid-lg">
+
             <section class="sg-item">
               <h3 class="sg-item_heading">.bg-tertiary</h3>  
               <div class="sg-swatch bg-tertiary"></div>                            
@@ -315,20 +294,17 @@
               <h3 class="sg-item_heading">.bg-tertiary-3</h3> 
               <div class="sg-swatch bg-tertiary-3"></div>                             
             </section>
+
           </div>
-
         </div>
-
       </section>
+
       <!-- Alerts -->
       <section class="sg-group" id="sg-alerts">
-
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Alerts</h2> 
         </heading>
-
         <div class="sg-group_content">
-
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -347,7 +323,6 @@
             </section>
 
           </div>
-
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -366,7 +341,6 @@
             </section>
 
           </div> 
-
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -382,19 +356,15 @@
               <div class="sg-swatch bg-error-3"></div>                             
             </section>
           </div>
-
         </div>
-
       </section>
+
       <!-- Shades -->
       <section class="sg-group" id="sg-shades">
-       
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Shades</h2> 
         </heading>
-
         <div class="sg-group_content"> 
-
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -433,19 +403,15 @@
             </section>
                
           </div> 
-
         </div> 
-
       </section>
+
       <!-- Gradients -->
       <section class="sg-group" id="sg-gradients">
-
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Gradients</h2> 
         </heading>
-
-        <section class="sg-group_content"> 
-
+        <section class="sg-group_content">
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -464,22 +430,18 @@
             </section>
 
           </div>
-
-        </section>  
-        
+        </section>
       </section>
+
       <!-- Shadows -->
       <section class="sg-group" id="sg-shadows">
-
-        <heading class="sg-group_header"> 
+        <heading class="sg-group_header">
           <h2 class="sg-heading heading">Shadows</h2> 
         </heading>
-
-        <section class="sg-group_content"> 
-
+        <section class="sg-group_content">
           <div class="grid-lg">
 
-            <section class="sg-item ">
+            <section class="sg-item">
               <h3 class="sg-item_heading">.bg-shadow-1 </h3>  
               <div class=".sg-swatch bg-shadow-1"></div>                            
             </section>
@@ -494,11 +456,10 @@
               <div class=".sg-swatch bg-shadow-3"></div>                            
             </section>
 
-          </div>   
-
+          </div>
         </section>  
+      </section>   
 
-      </section>          
     </div>
   </main>
 
@@ -515,8 +476,7 @@
     includeHTML('include-svgs', '/includes/svgs.html');
     includeHTML('include-sidenav', '/includes/sidenav.html');
   </script>
-  <script src="/js/base-footer.js" defer></script>
-  <script src="/js/footer.js" defer></script>
+
   <div id="include-svgs" class="display-none"></div>
 </body>
 

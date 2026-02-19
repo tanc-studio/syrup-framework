@@ -13,7 +13,7 @@
 /*
  * Layer Structure:
  * 1. base - CSS reset, Element defaults, typography
- * 2. layout - Grid systems, containers, positioning
+ * 2. layout - Grid systems, wraps, positioning
  * 3. components - Buttons, forms, navigation, etc.
  * 4. utilities - Display, spacing, color helpers
  * 5. themes - Dark mode, theme variations

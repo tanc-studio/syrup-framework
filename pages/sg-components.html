@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="theme-loading" data-theme="light" lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +12,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/style-guide.css">
-  <script src="/js/lenis.js"></script>
-  <script src="/js/base.js"></script>
+  <script src="/js/syrup.js"></script>
+  <script src="/js/styleguide.js" defer></script>
 </head>
-
 <body class="body body--sg">
 
   <!-- Header -->
   <header class="sg-header">
-    <div class="sg-nav container">
+    <div class="sg-nav wrap">
       <!-- Logo -->
       <a class="sg-nav_logo u-heading-lg" href="/index.html">syrup</a>
       <!-- Nav Right -->
@@ -46,9 +44,7 @@
   </header>
 
   <!-- Main -->
-  <main class="main main--sg container">
-
-    <!-- Styles Nav -->
+  <main class="main main--sg wrap">
     <nav class="sg-groups-nav">
       <div class="sg-groups-nav_links" id="stylesNav">
         <a class="sg-groups-nav_link" href="#sg-icons">Icons</a>
@@ -58,18 +54,14 @@
         <a class="sg-groups-nav_link" href="#sg-cards">Cards</a>
       </div>
     </nav>
-
-    <!-- Components Body -->
     <div class="sg-body">
+
       <!-- Icons -->
       <section class="sg-group" id="sg-icons">
-
         <header class="sg-group_header">
           <h2 class="sg-heading heading">Icons<br></h2>
         </header>
-
         <div class="sg-group_content">
-
           <div class="grid-xl">
 
             <section class="sg-item">
@@ -81,8 +73,8 @@
               <h3 class="sg-item_heading">icon--social</h3>
               <span class="icon icon--social icon--lg"></span>
             </section>
-          </div>
 
+          </div>
           <div class="grid-lg">
 
             <section class="sg-item">
@@ -101,8 +93,6 @@
             </section>
 
           </div>
-
-          <!-- Icons Site -->
           <div class="sg-sub-group">
 
             <header class="sg-sub-group_header">
@@ -111,8 +101,7 @@
                 </a>
               </h3>
             </header>
-
-            <div class="grid-xs">
+            <div class="grid-xs sg-grid--icons">
               <span class="icon icon--site">chevron_left</span>
               <span class="icon icon--site">chevron_right</span>
               <span class="icon icon--site">arrow_drop_down</span>
@@ -137,15 +126,13 @@
             </div>
 
           </div>
-
-          <!-- Icons Social -->
           <div class="sg-sub-group">
 
             <div class="sg-sub-group_header">
               <h3 class="sg-sub-heading"> Site icons - Icon Font </h3>
             </div>
 
-            <div class="grid-xs">
+            <div class="grid-xs sg-grid--icons">
               <span class="icon icon--social"></span>
               <span class="icon icon--social"></span>
               <span class="icon icon--social"></span>
@@ -195,6 +182,7 @@
         </div>
 
       </section>
+
       <!-- Buttons -->
       <section class="sg-group " id="sg-buttons">
 
@@ -309,6 +297,7 @@
         </div>
 
       </section>
+
       <!-- Forms -->
       <section class="sg-group" id="sg-forms">
         <heading class="sg-group_header">
@@ -402,6 +391,7 @@
 
         </section>
       </section>
+
       <!-- Tabs -->
       <section class="sg-group" id="sg-tabs">
         <heading class="sg-group_header">
@@ -494,6 +484,7 @@
 
         </section>
       </section>
+
       <!-- Cards -->
       <section class="sg-group" id="sg-cards">
         <heading class="sg-group_header">
@@ -501,7 +492,7 @@
         </heading>
         <section class="sg-group_content">
 
-          <div class="grid-md">
+          <div class="grid-lg">
             <!-- Basic Card -->
 
             <article class="card">
@@ -528,7 +519,6 @@
               </div>
             </article>
 
-            <!-- Flat Card -->
             <article class="card card--flat">
               <div class="card_header">
                 <h3 class="heading-sm">Flat Card</h3>
@@ -553,7 +543,6 @@
               </div>
             </article>
 
-            <!-- Pricing Card -->
             <article class="card card--primary">
               <div class="card_header">
                 <span class="caption-sm">Pro Plan</span>
@@ -575,6 +564,325 @@
 
         </section>
       </section>
+
+      <!-- Layout -->
+      <section class="sg-group" id="sg-layout">
+        <heading class="sg-group_header">
+          <h2 class="sg-heading heading">Layout</h2>
+        </heading>
+        <section class="sg-group_content">
+
+          <div class="grid-xl">
+            <!-- Basic Card -->
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+            
+          </div>
+
+        </section>
+      </section>
+
+      <section class="sg-group" id="sg-layout">
+        <heading class="sg-group_header">
+          <h2 class="sg-heading heading">Layout</h2>
+        </heading>
+        <section class="sg-group_content">
+
+          <div class="grid-md">
+            <!-- Basic Card -->
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card_header">
+                <span class="caption-sm">Pro Plan</span>
+                <h3 class="heading-lg mt-05">$29<span class="text-sm text-normal">/mo</span></h3>
+              </div>
+              <div class="card_body">
+                <ul class="text-sm"
+                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>unlimited Projects</li>
+                  <li>Priority Support</li>
+                  <li>Analytics Dashboard</li>
+                </ul>
+              </div>
+              <div class="card_footer" style="border-top: none;">
+                <button class="btn btn--primary w-full">Subscribe</button>
+              </div>
+            </article>
+            
+          </div>
+
+        </section>
+      </section>
+
+      
     </div>
 
   </main>
@@ -593,8 +901,7 @@
     includeHTML('include-sidenav', '/includes/sidenav.html');
   </script>
 
-  <script src="/js/base-footer.js" defer></script>
-  <script src="/js/footer.js" defer></script>
+
 
 
 </body>
