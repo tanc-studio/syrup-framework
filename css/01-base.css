@@ -3,15 +3,16 @@
 
   :root { 
     /* Color Palette */
-    --color-primary: hsl(60, 90%, 90%);
-    --color-primary-2: hsl(60, 80%, 95%);
-    --color-primary-3: hsl(60, 90%, 80%);
-    --color-secondary: hsl(120, 90%, 92%);
-    --color-secondary-2: hsl(120, 90%, 95%);
-    --color-secondary-3: hsl(120, 90%, 90%);
-    --color-tertiary: hsl(160, 90%, 88%);
-    --color-tertiary-2: hsl(160, 90%, 95%);
-    --color-tertiary-3: hsl(160, 90%, 85%);
+    /* Override these in tokens.css with project brand colours */
+    --color-primary: hsl(0, 0%, 75%);
+    --color-primary-2: hsl(0, 0%, 85%);
+    --color-primary-3: hsl(0, 0%, 60%);
+    --color-secondary: hsl(0, 0%, 50%);
+    --color-secondary-2: hsl(0, 0%, 60%);
+    --color-secondary-3: hsl(0, 0%, 40%);
+    --color-tertiary: hsl(0, 0%, 30%);
+    --color-tertiary-2: hsl(0, 0%, 40%);
+    --color-tertiary-3: hsl(0, 0%, 20%);
     
     /* Status Colors */
     --color-error-1: hsl(351, 90%, 85%);
@@ -66,6 +67,9 @@
     --text-serif: "Frank Ruhl Libre", serif;
     --text-mono: "Roboto Mono", monospace;
     --text-sans: "GeistVF", sans-serif;
+
+    /* Icon Library — override in tokens.css */
+    --icon-site-family: "MATERIAL ICONS";
 
     /* Typography Scale */
     --text-xs: clamp(0.71rem, -0.03vi + 0.72rem, 0.69rem);
@@ -179,39 +183,6 @@
 
   p, li, figcaption { 
     text-wrap: pretty;
-  }
-
-  /* Font Face Declarations */
-  @font-face {
-    font-family: 'GeistVF';
-    src: url('/fonts/GeistVF.ttf') format('woff2-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Roboto Mono';
-    src: url('../fonts/RobotoMono-VariableFont_wght.ttf') format('woff2-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'ICONS SOCIAL';
-    src: url('../fonts/SocialIcons.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'MATERIAL ICONS';
-    src: url('../fonts/MaterialIconsRound-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
   }
 
   /* Prevent Flash of Unstyled Content During Theme Changes */

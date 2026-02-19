@@ -25,7 +25,7 @@
 }
 
 .icon--site {
-    font-family: 'MATERIAL ICONS';
+    font-family: var(--icon-site-family);
     line-height: 1em;
 }
 
@@ -241,13 +241,6 @@ button {
     cursor: not-allowed;
 }
 
-.btn--flush-right {
-    margin-right: -1.5rem;
-}
-
-.btn--flush-left {
-    margin-left: -0.5rem;
-}
 
 
 /* ------------------------------------------------- */
@@ -390,17 +383,7 @@ button {
     width: 100%;
 }
 
-.form_select-wrapper::after {
-    content: '\f107';
-    position: absolute;
-    top: 0;
-    right: var(--size);
-    font-family: 'FontAwesome';
-    height: 100%;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-}
+/* Select arrow: add your own indicator in HTML or project CSS */
 
 .form_checkbox-group {
     margin-top: var(--size-xs);
