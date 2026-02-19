@@ -1,0 +1,15 @@
+# System
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# Editor & IDE config
+.vscode/
+.cursor/
+.idea/
+
+# Vercel
+.vercel/
+
+# Local dev
+node_modules/
