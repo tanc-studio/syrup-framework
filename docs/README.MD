@@ -267,7 +267,7 @@ Write selectors in this order within a component:
 
 <head>
   <!-- Syrup CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.0/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.1/css/main.css">
   <!-- Project CSS -->
   <link rel="stylesheet" href="/css/project.css">
 </head>
@@ -275,7 +275,7 @@ Write selectors in this order within a component:
 <body>
   ...
   <!-- Syrup JS -->
-  <script src="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.0/js/syrup.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.1/js/syrup.js" defer></script>
 </body>
 ```
 
@@ -320,6 +320,7 @@ css/
 | Tag     | Use case                       |
 |---------|-------------------------------|
 | `@main` | Development / testing only     |
-| `@v1.0` | Stable — pin all live projects |
+| `@v1.0` | Previous stable                |
+| `@v1.1` | Current stable — pin all live projects |
 
 Changing the version tag is the only step needed to upgrade a project.
