@@ -1,61 +1,60 @@
 
 @layer base {
 
-  :root { 
+  :root {
     /* Color Palette */
-    /* Override these in tokens.css with project brand colours */
-    --color-primary: hsl(0, 0%, 75%);
-    --color-primary-2: hsl(0, 0%, 85%);
-    --color-primary-3: hsl(0, 0%, 60%);
-    --color-secondary: hsl(0, 0%, 50%);
-    --color-secondary-2: hsl(0, 0%, 60%);
-    --color-secondary-3: hsl(0, 0%, 40%);
-    --color-tertiary: hsl(0, 0%, 30%);
-    --color-tertiary-2: hsl(0, 0%, 40%);
-    --color-tertiary-3: hsl(0, 0%, 20%);
-    
-    /* Status Colors */
-    --color-error-1: hsl(351, 90%, 85%);
-    --color-error-2: hsl(351, 90%, 70%);
-    --color-error-3: hsl(351, 90%, 50%);
-    --color-warning-1: hsl(38, 90%, 85%);
-    --color-warning-2: hsl(40, 80%, 74%);
-    --color-warning-3: hsl(38, 90%, 70%);
-    --color-success-1: hsl(100, 90%, 85%);
-    --color-success-2: hsl(100, 90%, 70%);
-    --color-success-3: hsl(100, 90%, 50%);
-    
-    /* Neutral Shades */
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
+    /* Override these in project.css with project brand colours */
+    --color-primary:           hsl(0, 0%, 75%);
+    --color-primary-light:     hsl(0, 0%, 85%);
+    --color-primary-dark:      hsl(0, 0%, 60%);
+    --color-secondary:         hsl(0, 0%, 50%);
+    --color-secondary-light:   hsl(0, 0%, 60%);
+    --color-secondary-dark:    hsl(0, 0%, 40%);
+    --color-tertiary:          hsl(0, 0%, 30%);
+    --color-tertiary-light:    hsl(0, 0%, 40%);
+    --color-tertiary-dark:     hsl(0, 0%, 20%);
 
-    --neutral-1: hsl(0, 0%, 95%);
-    --neutral-2: hsl(0, 0%, 85%);
-    --neutral-3: hsl(0, 0%, 75%);
-    --neutral-4: hsl(0, 0%, 60%);
-    --neutral-5: hsl(0, 0%, 50%);
-    --neutral-6: hsl(0, 0%, 40%);
-    --neutral-7: hsl(0, 0%, 30%);
-    --neutral-8: hsl(0, 0%, 20%);
-    --neutral-9: hsl(0, 0%, 10%);
+    /* Status Colors */
+    --color-error-tint:        hsl(351, 90%, 85%);
+    --color-error:             hsl(351, 90%, 70%);
+    --color-error-strong:      hsl(351, 90%, 50%);
+    --color-warning-tint:      hsl(38, 90%, 85%);
+    --color-warning:           hsl(40, 80%, 74%);
+    --color-warning-strong:    hsl(38, 90%, 70%);
+    --color-success-tint:      hsl(100, 90%, 85%);
+    --color-success:           hsl(100, 90%, 70%);
+    --color-success-strong:    hsl(100, 90%, 50%);
+
+    /* Neutral Shades */
+    --white:      hsl(0, 0%, 100%);
+    --black:      hsl(0, 0%, 0%);
+    --neutral-1:  hsl(0, 0%, 95%);
+    --neutral-2:  hsl(0, 0%, 85%);
+    --neutral-3:  hsl(0, 0%, 75%);
+    --neutral-4:  hsl(0, 0%, 60%);
+    --neutral-5:  hsl(0, 0%, 50%);
+    --neutral-6:  hsl(0, 0%, 40%);
+    --neutral-7:  hsl(0, 0%, 30%);
+    --neutral-8:  hsl(0, 0%, 20%);
+    --neutral-9:  hsl(0, 0%, 10%);
     --neutral-10: hsl(0, 0%, 5%);
 
     /* Fluid Sizing Scale */
-    --size-3xs: clamp(0.15rem, 0.1vw + 0.13rem, 0.175rem);
-    --size-2xs: clamp(0.22rem, 0.15vw + 0.19rem, 0.25rem);
-    --size-xs: clamp(0.44rem, 0.3vw + 0.38rem, 0.5rem);
-    --size-sm: clamp(0.66rem, 0.45vw + 0.56rem, 0.75rem);
+    --size-3xs:  clamp(0.15rem, 0.1vw + 0.13rem, 0.175rem);
+    --size-2xs:  clamp(0.22rem, 0.15vw + 0.19rem, 0.25rem);
+    --size-xs:   clamp(0.44rem, 0.3vw + 0.38rem, 0.5rem);
+    --size-sm:   clamp(0.66rem, 0.45vw + 0.56rem, 0.75rem);
     --size-base: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
-    --size-lg: clamp(1.09rem, 0.75vw + 0.94rem, 1.25rem);
-    --size-xl: clamp(1.31rem, 0.9vw + 1.13rem, 1.5rem);
-    --size-2xl: clamp(1.75rem, 1.2vw + 1.5rem, 2rem);
-    --size-3xl: clamp(2.19rem, 1.5vw + 1.88rem, 2.5rem);
-    --size-4xl: clamp(2.63rem, 1.8vw + 2.25rem, 3rem);
-    --size-5xl: clamp(3.06rem, 2.1vw + 2.63rem, 3.5rem);
-    --size-6xl: clamp(3.5rem, 2.4vw + 3rem, 4rem);
-    --size-7xl: clamp(4.38rem, 3vw + 3.75rem, 5rem);
-    --size-8xl: clamp(5.25rem, 3.6vw + 4.5rem, 6rem);
-    --size-9xl: clamp(6.56rem, 4.5vw + 5.63rem, 7.5rem);
+    --size-lg:   clamp(1.09rem, 0.75vw + 0.94rem, 1.25rem);
+    --size-xl:   clamp(1.31rem, 0.9vw + 1.13rem, 1.5rem);
+    --size-2xl:  clamp(1.75rem, 1.2vw + 1.5rem, 2rem);
+    --size-3xl:  clamp(2.19rem, 1.5vw + 1.88rem, 2.5rem);
+    --size-4xl:  clamp(2.63rem, 1.8vw + 2.25rem, 3rem);
+    --size-5xl:  clamp(3.06rem, 2.1vw + 2.63rem, 3.5rem);
+    --size-6xl:  clamp(3.5rem, 2.4vw + 3rem, 4rem);
+    --size-7xl:  clamp(4.38rem, 3vw + 3.75rem, 5rem);
+    --size-8xl:  clamp(5.25rem, 3.6vw + 4.5rem, 6rem);
+    --size-9xl:  clamp(6.56rem, 4.5vw + 5.63rem, 7.5rem);
     --size-10xl: clamp(8.75rem, 6vw + 7.5rem, 10rem);
     --size-11xl: clamp(10.94rem, 7.5vw + 9.38rem, 12.5rem);
     --size-12xl: clamp(13.13rem, 9vw + 11.25rem, 15rem);
@@ -63,37 +62,34 @@
     --size-14xl: clamp(17.5rem, 12vw + 15rem, 20rem);
     --size-15xl: clamp(19.69rem, 13.5vw + 16.88rem, 22.5rem);
 
-    /* Typography Families */
-    --text-serif: "Frank Ruhl Libre", serif;
-    --text-mono: "Roboto Mono", monospace;
-    --text-sans: "GeistVF", sans-serif;
-
-    /* Icon Library — override in tokens.css */
-    --icon-site-family: "MATERIAL ICONS";
+    /* Typography Families — override in project.css */
+    --text-serif: serif;
+    --text-mono:  monospace;
+    --text-sans:  sans-serif;
 
     /* Typography Scale */
-    --text-xs: clamp(0.71rem, -0.03vi + 0.72rem, 0.69rem);
-    --text-sm: clamp(0.82rem, 0.03vi + 0.81rem, 0.83rem);
+    --text-xs:   clamp(0.71rem, -0.03vi + 0.72rem, 0.69rem);
+    --text-sm:   clamp(0.82rem, 0.03vi + 0.81rem, 0.83rem);
     --text-base: clamp(0.94rem, 0.11vi + 0.91rem, 1rem);
-    --text-lg: clamp(1.08rem, 0.22vi + 1.02rem, 1.2rem);
-    --text-xl: clamp(1.24rem, 0.36vi + 1.15rem, 1.44rem);
-    --text-2xl: clamp(1.43rem, 0.55vi + 1.29rem, 1.73rem);
-    --text-3xl: clamp(1.64rem, 0.79vi + 1.44rem, 2.07rem);
-    --text-4xl: clamp(1.89rem, 1.1vi + 1.61rem, 2.49rem);
-    --text-5xl: clamp(2.17rem, 1.49vi + 1.8rem, 2.99rem);
-    
-    /* Typography Spacing */
-    --text-spacing-xs: -0.016em;
-    --text-spacing-sm: -0.008em;
-    --text-spacing-md: 0.008em;
-    --text-spacing-lg: 0.018em;
-    --text-spacing-xl: 0.03em;
-  
+    --text-lg:   clamp(1.08rem, 0.22vi + 1.02rem, 1.2rem);
+    --text-xl:   clamp(1.24rem, 0.36vi + 1.15rem, 1.44rem);
+    --text-2xl:  clamp(1.43rem, 0.55vi + 1.29rem, 1.73rem);
+    --text-3xl:  clamp(1.64rem, 0.79vi + 1.44rem, 2.07rem);
+    --text-4xl:  clamp(1.89rem, 1.1vi + 1.61rem, 2.49rem);
+    --text-5xl:  clamp(2.17rem, 1.49vi + 1.8rem, 2.99rem);
+
+    /* Letter Spacing */
+    --letter-spacing-xs: -0.016em;
+    --letter-spacing-sm: -0.008em;
+    --letter-spacing-md:  0.008em;
+    --letter-spacing-lg:  0.018em;
+    --letter-spacing-xl:  0.03em;
+
     /* Typography Weights */
-    --text-bold: 500;
+    --text-bold:   500;
     --text-medium: 400;
     --text-normal: 350;
-    --text-light: 200;
+    --text-light:  200;
 
     /* Line Heights */
     --line-height-xs: 1;
@@ -103,14 +99,13 @@
     --line-height-xl: 2;
 
     /* Border Properties */
-    --border-radius-xs: 0.15rem;
-    --border-radius-sm: 0.25rem;
-    --border-radius-md: 0.50rem;
-    --border-radius-lg: 0.75rem;
-    --border-radius-round: 50vw;   
-    
-    --border-thin: 1px;
-    --border-thick: 1.5px;
+    --border-radius-xs:    0.15rem;
+    --border-radius-sm:    0.25rem;
+    --border-radius-md:    0.50rem;
+    --border-radius-lg:    0.75rem;
+    --border-radius-round: 50vw;
+    --border-thin:         1px;
+    --border-thick:        1.5px;
 
     /* Layout & Spacing */
     --gap-xs: var(--size-xs);
@@ -121,15 +116,15 @@
 
     /* Container Widths */
     --site-margin: 5vw;
-    --wrap-flush: calc(100% - var(--site-margin) * 2);
-    --wrap: calc(min(100%, 1400px) - var(--site-margin) * 2);
-    --wrap-sm: calc(min(100%, 1000px) - var(--site-margin) * 2);
-    --wrap-xs: calc(min(100%, 800px) - var(--site-margin) * 2);
+    --wrap-flush:  calc(100% - var(--site-margin) * 2);
+    --wrap:        calc(min(100%, 1400px) - var(--site-margin) * 2);
+    --wrap-sm:     calc(min(100%, 1000px) - var(--site-margin) * 2);
+    --wrap-xs:     calc(min(100%, 800px) - var(--site-margin) * 2);
 
     /* Component Sizing */
-    --nav-height: 3rem;
+    --nav-height:    3rem;
     --nav-tray-width: 12rem;
-    --page-padding: var(--size-4xl);
+    --page-padding:  var(--size-4xl);
 
     /* Transitions */
     --theme-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -137,39 +132,40 @@
     --focus-transition: 0.2s ease-out;
 
     /* Focus States */
-    --focus-ring-width: 1.5px;
-    --focus-ring-style: solid;
+    --focus-ring-width:  1.5px;
+    --focus-ring-style:  solid;
+    --focus-ring-offset: 2px;
   }
 
   html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
   address, em, img, small, b, u, i, dl, dt, dd, ol, ul, li,
   article, aside, figure, figcaption, footer, header, menu, nav {
-    margin: 0; 
-    padding: 0;  
-    border: 0; 
-    vertical-align: baseline; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
     text-wrap: balance;
   }
 
-  *, *:before, *:after {box-sizing: border-box;}
-  html {color: var(--text-shade-black);}
-  ol, ul {list-style: none;}
-  address {font-style: normal;}
-  img {display: block; width: 100%;}
+  *, *:before, *:after { box-sizing: border-box; }
+  html { color: var(--color-text); }
+  ol, ul { list-style: none; }
+  address { font-style: normal; }
+  img { display: block; width: 100%; }
 
   a {
     text-decoration: none;
     cursor: pointer;
-    color: var(--link-shade-primary);
+    color: var(--color-link);
     transition: color var(--hover-transition);
   }
 
   a:hover {
-    color: var(--link-shade-primary-hover);
+    color: var(--color-link-hover);
   }
 
   a:focus {
-    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--color-focus);
   }
 
   a:focus:not(:focus-visible) {
@@ -177,11 +173,11 @@
   }
 
   a:focus-visible {
-    outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+    outline: var(--focus-ring-width) var(--focus-ring-style) var(--color-focus);
     outline-offset: var(--focus-ring-offset);
   }
 
-  p, li, figcaption { 
+  p, li, figcaption {
     text-wrap: pretty;
   }
 
@@ -192,17 +188,14 @@
   }
 
   /* Accessibility Enhancements */
-  /* Ensure all interactive elements are keyboard accessible */
   button, [role="button"], input, select, textarea, a, [tabindex]:not([tabindex="-1"]) {
     position: relative;
   }
 
-  /* Hide focus for mouse users, show for keyboard users */
   .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
   }
 
-  /* Ensure minimum touch target size for mobile accessibility */
   @media (pointer: coarse) {
     button, [role="button"], input[type="checkbox"], input[type="radio"], select {
       min-height: 44px;
@@ -210,21 +203,17 @@
     }
   }
 
-  
+
 /* ------------------------------------------------- */
 /* Elements */
 
   body {
-    font-family: var(--text-sans); 
-    background-color: var(--bg-shade-white);
-    line-height: var(--line-height-md); 
-    color: var(--text-shade-black);
+    font-family: var(--text-sans);
+    background-color: var(--color-bg);
+    line-height: var(--line-height-md);
+    color: var(--color-text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 }
-
-
-
-

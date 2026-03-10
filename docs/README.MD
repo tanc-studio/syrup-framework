@@ -58,8 +58,7 @@ css/
 └── 06-custom.css         # Project-specific overrides
 
 js/
-├── syrup.js              # Framework JS only — ships with Syrup
-└── styleguide.js         # Styleguide UI only — never in production
+└── syrup.js              # Framework JS — ThemeManager + TabsManager
 ```
 
 ---
@@ -192,16 +191,16 @@ document.getElementById('darkmodeToggle')
 .btn {
     /* Custom Properties */
     --btn-bg: var(--color-primary);
-    --btn-color: var(--text-white);
+    --btn-color: var(--color-text-inverse);
 
     /* Display & Positioning */
     display: inline-flex;
     position: relative;
 
     /* Typography */
-    font-size: var(--text);
+    font-size: var(--text-base);
     font-weight: var(--text-medium);
-    letter-spacing: var(--text-spacing-xs);
+    letter-spacing: var(--letter-spacing-xs);
     white-space: nowrap;
 
     /* Box Model */
@@ -270,9 +269,8 @@ Write selectors in this order within a component:
 <head>
   <!-- Syrup CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.0/css/main.css">
-  <!-- Project overrides -->
-  <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/custom.css">
+  <!-- Project CSS -->
+  <link rel="stylesheet" href="/css/project.css">
 </head>
 
 <body>
@@ -286,22 +284,35 @@ Write selectors in this order within a component:
 
 ```
 css/
-├── tokens.css    ← brand tokens only (colours, fonts, radii)
-└── custom.css    ← project components in @layer custom {}
+└── project.css   ← fonts, brand tokens, and project components
 ```
 
-### Token override pattern
+### project.css
 
-Only declare what differs from Syrup defaults:
+`@font-face` declarations at the top (global, outside layer), then brand token overrides and project components inside `@layer custom`. Only declare what differs from Syrup defaults.
 
 ```css
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/MyFont.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer custom {
-    :root {
-        --color-primary:   hsl(220, 90%, 55%);
-        --color-secondary: hsl(160, 60%, 45%);
-        --text-sans: 'Your Font', sans-serif;
-        --border-radius: 4px;
-    }
+
+  :root {
+    --color-primary:   hsl(220, 90%, 55%);
+    --color-secondary: hsl(160, 60%, 45%);
+    --text-sans:       'MyFont', sans-serif;
+
+    /* --icon-site-family: 'My Icons'; */
+  }
+
+  .hero { }
+  .nav { }
+
 }
 ```
 
