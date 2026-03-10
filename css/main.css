@@ -2,20 +2,19 @@
 /* Layer Definitions - Define the order */
 @layer base, layout, components, utilities, themes, custom;
 
-@import '01-base.css';     
-@import '02-layout.css'; 
+@import '01-base.css';
+@import '02-layout.css';
 @import '03-components.css';
-@import '04-utilities.css'; 
+@import '04-utilities.css';
 @import '05-themes.css';
-@import '06-custom.css';
 
 
 /*
  * Layer Structure:
- * 1. base - CSS reset, Element defaults, typography
- * 2. layout - Grid systems, wraps, positioning
- * 3. components - Buttons, forms, navigation, etc.
- * 4. utilities - Display, spacing, color helpers
- * 5. themes - Dark mode, theme variations
- * 6. Custom - Project custom CSS
+ * 1. base       — reset, element defaults, typography tokens
+ * 2. layout     — grid systems, wraps, positioning
+ * 3. components — buttons, forms, tabs, cards
+ * 4. utilities  — display, spacing, colour helpers
+ * 5. themes     — dark mode, high-contrast, reduced-motion
+ * 6. custom     — reserved for project/project.css (not shipped by CDN)
  */

@@ -22,7 +22,7 @@
 3. **components** - UI components (buttons, nav, forms, etc.)
 4. **utilities** - Display, spacing, color helpers
 5. **themes** - Dark mode, theme variations
-6. **custom** - Project-specific overrides and customizations
+6. **custom** - Reserved for project use via local `project.css` (not shipped by CDN)
 
 ---
 
@@ -54,8 +54,7 @@ css/
 ├── 02-layout.css         # Grid, containers, spacing systems
 ├── 03-components.css     # All UI components
 ├── 04-utilities.css      # Helper classes (display, spacing)
-├── 05-themes.css         # Dark mode, theme variations
-└── 06-custom.css         # Project-specific overrides
+└── 05-themes.css         # Dark mode, theme variations
 
 js/
 └── syrup.js              # Framework JS — ThemeManager + TabsManager
