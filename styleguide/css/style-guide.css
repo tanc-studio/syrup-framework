@@ -310,9 +310,17 @@
 }
 
 /* Style Swatches */
-[class*="sg-swatch"] { 
+[class*="sg-swatch"] {
     width: 100%;
     min-height: var(--size-8xl);
+}
+
+
+/* ------------------------------------------------- */
+/* Component demos */
+
+.sg-price {
+    margin-top: var(--size-2xs);
 }
 
 
