@@ -5,6 +5,7 @@ Thumbs.db
 
 # Editor & IDE config
 .vscode/
+.trae/
 .cursor/
 .idea/
 
@@ -13,3 +14,9 @@ Thumbs.db
 
 # Local dev
 node_modules/
+
+# Fonts (project-specific, not distributed)
+styleguide/fonts/
+
+# Claude config
+.claude/
