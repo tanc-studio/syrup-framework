@@ -4,6 +4,32 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
+## 2026-05-31 — Utilities Trim + Skill File Restructure
+
+### Utilities (`04-utilities.css`)
+- Stripped utilities back to a minimal set that earns its place in a component-first framework. **File reduced 482 → 62 lines.**
+- **Retained:** type presets (`headline-*`/`heading-*`), text alignment, visibility (`hidden`/`visually-hidden`/`block`/`inline`), responsive visibility (`sm:`/`lg:`)
+- **Removed:** spacing grid (`.m-*`/`.p-*`, ~130 classes), legacy grid spans, `.transform-none`, duplicate hidden classes (`.display-none` with `!important`, `.sr-only`), all text-colour, font-family, font-weight, text-style, background (brand/status/semantic), gradient, shadow, position, overflow, width/height, z-index, opacity, transition, focus, hover, cursor, select, and border utilities
+- Rationale: utilities that style what belongs in a component or custom CSS (position, z-index, transition, focus, shadow) leak styling into markup and work against the methodology. Colour/spacing/sizing now come from component tokens, the `@layer custom`, or `[data-theme]` scoping (dark-section text)
+
+### Styleguide
+- Swapped `display-none` → `hidden` across index, header, sg-widget, sg-styleguide, sg-components
+- Stripped redundant `text-normal` from the pricing demo markup
+- Replaced demo `mt-05` spacing with a styleguide-local `.sg-price` rule in `style-guide.css` — the consumer owns its own demo spacing
+- **Outstanding:** the styleguide still references ~100 removed utility classes — chiefly the colour/background/shadow/gradient swatch demos (which now document nothing) plus `w-full` layout helpers. Needs a deliberate showcase prune (tracked in sprints)
+
+### Skill Files (`~/.claude/skills/syrup/`)
+- Rewrote `SKILL.md` — separated non-negotiable rules from flexible guidance, relaxed token-tier usage, added project-scale adaptation (small/medium/large), documented CDN delivery and responsive approach, tightened component-promotion criteria
+- Rewrote `SKILL-components.md` — added workflow for project-local vs framework components, a Notes column on the registry, and complexity estimates on the not-yet-built list
+
+### Known Issues (carried forward)
+- `.card_footer` carries a `margin-bottom` that adds space below the footer inside the card — likely a bug
+- `.tabs--pills` references Tier 1 tokens (`--neutral-1`, `--neutral-2`) directly — should use semantic tokens for theme compatibility
+- `--gap-*` scale is offset from `--size-*` (e.g. `--gap-sm` → `--size-base`) — confusing naming
+- Icon button classes (`--icon-lg` etc.) conflate style and size
+
+---
+
 ## 2026-05-28 — Component Tokenization + Repo Consolidation
 
 ### Styleguide Path Fix
