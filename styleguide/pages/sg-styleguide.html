@@ -24,13 +24,16 @@
 
   <!-- Header -->
   <header class="sg-header">
-    <div class="sg-nav wrap"> 
+    <div class="sg-nav wrap">
       <!-- Logo -->
       <a class="sg-nav_logo" href="/styleguide/index.html">syrup</a>
       <!-- Nav Right -->
       <div class="sg-nav_section">
-        <!-- Nav Sections -->  
-        <div class="sg-nav-sections" id="include-sg-nav-links"></div>       
+        <!-- Page Links -->
+        <nav class="sg-page-nav text-sm">
+          <a class="sg-page-nav_link" href="/styleguide/pages/sg-styleguide.html">Styles</a>
+          <a class="sg-page-nav_link" href="/styleguide/pages/sg-components.html">Components</a>
+        </nav>
         <!-- Dropdown Toggle -->
         <button class="sg-groups-nav_dropdown btn" id="mobileTrigger" type="button">
           <span class="sg-groups-nav_dropdown_text">Go to</span>
@@ -42,24 +45,25 @@
         <button class="btn btn--icon-lg btn--flush-right" id="darkmodeToggle" type="button">
             <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="30"/></svg>
         </button>
-
       </div>
-    </div>       
+    </div>
   </header>
 
   <!-- Main -->
   <main class="main main--sg wrap">
     <nav class="sg-groups-nav">
+      <div class="sg-groups-nav_pages">
+        <a class="sg-groups-nav_page" href="/styleguide/pages/sg-styleguide.html">Styles</a>
+        <a class="sg-groups-nav_page" href="/styleguide/pages/sg-components.html">Components</a>
+      </div>
       <div class="sg-groups-nav_links text-sm" id="stylesNav">
         <a class="sg-groups-nav_link" href="#sg-typefaces">Typefaces</a>
         <a class="sg-groups-nav_link" href="#sg-typescale">Typescale</a>
         <a class="sg-groups-nav_link" href="#sg-headings">Headings</a>
         <a class="sg-groups-nav_link" href="#sg-type-other">Type Other</a>
         <a class="sg-groups-nav_link" href="#sg-colors">Colors</a>
-        <a class="sg-groups-nav_link" href="#sg-alerts">Alerts</a>
-        <a class="sg-groups-nav_link" href="#sg-shades">Shades</a>
-        <a class="sg-groups-nav_link" href="#sg-gradients">Gradients</a>
-        <a class="sg-groups-nav_link" href="#sg-shadows">Shadows</a>
+        <a class="sg-groups-nav_link" href="#sg-semantic">Semantic</a>
+        <a class="sg-groups-nav_link" href="#sg-neutrals">Neutrals</a>
       </div>
     </nav>
     <div class="sg-body">
@@ -67,110 +71,105 @@
       <!-- Typefaces -->
       <section class="sg-group" id="sg-typefaces">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Typefaces</h2> 
+          <h2 class="sg-heading heading">Typefaces</h2>
         </heading>
         <section class="sg-group_content">
           <div class="grid-md">
 
-            <section class="sg-item text-sans">
+            <section class="sg-item" style="font-family: var(--text-sans)">
               <h3 class="sg-item_heading">Sans Serif</h3>
               <section class="sg-sub-item">
-                <h3 class="heading-sm">Work Sans</h3>
-                <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                <h3 class="heading-sm">--text-sans</h3>
+                <p class="text">Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </section>
               <section class="sg-sub-item">
-                <p class="text-bold">Sans Serif Bold</p>                              
-                <p class="text-medium">Sans Serif Medium</p>                             
-                <p class="text-light">Sans Serif Light</p>                               
+                <p style="font-weight: var(--text-bold)">Bold (--text-bold)</p>
+                <p style="font-weight: var(--text-medium)">Medium (--text-medium)</p>
+                <p style="font-weight: var(--text-normal)">Normal (--text-normal)</p>
+                <p style="font-weight: var(--text-light)">Light (--text-light)</p>
               </section>
             </section>
 
-            <section class="sg-item text-serif">
+            <section class="sg-item" style="font-family: var(--text-serif)">
               <h3 class="sg-item_heading">Serif</h3>
               <div class="sg-sub-item">
-                <h3 class="heading-sm">Frank Ruhl Libre</h3>
-                <p class="text">orem ipsum dolor onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                <h3 class="heading-sm">--text-serif</h3>
+                <p class="text">Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
               <div class="sg-sub-item">
-                <p class="text-bold">Serif Bold</p>                              
-                 <p class="text-medium">Serif Medium</p>                             
-                 <p class="text-light">Serif Light</p>                               
+                <p style="font-weight: var(--text-bold)">Bold (--text-bold)</p>
+                <p style="font-weight: var(--text-medium)">Medium (--text-medium)</p>
+                <p style="font-weight: var(--text-normal)">Normal (--text-normal)</p>
+                <p style="font-weight: var(--text-light)">Light (--text-light)</p>
               </div>
             </section>
 
-            <section class="sg-item text-mono">
-              <h3 class="sg-item_heading">Monospace</h3> 
+            <section class="sg-item" style="font-family: var(--text-mono)">
+              <h3 class="sg-item_heading">Monospace</h3>
               <div class="sg-sub-item">
-                <h3 class="heading-sm">Roboto Mono</h3>
-                <p class="text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
-              </div>   
-              <div class="sg-sub-item">
-                <p class="text-bold">Monospace Bold</p>                              
-                 <p class="text-medium">Monospace Medium</p>                             
-                 <p class="text-light">Monospace Light</p>                               
+                <h3 class="heading-sm">--text-mono</h3>
+                <p class="text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
-            </section>  
-            
+              <div class="sg-sub-item">
+                <p style="font-weight: var(--text-bold)">Bold (--text-bold)</p>
+                <p style="font-weight: var(--text-medium)">Medium (--text-medium)</p>
+                <p style="font-weight: var(--text-normal)">Normal (--text-normal)</p>
+                <p style="font-weight: var(--text-light)">Light (--text-light)</p>
+              </div>
+            </section>
+
           </div>
         </section>
-      </section> 
+      </section>
 
       <!-- Type Scale -->
       <section class="sg-group" id="sg-typescale">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Type Scale</h2> 
+          <h2 class="sg-heading heading">Type Scale</h2>
         </heading>
         <section class="sg-group_content">
           <div class="grid-xl">
 
             <section class="sg-item">
               <h3 class="sg-item_heading">.text-4xl</h3>
-              <p class="text-4xl">Lorem, ipsum dolor sit amet consectne ut aliquid delusimuses magni, ullam minus assumenda nobis tempore nulla aut eveniet.
-              </p>                                
+              <p class="text-4xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delusimuses magni, ullam minus assumenda nobis tempore nulla aut eveniet.</p>
             </section>
 
             <section class="sg-item">
               <h3 class="sg-item_heading">.text-3xl</h3>
-              <p class="text-3xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, ullam minus assumenda nobis tempore nulla aut eveniet.
-              </p>                                
+              <p class="text-3xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, ullam minus assumenda nobis tempore nulla aut eveniet.</p>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.text-2xl</h3>               
-              <p class="text-2xl">Lorem, ipsum dolor sit amet atione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-                Labore repellat cum assumenda sit.</p>                               
-            </section> 
+              <h3 class="sg-item_heading">.text-2xl</h3>
+              <p class="text-2xl">Lorem, ipsum dolor sit amet atione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet. Labore repellat cum assumenda sit.</p>
+            </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.text-xl</h3> 
-              <p class="text-xl">Lorem, ipsum dolor sit amet quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-                Labore repellat cum assumenda sit.</p>                              
-            </section> 
+              <h3 class="sg-item_heading">.text-xl</h3>
+              <p class="text-xl">Lorem, ipsum dolor sit amet quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet. Labore repellat cum assumenda sit.</p>
+            </section>
 
             <section class="sg-item">
               <h3 class="sg-item_heading">.text-lg</h3>
-              <p class="text-lg">Lorem, ipsum dolor sit amet cing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-                Labore repellat cum assumenda sit.</p>                                
+              <p class="text-lg">Lorem, ipsum dolor sit amet cing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet. Labore repellat cum assumenda sit.</p>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.text</h3> 
-              <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-                Labore repellat cum assumenda sit.</p>                                            
+              <h3 class="sg-item_heading">.text</h3>
+              <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet. Labore repellat cum assumenda sit.</p>
             </section>
 
             <section class="sg-item">
               <h3 class="sg-item_heading">.text-sm</h3>
-              <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-                Labore repellat cum assumenda sit.</p>                                              
+              <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet. Labore repellat cum assumenda sit.</p>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.text-xs</h3> 
-              <p class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet.
-                Labore repellat cum assumenda sit.</p>                               
-            </section> 
-          
+              <h3 class="sg-item_heading">.text-xs</h3>
+              <p class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis ratione ut aliquid delectus aliquam ducimus quod dolores magni, dolore voluptate fugiat ullam minus assumenda nobis tempore nulla aut eveniet. Labore repellat cum assumenda sit.</p>
+            </section>
+
           </div>
         </section>
       </section>
@@ -178,293 +177,224 @@
       <!-- Headings -->
       <section class="sg-group" id="sg-headings">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Headings</h2> 
+          <h2 class="sg-heading heading">Headings</h2>
         </heading>
         <section class="sg-group_content">
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.headline-xl</h3> 
-              <div class="headline-xl">Headline XL</div>                               
+              <h3 class="sg-item_heading">.headline-xl</h3>
+              <div class="headline-xl">Headline XL</div>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.headline-lg</h3> 
-              <div class="headline-lg">Headline LG</div>                               
+              <h3 class="sg-item_heading">.headline-lg</h3>
+              <div class="headline-lg">Headline LG</div>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.headline</h3> 
-              <div class="headline">Headline</div>                               
+              <h3 class="sg-item_heading">.headline</h3>
+              <div class="headline">Headline</div>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.heading-xl</h3> 
-              <div class="heading-xl">Heading XL</div>                               
+              <h3 class="sg-item_heading">.heading-xl</h3>
+              <div class="heading-xl">Heading XL</div>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.heading-lg</h3> 
-              <div class="heading-lg">Heading LG</div>                               
+              <h3 class="sg-item_heading">.heading-lg</h3>
+              <div class="heading-lg">Heading LG</div>
             </section>
 
             <section class="sg-item">
               <h3 class="sg-item_heading">.heading</h3>
-              <div class="heading">Heading MD</div>                                             
+              <div class="heading">Heading MD</div>
             </section>
 
             <section class="sg-item">
               <h3 class="sg-item_heading">.heading-sm</h3>
-              <div class="heading-sm">Heading SM</div>                                             
+              <div class="heading-sm">Heading SM</div>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.heading-xs</h3> 
-              <div class="heading-xs">Heading XS</div>                               
+              <h3 class="sg-item_heading">.heading-xs</h3>
+              <div class="heading-xs">Heading XS</div>
             </section>
           </div>
         </section>
-      </section> 
+      </section>
 
       <!-- Other -->
       <section class="sg-group" id="sg-type-other">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Text Other</h2> 
+          <h2 class="sg-heading heading">Text Other</h2>
         </heading>
         <section class="sg-group_content">
           <div class="grid-lg">
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.caption</h3> 
-              <a class="caption">Caption</a>                                             
+              <h3 class="sg-item_heading">.caption</h3>
+              <span class="caption">Caption</span>
             </section>
 
             <section class="sg-item">
-              <h3 class="sg-item_heading">.eybrow</h3> 
-              <a class="eyebrow">eyebrow</a>                                             
+              <h3 class="sg-item_heading">.caption-sm</h3>
+              <span class="caption-sm">Caption Small</span>
             </section>
 
           </div>
         </section>
-      </section>   
+      </section>
 
       <!-- Colors -->
       <section class="sg-group" id="sg-colors">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Colors</h2> 
+          <h2 class="sg-heading heading">Brand Colors</h2>
         </heading>
         <div class="sg-group_content">
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-primary</h3>  
-              <div class="sg-swatch bg-primary"></div>                            
+              <h3 class="sg-item_heading">--color-primary</h3>
+              <div class="sg-swatch" style="background: var(--color-primary)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading"> .bg-primary-2 </h3> 
-              <div class="sg-swatch bg-primary-2"></div>                             
+              <h3 class="sg-item_heading">--color-primary-light</h3>
+              <div class="sg-swatch" style="background: var(--color-primary-light)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading"> .bg-primary-3 </h3> 
-              <div class="sg-swatch bg-primary-3"></div>                             
-            </section> 
-
+              <h3 class="sg-item_heading">--color-primary-dark</h3>
+              <div class="sg-swatch" style="background: var(--color-primary-dark)"></div>
+            </section>
           </div>
           <div class="grid-lg">
-            
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-secondary</h3>  
-              <div class="sg-swatch bg-secondary"></div>                            
+              <h3 class="sg-item_heading">--color-secondary</h3>
+              <div class="sg-swatch" style="background: var(--color-secondary)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading"> .bg-secondary-2 </h3> 
-              <div class="sg-swatch bg-secondary-2"></div>                             
+              <h3 class="sg-item_heading">--color-secondary-light</h3>
+              <div class="sg-swatch" style="background: var(--color-secondary-light)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading"> .bg-primary-3 </h3> 
-              <div class="sg-swatch bg-secondary-3"></div>                             
+              <h3 class="sg-item_heading">--color-secondary-dark</h3>
+              <div class="sg-swatch" style="background: var(--color-secondary-dark)"></div>
             </section>
-
           </div>
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-tertiary</h3>  
-              <div class="sg-swatch bg-tertiary"></div>                            
+              <h3 class="sg-item_heading">--color-tertiary</h3>
+              <div class="sg-swatch" style="background: var(--color-tertiary)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-tertiary-2</h3> 
-              <div class="sg-swatch bg-tertiary-2"></div>                             
+              <h3 class="sg-item_heading">--color-tertiary-light</h3>
+              <div class="sg-swatch" style="background: var(--color-tertiary-light)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-tertiary-3</h3> 
-              <div class="sg-swatch bg-tertiary-3"></div>                             
+              <h3 class="sg-item_heading">--color-tertiary-dark</h3>
+              <div class="sg-swatch" style="background: var(--color-tertiary-dark)"></div>
             </section>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Alerts -->
-      <section class="sg-group" id="sg-alerts">
-        <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Alerts</h2> 
-        </heading>
-        <div class="sg-group_content">
-          <div class="grid-lg">
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-success-1</h3>  
-              <div class="sg-swatch bg-success-1"></div>                            
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> .bg-success-2 </h3> 
-              <div class="sg-swatch bg-success-2"></div>                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-success-3 </h3> 
-              <div class="sg-swatch bg-success-3"></div>                             
-            </section>
-
           </div>
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-warning-1</h3>  
-              <div class="sg-swatch bg-warning-1"></div>                            
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading"> .bg-warning-2 </h3> 
-              <div class="sg-swatch bg-warning-2"></div>                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-warning-3 </h3> 
-              <div class="sg-swatch bg-warning-3"></div>                             
-            </section>
-
-          </div> 
-          <div class="grid-lg">
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-error-1</h3>  
-              <div class="sg-swatch bg-error-1"></div>                            
+              <h3 class="sg-item_heading">--color-error</h3>
+              <div class="sg-swatch" style="background: var(--color-error)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-error-2</h3>  
-              <div class="sg-swatch bg-error-2"></div>                             
+              <h3 class="sg-item_heading">--color-warning</h3>
+              <div class="sg-swatch" style="background: var(--color-warning)"></div>
             </section>
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-error-3</h3>  
-              <div class="sg-swatch bg-error-3"></div>                             
+              <h3 class="sg-item_heading">--color-success</h3>
+              <div class="sg-swatch" style="background: var(--color-success)"></div>
             </section>
           </div>
         </div>
       </section>
 
-      <!-- Shades -->
-      <section class="sg-group" id="sg-shades">
+      <!-- Semantic Colors -->
+      <section class="sg-group" id="sg-semantic">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Shades</h2> 
+          <h2 class="sg-heading heading">Semantic Backgrounds</h2>
         </heading>
-        <div class="sg-group_content"> 
+        <div class="sg-group_content">
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-black</h3>  
-              <div class="sg-swatch bg-black"></div>                            
+              <h3 class="sg-item_heading">--color-bg</h3>
+              <div class="sg-swatch" style="background: var(--color-bg); border: 1px solid var(--color-border)"></div>
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-off-black</h3>  
-              <div class="sg-swatch bg-off-black"></div>                            
+              <h3 class="sg-item_heading">--color-bg-subtle</h3>
+              <div class="sg-swatch" style="background: var(--color-bg-subtle)"></div>
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-dark-grey</h3> 
-              <div class="sg-swatch bg-dark-grey"></div>                             
+              <h3 class="sg-item_heading">--color-bg-muted</h3>
+              <div class="sg-swatch" style="background: var(--color-bg-muted)"></div>
             </section>
-
+          </div>
+          <div class="grid-lg">
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-grey</h3> 
-              <div class="sg-swatch bg-grey"></div>                             
+              <h3 class="sg-item_heading">--color-bg-strong</h3>
+              <div class="sg-swatch" style="background: var(--color-bg-strong)"></div>
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-dark-grey</h3> 
-              <div class="sg-swatch bg-dark-grey"></div>                             
+              <h3 class="sg-item_heading">--color-bg-inverse</h3>
+              <div class="sg-swatch" style="background: var(--color-bg-inverse)"></div>
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-off-white</h3> 
-              <div class="sg-swatch bg-off-white"></div>                             
+              <h3 class="sg-item_heading">--color-bg-disabled</h3>
+              <div class="sg-swatch" style="background: var(--color-bg-disabled)"></div>
             </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-white</h3> 
-              <div class="sg-swatch bg-white border-light"></div>                             
-            </section>
-               
-          </div> 
-        </div> 
+          </div>
+        </div>
       </section>
 
-      <!-- Gradients -->
-      <section class="sg-group" id="sg-gradients">
+      <!-- Neutrals -->
+      <section class="sg-group" id="sg-neutrals">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Gradients</h2> 
+          <h2 class="sg-heading heading">Neutrals</h2>
         </heading>
-        <section class="sg-group_content">
+        <div class="sg-group_content">
           <div class="grid-lg">
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-gradient-1 </h3>  
-              <div class=".sg-swatch bg-gradient-1"></div>                            
+              <h3 class="sg-item_heading">--black</h3>
+              <div class="sg-swatch" style="background: var(--black)"></div>
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-gradient-2</h3> 
-              <div class=".sg-swatch bg-gradient-2"></div>                             
+              <h3 class="sg-item_heading">--neutral-10</h3>
+              <div class="sg-swatch" style="background: var(--neutral-10)"></div>
             </section>
-
             <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-gradient-3</h3>  
-              <div class=".sg-swatch bg-gradient-3"></div>                            
+              <h3 class="sg-item_heading">--neutral-8</h3>
+              <div class="sg-swatch" style="background: var(--neutral-8)"></div>
             </section>
-
+            <section class="sg-item">
+              <h3 class="sg-item_heading">--neutral-6</h3>
+              <div class="sg-swatch" style="background: var(--neutral-6)"></div>
+            </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">--neutral-4</h3>
+              <div class="sg-swatch" style="background: var(--neutral-4)"></div>
+            </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">--neutral-3</h3>
+              <div class="sg-swatch" style="background: var(--neutral-3)"></div>
+            </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">--neutral-2</h3>
+              <div class="sg-swatch" style="background: var(--neutral-2)"></div>
+            </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">--neutral-1</h3>
+              <div class="sg-swatch" style="background: var(--neutral-1); border: 1px solid var(--color-border)"></div>
+            </section>
+            <section class="sg-item">
+              <h3 class="sg-item_heading">--white</h3>
+              <div class="sg-swatch" style="background: var(--white); border: 1px solid var(--color-border)"></div>
+            </section>
           </div>
-        </section>
+        </div>
       </section>
-
-      <!-- Shadows -->
-      <section class="sg-group" id="sg-shadows">
-        <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Shadows</h2> 
-        </heading>
-        <section class="sg-group_content">
-          <div class="grid-lg">
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-shadow-1 </h3>  
-              <div class=".sg-swatch bg-shadow-1"></div>                            
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-shadow-2 </h3> 
-              <div class=".sg-swatch bg-shadow-2"></div>                             
-            </section>
-
-            <section class="sg-item">
-              <h3 class="sg-item_heading">.bg-shadow-3 </h3>  
-              <div class=".sg-swatch bg-shadow-3"></div>                            
-            </section>
-
-          </div>
-        </section>  
-      </section>   
 
     </div>
   </main>
@@ -474,15 +404,12 @@
   </footer>
 
   <!-- Scripts -->
-  <script defer>
-    includeHTML('include-sg-nav-links', '/styleguide/includes/sg-nav-links.html');
-    includeHTML('include-svgs', '/styleguide/includes/svgs.html');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      includeHTML('include-svgs', '/styleguide/includes/svgs.html');
+    });
   </script>
 
   <div id="include-svgs" class="hidden"></div>
 </body>
-
 </html>
-
-
-

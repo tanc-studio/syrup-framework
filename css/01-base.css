@@ -51,16 +51,6 @@
     --size-3xl:  clamp(2.19rem, 1.5vw + 1.88rem, 2.5rem);
     --size-4xl:  clamp(2.63rem, 1.8vw + 2.25rem, 3rem);
     --size-5xl:  clamp(3.06rem, 2.1vw + 2.63rem, 3.5rem);
-    --size-6xl:  clamp(3.5rem, 2.4vw + 3rem, 4rem);
-    --size-7xl:  clamp(4.38rem, 3vw + 3.75rem, 5rem);
-    --size-8xl:  clamp(5.25rem, 3.6vw + 4.5rem, 6rem);
-    --size-9xl:  clamp(6.56rem, 4.5vw + 5.63rem, 7.5rem);
-    --size-10xl: clamp(8.75rem, 6vw + 7.5rem, 10rem);
-    --size-11xl: clamp(10.94rem, 7.5vw + 9.38rem, 12.5rem);
-    --size-12xl: clamp(13.13rem, 9vw + 11.25rem, 15rem);
-    --size-13xl: clamp(15.31rem, 10.5vw + 13.13rem, 17.5rem);
-    --size-14xl: clamp(17.5rem, 12vw + 15rem, 20rem);
-    --size-15xl: clamp(19.69rem, 13.5vw + 16.88rem, 22.5rem);
 
     /* Typography Families — override in project.css */
     --text-serif: serif;
@@ -104,15 +94,8 @@
     --border-radius-md:    0.50rem;
     --border-radius-lg:    0.75rem;
     --border-radius-round: 50vw;
-    --border-thin:         1px;
+    --border-thin:         1.25px;
     --border-thick:        1.5px;
-
-    /* Layout & Spacing */
-    --gap-xs: var(--size-xs);
-    --gap-sm: var(--size-base);
-    --gap-md: var(--size-xl);
-    --gap-lg: var(--size-2xl);
-    --gap-xl: var(--size-4xl);
 
     /* Container Widths */
     --site-margin: 5vw;
@@ -120,11 +103,6 @@
     --wrap:        calc(min(100%, 1400px) - var(--site-margin) * 2);
     --wrap-sm:     calc(min(100%, 1000px) - var(--site-margin) * 2);
     --wrap-xs:     calc(min(100%, 800px) - var(--site-margin) * 2);
-
-    /* Component Sizing */
-    --nav-height:    3rem;
-    --nav-tray-width: 12rem;
-    --page-padding:  var(--size-4xl);
 
     /* Transitions */
     --theme-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);

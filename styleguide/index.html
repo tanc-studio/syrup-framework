@@ -75,11 +75,13 @@
   <!-- Sidenav -->
   <div id="include-sidenav"></div>
 
-  <script defer>
-    includeHTML('include-navlinks', '/styleguide/includes/navlinks.html');
-    includeHTML('include-footer', '/styleguide/includes/footer.html');
-    includeHTML('include-svgs', '/styleguide/includes/svgs.html');
-    includeHTML('include-sidenav', '/styleguide/includes/sidenav.html');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      includeHTML('include-navlinks', '/styleguide/includes/navlinks.html');
+      includeHTML('include-footer', '/styleguide/includes/footer.html');
+      includeHTML('include-svgs', '/styleguide/includes/svgs.html');
+      includeHTML('include-sidenav', '/styleguide/includes/sidenav.html');
+    });
   </script>
 
 </body>

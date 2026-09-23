@@ -315,8 +315,8 @@ button:focus-visible {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap-md);
-    row-gap: var(--gap-xs);
+    gap: var(--size-xl);
+    row-gap: var(--size-xs);
     align-items: baseline;
 }
 
@@ -430,7 +430,7 @@ button:focus-visible {
 .form_select:focus {
     border-color: var(--color-focus);
     outline: none;
-    box-shadow: 0 0 0 var(--color-focus);
+    box-shadow: 0 0 0 var(--focus-ring-offset) var(--color-focus);
 }
 
 .form_select:focus-visible {
@@ -447,7 +447,7 @@ button:focus-visible {
 .form_checkbox-group {
     margin-top: var(--size-xs);
     display: flex;
-    gap: var(--gap-xs);
+    gap: var(--size-xs);
 }
 
 .form_radio-group {
@@ -457,7 +457,13 @@ button:focus-visible {
 }
 
 .form_radio {
-    display: none;
+    /* Hidden but focusable — display:none would break keyboard access */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }
 
 .form_radio-label {
@@ -490,8 +496,13 @@ button:focus-visible {
 }
 
 .form_toggle-input {
-    display: none;
-    height: 1rem;
+    /* Hidden but focusable — display:none would break keyboard access */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }
 
 .form_toggle-label {
@@ -611,12 +622,12 @@ button:focus-visible {
 .tabs--pills .tab {
     border-radius: var(--border-radius-md);
     border-bottom: none;
-    background-color: var(--neutral-1);
+    background-color: var(--color-bg-subtle);
     color: var(--color-text-muted);
 }
 
 .tabs--pills .tab:hover {
-    background-color: var(--neutral-2);
+    background-color: var(--color-bg-muted);
     color: var(--color-text);
 }
 
@@ -707,13 +718,11 @@ button:focus-visible {
 .card_footer {
     padding-top: var(--card-gap);
     margin-top: auto;
-    margin-bottom: var(--card-gap);
     border-top: 1px solid var(--card-border);
 }
 
 .card--flat {
     --card-shadow: none;
-    border: 1px solid var(--card-border);
 }
 
 .card--primary {

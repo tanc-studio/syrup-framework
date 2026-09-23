@@ -27,13 +27,16 @@
   <header class="sg-header">
     <div class="sg-nav wrap">
       <!-- Logo -->
-      <a class="sg-nav_logo u-heading-lg" href="/styleguide/index.html">syrup</a>
+      <a class="sg-nav_logo" href="/styleguide/index.html">syrup</a>
       <!-- Nav Right -->
       <div class="sg-nav_section">
-        <!-- Nav Sections -->
-        <div class="sg-nav-sections" id="include-sg-nav-links"></div>
+        <!-- Page Links -->
+        <nav class="sg-page-nav text-sm">
+          <a class="sg-page-nav_link" href="/styleguide/pages/sg-styleguide.html">Styles</a>
+          <a class="sg-page-nav_link" href="/styleguide/pages/sg-components.html">Components</a>
+        </nav>
         <!-- Dropdown Toggle -->
-        <button class="sg-groups-nav_dropdown btn " id="mobileTrigger" type="button">
+        <button class="sg-groups-nav_dropdown btn" id="mobileTrigger" type="button">
           <span class="sg-groups-nav_dropdown_text">Go to</span>
           <svg class="sg-groups-nav_dropdown_arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -52,12 +55,17 @@
   <!-- Main -->
   <main class="main main--sg wrap">
     <nav class="sg-groups-nav">
+      <div class="sg-groups-nav_pages">
+        <a class="sg-groups-nav_page" href="/styleguide/pages/sg-styleguide.html">Styles</a>
+        <a class="sg-groups-nav_page" href="/styleguide/pages/sg-components.html">Components</a>
+      </div>
       <div class="sg-groups-nav_links" id="stylesNav">
         <a class="sg-groups-nav_link" href="#sg-icons">Icons</a>
         <a class="sg-groups-nav_link" href="#sg-buttons">Buttons</a>
         <a class="sg-groups-nav_link" href="#sg-forms">Forms</a>
         <a class="sg-groups-nav_link" href="#sg-tabs">Tabs</a>
         <a class="sg-groups-nav_link" href="#sg-cards">Cards</a>
+        <a class="sg-groups-nav_link" href="#sg-layout">Layout</a>
       </div>
     </nav>
     <div class="sg-body">
@@ -65,7 +73,7 @@
       <!-- Icons -->
       <section class="sg-group" id="sg-icons">
         <header class="sg-group_header">
-          <h2 class="sg-heading heading">Icons<br></h2>
+          <h2 class="sg-heading heading">Icons</h2>
         </header>
         <div class="sg-group_content">
           <div class="grid-xl">
@@ -77,7 +85,7 @@
 
             <section class="sg-item">
               <h3 class="sg-item_heading">icon--social</h3>
-              <span class="icon icon--social icon--lg"></span>
+              <span class="icon icon--social icon--lg"></span>
             </section>
 
           </div>
@@ -85,7 +93,7 @@
 
             <section class="sg-item">
               <h3 class="sg-item_heading">icon--sm</h3>
-              <span class="icon icon--site icon--sm ">favorite</span>
+              <span class="icon icon--site icon--sm">favorite</span>
             </section>
 
             <section class="sg-item">
@@ -102,9 +110,8 @@
           <div class="sg-sub-group">
 
             <header class="sg-sub-group_header">
-              <h3 class="sg-sub-heading "> Site icons -
-                <a class="link-inline" href="https://fonts.google.com/icons" target="_blank">Material icons
-                </a>
+              <h3 class="sg-sub-heading">Site icons -
+                <a class="link-inline" href="https://fonts.google.com/icons" target="_blank">Material icons</a>
               </h3>
             </header>
             <div class="grid-xs sg-grid--icons">
@@ -135,53 +142,53 @@
           <div class="sg-sub-group">
 
             <div class="sg-sub-group_header">
-              <h3 class="sg-sub-heading"> Site icons - Icon Font </h3>
+              <h3 class="sg-sub-heading">Site icons - Icon Font</h3>
             </div>
 
             <div class="grid-xs sg-grid--icons">
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
-              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
+              <span class="icon icon--social"></span>
             </div>
 
           </div>
@@ -190,10 +197,10 @@
       </section>
 
       <!-- Buttons -->
-      <section class="sg-group " id="sg-buttons">
+      <section class="sg-group" id="sg-buttons">
 
         <heading class="sg-group_header">
-          <h2 class="sg-heading ">Buttons</h2>
+          <h2 class="sg-heading">Buttons</h2>
         </heading>
 
         <div class="sg-group_content sg-group_content--spaced">
@@ -222,45 +229,30 @@
           <div class="grid-lg">
 
             <section class="sg-item">
-
-              <h3 class="sg-item_heading"> .btn--primary</h3>
-
+              <h3 class="sg-item_heading">.btn--primary</h3>
               <button class="btn btn--primary">Click Me
                 <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path
-                    d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z"
-                    fill="currentColor" />
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor" />
                 </svg>
               </button>
-
             </section>
 
             <section class="sg-item">
-
-              <h3 class="sg-item_heading"> .btn--secondary</h3>
-
+              <h3 class="sg-item_heading">.btn--secondary</h3>
               <button class="btn btn--secondary">Click Me
                 <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path
-                    d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z"
-                    fill="currentColor" />
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor" />
                 </svg>
               </button>
-
             </section>
 
             <section class="sg-item">
-
-              <h3 class="sg-item_heading"> .btn--tertiary</h3>
-
+              <h3 class="sg-item_heading">.btn--tertiary</h3>
               <button class="btn btn--tertiary">Click Me
                 <svg class="icon icon-svg--sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path
-                    d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z"
-                    fill="currentColor" />
+                  <path d="M50 20 A5 5 0 0 1 55 25 V45 H75 A5 5 0 0 1 80 50 A5 5 0 0 1 75 55 H55 V75 A5 5 0 0 1 50 80 A5 5 0 0 1 45 75 V55 H25 A5 5 0 0 1 20 50 A5 5 0 0 1 25 45 H45 V25 A5 5 0 0 1 50 20 Z" fill="currentColor" />
                 </svg>
               </button>
-
             </section>
 
           </div>
@@ -269,33 +261,24 @@
           <div class="grid-lg">
 
             <section class="sg-item">
-
               <h3 class="sg-item_heading">.btn--icon</h3>
-
               <button class="btn btn--icon btn--primary">
                 <span class="icon icon--site icon--lg">settings</span>
               </button>
-
             </section>
 
             <section class="sg-item">
-
               <h3 class="sg-item_heading">.btn--icon-sm</h3>
-
               <button class="btn btn--icon-sm btn--primary">
                 <span class="icon icon--site icon--sm">settings</span>
               </button>
-
             </section>
 
             <section class="sg-item">
-
               <h3 class="sg-item_heading">.btn--icon-xs</h3>
-
               <button class="btn btn--icon-xs btn--secondary">
                 <span class="icon icon--site icon--xs">settings</span>
               </button>
-
             </section>
 
           </div>
@@ -312,7 +295,7 @@
         <section class="sg-group_content">
 
           <section class="sg-item">
-            <h3 class="sg-item_heading">Search Form &#40Horizontal&#41</h3>
+            <h3 class="sg-item_heading">Search Form (Horizontal)</h3>
             <form class="form" data-theme="only-dark">
               <h2 class="form_title heading-sm">Search</h2>
               <div class="form_items form_items--horizontal">
@@ -332,8 +315,8 @@
             <form class="form" data-theme="invert">
               <h2 class="form_title heading-sm">Search</h2>
               <div class="form_item">
-                <label class="form_label visually-hidden" for="search_query">Search Query</label>
-                <input class="form_input" type="search" id="search_query" name="search_query" required>
+                <label class="form_label visually-hidden" for="search_query_2">Search Query</label>
+                <input class="form_input" type="search" id="search_query_2" name="search_query_2" required>
               </div>
               <div class="form_item form_item--btn">
                 <button class="form_btn btn btn--secondary" type="submit">Search</button>
@@ -360,8 +343,8 @@
           </section>
 
           <section class="sg-item">
-            <h3 class="sg-item_heading">Form with toggle's</h3>
-            <form class="form exclude-theme">
+            <h3 class="sg-item_heading">Form with Toggles</h3>
+            <form class="form">
               <h2 class="form_title heading-sm">Form Title</h2>
               <div class="form_item">
                 <label class="form_label" for="name">Name:</label>
@@ -411,32 +394,49 @@
 
             <div class="tabs tabs--horizontal">
               <nav class="tabs_nav" role="tablist">
-                <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="pills-panel-1"
-                  id="pills-tab-1">
-                  Home
-                </button>
-                <button class="tab" role="tab" aria-selected="false" aria-controls="pills-panel-2" id="pills-tab-2">
-                  About
-                </button>
-                <button class="tab" role="tab" aria-selected="false" aria-controls="pills-panel-3" id="pills-tab-3">
-                  Contact
-                </button>
+                <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="horiz-panel-1" id="horiz-tab-1">Home</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="horiz-panel-2" id="horiz-tab-2">About</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="horiz-panel-3" id="horiz-tab-3">Contact</button>
               </nav>
               <div class="tabs_content">
-                <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="pills-tab-1"
-                  id="pills-panel-1">
-                  <h4 class="heading heading-sm">Welcome Home</h4>
-                  <p class="text-sm">This is the home section with a warm welcome message and introduction to our
-                    services.</p>
+                <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="horiz-tab-1" id="horiz-panel-1">
+                  <h4 class="heading-sm">Welcome Home</h4>
+                  <p class="text-sm">This is the home section with a warm welcome message and introduction to our services.</p>
                 </div>
-                <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-2" id="pills-panel-2">
-                  <h4 class="heading heading-sm">About Us</h4>
+                <div class="tabs_panel" role="tabpanel" aria-labelledby="horiz-tab-2" id="horiz-panel-2">
+                  <h4 class="heading-sm">About Us</h4>
                   <p class="text-sm">Learn more about our company, mission, and the team behind our products.</p>
                 </div>
+                <div class="tabs_panel" role="tabpanel" aria-labelledby="horiz-tab-3" id="horiz-panel-3">
+                  <h4 class="heading-sm">Get in Touch</h4>
+                  <p class="text-sm">Find all the ways you can reach out to us for support, questions, or collaboration.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Pills Tabs -->
+          <section class="sg-item">
+            <h3 class="sg-item_heading">Pills Tabs</h3>
+
+            <div class="tabs tabs--pills">
+              <nav class="tabs_nav" role="tablist">
+                <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="pills-panel-1" id="pills-tab-1">Home</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="pills-panel-2" id="pills-tab-2">About</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="pills-panel-3" id="pills-tab-3">Contact</button>
+              </nav>
+              <div class="tabs_content">
+                <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="pills-tab-1" id="pills-panel-1">
+                  <h4 class="heading-sm">Welcome Home</h4>
+                  <p class="text-sm">This is the home section with a warm welcome message.</p>
+                </div>
+                <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-2" id="pills-panel-2">
+                  <h4 class="heading-sm">About Us</h4>
+                  <p class="text-sm">Learn more about our company and mission.</p>
+                </div>
                 <div class="tabs_panel" role="tabpanel" aria-labelledby="pills-tab-3" id="pills-panel-3">
-                  <h4 class="heading heading-sm">Get in Touch</h4>
-                  <p class="text-sm">Find all the ways you can reach out to us for support, questions, or collaboration.
-                  </p>
+                  <h4 class="heading-sm">Get in Touch</h4>
+                  <p class="text-sm">Find all the ways you can reach out to us.</p>
                 </div>
               </div>
             </div>
@@ -447,27 +447,14 @@
             <h3 class="sg-item_heading">Vertical Tabs</h3>
             <div class="tabs tabs--vertical">
               <nav class="tabs_nav" role="tablist">
-                <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="vertical-panel-1"
-                  id="vertical-tab-1">
-                  Settings
-                </button>
-                <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-2"
-                  id="vertical-tab-2">
-                  Privacy
-                </button>
-                <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-3"
-                  id="vertical-tab-3">
-                  Security
-                </button>
-                <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-4"
-                  id="vertical-tab-4">
-                  Notifications
-                </button>
+                <button class="tab tab--active" role="tab" aria-selected="true" aria-controls="vertical-panel-1" id="vertical-tab-1">Settings</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-2" id="vertical-tab-2">Privacy</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-3" id="vertical-tab-3">Security</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="vertical-panel-4" id="vertical-tab-4">Notifications</button>
               </nav>
               <div class="tabs_content">
-                <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="vertical-tab-1"
-                  id="vertical-panel-1">
-                  <h4 class="heading ">General Settings</h4>
+                <div class="tabs_panel tabs_panel--active" role="tabpanel" aria-labelledby="vertical-tab-1" id="vertical-panel-1">
+                  <h4 class="heading">General Settings</h4>
                   <p class="text-sm">Configure your general application preferences and default behaviors.</p>
                 </div>
                 <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-2" id="vertical-panel-2">
@@ -476,13 +463,11 @@
                 </div>
                 <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-3" id="vertical-panel-3">
                   <h4 class="heading">Security Options</h4>
-                  <p class="text-sm">Set up two-factor authentication and other security measures to protect your
-                    account.</p>
+                  <p class="text-sm">Set up two-factor authentication and other security measures to protect your account.</p>
                 </div>
                 <div class="tabs_panel" role="tabpanel" aria-labelledby="vertical-tab-4" id="vertical-panel-4">
                   <h4 class="heading">Notification Preferences</h4>
-                  <p class="text-sm">Choose which notifications you want to receive and how you want to receive them.
-                  </p>
+                  <p class="text-sm">Choose which notifications you want to receive and how you want to receive them.</p>
                 </div>
               </div>
             </div>
@@ -499,7 +484,6 @@
         <section class="sg-group_content">
 
           <div class="grid-lg">
-            <!-- Basic Card -->
 
             <article class="card">
               <div class="card_header">
@@ -515,7 +499,7 @@
 
             <article class="card" data-theme="only-dark">
               <div class="card_header">
-                <h3 class="heading-sm">Basic Card</h3>
+                <h3 class="heading-sm">Dark Card</h3>
               </div>
               <div class="card_body">
                 <p class="text-sm">This is a standard card component with header, body, and footer sections.</p>
@@ -537,9 +521,9 @@
               </div>
             </article>
 
-            <article class="card card--flat"  data-theme="invert">
+            <article class="card card--flat" data-theme="invert">
               <div class="card_header">
-                <h3 class="heading-sm">Flat Card</h3>
+                <h3 class="heading-sm">Flat Card (Invert)</h3>
               </div>
               <div class="card_body">
                 <p class="text-sm">A flat variation without shadow, useful for bordered content areas.</p>
@@ -555,17 +539,17 @@
                 <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
               </div>
               <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
+                <ul class="text-sm" style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>Unlimited Projects</li>
                   <li>Priority Support</li>
                   <li>Analytics Dashboard</li>
                 </ul>
               </div>
               <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
+                <button class="btn btn--primary" style="width: 100%">Subscribe</button>
               </div>
             </article>
+
           </div>
 
         </section>
@@ -574,321 +558,67 @@
       <!-- Layout -->
       <section class="sg-group" id="sg-layout">
         <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Layout</h2>
+          <h2 class="sg-heading heading">Layout Grids</h2>
         </heading>
         <section class="sg-group_content">
 
-          <div class="grid-xl">
-            <!-- Basic Card -->
+          <section class="sg-item">
+            <h3 class="sg-item_heading">.grid-xl</h3>
+            <div class="grid-xl">
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid XL item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid XL item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid XL item</p></div>
+              </article>
+            </div>
+          </section>
 
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
+          <section class="sg-item">
+            <h3 class="sg-item_heading">.grid-lg</h3>
+            <div class="grid-lg">
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid LG item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid LG item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid LG item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid LG item</p></div>
+              </article>
+            </div>
+          </section>
 
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-            
-          </div>
+          <section class="sg-item">
+            <h3 class="sg-item_heading">.grid-md</h3>
+            <div class="grid-md">
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid MD item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid MD item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid MD item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid MD item</p></div>
+              </article>
+              <article class="card card--flat">
+                <div class="card_body"><p class="text-sm">Grid MD item</p></div>
+              </article>
+            </div>
+          </section>
 
         </section>
       </section>
 
-      <section class="sg-group" id="sg-layout">
-        <heading class="sg-group_header">
-          <h2 class="sg-heading heading">Layout</h2>
-        </heading>
-        <section class="sg-group_content">
-
-          <div class="grid-md">
-            <!-- Basic Card -->
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card_header">
-                <span class="caption-sm">Pro Plan</span>
-                <h3 class="heading-lg sg-price">$29<span class="text-sm">/mo</span></h3>
-              </div>
-              <div class="card_body">
-                <ul class="text-sm"
-                  style="list-style: disc; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                  <li>unlimited Projects</li>
-                  <li>Priority Support</li>
-                  <li>Analytics Dashboard</li>
-                </ul>
-              </div>
-              <div class="card_footer" style="border-top: none;">
-                <button class="btn btn--primary w-full">Subscribe</button>
-              </div>
-            </article>
-            
-          </div>
-
-        </section>
-      </section>
-
-      
     </div>
 
   </main>
@@ -900,14 +630,11 @@
   <!-- Scripts -->
   <div id="include-svgs" class="hidden"></div>
 
-  <script defer>
-    includeHTML('include-sg-nav-links', '/styleguide/includes/sg-nav-links.html');
-    includeHTML('include-svgs', '/styleguide/includes/svgs.html');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      includeHTML('include-svgs', '/styleguide/includes/svgs.html');
+    });
   </script>
 
-
-
-
 </body>
-
 </html>
