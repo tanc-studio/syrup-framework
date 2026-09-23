@@ -4,6 +4,64 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
+## 2026-07-17 — Bug Fixes + Cleanup (framework audit)
+
+### Bug Fixes
+- **High-contrast media query never fired** — `prefers-contrast: high` is not a valid value; changed to `prefers-contrast: more`
+- **Radios/toggles unusable by keyboard** — `.form_radio` and `.form_toggle-input` were `display: none`, so they could never receive focus and their `:focus-visible + label` rules were dead. Now hidden with the visually-hidden pattern (focusable)
+- **`.form_select:focus` ring invisible** — `box-shadow: 0 0 0 var(--color-focus)` parsed as a zero-spread (invisible) shadow; now matches `.form_input` (`0 0 0 var(--focus-ring-offset) var(--color-focus)`)
+- **Dark theme `--color-bg-subtle` was identical to `--color-bg`** (both `neutral-9`) — pills tabs invisible against the page in dark mode. Now `neutral-8` (mirrors light theme's one-step offset)
+- **ThemeManager baked in the system theme on first visit** — `applyTheme()` stored every theme it applied, so `watchSystemTheme()`'s "no manual choice" check never passed after first load. Persistence now happens only in `toggle()`/`setTheme()` (explicit user choice)
+- **ThemeManager no-animate path was ineffective** — inline `transition` on `<html>` doesn't stop child transitions; now uses the existing `.theme-loading` class (without clobbering a page-set FOUC guard)
+
+### Cleanup
+- Theme-transition selector list: removed stale `[class*="bg-"]`/`[class*="text-"]`/`[class*="border-"]` (those utilities were culled 2026-05-31); added `.card` so cards transition with the theme instead of snapping
+- `.card--flat`: removed duplicate `border` declaration (base `.card` already sets it)
+- `.grid-wrap`: hardcoded `gap: 1rem` → `var(--size-base)`
+- Rewrote stale root `README.md` in the outer `Syrup` repo (still described the pre-cull utility-first framework, npm install, 7 layers)
+- Registry (`SKILL-components.md`): corrected Icon sizing note (rem, not em) and flagged `--icon-site-family` as a required project override
+
+---
+
+## 2026-05-31 — Sprint Cleanup + Bug Fixes
+
+### Bug Fixes
+- **`.card_footer` margin-bottom** — removed erroneous `margin-bottom: var(--card-gap)` that pushed space below the footer inside the card
+- **`.tabs--pills` Tier 1 tokens** — replaced `--neutral-1`/`--neutral-2` with semantic `--color-bg-subtle`/`--color-bg-muted` for dark-mode compatibility
+- **`--gap-*` scale removed** — eliminated the confusing offset naming (`--gap-sm` → `--size-base`); all usages replaced with direct `--size-*` tokens; definitions removed from `01-base.css`
+
+### Sizing Scale
+- Trimmed from 21 to 11 steps — removed `--size-6xl` through `--size-15xl` (unused in framework and all consuming projects)
+
+### Styleguide Prune
+- Replaced dead utility-class colour/shade/gradient/shadow demos with inline-style token swatches showing actual `--color-*` and `--neutral-*` values
+- Fixed typeface section — was using nonexistent `.text-sans`/`.text-bold` utility classes; now uses inline `font-family`/`font-weight` with CSS custom properties
+- Removed dead `.eyebrow` demo, added `.caption-sm`
+- Components page: removed dead `u-heading-lg`, `w-full`; trimmed 16 duplicate pricing cards to a clean grid demo; added pills tab variant demo
+- Updated nav links to match new section structure
+
+### Skill Files
+- Tightened `em` usage rule — explicit property list instead of vague guidance
+- Added file-naming convention note (framework: numbered, projects: descriptive)
+- Marked modal, table, dropdown as project-local in Summit in component registry
+- Documented JS init convention (auto-init, CSS class selection, `data-` attribute pattern for new components)
+- Removed resolved known issues (tabs pills, gap scale)
+
+### Token Audit
+- Moved orphan layout tokens (`--nav-height`, `--nav-tray-width`, `--page-padding`) from `01-base.css` to `style-guide.css` — no framework component consumed them; framework tokens must be paired with framework CSS
+
+### Styleguide Navigation
+- Added page links (Styles / Components) to header — visible inline on desktop, collapsed into "Go to" slide-out on mobile
+- Replaced `includeHTML`-based nav with inline markup; removed old `sg-nav-sections` CSS
+
+### Known Issues (resolved this session)
+- ~~`.card_footer` margin-bottom bug~~ — fixed
+- ~~`.tabs--pills` Tier 1 tokens~~ — fixed
+- ~~`--gap-*` naming confusion~~ — removed entirely
+- ~~`icon-svg--sm` identical to base~~ — was already differentiated (0.75em vs 1em)
+
+---
+
 ## 2026-05-31 — Utilities Trim + Skill File Restructure
 
 ### Utilities (`04-utilities.css`)
@@ -22,11 +80,11 @@ All notable changes to the Syrup CSS Framework.
 - Rewrote `SKILL.md` — separated non-negotiable rules from flexible guidance, relaxed token-tier usage, added project-scale adaptation (small/medium/large), documented CDN delivery and responsive approach, tightened component-promotion criteria
 - Rewrote `SKILL-components.md` — added workflow for project-local vs framework components, a Notes column on the registry, and complexity estimates on the not-yet-built list
 
-### Known Issues (carried forward)
-- `.card_footer` carries a `margin-bottom` that adds space below the footer inside the card — likely a bug
-- `.tabs--pills` references Tier 1 tokens (`--neutral-1`, `--neutral-2`) directly — should use semantic tokens for theme compatibility
-- `--gap-*` scale is offset from `--size-*` (e.g. `--gap-sm` → `--size-base`) — confusing naming
-- Icon button classes (`--icon-lg` etc.) conflate style and size
+### Known Issues (carried forward — all resolved in next session entry above)
+- ~~`.card_footer` margin-bottom bug~~
+- ~~`.tabs--pills` Tier 1 tokens~~
+- ~~`--gap-*` naming confusion~~
+- Icon button classes (`--icon-lg` etc.) conflate style and size — deferred, tracked as known debt
 
 ---
 

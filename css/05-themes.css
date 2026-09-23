@@ -38,8 +38,8 @@
     --color-bg-tertiary-dark:  var(--color-tertiary-dark);
 
     /* Border */
-    --color-border:        var(--neutral-2);
-    --color-border-strong: var(--neutral-6);
+    --color-border:        var(--neutral-5);
+    --color-border-strong: var(--neutral-8);
 
     /* Links */
     --color-link:          var(--black);
@@ -114,7 +114,7 @@
 
     /* Background */
     --color-bg:            var(--neutral-9);
-    --color-bg-subtle:     var(--neutral-9);
+    --color-bg-subtle:     var(--neutral-8);
     --color-bg-muted:      var(--neutral-5);
     --color-bg-strong:     var(--neutral-3);
     --color-bg-inverse:    var(--neutral-2);
@@ -136,7 +136,7 @@
 
     /* Border */
     --color-border:        var(--neutral-6);
-    --color-border-strong: var(--neutral-4);
+    --color-border-strong: var(--neutral-2);
 
     /* Links */
     --color-link:          var(--neutral-2);
@@ -202,9 +202,7 @@
   .form_input,
   .form_select,
   .tab,
-  [class*="bg-"],
-  [class*="text-"],
-  [class*="border-"] {
+  .card {
     transition:
       background-color var(--theme-transition),
       color var(--theme-transition),
@@ -216,7 +214,7 @@
 
 
   /* High Contrast */
-  @media (prefers-contrast: high) {
+  @media (prefers-contrast: more) {
     :root {
       --color-text:          var(--black);
       --color-bg:            var(--white);

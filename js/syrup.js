@@ -41,8 +41,12 @@ class ThemeManager {
     applyTheme(theme, animate = true) {
         const root = document.documentElement;
 
+        // Suppress transitions via .theme-loading (inline transition on <html>
+        // wouldn't stop child transitions). Don't remove it if the page set it
+        // itself for FOUC prevention — init() clears that one.
+        const hadLoadingClass = root.classList.contains('theme-loading');
         if (!animate) {
-            root.style.transition = 'none';
+            root.classList.add('theme-loading');
         }
 
         // Light is the default — only set attribute for non-light themes
@@ -52,26 +56,30 @@ class ThemeManager {
             root.setAttribute('data-theme', theme);
         }
 
-        if (!animate) {
+        if (!animate && !hadLoadingClass) {
             root.offsetHeight; // Force reflow
-            root.style.transition = '';
+            root.classList.remove('theme-loading');
         }
 
         this.currentTheme = theme;
-        this.storeTheme(theme);
 
         window.dispatchEvent(new CustomEvent('themechange', {
             detail: { theme }
         }));
     }
 
+    // Persist only on explicit user choice — storing the system theme on load
+    // would stop watchSystemTheme() from ever following OS changes
     toggle() {
-        this.applyTheme(this.currentTheme === 'dark' ? 'light' : 'dark');
+        const theme = this.currentTheme === 'dark' ? 'light' : 'dark';
+        this.applyTheme(theme);
+        this.storeTheme(theme);
     }
 
     setTheme(theme) {
         if (['light', 'dark'].includes(theme)) {
             this.applyTheme(theme);
+            this.storeTheme(theme);
         }
     }
 

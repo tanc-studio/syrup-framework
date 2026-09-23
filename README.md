@@ -30,14 +30,13 @@ css/
 ├── 01-base.css         ← reset, root tokens, typography
 ├── 02-layout.css       ← grid, containers, spacing
 ├── 03-components.css   ← buttons, forms, cards, tabs, etc.
-├── 04-utilities.css    ← helper classes
+├── 04-utilities.css    ← type presets, text alignment, visibility
 └── 05-themes.css       ← dark/light theme tokens
 
 js/
 └── syrup.js            ← ThemeManager + TabsManager
 
 styleguide/             ← component validation environment
-boilerplate/            ← project starter template
 ```
 
 ## Components

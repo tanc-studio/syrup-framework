@@ -21,33 +21,37 @@ class StylesNavManager {
     }
 
     init() {
-        const toggleButton = document.querySelector('.btn-triangle.btn--style');
+        const toggleButton = document.querySelector('.sg-groups-nav_dropdown');
         const stylesNav    = document.querySelector('.sg-groups-nav_links');
         const navLinks     = document.querySelectorAll('.sg-groups-nav_link');
 
-        if (!toggleButton || !stylesNav || !navLinks.length) return;
+        if (!stylesNav || !navLinks.length) return;
 
         // Desktop: links visible by default
         if (window.innerWidth > 900) {
             gsap.set(navLinks, { opacity: 1, y: 0 });
         }
 
-        toggleButton.addEventListener('click', () => {
-            this.toggle(stylesNav, toggleButton, navLinks);
-        });
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                this.toggle(stylesNav, toggleButton, navLinks);
+            });
+        }
 
-        // Anchor link clicks — close nav then scroll
+        // Anchor link clicks — smooth scroll with offset
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
                 if (!href?.startsWith('#')) return;
 
+                e.preventDefault();
+
                 if (this.isOpen && window.innerWidth <= 900) {
-                    e.preventDefault();
-                    e.stopPropagation();
                     this.close(stylesNav, toggleButton, navLinks, () => {
                         setTimeout(() => this.scrollToTarget(href), 300);
                     });
+                } else {
+                    this.scrollToTarget(href);
                 }
             });
         });
@@ -80,7 +84,10 @@ class StylesNavManager {
     scrollToTarget(href) {
         const target = document.querySelector(href);
         if (!target) return;
-        const offset = -160;
+        const navLinks = document.querySelector('.sg-groups-nav_links');
+        const offset = navLinks
+            ? -parseFloat(getComputedStyle(navLinks).paddingTop)
+            : 0;
 
         if (window.lenis) {
             window.lenis.scrollTo(target, {
