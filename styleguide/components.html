@@ -116,6 +116,61 @@
         <button type="submit" class="btn btn--primary">Submit</button>
       </div>
     </form>
+
+    <h2>Tabs</h2>
+    <p>Selected state comes from <code>aria-selected</code>. The demos below are static until tabs.js is built (P8).</p>
+    <h3>Default</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabs_nav">
+        <button type="button" class="tab" aria-selected="true">Overview</button>
+        <button type="button" class="tab" aria-selected="false">Specs</button>
+        <button type="button" class="tab" aria-selected="false">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel" hidden><p>Specs panel.</p></div>
+        <div class="tabs_panel" hidden><p>Reviews panel.</p></div>
+      </div>
+    </div>
+    <h3>--pills</h3>
+    <div class="tabs tabs--pills" data-tabs>
+      <div class="tabs_nav">
+        <button type="button" class="tab" aria-selected="true">Overview</button>
+        <button type="button" class="tab" aria-selected="false">Specs</button>
+        <button type="button" class="tab" aria-selected="false">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel" hidden><p>Specs panel.</p></div>
+        <div class="tabs_panel" hidden><p>Reviews panel.</p></div>
+      </div>
+    </div>
+    <h3>--vertical</h3>
+    <div class="tabs tabs--vertical" data-tabs>
+      <div class="tabs_nav">
+        <button type="button" class="tab" aria-selected="true">Overview</button>
+        <button type="button" class="tab" aria-selected="false">Specs</button>
+        <button type="button" class="tab" aria-selected="false">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel" hidden><p>Specs panel.</p></div>
+        <div class="tabs_panel" hidden><p>Reviews panel.</p></div>
+      </div>
+    </div>
+    <h3>Without JS: every panel shows</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabs_nav">
+        <button type="button" class="tab">Overview</button>
+        <button type="button" class="tab">Specs</button>
+        <button type="button" class="tab">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
+      </div>
+    </div>
   </main>
 </body>
 </html>

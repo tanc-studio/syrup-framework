@@ -1,0 +1,85 @@
+/* tabs
+ * Classes:   .tabs, .tabs_nav, .tab (button), .tabs_content, .tabs_panel
+ * Modifiers: --pills, --vertical
+ * States:    .tab[aria-selected="true"]; inactive panels get [hidden] from JS
+ * JS hook:   [data-tabs] on .tabs (tabs.js adds roles, keys, hidden)
+ * Use:       without JS every panel shows
+ */
+.tabs_nav {
+  display: flex;
+  border-block-end: var(--border-width-sm) solid var(--color-border);
+  margin-block-end: var(--size-16);
+}
+
+.tab {
+  padding: var(--size-8) var(--size-16);
+  border: none;
+  border-block-end: var(--border-width-md) solid transparent;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  background-color: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition-property: background-color, border-color, color;
+  transition-duration: var(--transition-duration-sm);
+  transition-timing-function: var(--transition-timing-function-out);
+
+  &:hover {
+    color: var(--color-text);
+  }
+
+  &[aria-selected="true"] {
+    border-color: var(--color-border-selected);
+    color: var(--color-text);
+  }
+}
+
+/* Pills */
+.tabs--pills .tabs_nav {
+  gap: var(--size-4);
+  border: none;
+}
+
+.tabs--pills .tab {
+  border: none;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-background-subtle);
+
+  &:hover {
+    background-color: var(--color-background-muted);
+  }
+
+  &[aria-selected="true"] {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-inverse);
+  }
+}
+
+/* Vertical */
+.tabs--vertical {
+  display: flex;
+  gap: var(--size-24);
+}
+
+.tabs--vertical .tabs_nav {
+  flex-direction: column;
+  min-inline-size: 12rem;
+  border-inline-end: var(--border-width-sm) solid var(--color-border);
+  border-block-end: none;
+  margin-block-end: 0;
+}
+
+.tabs--vertical .tab {
+  border-inline-end: var(--border-width-md) solid transparent;
+  border-block-end: none;
+  text-align: start;
+
+  &[aria-selected="true"] {
+    border-color: var(--color-border-selected);
+  }
+}
+
+.tabs--vertical .tabs_content {
+  flex: 1;
+}
