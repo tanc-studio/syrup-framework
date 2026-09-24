@@ -16,8 +16,6 @@
   }
 
   :target {
-    outline: 3px solid red;
-    outline-offset: 3px;
     scroll-margin: 20vb;
   }
 
