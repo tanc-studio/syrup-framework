@@ -69,6 +69,53 @@
       <button type="button" class="btn btn--tertiary" aria-busy="true"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> Saving</button>
       <button type="button" class="btn" aria-busy="true">Saving</button>
     </div>
+
+    <h2>Form</h2>
+    <p>Type in the email field, then click away: the red border only shows after you've interacted.</p>
+    <form class="form wrap--sm" onsubmit="return false">
+      <div class="form_item">
+        <label class="form_label" for="sg-name">Name</label>
+        <input class="form_input" id="sg-name" type="text" placeholder="Jane Doe">
+      </div>
+      <div class="form_item">
+        <label class="form_label" for="sg-email">Email</label>
+        <input class="form_input" id="sg-email" type="email" required aria-describedby="sg-email-msg">
+        <p class="form_message" id="sg-email-msg">We never share it.</p>
+      </div>
+      <div class="form_item">
+        <label class="form_label" for="sg-role">Role</label>
+        <select class="form_select" id="sg-role"><option>Designer</option><option>Developer</option></select>
+      </div>
+      <div class="form_item">
+        <label class="form_label" for="sg-msg">Message</label>
+        <textarea class="form_input" id="sg-msg"></textarea>
+        <p class="form_message form_message--error">Error message</p>
+        <p class="form_message form_message--success">Success message</p>
+      </div>
+      <div class="form_item">
+        <label class="form_label" for="sg-off">Disabled</label>
+        <input class="form_input" id="sg-off" type="text" value="Can't edit" disabled>
+      </div>
+      <fieldset class="form_item">
+        <legend class="form_label">Checkboxes (native)</legend>
+        <div class="form_checkbox-group">
+          <label><input type="checkbox" checked> News</label>
+          <label><input type="checkbox"> Offers</label>
+        </div>
+      </fieldset>
+      <fieldset class="form_item">
+        <legend class="form_label">Radio group</legend>
+        <div class="form_radio-group">
+          <input class="form_radio" type="radio" name="sg-plan" id="sg-plan-1" checked><label class="form_radio-label" for="sg-plan-1">Monthly</label>
+          <input class="form_radio" type="radio" name="sg-plan" id="sg-plan-2"><label class="form_radio-label" for="sg-plan-2">Yearly</label>
+          <input class="form_radio" type="radio" name="sg-plan" id="sg-plan-3"><label class="form_radio-label" for="sg-plan-3">Lifetime</label>
+        </div>
+      </fieldset>
+      <div class="cluster">
+        <input class="form_input" type="text" placeholder="Input next to a button" style="inline-size: auto; flex: 1">
+        <button type="submit" class="btn btn--primary">Submit</button>
+      </div>
+    </form>
   </main>
 </body>
 </html>
