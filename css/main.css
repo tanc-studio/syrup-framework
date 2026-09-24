@@ -11,4 +11,5 @@
 @import 'components/btn.css' layer(components);
 @import 'components/form.css' layer(components);
 @import 'components/tabs.css' layer(components);
+@import 'components/card.css' layer(components);
 @import 'utilities.css' layer(utilities);

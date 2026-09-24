@@ -48,7 +48,7 @@
     font-size: var(--font-size-xl);
   }
 
-  .sg-main :is(h2, h3, h4):not(.sg-flow *) {
+  .sg-main :is(h2, h3, h4):not([class], .sg-flow *) {
     margin-block: 2rem 1rem;
   }
 
