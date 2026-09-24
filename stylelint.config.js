@@ -51,6 +51,7 @@ export default {
       { message: 'Use block_element--modifier (single underscore)' },
     ],
     'import-notation': 'string',
+    'custom-property-empty-line-before': null,
     'max-nesting-depth': 2,
     'declaration-no-important': true,
     'declaration-property-value-disallowed-list': [
