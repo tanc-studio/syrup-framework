@@ -19,8 +19,11 @@
     scroll-margin: 20vb;
   }
 
-  /* Fixed on wide screens; stacks above content on narrow */
+  /* Sidebar on wide screens; sticky top bar + dropdown on narrow. See [1] */
   .sg-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     align-self: start;
     block-size: 100dvh;
     overflow-y: auto;
@@ -30,9 +33,53 @@
     inset-block-start: 0;
 
     @media (width < 48rem) {
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
       block-size: auto;
-      position: static;
+      max-block-size: 100dvh;
+      padding: 0.75rem 1rem;
+      border-inline-end: 0;
+      border-block-end: thin solid color-mix(in oklch, currentcolor 15%, transparent);
+      z-index: 1;
+      background-color: var(--color-background);
     }
+  }
+
+  .sg-nav_menu {
+    @media (width >= 48rem) {
+      &::details-content {
+        content-visibility: visible;
+      }
+    }
+  }
+
+  .sg-nav_title {
+    font-weight: 600;
+    cursor: pointer;
+
+    @media (width >= 48rem) {
+      list-style: none;
+      pointer-events: none;
+    }
+  }
+
+  .sg-nav_groups,
+  .sg-nav_list {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+
+    & [aria-current] {
+      font-weight: 600;
+    }
+  }
+
+  .sg-nav_groups {
+    padding-block: 1rem;
+    border-block-end: thin solid color-mix(in oklch, currentcolor 15%, transparent);
+    margin-block-end: 1rem;
   }
 
   .sg-nav_sub {
@@ -44,24 +91,13 @@
     list-style: none;
   }
 
-  .sg-nav_title {
-    margin-block-end: 1rem;
-    font-weight: 600;
-  }
-
-  .sg-nav_list {
-    display: grid;
-    gap: 0.5rem;
-    padding: 0;
-    list-style: none;
-
-    & [aria-current="page"] {
-      font-weight: 600;
-    }
-  }
-
   .sg-nav_theme {
-    margin-block-start: 1.5rem;
+    align-self: start;
+    margin-block-start: auto;
+
+    @media (width < 48rem) {
+      margin-block-start: 0;
+    }
   }
 
   .sg-main {
@@ -224,3 +260,8 @@
     }
   }
 }
+
+/* Notes
+ * [1] One <details> serves both: on wide screens ::details-content is forced visible
+ *     and the summary is inert, so the menu is always shown; on narrow it's a dropdown.
+ */

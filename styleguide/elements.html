@@ -8,30 +8,36 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/styleguide/styleguide.css">
   <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
 </head>
 <body class="sg">
   <!-- sg-nav -->
   <nav class="sg-nav" aria-label="Styleguide">
-    <p class="sg-nav_title">Syrup v2</p>
-    <ul class="sg-nav_list">
-      <li><a href="/styleguide/index.html">Overview</a></li>
-      <li><a href="/styleguide/colour.html">Colour</a></li>
-      <li><a href="/styleguide/type.html">Type</a></li>
-      <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
-      <li><a href="/styleguide/layout.html">Layout</a></li>
-      <li><a href="/styleguide/elements.html" aria-current="page">Elements</a>
-        <ul class="sg-nav_sub">
-          <li><a href="#headings">Headings</a></li>
-          <li><a href="#text">Text</a></li>
-          <li><a href="#table">Table</a></li>
-          <li><a href="#form-controls-native">Form controls (native)</a></li>
-          <li><a href="#details">Details</a></li>
-          <li><a href="#dialog">Dialog</a></li>
-        </ul>
-      </li>
-      <li><a href="/styleguide/components.html">Components</a></li>
-    </ul>
-    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme: system</button>
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html" aria-current="true">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/colour.html">Colour</a></li>
+        <li><a href="/styleguide/type.html">Type</a></li>
+        <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
+        <li><a href="/styleguide/layout.html">Layout</a></li>
+        <li><a href="/styleguide/elements.html" aria-current="page">Elements</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#form-controls-native">Form controls</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#dialog">Dialog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
   </nav>
   <!-- /sg-nav -->
   <main class="sg-main">

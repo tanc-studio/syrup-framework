@@ -1,34 +1,29 @@
-// Theme toggle: <button data-theme-toggle> cycles light → dark → system. See [1]
+// Theme toggle: <button data-theme-toggle> switches light ↔ dark. See [1]
 const KEY = 'syrup-theme';
-const MODES = ['light', 'dark', 'system'];
 const root = document.documentElement;
 const buttons = document.querySelectorAll('[data-theme-toggle]');
+const osDark = matchMedia('(prefers-color-scheme: dark)');
 
-function stored() {
-  try { return localStorage.getItem(KEY); } catch { return null; }
+function current() {
+  return root.dataset.theme || (osDark.matches ? 'dark' : 'light');
 }
 
-function apply(mode) {
-  if (mode === 'system') delete root.dataset.theme;
-  else root.dataset.theme = mode;
-
-  try {
-    if (mode === 'system') localStorage.removeItem(KEY);
-    else localStorage.setItem(KEY, mode);
-  } catch { /* storage blocked: theme still applies for this page */ }
-
-  buttons.forEach((btn) => { btn.textContent = `Theme: ${mode}`; });
-  document.dispatchEvent(new CustomEvent('themechange', { detail: { mode } }));
+function label() {
+  buttons.forEach((btn) => { btn.textContent = `Theme: ${current()}`; });
 }
 
-let mode = MODES.includes(stored()) ? stored() : 'system';
 buttons.forEach((btn) => btn.addEventListener('click', () => {
-  mode = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
-  apply(mode);
+  const mode = current() === 'dark' ? 'light' : 'dark';
+  root.dataset.theme = mode;
+  try { localStorage.setItem(KEY, mode); } catch { /* storage blocked: applies for this page only */ }
+  label();
+  document.dispatchEvent(new CustomEvent('themechange', { detail: { mode } }));
 }));
-apply(mode);
+
+osDark.addEventListener('change', label);
+label();
 
 /* Notes
  * [1] Pair with the inline <head> snippet (see styleguide pages) so a stored theme applies
- *     before first paint. "system" removes data-theme, so the OS decides.
+ *     before first paint. Until the first click, no data-theme is set and the OS decides.
  */

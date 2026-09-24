@@ -53,6 +53,9 @@ All notable changes to the Syrup CSS Framework.
 ### Review (P9)
 - Colour page: theme panels no longer overflow at 360px (`minmax(min(20rem, 100%), 1fr)`)
 - Button sizes: `--lg` (48px) added, default 40px, `--sm` 32px; `--xs` removed
+- Theme toggle: light ↔ dark only ("system" removed); follows the OS until first click
+- Styleguide nav: Overview / Foundations / Components groups, then that group's pages; theme toggle at the bottom; sticky top bar + dropdown under 48rem (closes on link click via `styleguide/styleguide.js`)
+- Styleguide: `components.html` split into `styleguide/components/<name>.html` (icon, btn, form, tabs, card)
 
 ---
 
