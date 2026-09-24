@@ -30,4 +30,83 @@
   --size-section-md-max: 80;
   --size-section-lg-min: 64;
   --size-section-lg-max: 120;
+
+  /* Colour — neutral ramp, 1 = lightest */
+  --color-white: oklch(100% 0 0deg);
+  --color-neutral-1: oklch(97% 0 0deg);
+  --color-neutral-2: oklch(93% 0 0deg);
+  --color-neutral-3: oklch(87% 0 0deg);
+  --color-neutral-4: oklch(78% 0 0deg);
+  --color-neutral-5: oklch(68% 0 0deg);
+  --color-neutral-6: oklch(57% 0 0deg);
+  --color-neutral-7: oklch(46% 0 0deg);
+  --color-neutral-8: oklch(36% 0 0deg);
+  --color-neutral-9: oklch(26% 0 0deg);
+  --color-neutral-10: oklch(18% 0 0deg);
+  --color-black: oklch(0% 0 0deg);
+
+  /* Colour — brand (wireframe greys; projects replace) */
+  --color-primary: oklch(25% 0 0deg);
+  --color-secondary: oklch(55% 0 0deg);
+  --color-tertiary: oklch(85% 0 0deg);
+
+  /* Colour — status */
+  --color-error: oklch(55% 0.15 25deg);
+  --color-warning: oklch(70% 0.13 75deg);
+  --color-success: oklch(55% 0.1 150deg);
+
+  /* Font family — system stacks until house fonts are picked */
+  --font-family-sans: system-ui, sans-serif;
+  --font-family-serif: ui-serif, georgia, serif;
+  --font-family-mono: ui-monospace, menlo, consolas, monospace;
+
+  /* Font weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line height */
+  --line-height-xs: 1;
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-xl: 2;
+
+  /* Letter spacing */
+  --letter-spacing-xs: -0.016em;
+  --letter-spacing-sm: -0.008em;
+  --letter-spacing-md: 0;
+  --letter-spacing-lg: 0.018em;
+  --letter-spacing-xl: 0.03em;
+
+  /* Radius */
+  --border-radius-xs: 0.125rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-full: 9999px;
+
+  /* Border width */
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+
+  /* Focus */
+  --outline-width-focus: 2px;
+  --outline-offset-focus: 2px;
+
+  /* Shadow — darker in dark mode */
+  --box-shadow-sm: 0 1px 2px light-dark(oklch(0% 0 0deg / 8%), oklch(0% 0 0deg / 40%));
+  --box-shadow-md: 0 2px 8px light-dark(oklch(0% 0 0deg / 10%), oklch(0% 0 0deg / 50%));
+  --box-shadow-lg: 0 8px 24px light-dark(oklch(0% 0 0deg / 12%), oklch(0% 0 0deg / 60%));
+
+  /* Motion */
+  --transition-duration-sm: 150ms;
+  --transition-duration-md: 250ms;
+  --transition-duration-lg: 400ms;
+  --transition-timing-function-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-timing-function-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition-timing-function-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
