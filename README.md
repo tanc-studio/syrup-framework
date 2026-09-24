@@ -1,54 +1,77 @@
 # Syrup CSS Framework
 
-A semantic, component-first CSS framework. Built for rapid site development with predictable cascade behaviour.
+A small, semantic, component-first CSS framework. Reset, tokens, base styles, layout primitives, a few utilities and components, plus a tiny optional JS module. The default look is a greyscale wireframe; brand it by changing tokens.
 
 ## What It Is
 
-- **CSS Cascade Layers** — 6-layer system, no `!important` ever
-- **Modified BEM** — single underscore: `.block_element--modifier`
-- **Three-tier tokens** — raw values → semantic aliases → component tokens
-- **Dark/light theming** — `data-theme` attribute with invert, force-dark/light variants
-- **Fluid sizing** — `clamp()`-based scales for spacing and typography
+- **Cascade layers** — `reset, tokens, base, layout, components, utilities, custom`; no `!important`
+- **BEM, single underscore** — `.block_element--modifier`
+- **Two-tier tokens** — primitives (`--font-size-md`, `--size-16`) and semantic colour (`--color-text-muted`)
+- **Light/dark without JS** — follows the OS via `light-dark()`; `data-theme="light|dark"` pins any element
+- **Fluid type** — Utopia-style scale calculated live in CSS; `data-sizing="fixed"` locks it
+- **Accessible by default** — one global focus ring, `prefers-contrast`, `forced-colors`, reduced motion, 44px tap areas on touch
+- **Modern CSS** — logical properties, `oklch()`, container queries, native nesting; no build step
 
-## Quick Start
+## Get It
+
+Copy `css/`, `js/`, `fonts/` and `styleguide/` into your project and own them — edit the files directly. Or, for prototypes, load from jsDelivr (pin the tag):
 
 ```html
-<!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.0.1/css/main.css">
-
-<!-- JS (theme manager, tabs) -->
-<script src="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v1.0.1/js/syrup.js" defer></script>
+<head>
+  <!-- Apply a saved theme before first paint (only needed with the theme toggle) -->
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v2.0.0/css/main.css">
+  <script type="module" src="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v2.0.0/js/syrup.js"></script>
+</head>
 ```
 
-Override brand tokens and add project styles in your own CSS file inside `@layer custom`.
+Project styles go after Syrup, optionally in `@layer custom`. v1 users: stay pinned to `@v1.0.1` — v2 is a clean break.
 
 ## Structure
 
 ```
 css/
-├── main.css            ← imports all layers
-├── 01-base.css         ← reset, root tokens, typography
-├── 02-layout.css       ← grid, containers, spacing
-├── 03-components.css   ← buttons, forms, cards, tabs, etc.
-├── 04-utilities.css    ← type presets, text alignment, visibility
-└── 05-themes.css       ← dark/light theme tokens
-
+├── main.css            ← layer order + imports + version
+├── reset.css
+├── tokens.css          ← primitives, semantic colour, themes, contrast
+├── scales.css          ← fluid type + section space maths
+├── fonts.css           ← house fonts (delete the import to drop them)
+├── base.css            ← elements, focus, native elements
+├── layout.css          ← .wrap, .grid, .stack, .cluster
+├── utilities.css       ← type presets, alignment, visibility
+└── components/         ← one file per component
 js/
-└── syrup.js            ← ThemeManager + TabsManager
-
-styleguide/             ← component validation environment
+├── syrup.js            ← module entry; delete imports you don't use
+├── theme.js            ← <button data-theme-toggle>
+└── tabs.js             ← [data-tabs]
+fonts/                  ← Geist, Frank Ruhl Libre, Roboto Mono (OFL)
+styleguide/             ← every token and component, both themes
 ```
 
 ## Components
 
-| Component | Key Classes |
-|-----------|-------------|
-| Button | `.btn`, `--sm/--xs`, `--primary/--secondary/--tertiary`, `--icon`, `--loading` |
-| Form | `.form`, `_input`, `_select`, `_label`, `_radio-group`, `_toggle` |
-| Card | `.card`, `_header/_body/_footer`, `--flat/--primary/--interactive` |
-| Tabs | `.tabs`, `--horizontal/--vertical/--pills`, `.tab` |
-| Icon | `.icon`, `--xs/--sm/--lg`, `.icon-svg` |
-| Caption | `.caption`, `.caption-sm` |
+Each file in `css/components/` starts with a header comment listing its classes, modifiers, states and JS hook.
+
+| Component | Classes |
+|-----------|---------|
+| Button | `.btn`, `--primary/--secondary/--tertiary`, `--lg/--sm`, `--icon` |
+| Form | `.form`, `_item`, `_label`, `_input`, `_select`, `_message`, `_checkbox-group`, `_radio-group` |
+| Tabs | `.tabs`, `_nav`, `_content`, `_panel`, `.tab`, `--pills/--vertical` |
+| Card | `.card`, `_header/_body/_footer`, `--interactive/--primary` |
+| Icon | `.icon`, `--sm/--lg` |
+
+## Styleguide
+
+Serve the repo root (e.g. `npx serve`) and open `/styleguide/index.html`.
+
+## Development
+
+```
+npm install
+npm run lint:css
+```
+
+Stylelint enforces the conventions (naming, tokens, logical properties, nesting, property order).
 
 ## Docs
 
@@ -56,4 +79,4 @@ See [`CHANGELOG.md`](CHANGELOG.md) for version history.
 
 ## License
 
-Personal framework by [tanc-studio](https://github.com/tanc-studio).
+Personal framework by [tanc-studio](https://github.com/tanc-studio). Fonts are under the SIL Open Font License (see `fonts/`).

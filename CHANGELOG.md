@@ -54,6 +54,10 @@ All notable changes to the Syrup CSS Framework.
 - Colour page: theme panels no longer overflow at 360px (`minmax(min(20rem, 100%), 1fr)`)
 - Elements page: native form controls section removed (forms always use `.form` classes)
 - `btn`: invisible 44px tap area on touch screens (`pointer: coarse`, `::before`); look unchanged
+
+### Docs (P10)
+- `README.md` and `CLAUDE.md` rewritten for v2
+- `SKILL.md` (methodology) rewritten for v2; `SKILL-components.md` retired — component file headers replace it
 - Button sizes: `--lg` (48px) added, default 40px, `--sm` 32px; `--xs` removed
 - Theme toggle: light ↔ dark only ("system" removed); follows the OS until first click
 - Styleguide nav: Overview / Foundations / Components groups, then that group's pages; theme toggle at the bottom; sticky top bar + dropdown under 48rem (closes on link click via `styleguide/styleguide.js`)
