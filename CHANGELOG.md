@@ -21,6 +21,7 @@ All notable changes to the Syrup CSS Framework.
 - Semantic colour with `light-dark()`; 21 text/background pairs pass AA in both themes
 - `[data-theme]` on any element, `data-sizing="fixed"`, `prefers-contrast: more`, `forced-colors`, reduced motion
 - Utilities: type presets `.display-sm/md/lg`, `.heading-sm`…`-3xl`, `.text-xs`…`-2xl`, `.caption`; `.text-start/center/end`; `.visually-hidden`, `.hide-mobile`/`.hide-desktop` (48rem). Shown on the type page
+- Styleguide: nav fixed on wide screens with section links for the current page; smooth scroll; `:target` outline on the section you jump to
 - `js/theme.js`: `<button data-theme-toggle>` cycles light → dark → system, saved in `localStorage` (`syrup-theme`), fires `themechange`. Inline `<head>` snippet applies it before paint. In the styleguide nav
 - Styleguide token pages: colour (primitives + semantic, light and dark side by side), type (family, size, weight, line height, letter spacing), space & effects (space, radius, border, shadow, focus, motion)
 - House fonts in `/fonts` (variable woff2, OFL): Geist (sans), Frank Ruhl Libre (serif), Roboto Mono (mono). `css/fonts.css`; remove by deleting its `@import`. Icon fonts dropped
@@ -47,6 +48,7 @@ All notable changes to the Syrup CSS Framework.
 
 ### JS
 - `js/tabs.js`: adds tab roles, `aria-controls`/`aria-labelledby`, roving `tabindex`, hides inactive panels. Arrow keys (up/down with `data-tabs="vertical"`), Home/End. Fires `tabchange` (bubbles; `detail: { index, tab, panel }`)
+- `js/syrup.js` is now a module entry that imports `theme.js` + `tabs.js`; no globals. v1 `ThemeManager`, `TabsManager`, `includeHTML` removed. Styleguide pages load `syrup.js`
 
 ---
 
