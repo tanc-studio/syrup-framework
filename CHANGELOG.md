@@ -52,6 +52,7 @@ All notable changes to the Syrup CSS Framework.
 
 ### Review (P9)
 - Colour page: theme panels no longer overflow at 360px (`minmax(min(20rem, 100%), 1fr)`)
+- Button sizes: `--lg` (48px) added, default 40px, `--sm` 32px; `--xs` removed
 
 ---
 
