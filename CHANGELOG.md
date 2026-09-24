@@ -50,6 +50,9 @@ All notable changes to the Syrup CSS Framework.
 - `js/tabs.js`: adds tab roles, `aria-controls`/`aria-labelledby`, roving `tabindex`, hides inactive panels. Arrow keys (up/down with `data-tabs="vertical"`), Home/End. Fires `tabchange` (bubbles; `detail: { index, tab, panel }`)
 - `js/syrup.js` is now a module entry that imports `theme.js` + `tabs.js`; no globals. v1 `ThemeManager`, `TabsManager`, `includeHTML` removed. Styleguide pages load `syrup.js`
 
+### Review (P9)
+- Colour page: theme panels no longer overflow at 360px (`minmax(min(20rem, 100%), 1fr)`)
+
 ---
 
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)

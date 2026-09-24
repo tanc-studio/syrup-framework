@@ -1,6 +1,6 @@
 /* btn
  * Classes:   .btn (on <button> or <a>)
- * Modifiers: --primary, --secondary, --tertiary (colour); --sm, --xs (size); --icon (square, icon only)
+ * Modifiers: --primary, --secondary, --tertiary (colour); --lg, --sm (size; default = md); --icon (square, icon only)
  * States:    :disabled or [aria-disabled="true"]; [aria-busy="true"] (loading)
  * JS hook:   none
  * Use:       default has no fill, just a border; icon-only needs an aria-label
@@ -70,16 +70,16 @@
 }
 
 /* Size */
+.btn--lg {
+  block-size: var(--size-48);
+  padding-inline: var(--size-20);
+  font-size: var(--font-size-lg);
+}
+
 .btn--sm {
   block-size: var(--size-32);
   padding-inline: var(--size-12);
   font-size: var(--font-size-sm);
-}
-
-.btn--xs {
-  block-size: var(--size-24);
-  padding-inline: var(--size-8);
-  font-size: var(--font-size-xs);
 }
 
 .btn--icon {
