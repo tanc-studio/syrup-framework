@@ -73,6 +73,6 @@ export default {
       },
     },
     { files: ['css/reset.css'], rules: { 'declaration-no-important': null } },
-    { files: ['css/tokens.css'], rules: { 'declaration-property-value-disallowed-list': null } },
+    { files: ['css/tokens.css', 'css/scales.css'], rules: { 'declaration-property-value-disallowed-list': null } },
   ],
 };
