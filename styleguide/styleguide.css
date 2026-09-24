@@ -40,8 +40,20 @@
     padding: 1.5rem;
   }
 
-  .sg-main :is(h2, h3, h4) {
+  .sg-main > h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .sg-main > h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .sg-main :is(h2, h3, h4):not(.sg-flow *) {
     margin-block: 2rem 1rem;
+  }
+
+  .sg-flow > * + * {
+    margin-block-start: 1rem;
   }
 
   /* Colour swatches */

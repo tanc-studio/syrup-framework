@@ -24,6 +24,12 @@ All notable changes to the Syrup CSS Framework.
 - Styleguide token pages: colour (primitives + semantic, light and dark side by side), type (family, size, weight, line height, letter spacing), space & effects (space, radius, border, shadow, focus, motion)
 - House fonts in `/fonts` (variable woff2, OFL): Geist (sans), Frank Ruhl Libre (serif), Roboto Mono (mono). `css/fonts.css`; remove by deleting its `@import`. Icon fonts dropped
 
+### Reset + base
+- `reset.css`: box-sizing, margin 0, form controls inherit font, wrapping, media fit, `ul[class]`/`ol[class]` lose bullets, `[hidden]`, reduced-motion block (the only `!important`)
+- `base.css`: body type + colour, one `:focus-visible` ring, underlined links (`a:not([class])`), h1–h6 at body size, `::selection` + `accent-color`, `hr`, `code`/`pre`, `blockquote`, `table`, `summary`, `dialog` (re-centred), `@view-transition`
+- `text-box: trim` dropped from base: it made unspaced lines overlap
+- Styleguide elements page: headings, text, table, native form controls, details, dialog
+
 ---
 
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)
