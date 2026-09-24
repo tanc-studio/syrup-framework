@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Type — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/theme.js"></script>
 </head>
 <body class="sg">
   <!-- sg-nav -->
@@ -20,10 +22,58 @@
       <li><a href="/styleguide/elements.html">Elements</a></li>
       <li><a href="/styleguide/components.html">Components</a></li>
     </ul>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme: system</button>
   </nav>
   <!-- /sg-nav -->
   <main class="sg-main">
     <h1>Type</h1>
+
+    <h2>Family</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--font-family-sans</code><span class="sg-sample" style="font-family: var(--font-family-sans)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--font-family-serif</code><span class="sg-sample" style="font-family: var(--font-family-serif)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--font-family-mono</code><span class="sg-sample" style="font-family: var(--font-family-mono)">The quick brown fox jumps over the lazy dog</span></li>
+    </ul>
+
+    <h2>Size</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--font-size-xs</code><span class="sg-sample" style="font-size: var(--font-size-xs)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-sm</code><span class="sg-sample" style="font-size: var(--font-size-sm)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-md</code><span class="sg-sample" style="font-size: var(--font-size-md)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-lg</code><span class="sg-sample" style="font-size: var(--font-size-lg)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-xl</code><span class="sg-sample" style="font-size: var(--font-size-xl)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-2xl</code><span class="sg-sample" style="font-size: var(--font-size-2xl)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-3xl</code><span class="sg-sample" style="font-size: var(--font-size-3xl)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-4xl</code><span class="sg-sample" style="font-size: var(--font-size-4xl)">Syrup</span></li>
+      <li class="sg-row"><code>--font-size-5xl</code><span class="sg-sample" style="font-size: var(--font-size-5xl)">Syrup</span></li>
+    </ul>
+
+    <h2>Weight</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--font-weight-light</code><span class="sg-sample" style="font-weight: var(--font-weight-light)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--font-weight-regular</code><span class="sg-sample" style="font-weight: var(--font-weight-regular)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--font-weight-medium</code><span class="sg-sample" style="font-weight: var(--font-weight-medium)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--font-weight-semibold</code><span class="sg-sample" style="font-weight: var(--font-weight-semibold)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--font-weight-bold</code><span class="sg-sample" style="font-weight: var(--font-weight-bold)">The quick brown fox jumps over the lazy dog</span></li>
+    </ul>
+
+    <h2>Line height</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--line-height-xs</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-xs)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
+      <li class="sg-row"><code>--line-height-sm</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-sm)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
+      <li class="sg-row"><code>--line-height-md</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-md)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
+      <li class="sg-row"><code>--line-height-lg</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-lg)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
+      <li class="sg-row"><code>--line-height-xl</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-xl)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
+    </ul>
+
+    <h2>Letter spacing</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--letter-spacing-xs</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-xs)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--letter-spacing-sm</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-sm)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--letter-spacing-md</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-md)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--letter-spacing-lg</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-lg)">The quick brown fox jumps over the lazy dog</span></li>
+      <li class="sg-row"><code>--letter-spacing-xl</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-xl)">The quick brown fox jumps over the lazy dog</span></li>
+    </ul>
   </main>
 </body>
 </html>

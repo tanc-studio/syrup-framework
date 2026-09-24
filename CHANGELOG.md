@@ -20,6 +20,8 @@ All notable changes to the Syrup CSS Framework.
 - Primitives: `oklch()` colour (neutral ramp, brand, status), fonts, weights, line-height, letter-spacing, radius, border width, focus, shadow, motion
 - Semantic colour with `light-dark()`; 21 text/background pairs pass AA in both themes
 - `[data-theme]` on any element, `data-sizing="fixed"`, `prefers-contrast: more`, `forced-colors`, reduced motion
+- `js/theme.js`: `<button data-theme-toggle>` cycles light → dark → system, saved in `localStorage` (`syrup-theme`), fires `themechange`. Inline `<head>` snippet applies it before paint. In the styleguide nav
+- Styleguide token pages: colour (primitives + semantic, light and dark side by side), type (family, size, weight, line height, letter spacing), space & effects (space, radius, border, shadow, focus, motion)
 - House fonts in `/fonts` (variable woff2, OFL): Geist (sans), Frank Ruhl Libre (serif), Roboto Mono (mono). `css/fonts.css`; remove by deleting its `@import`. Icon fonts dropped
 
 ---
