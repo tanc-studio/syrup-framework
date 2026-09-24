@@ -154,3 +154,51 @@
 
   color-scheme: light dark;
 }
+
+/* Theme — any element; see [1] */
+[data-theme="light"] {
+  color-scheme: light;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Fixed sizing — scales lock to their desktop size */
+:root[data-sizing="fixed"] {
+  --fluid-progress: 1px;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-muted: var(--color-text);
+    --color-text-subtle: var(--color-text);
+    --color-border: var(--color-border-strong);
+    --color-border-strong: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --color-focus: Highlight;
+    --color-border: CanvasText;
+    --color-border-strong: CanvasText;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration-sm: 0ms;
+    --transition-duration-md: 0ms;
+    --transition-duration-lg: 0ms;
+  }
+}
+
+/* Notes
+ * [1] Sets color and background too: inherited colour is already resolved,
+ *     so a themed section must re-apply it to pick up the new mode.
+ */

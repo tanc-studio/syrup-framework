@@ -33,7 +33,7 @@ const groups = [
     'text-wrap', 'text-box', 'text-overflow', 'white-space', 'overflow-wrap', 'word-break',
     'hyphens', 'vertical-align', 'list-style'],
   // visual
-  ['background', 'background-color', 'background-image', 'background-position', 'background-size',
+  ['color-scheme', 'background', 'background-color', 'background-image', 'background-position', 'background-size',
     'background-repeat', 'color', 'accent-color', 'fill', 'stroke', 'box-shadow', 'opacity',
     'visibility', 'filter', 'backdrop-filter', 'transform', 'clip-path', 'object-fit', 'object-position'],
   // interaction
