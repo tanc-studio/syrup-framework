@@ -37,6 +37,14 @@ All notable changes to the Syrup CSS Framework.
 - `.stack` (`--stack-gap`), `.cluster` (`--cluster-gap`)
 - Styleguide layout page
 
+### Components (`css/components/`, one file each, header comment lists classes/modifiers/states/hook)
+- `icon`: SVG only, 1em, `--sm`/`--lg`; colour from the SVG's `currentColor` (CSS doesn't set `fill`, so stroke icons work)
+- `btn`: default outline + `--primary/--secondary/--tertiary`; `--sm`/`--xs`; `--icon` (square); `:disabled`/`aria-disabled`; loading is `aria-busy="true"` (replaces `--loading`). Dropped: `--form`, `--icon-lg/-sm/-xs`, `--square`, `--flat`. New shared token `--btn-height` (inputs use it too)
+- `form`: `.form` is a plain column; `.form_input`/`.form_select` share one look; `:user-invalid` errors; native checkbox; radio pills focusable. Dropped: `.form_toggle`, horizontal/stretch/btn item modifiers, `.form_select-wrapper`, `.form_title`
+- `tabs`: `[aria-selected]` state, `[hidden]` panels, `data-tabs` hook; `--pills`, `--vertical`; no JS = all panels show
+- `card`: flat (border, no shadow); `--interactive` hover; `--primary` brand tint; padding grows via container query
+- Old `01–05` CSS files deleted; `lint:css` now covers all of `css/`
+
 ---
 
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)

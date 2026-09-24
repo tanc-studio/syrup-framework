@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint:css": "stylelint \"css/**/*.css\" --ignore-pattern \"css/0*.css\""
+    "lint:css": "stylelint \"css/**/*.css\""
   },
   "devDependencies": {
     "stylelint": "^17.15.0",
