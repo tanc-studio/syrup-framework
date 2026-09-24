@@ -7,4 +7,27 @@
   --font-size-base-max: 18;
   --font-size-ratio-min: 1.2;
   --font-size-ratio-max: 1.25;
+
+  /* Space — fixed 4px grid; name = px at default browser size */
+  --size-2: 0.125rem;
+  --size-4: 0.25rem;
+  --size-6: 0.375rem;
+  --size-8: 0.5rem;
+  --size-10: 0.625rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-64: 4rem;
+
+  /* Section space — px at smallest → biggest screen. The maths is in scales.css. */
+  --size-section-sm-min: 32;
+  --size-section-sm-max: 48;
+  --size-section-md-min: 48;
+  --size-section-md-max: 80;
+  --size-section-lg-min: 64;
+  --size-section-lg-max: 120;
 }
