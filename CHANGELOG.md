@@ -30,6 +30,12 @@ All notable changes to the Syrup CSS Framework.
 - `text-box: trim` dropped from base: it made unspaced lines overlap
 - Styleguide elements page: headings, text, table, native form controls, details, dialog
 
+### Layout
+- `.wrap` (80rem; `--sm` 40, `--md` 60, `--full`) with fluid side padding: new token `--size-wrap-padding` (16 → 32px)
+- `.grid` auto-fit columns; `--xs` 6, `--sm` 8, default 12, `--lg` 16, `--xl` 24rem minimum; `--grid-gap`
+- `.stack` (`--stack-gap`), `.cluster` (`--cluster-gap`)
+- Styleguide layout page
+
 ---
 
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)

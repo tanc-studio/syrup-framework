@@ -56,6 +56,19 @@
     margin-block-start: 1rem;
   }
 
+  /* Layout demos */
+  .sg-cell {
+    padding: 0.75rem;
+    border: var(--border-width-sm) dashed var(--color-border-strong);
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    background-color: var(--color-background-subtle);
+  }
+
+  .sg-cell .sg-cell {
+    background-color: var(--color-background-muted);
+  }
+
   /* Colour swatches */
   .sg-swatches,
   .sg-rows {

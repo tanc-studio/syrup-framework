@@ -43,6 +43,9 @@
   --size-section-sm: clamp(var(--size-section-sm-min) / 16 * 1rem, var(--size-section-sm-min) / 16 * 1rem + (var(--size-section-sm-max) - var(--size-section-sm-min)) * var(--fluid-progress), var(--size-section-sm-max) / 16 * 1rem);
   --size-section-md: clamp(var(--size-section-md-min) / 16 * 1rem, var(--size-section-md-min) / 16 * 1rem + (var(--size-section-md-max) - var(--size-section-md-min)) * var(--fluid-progress), var(--size-section-md-max) / 16 * 1rem);
   --size-section-lg: clamp(var(--size-section-lg-min) / 16 * 1rem, var(--size-section-lg-min) / 16 * 1rem + (var(--size-section-lg-max) - var(--size-section-lg-min)) * var(--fluid-progress), var(--size-section-lg-max) / 16 * 1rem);
+
+  /* Wrap side padding */
+  --size-wrap-padding: clamp(var(--size-wrap-padding-min) / 16 * 1rem, var(--size-wrap-padding-min) / 16 * 1rem + (var(--size-wrap-padding-max) - var(--size-wrap-padding-min)) * var(--fluid-progress), var(--size-wrap-padding-max) / 16 * 1rem);
 }
 
 /* Notes

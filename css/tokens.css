@@ -31,6 +31,10 @@
   --size-section-lg-min: 64;
   --size-section-lg-max: 120;
 
+  /* Wrap side padding — px at smallest → biggest screen */
+  --size-wrap-padding-min: 16;
+  --size-wrap-padding-max: 32;
+
   /* Colour — neutral ramp, 1 = lightest */
   --color-white: oklch(100% 0 0deg);
   --color-neutral-1: oklch(97% 0 0deg);
