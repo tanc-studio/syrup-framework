@@ -36,6 +36,19 @@
     inline-size: 1.25em;
     block-size: 1.25em;
   }
+
+  /* Touch: invisible 44px tap area; the look doesn't change. See [2] */
+  @media (pointer: coarse) {
+    &::before {
+      inline-size: max(100%, 2.75rem);
+      block-size: max(100%, 2.75rem);
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-start: 50%;
+      translate: -50% -50%;
+      content: "";
+    }
+  }
 }
 
 /* Colour */
@@ -123,4 +136,6 @@
 /* Notes
  * [1] text-fill hides the text but keeps `color`, so the spinner (currentcolor)
  *     matches each variant. Children (icons, spans) are hidden instead.
+ * [2] 44px = Apple / WCAG AAA thumb size (AA minimum is 24px). Only grows buttons smaller
+ *     than 44px (--sm, small --icon). Keep ≥ 8px gap between small buttons or tap areas overlap.
  */
