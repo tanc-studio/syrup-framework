@@ -4,7 +4,9 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
-## 2026-09-24 — v2 in progress (branch `v2`)
+## 2026-09-24 — v2.0.0
+
+Clean-break rewrite. Not backwards compatible: v1 class and token names are gone. v1 users stay pinned to `@v1.0.1`.
 
 ### Setup + tooling
 - Branch `v2`; untracked `css/.DS_Store`, `js/.DS_Store`
