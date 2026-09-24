@@ -4,6 +4,25 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
+## 2026-09-24 — v2 in progress (branch `v2`)
+
+### Setup + tooling
+- Branch `v2`; untracked `css/.DS_Store`, `js/.DS_Store`
+- Stylelint (dev only): BEM single underscore, no raw colours in components, logical properties, nesting ≤ 2, no width `@media` in components, `!important` only in reset, no hardcoded `1px`, box-model property order (auto-fix). Run `npm run lint:css`
+
+### Skeleton
+- `main.css`: version header, v2 layer order `reset, tokens, base, layout, components, utilities, custom`
+- New styleguide: 7 page shells + `styleguide.css` (own `sg` layer); v1 styleguide removed
+
+### Tokens
+- Fluid type `--font-size-xs`…`5xl`: six settings in `tokens.css` (screen min/max, base min/max, ratio min/max); maths in `scales.css`
+- Space: fixed 4px grid `--size-2`…`--size-64`; fluid `--size-section-sm/md/lg`
+- Primitives: `oklch()` colour (neutral ramp, brand, status), fonts, weights, line-height, letter-spacing, radius, border width, focus, shadow, motion
+- Semantic colour with `light-dark()`; 21 text/background pairs pass AA in both themes
+- `[data-theme]` on any element, `data-sizing="fixed"`, `prefers-contrast: more`, `forced-colors`, reduced motion
+
+---
+
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)
 
 ### Bug Fixes
