@@ -7,4 +7,5 @@
 @import 'fonts.css' layer(base);
 @import 'base.css' layer(base);
 @import 'layout.css' layer(layout);
+@import 'components/icon.css' layer(components);
 @import 'utilities.css' layer(utilities);

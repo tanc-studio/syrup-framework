@@ -27,6 +27,17 @@
   <!-- /sg-nav -->
   <main class="sg-main">
     <h1>Components</h1>
+
+    <h2>Icon</h2>
+    <p>SVG only. Sized by the text around it, coloured by <code>currentColor</code>.</p>
+    <svg hidden><symbol id="sg-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5-6.5 4.5 2-7.5L2 9h7z"/></symbol><symbol id="sg-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol></svg>
+    <div class="cluster">
+      <span><svg class="icon icon--sm" aria-hidden="true"><use href="#sg-star"/></svg> .icon--sm</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> .icon</span>
+      <span><svg class="icon icon--lg" aria-hidden="true"><use href="#sg-star"/></svg> .icon--lg</span>
+      <span style="color: var(--color-text-error)"><svg class="icon" aria-hidden="true"><use href="#sg-check"/></svg> stroke icon, inherits colour</span>
+      <span class="text-2xl"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> scales with text</span>
+    </div>
   </main>
 </body>
 </html>
