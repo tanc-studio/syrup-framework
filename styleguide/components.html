@@ -38,6 +38,37 @@
       <span style="color: var(--color-text-error)"><svg class="icon" aria-hidden="true"><use href="#sg-check"/></svg> stroke icon, inherits colour</span>
       <span class="text-2xl"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> scales with text</span>
     </div>
+    <h2>Button</h2>
+    <p>Colour: <code>--primary</code>, <code>--secondary</code>, <code>--tertiary</code>. Default has a border and no fill.</p>
+    <div class="cluster">
+      <button type="button" class="btn">default</button>
+      <button type="button" class="btn btn--primary">primary</button>
+      <button type="button" class="btn btn--secondary">secondary</button>
+      <button type="button" class="btn btn--tertiary">tertiary</button>
+    </div>
+    <h3>Size: --sm, --xs</h3>
+    <div class="cluster">
+      <button type="button" class="btn btn--primary">Default</button>
+      <button type="button" class="btn btn--primary btn--sm">Small</button>
+      <button type="button" class="btn btn--primary btn--xs">Extra small</button>
+      <a href="#" class="btn">Link as button</a>
+    </div>
+    <h3>With icon, --icon</h3>
+    <div class="cluster">
+      <button type="button" class="btn btn--primary"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> Star</button>
+      <button type="button" class="btn btn--icon" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+      <button type="button" class="btn btn--icon btn--primary" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+      <button type="button" class="btn btn--icon btn--sm" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+      <button type="button" class="btn btn--icon btn--xs" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+    </div>
+    <h3>State: disabled, aria-busy</h3>
+    <div class="cluster">
+      <button type="button" class="btn btn--primary" disabled>Disabled</button>
+      <a class="btn" aria-disabled="true">aria-disabled link</a>
+      <button type="button" class="btn btn--primary" aria-busy="true">Saving</button>
+      <button type="button" class="btn btn--tertiary" aria-busy="true"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> Saving</button>
+      <button type="button" class="btn" aria-busy="true">Saving</button>
+    </div>
   </main>
 </body>
 </html>
