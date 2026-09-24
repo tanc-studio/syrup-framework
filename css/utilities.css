@@ -1,1 +1,88 @@
 /* utilities */
+
+/* Type presets — size, weight, line height, letter spacing in one class */
+.text-xs,
+.text-sm,
+.text-md,
+.text-lg,
+.text-xl,
+.text-2xl {
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-md);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-lg);
+}
+
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+
+.heading-sm,
+.heading-md,
+.heading-lg,
+.heading-xl,
+.heading-2xl,
+.heading-3xl {
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+.heading-sm { font-size: var(--font-size-md); }
+.heading-md { font-size: var(--font-size-lg); }
+.heading-lg { font-size: var(--font-size-xl); }
+.heading-xl { font-size: var(--font-size-2xl); }
+.heading-2xl { font-size: var(--font-size-3xl); }
+.heading-3xl { font-size: var(--font-size-4xl); }
+
+.display-sm,
+.display-md,
+.display-lg {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.display-sm { font-size: var(--font-size-3xl); }
+.display-md { font-size: var(--font-size-4xl); }
+.display-lg { font-size: var(--font-size-5xl); }
+
+.caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-xl);
+  text-transform: uppercase;
+}
+
+/* Alignment */
+.text-start { text-align: start; }
+.text-center { text-align: center; }
+.text-end { text-align: end; }
+
+/* Visibility — hidden on screen, still read by screen readers */
+.visually-hidden:not(:focus-within, :active) {
+  /* stylelint-disable declaration-property-value-disallowed-list -- 1px is the standard hide size, not a border */
+  inline-size: 1px;
+  block-size: 1px;
+  /* stylelint-enable declaration-property-value-disallowed-list */
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+/* Split at 48rem, the tablet breakpoint */
+@media (width < 48rem) {
+  .hide-mobile { display: none; }
+}
+
+@media (width >= 48rem) {
+  .hide-desktop { display: none; }
+}
