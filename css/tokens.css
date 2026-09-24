@@ -38,7 +38,7 @@
   --color-neutral-3: oklch(87% 0 0deg);
   --color-neutral-4: oklch(78% 0 0deg);
   --color-neutral-5: oklch(68% 0 0deg);
-  --color-neutral-6: oklch(57% 0 0deg);
+  --color-neutral-6: oklch(55% 0 0deg);
   --color-neutral-7: oklch(46% 0 0deg);
   --color-neutral-8: oklch(36% 0 0deg);
   --color-neutral-9: oklch(26% 0 0deg);
@@ -109,4 +109,48 @@
   --transition-timing-function-in: cubic-bezier(0.4, 0, 1, 1);
   --transition-timing-function-out: cubic-bezier(0, 0, 0.2, 1);
   --transition-timing-function-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Semantic colour — light-dark(light, dark). Components use only these. */
+
+  /* Text */
+  --color-text: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  --color-text-muted: light-dark(var(--color-neutral-7), var(--color-neutral-4));
+  --color-text-subtle: light-dark(var(--color-neutral-6), var(--color-neutral-5));
+  --color-text-inverse: light-dark(var(--color-white), var(--color-neutral-10));
+  --color-text-disabled: light-dark(var(--color-neutral-5), var(--color-neutral-6));
+  --color-text-link: light-dark(var(--color-primary), var(--color-neutral-1));
+  --color-text-link-hover: light-dark(var(--color-neutral-7), var(--color-neutral-4));
+  --color-text-error: light-dark(oklch(from var(--color-error) calc(l - 0.05) c h), oklch(from var(--color-error) calc(l + 0.15) c h));
+  --color-text-warning: light-dark(oklch(from var(--color-warning) calc(l - 0.2) c h), oklch(from var(--color-warning) calc(l + 0.1) c h));
+  --color-text-success: light-dark(oklch(from var(--color-success) calc(l - 0.05) c h), oklch(from var(--color-success) calc(l + 0.15) c h));
+
+  /* Background */
+  --color-background: light-dark(var(--color-white), var(--color-neutral-10));
+  --color-background-subtle: light-dark(var(--color-neutral-1), var(--color-neutral-9));
+  --color-background-muted: light-dark(var(--color-neutral-2), var(--color-neutral-8));
+  --color-background-inverse: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  --color-background-disabled: light-dark(var(--color-neutral-2), var(--color-neutral-8));
+  --color-background-primary: light-dark(var(--color-primary), var(--color-neutral-1));
+  --color-background-primary-hover: light-dark(oklch(from var(--color-primary) calc(l + 0.1) c h), var(--color-neutral-3));
+  --color-background-primary-subtle: light-dark(oklch(from var(--color-primary) 95% calc(c * 0.3) h), oklch(from var(--color-primary) 25% calc(c * 0.4) h));
+  --color-background-secondary: light-dark(var(--color-secondary), oklch(from var(--color-secondary) calc(l + 0.15) c h));
+  --color-background-secondary-hover: light-dark(oklch(from var(--color-secondary) calc(l - 0.08) c h), oklch(from var(--color-secondary) calc(l + 0.23) c h));
+  --color-background-tertiary: light-dark(var(--color-tertiary), var(--color-neutral-8));
+  --color-background-tertiary-hover: light-dark(oklch(from var(--color-tertiary) calc(l - 0.06) c h), var(--color-neutral-7));
+  --color-background-error: light-dark(oklch(from var(--color-error) 95% calc(c * 0.3) h), oklch(from var(--color-error) 25% calc(c * 0.4) h));
+  --color-background-warning: light-dark(oklch(from var(--color-warning) 95% calc(c * 0.3) h), oklch(from var(--color-warning) 25% calc(c * 0.4) h));
+  --color-background-success: light-dark(oklch(from var(--color-success) 95% calc(c * 0.3) h), oklch(from var(--color-success) 25% calc(c * 0.4) h));
+
+  /* Border */
+  --color-border: light-dark(var(--color-neutral-3), var(--color-neutral-8));
+  --color-border-strong: var(--color-neutral-6);
+  --color-border-selected: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  --color-border-error: var(--color-text-error);
+  --color-border-warning: var(--color-text-warning);
+  --color-border-success: var(--color-text-success);
+
+  /* Focus */
+  --color-focus: light-dark(var(--color-primary), var(--color-neutral-1));
+
+  color-scheme: light dark;
 }
