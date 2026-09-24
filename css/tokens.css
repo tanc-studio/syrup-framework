@@ -156,17 +156,13 @@
 }
 
 /* Theme — any element; see [1] */
-[data-theme="light"] {
-  color-scheme: light;
+[data-theme] {
   background-color: var(--color-background);
   color: var(--color-text);
 }
 
-[data-theme="dark"] {
-  color-scheme: dark;
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
 
 /* Fixed sizing — scales lock to their desktop size */
 :root[data-sizing="fixed"] {
