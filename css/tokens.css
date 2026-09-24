@@ -55,10 +55,10 @@
   --color-warning: oklch(70% 0.13 75deg);
   --color-success: oklch(55% 0.1 150deg);
 
-  /* Font family — system stacks until house fonts are picked */
-  --font-family-sans: system-ui, sans-serif;
-  --font-family-serif: ui-serif, georgia, serif;
-  --font-family-mono: ui-monospace, menlo, consolas, monospace;
+  /* Font family — house fonts (fonts.css), system fallbacks */
+  --font-family-sans: geist, system-ui, sans-serif;
+  --font-family-serif: 'Frank Ruhl Libre', ui-serif, georgia, serif;
+  --font-family-mono: 'Roboto Mono', ui-monospace, menlo, consolas, monospace;
 
   /* Font weight */
   --font-weight-light: 300;

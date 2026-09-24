@@ -20,6 +20,7 @@ All notable changes to the Syrup CSS Framework.
 - Primitives: `oklch()` colour (neutral ramp, brand, status), fonts, weights, line-height, letter-spacing, radius, border width, focus, shadow, motion
 - Semantic colour with `light-dark()`; 21 text/background pairs pass AA in both themes
 - `[data-theme]` on any element, `data-sizing="fixed"`, `prefers-contrast: more`, `forced-colors`, reduced motion
+- House fonts in `/fonts` (variable woff2, OFL): Geist (sans), Frank Ruhl Libre (serif), Roboto Mono (mono). `css/fonts.css`; remove by deleting its `@import`. Icon fonts dropped
 
 ---
 
