@@ -1,0 +1,38 @@
+/* Styleguide chrome only — never imported by main.css */
+@layer sg {
+  .sg {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    min-block-size: 100dvh;
+    font-family: system-ui, sans-serif;
+
+    @media (width < 48rem) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sg-nav {
+    padding: 1.5rem;
+    border-inline-end: thin solid color-mix(in oklch, currentcolor 15%, transparent);
+  }
+
+  .sg-nav_title {
+    margin-block-end: 1rem;
+    font-weight: 600;
+  }
+
+  .sg-nav_list {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+
+    & [aria-current="page"] {
+      font-weight: 600;
+    }
+  }
+
+  .sg-main {
+    padding: 1.5rem;
+  }
+}
