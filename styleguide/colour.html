@@ -15,7 +15,12 @@
     <p class="sg-nav_title">Syrup v2</p>
     <ul class="sg-nav_list">
       <li><a href="/styleguide/index.html">Overview</a></li>
-      <li><a href="/styleguide/colour.html" aria-current="page">Colour</a></li>
+      <li><a href="/styleguide/colour.html" aria-current="page">Colour</a>
+        <ul class="sg-nav_sub">
+          <li><a href="#primitives">Primitives</a></li>
+          <li><a href="#semantic">Semantic</a></li>
+        </ul>
+      </li>
       <li><a href="/styleguide/type.html">Type</a></li>
       <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
       <li><a href="/styleguide/layout.html">Layout</a></li>
@@ -28,7 +33,7 @@
   <main class="sg-main">
     <h1>Colour</h1>
 
-    <h2>Primitives</h2>
+    <h2 id="primitives">Primitives</h2>
     <ul class="sg-swatches">
       <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-white)"><span class="sg-swatch_chip"></span><code>--color-white</code></li>
       <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-1)"><span class="sg-swatch_chip"></span><code>--color-neutral-1</code></li>
@@ -50,7 +55,7 @@
       <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-success)"><span class="sg-swatch_chip"></span><code>--color-success</code></li>
     </ul>
 
-    <h2>Semantic</h2>
+    <h2 id="semantic">Semantic</h2>
     <p>Components use only these. Each panel is forced with <code>data-theme</code>.</p>
     <div class="sg-themes">
       <div class="sg-panel" data-theme="light">

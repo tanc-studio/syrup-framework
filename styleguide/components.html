@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/styleguide/styleguide.css">
   <script type="module" src="/js/theme.js"></script>
+  <script type="module" src="/js/tabs.js"></script>
 </head>
 <body class="sg">
   <!-- sg-nav -->
@@ -20,7 +21,15 @@
       <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
       <li><a href="/styleguide/layout.html">Layout</a></li>
       <li><a href="/styleguide/elements.html">Elements</a></li>
-      <li><a href="/styleguide/components.html" aria-current="page">Components</a></li>
+      <li><a href="/styleguide/components.html" aria-current="page">Components</a>
+        <ul class="sg-nav_sub">
+          <li><a href="#icon">Icon</a></li>
+          <li><a href="#button">Button</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#tabs">Tabs</a></li>
+          <li><a href="#card">Card</a></li>
+        </ul>
+      </li>
     </ul>
     <button type="button" class="sg-nav_theme" data-theme-toggle>Theme: system</button>
   </nav>
@@ -28,7 +37,7 @@
   <main class="sg-main">
     <h1>Components</h1>
 
-    <h2>Icon</h2>
+    <h2 id="icon">Icon</h2>
     <p>SVG only. Sized by the text around it, coloured by <code>currentColor</code>.</p>
     <svg hidden><symbol id="sg-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5-6.5 4.5 2-7.5L2 9h7z"/></symbol><symbol id="sg-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol></svg>
     <div class="cluster">
@@ -38,7 +47,7 @@
       <span style="color: var(--color-text-error)"><svg class="icon" aria-hidden="true"><use href="#sg-check"/></svg> stroke icon, inherits colour</span>
       <span class="text-2xl"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> scales with text</span>
     </div>
-    <h2>Button</h2>
+    <h2 id="button">Button</h2>
     <p>Colour: <code>--primary</code>, <code>--secondary</code>, <code>--tertiary</code>. Default has a border and no fill.</p>
     <div class="cluster">
       <button type="button" class="btn">default</button>
@@ -70,7 +79,7 @@
       <button type="button" class="btn" aria-busy="true">Saving</button>
     </div>
 
-    <h2>Form</h2>
+    <h2 id="form">Form</h2>
     <p>Type in the email field, then click away: the red border only shows after you've interacted.</p>
     <form class="form wrap--sm" onsubmit="return false">
       <div class="form_item">
@@ -117,8 +126,8 @@
       </div>
     </form>
 
-    <h2>Tabs</h2>
-    <p>Selected state comes from <code>aria-selected</code>. The demos below are static until tabs.js is built (P8).</p>
+    <h2 id="tabs">Tabs</h2>
+    <p>Selected state comes from <code>aria-selected</code>. Arrow keys move between tabs; Home/End jump to the ends. Vertical tabs use <code>data-tabs="vertical"</code> for up/down keys.</p>
     <h3>Default</h3>
     <div class="tabs" data-tabs>
       <div class="tabs_nav">
@@ -128,8 +137,8 @@
       </div>
       <div class="tabs_content">
         <div class="tabs_panel"><p>Overview panel.</p></div>
-        <div class="tabs_panel" hidden><p>Specs panel.</p></div>
-        <div class="tabs_panel" hidden><p>Reviews panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
       </div>
     </div>
     <h3>--pills</h3>
@@ -141,12 +150,12 @@
       </div>
       <div class="tabs_content">
         <div class="tabs_panel"><p>Overview panel.</p></div>
-        <div class="tabs_panel" hidden><p>Specs panel.</p></div>
-        <div class="tabs_panel" hidden><p>Reviews panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
       </div>
     </div>
     <h3>--vertical</h3>
-    <div class="tabs tabs--vertical" data-tabs>
+    <div class="tabs tabs--vertical" data-tabs="vertical">
       <div class="tabs_nav">
         <button type="button" class="tab" aria-selected="true">Overview</button>
         <button type="button" class="tab" aria-selected="false">Specs</button>
@@ -154,12 +163,12 @@
       </div>
       <div class="tabs_content">
         <div class="tabs_panel"><p>Overview panel.</p></div>
-        <div class="tabs_panel" hidden><p>Specs panel.</p></div>
-        <div class="tabs_panel" hidden><p>Reviews panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
       </div>
     </div>
     <h3>Without JS: every panel shows</h3>
-    <div class="tabs" data-tabs>
+    <div class="tabs">
       <div class="tabs_nav">
         <button type="button" class="tab">Overview</button>
         <button type="button" class="tab">Specs</button>
@@ -172,7 +181,7 @@
       </div>
     </div>
 
-    <h2>Card</h2>
+    <h2 id="card">Card</h2>
     <p>Flat: border, no shadow. Padding grows from 16 to 24px when the card is wider than 30rem.</p>
     <div class="grid">
       <article class="card">

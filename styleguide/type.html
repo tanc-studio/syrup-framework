@@ -16,7 +16,16 @@
     <ul class="sg-nav_list">
       <li><a href="/styleguide/index.html">Overview</a></li>
       <li><a href="/styleguide/colour.html">Colour</a></li>
-      <li><a href="/styleguide/type.html" aria-current="page">Type</a></li>
+      <li><a href="/styleguide/type.html" aria-current="page">Type</a>
+        <ul class="sg-nav_sub">
+          <li><a href="#family">Family</a></li>
+          <li><a href="#size">Size</a></li>
+          <li><a href="#weight">Weight</a></li>
+          <li><a href="#line-height">Line height</a></li>
+          <li><a href="#letter-spacing">Letter spacing</a></li>
+          <li><a href="#presets">Presets</a></li>
+        </ul>
+      </li>
       <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
       <li><a href="/styleguide/layout.html">Layout</a></li>
       <li><a href="/styleguide/elements.html">Elements</a></li>
@@ -28,14 +37,14 @@
   <main class="sg-main">
     <h1>Type</h1>
 
-    <h2>Family</h2>
+    <h2 id="family">Family</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--font-family-sans</code><span class="sg-sample" style="font-family: var(--font-family-sans)">The quick brown fox jumps over the lazy dog</span></li>
       <li class="sg-row"><code>--font-family-serif</code><span class="sg-sample" style="font-family: var(--font-family-serif)">The quick brown fox jumps over the lazy dog</span></li>
       <li class="sg-row"><code>--font-family-mono</code><span class="sg-sample" style="font-family: var(--font-family-mono)">The quick brown fox jumps over the lazy dog</span></li>
     </ul>
 
-    <h2>Size</h2>
+    <h2 id="size">Size</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--font-size-xs</code><span class="sg-sample" style="font-size: var(--font-size-xs)">Syrup</span></li>
       <li class="sg-row"><code>--font-size-sm</code><span class="sg-sample" style="font-size: var(--font-size-sm)">Syrup</span></li>
@@ -48,7 +57,7 @@
       <li class="sg-row"><code>--font-size-5xl</code><span class="sg-sample" style="font-size: var(--font-size-5xl)">Syrup</span></li>
     </ul>
 
-    <h2>Weight</h2>
+    <h2 id="weight">Weight</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--font-weight-light</code><span class="sg-sample" style="font-weight: var(--font-weight-light)">The quick brown fox jumps over the lazy dog</span></li>
       <li class="sg-row"><code>--font-weight-regular</code><span class="sg-sample" style="font-weight: var(--font-weight-regular)">The quick brown fox jumps over the lazy dog</span></li>
@@ -57,7 +66,7 @@
       <li class="sg-row"><code>--font-weight-bold</code><span class="sg-sample" style="font-weight: var(--font-weight-bold)">The quick brown fox jumps over the lazy dog</span></li>
     </ul>
 
-    <h2>Line height</h2>
+    <h2 id="line-height">Line height</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--line-height-xs</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-xs)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
       <li class="sg-row"><code>--line-height-sm</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-sm)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
@@ -66,7 +75,7 @@
       <li class="sg-row"><code>--line-height-xl</code><span class="sg-sample sg-sample--narrow" style="line-height: var(--line-height-xl)">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></li>
     </ul>
 
-    <h2>Letter spacing</h2>
+    <h2 id="letter-spacing">Letter spacing</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--letter-spacing-xs</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-xs)">The quick brown fox jumps over the lazy dog</span></li>
       <li class="sg-row"><code>--letter-spacing-sm</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-sm)">The quick brown fox jumps over the lazy dog</span></li>
@@ -75,7 +84,7 @@
       <li class="sg-row"><code>--letter-spacing-xl</code><span class="sg-sample" style="letter-spacing: var(--letter-spacing-xl)">The quick brown fox jumps over the lazy dog</span></li>
     </ul>
 
-    <h2>Presets</h2>
+    <h2 id="presets">Presets</h2>
     <p>Utility classes: size, weight, line height and letter spacing in one.</p>
 
     <h3>Display</h3>

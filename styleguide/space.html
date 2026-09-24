@@ -17,7 +17,16 @@
       <li><a href="/styleguide/index.html">Overview</a></li>
       <li><a href="/styleguide/colour.html">Colour</a></li>
       <li><a href="/styleguide/type.html">Type</a></li>
-      <li><a href="/styleguide/space.html" aria-current="page">Space &amp; effects</a></li>
+      <li><a href="/styleguide/space.html" aria-current="page">Space &amp; effects</a>
+        <ul class="sg-nav_sub">
+          <li><a href="#space">Space</a></li>
+          <li><a href="#radius">Radius</a></li>
+          <li><a href="#border-width">Border width</a></li>
+          <li><a href="#shadow">Shadow</a></li>
+          <li><a href="#focus">Focus</a></li>
+          <li><a href="#motion">Motion</a></li>
+        </ul>
+      </li>
       <li><a href="/styleguide/layout.html">Layout</a></li>
       <li><a href="/styleguide/elements.html">Elements</a></li>
       <li><a href="/styleguide/components.html">Components</a></li>
@@ -28,7 +37,7 @@
   <main class="sg-main">
     <h1>Space &amp; effects</h1>
 
-    <h2>Space</h2>
+    <h2 id="space">Space</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--size-2</code><span class="sg-bar" style="inline-size: var(--size-2)"></span></li>
       <li class="sg-row"><code>--size-4</code><span class="sg-bar" style="inline-size: var(--size-4)"></span></li>
@@ -48,7 +57,7 @@
       <li class="sg-row"><code>--size-section-lg</code><span class="sg-bar" style="inline-size: var(--size-section-lg)"></span></li>
     </ul>
 
-    <h2>Radius</h2>
+    <h2 id="radius">Radius</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--border-radius-xs</code><span class="sg-box" style="border-radius: var(--border-radius-xs)"></span></li>
       <li class="sg-row"><code>--border-radius-sm</code><span class="sg-box" style="border-radius: var(--border-radius-sm)"></span></li>
@@ -58,25 +67,25 @@
       <li class="sg-row"><code>--border-radius-full</code><span class="sg-box" style="border-radius: var(--border-radius-full)"></span></li>
     </ul>
 
-    <h2>Border width</h2>
+    <h2 id="border-width">Border width</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--border-width-sm</code><span class="sg-box sg-box--border" style="border-width: var(--border-width-sm)"></span></li>
       <li class="sg-row"><code>--border-width-md</code><span class="sg-box sg-box--border" style="border-width: var(--border-width-md)"></span></li>
     </ul>
 
-    <h2>Shadow</h2>
+    <h2 id="shadow">Shadow</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--box-shadow-sm</code><span class="sg-box sg-box--shadow" style="box-shadow: var(--box-shadow-sm)"></span></li>
       <li class="sg-row"><code>--box-shadow-md</code><span class="sg-box sg-box--shadow" style="box-shadow: var(--box-shadow-md)"></span></li>
       <li class="sg-row"><code>--box-shadow-lg</code><span class="sg-box sg-box--shadow" style="box-shadow: var(--box-shadow-lg)"></span></li>
     </ul>
 
-    <h2>Focus</h2>
+    <h2 id="focus">Focus</h2>
     <ul class="sg-rows">
       <li class="sg-row"><code>--outline-width-focus</code><code>--outline-offset-focus</code><span class="sg-box sg-box--focus"></span></li>
     </ul>
 
-    <h2>Motion</h2>
+    <h2 id="motion">Motion</h2>
     <p>Hover a row. Durations are 0 under reduced motion.</p>
     <ul class="sg-rows">
       <li class="sg-row"><code>--transition-duration-sm</code><span class="sg-track" style="transition-duration: var(--transition-duration-sm)"><span class="sg-dot"></span></span></li>

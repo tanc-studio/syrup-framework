@@ -19,7 +19,16 @@
       <li><a href="/styleguide/type.html">Type</a></li>
       <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
       <li><a href="/styleguide/layout.html">Layout</a></li>
-      <li><a href="/styleguide/elements.html" aria-current="page">Elements</a></li>
+      <li><a href="/styleguide/elements.html" aria-current="page">Elements</a>
+        <ul class="sg-nav_sub">
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#text">Text</a></li>
+          <li><a href="#table">Table</a></li>
+          <li><a href="#form-controls-native">Form controls (native)</a></li>
+          <li><a href="#details">Details</a></li>
+          <li><a href="#dialog">Dialog</a></li>
+        </ul>
+      </li>
       <li><a href="/styleguide/components.html">Components</a></li>
     </ul>
     <button type="button" class="sg-nav_theme" data-theme-toggle>Theme: system</button>
@@ -28,7 +37,7 @@
   <main class="sg-main">
     <h1>Elements</h1>
 
-    <h2>Headings</h2>
+    <h2 id="headings">Headings</h2>
     <p>All levels render at body size. The look comes from a class.</p>
     <div class="sg-flow">
       <h1>Heading 1</h1>
@@ -39,7 +48,7 @@
       <h6>Heading 6</h6>
     </div>
 
-    <h2>Text</h2>
+    <h2 id="text">Text</h2>
     <div class="sg-flow">
       <p>Running text with <a href="#">a link</a>, <strong>strong</strong>, <em>emphasis</em>, <code>inline code</code>, <kbd>Tab</kbd>, <mark>mark</mark> and <small>small</small>. Select this text to check the selection colour.</p>
       <blockquote><p>A blockquote. Short and to the point.</p></blockquote>
@@ -57,7 +66,7 @@
       </ol>
     </div>
 
-    <h2>Table</h2>
+    <h2 id="table">Table</h2>
     <table>
       <thead>
         <tr><th scope="col">Token</th><th scope="col">Value</th></tr>
@@ -68,7 +77,7 @@
       </tbody>
     </table>
 
-    <h2>Form controls (native)</h2>
+    <h2 id="form-controls-native">Form controls (native)</h2>
     <div class="sg-flow">
       <p><label>Text <input type="text" placeholder="Placeholder"></label></p>
       <p><label>Select <select><option>One</option><option>Two</option></select></label></p>
@@ -77,13 +86,13 @@
       <p><button type="button">Button</button></p>
     </div>
 
-    <h2>Details</h2>
+    <h2 id="details">Details</h2>
     <details>
       <summary>Click or press Enter to open</summary>
       <p>Hidden content.</p>
     </details>
 
-    <h2>Dialog</h2>
+    <h2 id="dialog">Dialog</h2>
     <button type="button" commandfor="sg-dialog" command="show-modal">Open dialog</button>
     <dialog id="sg-dialog" aria-labelledby="sg-dialog-title">
       <div class="sg-flow">

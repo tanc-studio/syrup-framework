@@ -11,9 +11,39 @@
     }
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :target {
+    outline: 3px solid red;
+    outline-offset: 3px;
+    scroll-margin: 20vb;
+  }
+
+  /* Fixed on wide screens; stacks above content on narrow */
   .sg-nav {
+    align-self: start;
+    block-size: 100dvh;
+    overflow-y: auto;
     padding: 1.5rem;
     border-inline-end: thin solid color-mix(in oklch, currentcolor 15%, transparent);
+    position: sticky;
+    inset-block-start: 0;
+
+    @media (width < 48rem) {
+      block-size: auto;
+      position: static;
+    }
+  }
+
+  .sg-nav_sub {
+    display: grid;
+    gap: 0.25rem;
+    padding-inline-start: 1rem;
+    margin-block-start: 0.5rem;
+    font-size: var(--font-size-sm);
+    list-style: none;
   }
 
   .sg-nav_title {

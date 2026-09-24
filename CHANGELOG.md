@@ -45,6 +45,9 @@ All notable changes to the Syrup CSS Framework.
 - `card`: flat (border, no shadow); `--interactive` hover; `--primary` brand tint; padding grows via container query
 - Old `01–05` CSS files deleted; `lint:css` now covers all of `css/`
 
+### JS
+- `js/tabs.js`: adds tab roles, `aria-controls`/`aria-labelledby`, roving `tabindex`, hides inactive panels. Arrow keys (up/down with `data-tabs="vertical"`), Home/End. Fires `tabchange` (bubbles; `detail: { index, tab, panel }`)
+
 ---
 
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)

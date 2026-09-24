@@ -18,7 +18,14 @@
       <li><a href="/styleguide/colour.html">Colour</a></li>
       <li><a href="/styleguide/type.html">Type</a></li>
       <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
-      <li><a href="/styleguide/layout.html" aria-current="page">Layout</a></li>
+      <li><a href="/styleguide/layout.html" aria-current="page">Layout</a>
+        <ul class="sg-nav_sub">
+          <li><a href="#wrap">Wrap</a></li>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#cluster">Cluster</a></li>
+        </ul>
+      </li>
       <li><a href="/styleguide/elements.html">Elements</a></li>
       <li><a href="/styleguide/components.html">Components</a></li>
     </ul>
@@ -28,7 +35,7 @@
   <main class="sg-main">
     <h1>Layout</h1>
 
-    <h2>Wrap</h2>
+    <h2 id="wrap">Wrap</h2>
     <p>Centres content with fluid side padding (<code>--size-wrap-padding</code>, 16 → 32px).</p>
     <div class="sg-flow">
       <div class="sg-cell"><div class="wrap wrap--sm"><div class="sg-cell">.wrap--sm (40rem)</div></div></div>
@@ -37,7 +44,7 @@
       <div class="sg-cell"><div class="wrap wrap--full"><div class="sg-cell">.wrap--full</div></div></div>
     </div>
 
-    <h2>Grid</h2>
+    <h2 id="grid">Grid</h2>
     <p>Columns wrap on their own. The modifier sets the smallest column. Gap: <code>--grid-gap</code>.</p>
     <h3>.grid--xs (6rem)</h3>
     <div class="grid grid--xs">
@@ -66,7 +73,7 @@
       <div class="sg-cell">3</div>
     </div>
 
-    <h2>Stack</h2>
+    <h2 id="stack">Stack</h2>
     <p>Spaces children top to bottom. Gap: <code>--stack-gap</code>.</p>
     <div class="stack">
       <div class="sg-cell">1</div>
@@ -74,7 +81,7 @@
       <div class="sg-cell">3</div>
     </div>
 
-    <h2>Cluster</h2>
+    <h2 id="cluster">Cluster</h2>
     <p>A row that wraps. Gap: <code>--cluster-gap</code>.</p>
     <div class="cluster">
       <div class="sg-cell">Design</div>
