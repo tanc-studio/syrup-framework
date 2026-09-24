@@ -1,0 +1,24 @@
+/* House fonts (OFL). Remove: delete this file's @import in main.css + /fonts */
+@font-face {
+  font-family: Geist;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Geist.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/FrankRuhlLibre.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/RobotoMono.woff2') format('woff2');
+}

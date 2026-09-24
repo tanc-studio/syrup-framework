@@ -1,0 +1,125 @@
+/* form
+ * Classes:   .form, .form_item, .form_label, .form_input (input, textarea), .form_select,
+ *            .form_message, .form_checkbox-group, .form_radio-group, .form_radio, .form_radio-label
+ * Modifiers: .form_message--error, --success
+ * States:    :disabled; :user-invalid (red border only after the user has interacted)
+ * JS hook:   none
+ * Use:       checkbox is native (colour via accent-color in base); select stays native
+ */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-24);
+}
+
+.form_item {
+  display: grid;
+  gap: var(--size-6);
+  min-inline-size: 0;
+  padding: 0;
+  border: none;
+}
+
+.form_label {
+  padding: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.form_input,
+.form_select {
+  inline-size: 100%;
+  block-size: var(--btn-height);
+  padding-inline: var(--size-12);
+  border: var(--border-width-sm) solid var(--color-border-strong);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  &::placeholder {
+    color: var(--color-text-subtle);
+  }
+
+  &:user-invalid {
+    border-color: var(--color-border-error);
+  }
+
+  &:disabled {
+    border-color: var(--color-border);
+    background-color: var(--color-background-disabled);
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+  }
+}
+
+textarea.form_input {
+  block-size: auto;
+  min-block-size: 6rem;
+  padding-block: var(--size-8);
+  resize: vertical;
+}
+
+.form_message {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.form_message--error { color: var(--color-text-error); }
+.form_message--success { color: var(--color-text-success); }
+
+.form_checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-8) var(--size-16);
+
+  & label {
+    display: inline-flex;
+    gap: var(--size-8);
+    align-items: center;
+  }
+}
+
+/* Pill switcher: real radios, visually hidden but still focusable */
+.form_radio-group {
+  display: flex;
+  gap: var(--size-4);
+  padding: var(--size-4);
+  border: var(--border-width-sm) solid var(--color-border);
+  border-radius: var(--border-radius-full);
+  position: relative;
+  background-color: var(--color-background-subtle);
+}
+
+.form_radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form_radio-label {
+  flex: 1;
+  padding: var(--size-4) var(--size-12);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-background-muted);
+  }
+
+  /* The only focus rule outside base. See [1] */
+  .form_radio:focus-visible + & {
+    outline: var(--outline-width-focus) solid var(--color-focus);
+    outline-offset: var(--outline-offset-focus);
+  }
+
+  .form_radio:checked + & {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-inverse);
+  }
+}
+
+/* Notes
+ * [1] The radio is hidden, so its focus ring is drawn on the visible label.
+ */

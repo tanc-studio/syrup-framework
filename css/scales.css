@@ -1,0 +1,54 @@
+/* scales — generated from the settings in tokens.css; don't edit, see [1] */
+:root {
+  --fluid-progress: calc((100vi - var(--fluid-min) * 1px) / (var(--fluid-max) - var(--fluid-min)));
+
+  /* Type — base × ratio^n */
+  --font-size-xs-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), -2));
+  --font-size-xs-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), -2));
+  --font-size-xs: clamp(var(--font-size-xs-min) / 16 * 1rem, var(--font-size-xs-min) / 16 * 1rem + (var(--font-size-xs-max) - var(--font-size-xs-min)) * var(--fluid-progress), var(--font-size-xs-max) / 16 * 1rem);
+
+  --font-size-sm-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), -1));
+  --font-size-sm-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), -1));
+  --font-size-sm: clamp(var(--font-size-sm-min) / 16 * 1rem, var(--font-size-sm-min) / 16 * 1rem + (var(--font-size-sm-max) - var(--font-size-sm-min)) * var(--fluid-progress), var(--font-size-sm-max) / 16 * 1rem);
+
+  --font-size-md-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 0));
+  --font-size-md-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 0));
+  --font-size-md: clamp(var(--font-size-md-min) / 16 * 1rem, var(--font-size-md-min) / 16 * 1rem + (var(--font-size-md-max) - var(--font-size-md-min)) * var(--fluid-progress), var(--font-size-md-max) / 16 * 1rem);
+
+  --font-size-lg-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 1));
+  --font-size-lg-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 1));
+  --font-size-lg: clamp(var(--font-size-lg-min) / 16 * 1rem, var(--font-size-lg-min) / 16 * 1rem + (var(--font-size-lg-max) - var(--font-size-lg-min)) * var(--fluid-progress), var(--font-size-lg-max) / 16 * 1rem);
+
+  --font-size-xl-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 2));
+  --font-size-xl-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 2));
+  --font-size-xl: clamp(var(--font-size-xl-min) / 16 * 1rem, var(--font-size-xl-min) / 16 * 1rem + (var(--font-size-xl-max) - var(--font-size-xl-min)) * var(--fluid-progress), var(--font-size-xl-max) / 16 * 1rem);
+
+  --font-size-2xl-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 3));
+  --font-size-2xl-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 3));
+  --font-size-2xl: clamp(var(--font-size-2xl-min) / 16 * 1rem, var(--font-size-2xl-min) / 16 * 1rem + (var(--font-size-2xl-max) - var(--font-size-2xl-min)) * var(--fluid-progress), var(--font-size-2xl-max) / 16 * 1rem);
+
+  --font-size-3xl-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 4));
+  --font-size-3xl-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 4));
+  --font-size-3xl: clamp(var(--font-size-3xl-min) / 16 * 1rem, var(--font-size-3xl-min) / 16 * 1rem + (var(--font-size-3xl-max) - var(--font-size-3xl-min)) * var(--fluid-progress), var(--font-size-3xl-max) / 16 * 1rem);
+
+  --font-size-4xl-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 5));
+  --font-size-4xl-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 5));
+  --font-size-4xl: clamp(var(--font-size-4xl-min) / 16 * 1rem, var(--font-size-4xl-min) / 16 * 1rem + (var(--font-size-4xl-max) - var(--font-size-4xl-min)) * var(--fluid-progress), var(--font-size-4xl-max) / 16 * 1rem);
+
+  --font-size-5xl-min: calc(var(--font-size-base-min) * pow(var(--font-size-ratio-min), 6));
+  --font-size-5xl-max: calc(var(--font-size-base-max) * pow(var(--font-size-ratio-max), 6));
+  --font-size-5xl: clamp(var(--font-size-5xl-min) / 16 * 1rem, var(--font-size-5xl-min) / 16 * 1rem + (var(--font-size-5xl-max) - var(--font-size-5xl-min)) * var(--fluid-progress), var(--font-size-5xl-max) / 16 * 1rem);
+
+  /* Section space */
+  --size-section-sm: clamp(var(--size-section-sm-min) / 16 * 1rem, var(--size-section-sm-min) / 16 * 1rem + (var(--size-section-sm-max) - var(--size-section-sm-min)) * var(--fluid-progress), var(--size-section-sm-max) / 16 * 1rem);
+  --size-section-md: clamp(var(--size-section-md-min) / 16 * 1rem, var(--size-section-md-min) / 16 * 1rem + (var(--size-section-md-max) - var(--size-section-md-min)) * var(--fluid-progress), var(--size-section-md-max) / 16 * 1rem);
+  --size-section-lg: clamp(var(--size-section-lg-min) / 16 * 1rem, var(--size-section-lg-min) / 16 * 1rem + (var(--size-section-lg-max) - var(--size-section-lg-min)) * var(--fluid-progress), var(--size-section-lg-max) / 16 * 1rem);
+
+  /* Wrap side padding */
+  --size-wrap-padding: clamp(var(--size-wrap-padding-min) / 16 * 1rem, var(--size-wrap-padding-min) / 16 * 1rem + (var(--size-wrap-padding-max) - var(--size-wrap-padding-min)) * var(--fluid-progress), var(--size-wrap-padding-max) / 16 * 1rem);
+}
+
+/* Notes
+ * [1] Same maths as utopia.fyi, done live: each step has a min (at --fluid-min)
+ *     and a max (at --fluid-max); clamp() slides between them. Only edit the settings in tokens.css.
+ */

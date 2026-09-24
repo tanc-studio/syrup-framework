@@ -1,20 +1,15 @@
+/* Syrup v2.0.0 */
+@layer reset, tokens, base, layout, components, utilities, custom;
 
-/* Layer Definitions - Define the order */
-@layer base, layout, components, utilities, themes, custom;
-
-@import '01-base.css';
-@import '02-layout.css';
-@import '03-components.css';
-@import '04-utilities.css';
-@import '05-themes.css';
-
-
-/*
- * Layer Structure:
- * 1. base       — reset, element defaults, typography tokens
- * 2. layout     — grid systems, wraps, positioning
- * 3. components — buttons, forms, tabs, cards
- * 4. utilities  — display, spacing, colour helpers
- * 5. themes     — dark mode, high-contrast, reduced-motion
- * 6. custom     — reserved for project/project.css (not shipped by CDN)
- */
+@import 'reset.css' layer(reset);
+@import 'tokens.css' layer(tokens);
+@import 'scales.css' layer(tokens);
+@import 'fonts.css' layer(base);
+@import 'base.css' layer(base);
+@import 'layout.css' layer(layout);
+@import 'components/icon.css' layer(components);
+@import 'components/btn.css' layer(components);
+@import 'components/form.css' layer(components);
+@import 'components/tabs.css' layer(components);
+@import 'components/card.css' layer(components);
+@import 'utilities.css' layer(utilities);

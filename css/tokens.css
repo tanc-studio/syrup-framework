@@ -1,0 +1,207 @@
+/* tokens */
+:root {
+  /* Scale settings — edit these (px). The maths is in scales.css. */
+  --fluid-min: 360;
+  --fluid-max: 1440;
+  --font-size-base-min: 16;
+  --font-size-base-max: 18;
+  --font-size-ratio-min: 1.2;
+  --font-size-ratio-max: 1.25;
+
+  /* Space — fixed 4px grid; name = px at default browser size */
+  --size-2: 0.125rem;
+  --size-4: 0.25rem;
+  --size-6: 0.375rem;
+  --size-8: 0.5rem;
+  --size-10: 0.625rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-64: 4rem;
+
+  /* Section space — px at smallest → biggest screen. The maths is in scales.css. */
+  --size-section-sm-min: 32;
+  --size-section-sm-max: 48;
+  --size-section-md-min: 48;
+  --size-section-md-max: 80;
+  --size-section-lg-min: 64;
+  --size-section-lg-max: 120;
+
+  /* Wrap side padding — px at smallest → biggest screen */
+  --size-wrap-padding-min: 16;
+  --size-wrap-padding-max: 32;
+
+  /* Colour — neutral ramp, 1 = lightest */
+  --color-white: oklch(100% 0 0deg);
+  --color-neutral-1: oklch(97% 0 0deg);
+  --color-neutral-2: oklch(93% 0 0deg);
+  --color-neutral-3: oklch(87% 0 0deg);
+  --color-neutral-4: oklch(78% 0 0deg);
+  --color-neutral-5: oklch(68% 0 0deg);
+  --color-neutral-6: oklch(55% 0 0deg);
+  --color-neutral-7: oklch(46% 0 0deg);
+  --color-neutral-8: oklch(36% 0 0deg);
+  --color-neutral-9: oklch(26% 0 0deg);
+  --color-neutral-10: oklch(18% 0 0deg);
+  --color-black: oklch(0% 0 0deg);
+
+  /* Colour — brand (wireframe greys; projects replace) */
+  --color-primary: oklch(25% 0 0deg);
+  --color-secondary: oklch(55% 0 0deg);
+  --color-tertiary: oklch(85% 0 0deg);
+
+  /* Colour — status */
+  --color-error: oklch(55% 0.15 25deg);
+  --color-warning: oklch(70% 0.13 75deg);
+  --color-success: oklch(55% 0.1 150deg);
+
+  /* Font family — house fonts (fonts.css), system fallbacks */
+  --font-family-sans: geist, system-ui, sans-serif;
+  --font-family-serif: 'Frank Ruhl Libre', ui-serif, georgia, serif;
+  --font-family-mono: 'Roboto Mono', ui-monospace, menlo, consolas, monospace;
+
+  /* Font weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line height */
+  --line-height-xs: 1;
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-xl: 2;
+
+  /* Letter spacing */
+  --letter-spacing-xs: -0.016em;
+  --letter-spacing-sm: -0.008em;
+  --letter-spacing-md: 0;
+  --letter-spacing-lg: 0.018em;
+  --letter-spacing-xl: 0.03em;
+
+  /* Radius */
+  --border-radius-xs: 0.125rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-full: 9999px;
+
+  /* Border width */
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+
+  /* Focus */
+  --outline-width-focus: 2px;
+  --outline-offset-focus: 2px;
+
+  /* Shadow — darker in dark mode */
+  --box-shadow-sm: 0 1px 2px light-dark(oklch(0% 0 0deg / 8%), oklch(0% 0 0deg / 40%));
+  --box-shadow-md: 0 2px 8px light-dark(oklch(0% 0 0deg / 10%), oklch(0% 0 0deg / 50%));
+  --box-shadow-lg: 0 8px 24px light-dark(oklch(0% 0 0deg / 12%), oklch(0% 0 0deg / 60%));
+
+  /* Motion */
+  --transition-duration-sm: 150ms;
+  --transition-duration-md: 250ms;
+  --transition-duration-lg: 400ms;
+  --transition-timing-function-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-timing-function-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition-timing-function-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shared component size — buttons and inputs line up */
+  --btn-height: 2.5rem;
+
+  /* Semantic colour — light-dark(light, dark). Components use only these. */
+
+  /* Text */
+  --color-text: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  --color-text-muted: light-dark(var(--color-neutral-7), var(--color-neutral-4));
+  --color-text-subtle: light-dark(var(--color-neutral-6), var(--color-neutral-5));
+  --color-text-inverse: light-dark(var(--color-white), var(--color-neutral-10));
+  --color-text-disabled: light-dark(var(--color-neutral-5), var(--color-neutral-6));
+  --color-text-link: light-dark(var(--color-primary), var(--color-neutral-1));
+  --color-text-link-hover: light-dark(var(--color-neutral-7), var(--color-neutral-4));
+  --color-text-error: light-dark(oklch(from var(--color-error) calc(l - 0.05) c h), oklch(from var(--color-error) calc(l + 0.15) c h));
+  --color-text-warning: light-dark(oklch(from var(--color-warning) calc(l - 0.2) c h), oklch(from var(--color-warning) calc(l + 0.1) c h));
+  --color-text-success: light-dark(oklch(from var(--color-success) calc(l - 0.05) c h), oklch(from var(--color-success) calc(l + 0.15) c h));
+
+  /* Background */
+  --color-background: light-dark(var(--color-white), var(--color-neutral-10));
+  --color-background-subtle: light-dark(var(--color-neutral-1), var(--color-neutral-9));
+  --color-background-muted: light-dark(var(--color-neutral-2), var(--color-neutral-8));
+  --color-background-inverse: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  --color-background-disabled: light-dark(var(--color-neutral-2), var(--color-neutral-8));
+  --color-background-primary: light-dark(var(--color-primary), var(--color-neutral-1));
+  --color-background-primary-hover: light-dark(oklch(from var(--color-primary) calc(l + 0.1) c h), var(--color-neutral-3));
+  --color-background-primary-subtle: light-dark(oklch(from var(--color-primary) 95% calc(c * 0.3) h), oklch(from var(--color-primary) 25% calc(c * 0.4) h));
+  --color-background-secondary: light-dark(var(--color-secondary), oklch(from var(--color-secondary) calc(l + 0.15) c h));
+  --color-background-secondary-hover: light-dark(oklch(from var(--color-secondary) calc(l - 0.08) c h), oklch(from var(--color-secondary) calc(l + 0.23) c h));
+  --color-background-tertiary: light-dark(var(--color-tertiary), var(--color-neutral-8));
+  --color-background-tertiary-hover: light-dark(oklch(from var(--color-tertiary) calc(l - 0.06) c h), var(--color-neutral-7));
+  --color-background-error: light-dark(oklch(from var(--color-error) 95% calc(c * 0.3) h), oklch(from var(--color-error) 25% calc(c * 0.4) h));
+  --color-background-warning: light-dark(oklch(from var(--color-warning) 95% calc(c * 0.3) h), oklch(from var(--color-warning) 25% calc(c * 0.4) h));
+  --color-background-success: light-dark(oklch(from var(--color-success) 95% calc(c * 0.3) h), oklch(from var(--color-success) 25% calc(c * 0.4) h));
+
+  /* Border */
+  --color-border: light-dark(var(--color-neutral-3), var(--color-neutral-8));
+  --color-border-strong: var(--color-neutral-6);
+  --color-border-selected: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  --color-border-error: var(--color-text-error);
+  --color-border-warning: var(--color-text-warning);
+  --color-border-success: var(--color-text-success);
+
+  /* Focus */
+  --color-focus: light-dark(var(--color-primary), var(--color-neutral-1));
+
+  color-scheme: light dark;
+}
+
+/* Theme — any element; see [1] */
+[data-theme] {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+/* Fixed sizing — scales lock to their desktop size */
+:root[data-sizing="fixed"] {
+  --fluid-progress: 1px;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-muted: var(--color-text);
+    --color-text-subtle: var(--color-text);
+    --color-border: var(--color-border-strong);
+    --color-border-strong: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --color-focus: Highlight;
+    --color-border: CanvasText;
+    --color-border-strong: CanvasText;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration-sm: 0ms;
+    --transition-duration-md: 0ms;
+    --transition-duration-lg: 0ms;
+  }
+}
+
+/* Notes
+ * [1] Sets color and background too: inherited colour is already resolved,
+ *     so a themed section must re-apply it to pick up the new mode.
+ */

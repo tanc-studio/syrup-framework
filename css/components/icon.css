@@ -1,0 +1,30 @@
+/* icon
+ * Classes:   .icon (on <svg>)
+ * Modifiers: --sm (0.75em), --lg (1.5em)
+ * States:    none
+ * JS hook:   none
+ * Use:       <svg class="icon" aria-hidden="true">…</svg>; add a label on the parent control
+ * Colour:    follows the text; see [1]
+ */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  inline-size: 1em;
+  block-size: 1em;
+  vertical-align: -0.125em;
+}
+
+.icon--sm {
+  inline-size: 0.75em;
+  block-size: 0.75em;
+}
+
+.icon--lg {
+  inline-size: 1.5em;
+  block-size: 1.5em;
+}
+
+/* Notes
+ * [1] The SVG itself uses fill/stroke="currentColor". CSS doesn't set fill:
+ *     it would override fill="none" and break stroke icons (e.g. Lucide).
+ */

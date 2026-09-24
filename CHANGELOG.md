@@ -4,6 +4,69 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
+## 2026-09-24 — v2.0.0
+
+Clean-break rewrite. Not backwards compatible: v1 class and token names are gone. v1 users stay pinned to `@v1.0.1`.
+
+### Setup + tooling
+- Branch `v2`; untracked `css/.DS_Store`, `js/.DS_Store`
+- Stylelint (dev only): BEM single underscore, no raw colours in components, logical properties, nesting ≤ 2, no width `@media` in components, `!important` only in reset, no hardcoded `1px`, box-model property order (auto-fix). Run `npm run lint:css`
+
+### Skeleton
+- `main.css`: version header, v2 layer order `reset, tokens, base, layout, components, utilities, custom`
+- New styleguide: 7 page shells + `styleguide.css` (own `sg` layer); v1 styleguide removed
+
+### Tokens
+- Fluid type `--font-size-xs`…`5xl`: six settings in `tokens.css` (screen min/max, base min/max, ratio min/max); maths in `scales.css`
+- Space: fixed 4px grid `--size-2`…`--size-64`; fluid `--size-section-sm/md/lg`
+- Primitives: `oklch()` colour (neutral ramp, brand, status), fonts, weights, line-height, letter-spacing, radius, border width, focus, shadow, motion
+- Semantic colour with `light-dark()`; 21 text/background pairs pass AA in both themes
+- `[data-theme]` on any element, `data-sizing="fixed"`, `prefers-contrast: more`, `forced-colors`, reduced motion
+- Utilities: type presets `.display-sm/md/lg`, `.heading-sm`…`-3xl`, `.text-xs`…`-2xl`, `.caption`; `.text-start/center/end`; `.visually-hidden`, `.hide-mobile`/`.hide-desktop` (48rem). Shown on the type page
+- Styleguide: nav fixed on wide screens with section links for the current page; smooth scroll to sections, with `scroll-margin` so the heading lands clear of the top
+- `js/theme.js`: `<button data-theme-toggle>` cycles light → dark → system, saved in `localStorage` (`syrup-theme`), fires `themechange`. Inline `<head>` snippet applies it before paint. In the styleguide nav
+- Styleguide token pages: colour (primitives + semantic, light and dark side by side), type (family, size, weight, line height, letter spacing), space & effects (space, radius, border, shadow, focus, motion)
+- House fonts in `/fonts` (variable woff2, OFL): Geist (sans), Frank Ruhl Libre (serif), Roboto Mono (mono). `css/fonts.css`; remove by deleting its `@import`. Icon fonts dropped
+
+### Reset + base
+- `reset.css`: box-sizing, margin 0, form controls inherit font, wrapping, media fit, `ul[class]`/`ol[class]` lose bullets, `[hidden]`, reduced-motion block (the only `!important`)
+- `base.css`: body type + colour, one `:focus-visible` ring, underlined links (`a:not([class])`), h1–h6 at body size, `::selection` + `accent-color`, `hr`, `code`/`pre`, `blockquote`, `table`, `summary`, `dialog` (re-centred), `@view-transition`
+- `text-box: trim` dropped from base: it made unspaced lines overlap
+- Styleguide elements page: headings, text, table, native form controls, details, dialog
+
+### Layout
+- `.wrap` (80rem; `--sm` 40, `--md` 60, `--full`) with fluid side padding: new token `--size-wrap-padding` (16 → 32px)
+- `.grid` auto-fit columns; `--xs` 6, `--sm` 8, default 12, `--lg` 16, `--xl` 24rem minimum; `--grid-gap`
+- `.stack` (`--stack-gap`), `.cluster` (`--cluster-gap`)
+- Styleguide layout page
+
+### Components (`css/components/`, one file each, header comment lists classes/modifiers/states/hook)
+- `icon`: SVG only, 1em, `--sm`/`--lg`; colour from the SVG's `currentColor` (CSS doesn't set `fill`, so stroke icons work)
+- `btn`: default outline + `--primary/--secondary/--tertiary`; `--sm`/`--xs`; `--icon` (square); `:disabled`/`aria-disabled`; loading is `aria-busy="true"` (replaces `--loading`). Dropped: `--form`, `--icon-lg/-sm/-xs`, `--square`, `--flat`. New shared token `--btn-height` (inputs use it too)
+- `form`: `.form` is a plain column; `.form_input`/`.form_select` share one look; `:user-invalid` errors; native checkbox; radio pills focusable. Dropped: `.form_toggle`, horizontal/stretch/btn item modifiers, `.form_select-wrapper`, `.form_title`
+- `tabs`: `[aria-selected]` state, `[hidden]` panels, `data-tabs` hook; `--pills`, `--vertical`; no JS = all panels show
+- `card`: flat (border, no shadow); `--interactive` hover; `--primary` brand tint; padding grows via container query
+- Old `01–05` CSS files deleted; `lint:css` now covers all of `css/`
+
+### JS
+- `js/tabs.js`: adds tab roles, `aria-controls`/`aria-labelledby`, roving `tabindex`, hides inactive panels. Arrow keys (up/down with `data-tabs="vertical"`), Home/End. Fires `tabchange` (bubbles; `detail: { index, tab, panel }`)
+- `js/syrup.js` is now a module entry that imports `theme.js` + `tabs.js`; no globals. v1 `ThemeManager`, `TabsManager`, `includeHTML` removed. Styleguide pages load `syrup.js`
+
+### Review (P9)
+- Colour page: theme panels no longer overflow at 360px (`minmax(min(20rem, 100%), 1fr)`)
+- Elements page: native form controls section removed (forms always use `.form` classes)
+- `btn`: invisible 44px tap area on touch screens (`pointer: coarse`, `::before`); look unchanged
+
+### Docs (P10)
+- `README.md` and `CLAUDE.md` rewritten for v2
+- `SKILL.md` (methodology) rewritten for v2; `SKILL-components.md` retired — component file headers replace it
+- Button sizes: `--lg` (48px) added, default 40px, `--sm` 32px; `--xs` removed
+- Theme toggle: light ↔ dark only ("system" removed); follows the OS until first click
+- Styleguide nav: Overview / Foundations / Components groups, then that group's pages; theme toggle at the bottom; sticky top bar + dropdown under 48rem (closes on link click via `styleguide/styleguide.js`)
+- Styleguide: `components.html` split into `styleguide/components/<name>.html` (icon, btn, form, tabs, card)
+
+---
+
 ## 2026-07-17 — Bug Fixes + Cleanup (framework audit)
 
 ### Bug Fixes

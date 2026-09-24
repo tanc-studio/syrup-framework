@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
+</head>
+<body class="sg">
+  <!-- sg-nav -->
+  <nav class="sg-nav" aria-label="Styleguide">
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html" aria-current="true">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/components/icon.html">Icon</a></li>
+        <li><a href="/styleguide/components/btn.html" aria-current="page">Button</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#size">Size</a></li>
+            <li><a href="#with-icon">With icon</a></li>
+            <li><a href="#state">State</a></li>
+          </ul>
+        </li>
+        <li><a href="/styleguide/components/form.html">Form</a></li>
+        <li><a href="/styleguide/components/tabs.html">Tabs</a></li>
+        <li><a href="/styleguide/components/card.html">Card</a></li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
+  </nav>
+  <!-- /sg-nav -->
+  <main class="sg-main">
+    <h1>Button</h1>
+    <p>Colour: <code>--primary</code>, <code>--secondary</code>, <code>--tertiary</code>. Default has a border and no fill.</p>
+    <svg hidden><symbol id="sg-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5-6.5 4.5 2-7.5L2 9h7z"/></symbol><symbol id="sg-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol></svg>
+    <div class="cluster">
+      <button type="button" class="btn">default</button>
+      <button type="button" class="btn btn--primary">primary</button>
+      <button type="button" class="btn btn--secondary">secondary</button>
+      <button type="button" class="btn btn--tertiary">tertiary</button>
+    </div>
+    <h2 id="size">Size: --lg, default, --sm</h2>
+    <div class="cluster">
+      <button type="button" class="btn btn--primary btn--lg">Large</button>
+      <button type="button" class="btn btn--primary">Default</button>
+      <button type="button" class="btn btn--primary btn--sm">Small</button>
+      <a href="#" class="btn">Link as button</a>
+    </div>
+    <h2 id="with-icon">With icon, --icon</h2>
+    <div class="cluster">
+      <button type="button" class="btn btn--primary"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> Star</button>
+      <button type="button" class="btn btn--icon" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+      <button type="button" class="btn btn--icon btn--primary" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+      <button type="button" class="btn btn--icon btn--sm" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+      <button type="button" class="btn btn--icon btn--lg" aria-label="Star"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg></button>
+    </div>
+    <h2 id="state">State: disabled, aria-busy</h2>
+    <div class="cluster">
+      <button type="button" class="btn btn--primary" disabled>Disabled</button>
+      <a class="btn" aria-disabled="true">aria-disabled link</a>
+      <button type="button" class="btn btn--primary" aria-busy="true">Saving</button>
+      <button type="button" class="btn btn--tertiary" aria-busy="true"><svg class="icon" aria-hidden="true"><use href="#sg-star"/></svg> Saving</button>
+      <button type="button" class="btn" aria-busy="true">Saving</button>
+    </div>
+
+    
+  </main>
+</body>
+</html>

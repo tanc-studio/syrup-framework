@@ -1,0 +1,100 @@
+/* base */
+@view-transition {
+  navigation: auto;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  accent-color: var(--color-background-primary);
+}
+
+::selection {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-inverse);
+}
+
+:focus-visible {
+  outline: var(--outline-width-focus) solid var(--color-focus);
+  outline-offset: var(--outline-offset-focus);
+}
+
+/* Headings: size comes from a class, level is structure only */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: var(--line-height-sm);
+}
+
+a:not([class]) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  color: var(--color-text-link);
+
+  &:hover {
+    color: var(--color-text-link-hover);
+  }
+}
+
+hr {
+  border: none;
+  border-block-start: var(--border-width-sm) solid var(--color-border);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+}
+
+pre {
+  overflow: auto;
+  padding: var(--size-16);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-background-subtle);
+}
+
+blockquote {
+  padding-inline-start: var(--size-16);
+  border-inline-start: var(--border-width-md) solid var(--color-border-strong);
+}
+
+table {
+  inline-size: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: var(--size-8) var(--size-12);
+  border-block-end: var(--border-width-sm) solid var(--color-border);
+  text-align: start;
+}
+
+summary {
+  cursor: pointer;
+}
+
+dialog {
+  max-inline-size: min(90vw, 40rem);
+  padding: var(--size-24);
+  border: var(--border-width-sm) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  margin: auto; /* reset removes the browser's centring */
+  background-color: var(--color-background);
+  color: var(--color-text);
+  box-shadow: var(--box-shadow-lg);
+
+  &::backdrop {
+    background-color: oklch(0% 0 0deg / 50%);
+  }
+}

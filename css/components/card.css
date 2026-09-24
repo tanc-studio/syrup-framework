@@ -1,0 +1,64 @@
+/* card
+ * Classes:   .card, .card_header, .card_body, .card_footer
+ * Modifiers: --interactive (hover), --primary (brand tint)
+ * States:    none
+ * JS hook:   none
+ * Use:       padding lives on the elements and grows when the card is wide. See [1]
+ */
+.card {
+  display: flex;
+  container-type: inline-size;
+  flex-direction: column;
+  border: var(--border-width-sm) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.card_header,
+.card_body,
+.card_footer {
+  padding: var(--size-16);
+}
+
+.card_header {
+  border-block-end: var(--border-width-sm) solid var(--color-border);
+}
+
+.card_body {
+  flex: 1;
+}
+
+.card_footer {
+  border-block-start: var(--border-width-sm) solid var(--color-border);
+}
+
+.card--interactive {
+  cursor: pointer;
+  transition-property: background-color, border-color;
+  transition-duration: var(--transition-duration-sm);
+  transition-timing-function: var(--transition-timing-function-out);
+
+  &:hover {
+    border-color: var(--color-border-strong);
+    background-color: var(--color-background-subtle);
+  }
+}
+
+.card--primary {
+  border-color: transparent;
+  background-color: var(--color-background-primary-subtle);
+}
+
+@container (inline-size > 30rem) {
+  .card_header,
+  .card_body,
+  .card_footer {
+    padding: var(--size-24);
+  }
+}
+
+/* Notes
+ * [1] A container query can't style the container itself, so the card's own
+ *     padding couldn't respond to its width. Its elements carry it instead.
+ */

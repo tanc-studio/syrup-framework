@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabs — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
+</head>
+<body class="sg">
+  <!-- sg-nav -->
+  <nav class="sg-nav" aria-label="Styleguide">
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html" aria-current="true">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/components/icon.html">Icon</a></li>
+        <li><a href="/styleguide/components/btn.html">Button</a></li>
+        <li><a href="/styleguide/components/form.html">Form</a></li>
+        <li><a href="/styleguide/components/tabs.html" aria-current="page">Tabs</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#default">Default</a></li>
+            <li><a href="#pills">--pills</a></li>
+            <li><a href="#vertical">--vertical</a></li>
+            <li><a href="#without-js">Without JS</a></li>
+          </ul>
+        </li>
+        <li><a href="/styleguide/components/card.html">Card</a></li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
+  </nav>
+  <!-- /sg-nav -->
+  <main class="sg-main">
+    <h1>Tabs</h1>
+    <p>Selected state comes from <code>aria-selected</code>. Arrow keys move between tabs; Home/End jump to the ends. Vertical tabs use <code>data-tabs="vertical"</code> for up/down keys.</p>
+    <h2 id="default">Default</h2>
+    <div class="tabs" data-tabs>
+      <div class="tabs_nav">
+        <button type="button" class="tab" aria-selected="true">Overview</button>
+        <button type="button" class="tab" aria-selected="false">Specs</button>
+        <button type="button" class="tab" aria-selected="false">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
+      </div>
+    </div>
+    <h2 id="pills">--pills</h2>
+    <div class="tabs tabs--pills" data-tabs>
+      <div class="tabs_nav">
+        <button type="button" class="tab" aria-selected="true">Overview</button>
+        <button type="button" class="tab" aria-selected="false">Specs</button>
+        <button type="button" class="tab" aria-selected="false">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
+      </div>
+    </div>
+    <h2 id="vertical">--vertical</h2>
+    <div class="tabs tabs--vertical" data-tabs="vertical">
+      <div class="tabs_nav">
+        <button type="button" class="tab" aria-selected="true">Overview</button>
+        <button type="button" class="tab" aria-selected="false">Specs</button>
+        <button type="button" class="tab" aria-selected="false">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
+      </div>
+    </div>
+    <h2 id="without-js">Without JS: every panel shows</h2>
+    <div class="tabs">
+      <div class="tabs_nav">
+        <button type="button" class="tab">Overview</button>
+        <button type="button" class="tab">Specs</button>
+        <button type="button" class="tab">Reviews</button>
+      </div>
+      <div class="tabs_content">
+        <div class="tabs_panel"><p>Overview panel.</p></div>
+        <div class="tabs_panel"><p>Specs panel.</p></div>
+        <div class="tabs_panel"><p>Reviews panel.</p></div>
+      </div>
+    </div>
+
+    
+  </main>
+</body>
+</html>

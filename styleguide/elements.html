@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elements — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
+</head>
+<body class="sg">
+  <!-- sg-nav -->
+  <nav class="sg-nav" aria-label="Styleguide">
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html" aria-current="true">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/colour.html">Colour</a></li>
+        <li><a href="/styleguide/type.html">Type</a></li>
+        <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
+        <li><a href="/styleguide/layout.html">Layout</a></li>
+        <li><a href="/styleguide/elements.html" aria-current="page">Elements</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#dialog">Dialog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
+  </nav>
+  <!-- /sg-nav -->
+  <main class="sg-main">
+    <h1>Elements</h1>
+
+    <h2 id="headings">Headings</h2>
+    <p>All levels render at body size. The look comes from a class.</p>
+    <div class="sg-flow">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </div>
+
+    <h2 id="text">Text</h2>
+    <div class="sg-flow">
+      <p>Running text with <a href="#">a link</a>, <strong>strong</strong>, <em>emphasis</em>, <code>inline code</code>, <kbd>Tab</kbd>, <mark>mark</mark> and <small>small</small>. Select this text to check the selection colour.</p>
+      <blockquote><p>A blockquote. Short and to the point.</p></blockquote>
+      <pre><code>.card_header {
+  padding: var(--size-16);
+}</code></pre>
+      <hr>
+      <ul>
+        <li>Unordered list, no class, keeps bullets</li>
+        <li>Second item</li>
+      </ul>
+      <ol>
+        <li>Ordered list, no class, keeps numbers</li>
+        <li>Second item</li>
+      </ol>
+    </div>
+
+    <h2 id="table">Table</h2>
+    <table>
+      <thead>
+        <tr><th scope="col">Token</th><th scope="col">Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>--size-16</td><td>1rem</td></tr>
+        <tr><td>--size-24</td><td>1.5rem</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="details">Details</h2>
+    <details>
+      <summary>Click or press Enter to open</summary>
+      <p>Hidden content.</p>
+    </details>
+
+    <h2 id="dialog">Dialog</h2>
+    <button type="button" commandfor="sg-dialog" command="show-modal">Open dialog</button>
+    <dialog id="sg-dialog" aria-labelledby="sg-dialog-title">
+      <div class="sg-flow">
+        <h3 id="sg-dialog-title">Dialog</h3>
+        <p>Esc or the button closes it.</p>
+        <button type="button" commandfor="sg-dialog" command="close">Close</button>
+      </div>
+    </dialog>
+  </main>
+</body>
+</html>

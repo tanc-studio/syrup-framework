@@ -1,0 +1,46 @@
+/* layout */
+.wrap {
+  max-inline-size: 80rem;
+  padding-inline: var(--size-wrap-padding);
+  margin-inline: auto;
+}
+
+.wrap--sm { max-inline-size: 40rem; }
+.wrap--md { max-inline-size: 60rem; }
+.wrap--full { max-inline-size: none; }
+
+/* Columns wrap on their own; the modifier sets the smallest column. See [1] */
+.grid {
+  --grid-min: 12rem;
+  --grid-gap: var(--size-24);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min)), 1fr));
+  gap: var(--grid-gap);
+}
+
+.grid--xs { --grid-min: 6rem; }
+.grid--sm { --grid-min: 8rem; }
+.grid--lg { --grid-min: 16rem; }
+.grid--xl { --grid-min: 24rem; }
+
+.stack {
+  --stack-gap: var(--size-16);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap);
+}
+
+.cluster {
+  --cluster-gap: var(--size-8);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap);
+  align-items: center;
+}
+
+/* Notes
+ * [1] min(100%, …) stops a column overflowing when the container is narrower than --grid-min.
+ */

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
+</head>
+<body class="sg">
+  <!-- sg-nav -->
+  <nav class="sg-nav" aria-label="Styleguide">
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html" aria-current="true">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/components/icon.html">Icon</a></li>
+        <li><a href="/styleguide/components/btn.html">Button</a></li>
+        <li><a href="/styleguide/components/form.html">Form</a></li>
+        <li><a href="/styleguide/components/tabs.html">Tabs</a></li>
+        <li><a href="/styleguide/components/card.html" aria-current="page">Card</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#wide-card">Wide card</a></li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
+  </nav>
+  <!-- /sg-nav -->
+  <main class="sg-main">
+    <h1>Card</h1>
+    <p>Flat: border, no shadow. Padding grows from 16 to 24px when the card is wider than 30rem.</p>
+    <div class="grid">
+      <article class="card">
+        <header class="card_header"><h3 class="heading-sm">.card</h3></header>
+        <div class="card_body"><p>Card body text.</p></div>
+        <footer class="card_footer"><button type="button" class="btn btn--sm">Action</button></footer>
+      </article>
+      <article class="card card--interactive">
+        <header class="card_header"><h3 class="heading-sm">.card--interactive</h3></header>
+        <div class="card_body"><p>Card body text.</p></div>
+        <footer class="card_footer"><button type="button" class="btn btn--sm">Action</button></footer>
+      </article>
+      <article class="card card--primary">
+        <header class="card_header"><h3 class="heading-sm">.card--primary</h3></header>
+        <div class="card_body"><p>Card body text.</p></div>
+        <footer class="card_footer"><button type="button" class="btn btn--sm">Action</button></footer>
+      </article>
+    </div>
+    <h2 id="wide-card">Wide card (container query)</h2>
+      <article class="card">
+        <header class="card_header"><h3 class="heading-sm">Wide card</h3></header>
+        <div class="card_body"><p>Card body text.</p></div>
+        <footer class="card_footer"><button type="button" class="btn btn--sm">Action</button></footer>
+      </article>
+  
+  </main>
+</body>
+</html>

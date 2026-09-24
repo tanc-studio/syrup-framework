@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colour — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
+</head>
+<body class="sg">
+  <!-- sg-nav -->
+  <nav class="sg-nav" aria-label="Styleguide">
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html" aria-current="page">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/colour.html" aria-current="page">Colour</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#primitives">Primitives</a></li>
+            <li><a href="#semantic">Semantic</a></li>
+          </ul>
+        </li>
+        <li><a href="/styleguide/type.html">Type</a></li>
+        <li><a href="/styleguide/space.html">Space &amp; effects</a></li>
+        <li><a href="/styleguide/layout.html">Layout</a></li>
+        <li><a href="/styleguide/elements.html">Elements</a></li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
+  </nav>
+  <!-- /sg-nav -->
+  <main class="sg-main">
+    <h1>Colour</h1>
+
+    <h2 id="primitives">Primitives</h2>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-white)"><span class="sg-swatch_chip"></span><code>--color-white</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-1)"><span class="sg-swatch_chip"></span><code>--color-neutral-1</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-2)"><span class="sg-swatch_chip"></span><code>--color-neutral-2</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-3)"><span class="sg-swatch_chip"></span><code>--color-neutral-3</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-4)"><span class="sg-swatch_chip"></span><code>--color-neutral-4</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-5)"><span class="sg-swatch_chip"></span><code>--color-neutral-5</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-6)"><span class="sg-swatch_chip"></span><code>--color-neutral-6</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-7)"><span class="sg-swatch_chip"></span><code>--color-neutral-7</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-8)"><span class="sg-swatch_chip"></span><code>--color-neutral-8</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-9)"><span class="sg-swatch_chip"></span><code>--color-neutral-9</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-neutral-10)"><span class="sg-swatch_chip"></span><code>--color-neutral-10</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-black)"><span class="sg-swatch_chip"></span><code>--color-black</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-primary)"><span class="sg-swatch_chip"></span><code>--color-primary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-secondary)"><span class="sg-swatch_chip"></span><code>--color-secondary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-tertiary)"><span class="sg-swatch_chip"></span><code>--color-tertiary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-error)"><span class="sg-swatch_chip"></span><code>--color-error</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-warning)"><span class="sg-swatch_chip"></span><code>--color-warning</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-success)"><span class="sg-swatch_chip"></span><code>--color-success</code></li>
+    </ul>
+
+    <h2 id="semantic">Semantic</h2>
+    <p>Components use only these. Each panel is forced with <code>data-theme</code>.</p>
+    <div class="sg-themes">
+      <div class="sg-panel" data-theme="light">
+        <h3>Light</h3>
+
+    <h4>Text</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text)"><span class="sg-swatch_chip">Aa</span><code>--color-text</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-muted)"><span class="sg-swatch_chip">Aa</span><code>--color-text-muted</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-subtle)"><span class="sg-swatch_chip">Aa</span><code>--color-text-subtle</code></li>
+      <li class="sg-swatch sg-swatch--text sg-swatch--inverse" style="--sg-value: var(--color-text-inverse)"><span class="sg-swatch_chip">Aa</span><code>--color-text-inverse</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-disabled)"><span class="sg-swatch_chip">Aa</span><code>--color-text-disabled</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-link)"><span class="sg-swatch_chip">Aa</span><code>--color-text-link</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-link-hover)"><span class="sg-swatch_chip">Aa</span><code>--color-text-link-hover</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-error)"><span class="sg-swatch_chip">Aa</span><code>--color-text-error</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-warning)"><span class="sg-swatch_chip">Aa</span><code>--color-text-warning</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-success)"><span class="sg-swatch_chip">Aa</span><code>--color-text-success</code></li>
+    </ul>
+
+    <h4>Background</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background)"><span class="sg-swatch_chip"></span><code>--color-background</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-subtle)"><span class="sg-swatch_chip"></span><code>--color-background-subtle</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-muted)"><span class="sg-swatch_chip"></span><code>--color-background-muted</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-inverse)"><span class="sg-swatch_chip"></span><code>--color-background-inverse</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-disabled)"><span class="sg-swatch_chip"></span><code>--color-background-disabled</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-primary)"><span class="sg-swatch_chip"></span><code>--color-background-primary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-primary-hover)"><span class="sg-swatch_chip"></span><code>--color-background-primary-hover</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-primary-subtle)"><span class="sg-swatch_chip"></span><code>--color-background-primary-subtle</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-secondary)"><span class="sg-swatch_chip"></span><code>--color-background-secondary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-secondary-hover)"><span class="sg-swatch_chip"></span><code>--color-background-secondary-hover</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-tertiary)"><span class="sg-swatch_chip"></span><code>--color-background-tertiary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-tertiary-hover)"><span class="sg-swatch_chip"></span><code>--color-background-tertiary-hover</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-error)"><span class="sg-swatch_chip"></span><code>--color-background-error</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-warning)"><span class="sg-swatch_chip"></span><code>--color-background-warning</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-success)"><span class="sg-swatch_chip"></span><code>--color-background-success</code></li>
+    </ul>
+
+    <h4>Border</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border)"><span class="sg-swatch_chip"></span><code>--color-border</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-strong)"><span class="sg-swatch_chip"></span><code>--color-border-strong</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-selected)"><span class="sg-swatch_chip"></span><code>--color-border-selected</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-error)"><span class="sg-swatch_chip"></span><code>--color-border-error</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-warning)"><span class="sg-swatch_chip"></span><code>--color-border-warning</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-success)"><span class="sg-swatch_chip"></span><code>--color-border-success</code></li>
+    </ul>
+
+    <h4>Focus</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-focus)"><span class="sg-swatch_chip"></span><code>--color-focus</code></li>
+    </ul>
+      </div>
+      <div class="sg-panel" data-theme="dark">
+        <h3>Dark</h3>
+
+    <h4>Text</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text)"><span class="sg-swatch_chip">Aa</span><code>--color-text</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-muted)"><span class="sg-swatch_chip">Aa</span><code>--color-text-muted</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-subtle)"><span class="sg-swatch_chip">Aa</span><code>--color-text-subtle</code></li>
+      <li class="sg-swatch sg-swatch--text sg-swatch--inverse" style="--sg-value: var(--color-text-inverse)"><span class="sg-swatch_chip">Aa</span><code>--color-text-inverse</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-disabled)"><span class="sg-swatch_chip">Aa</span><code>--color-text-disabled</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-link)"><span class="sg-swatch_chip">Aa</span><code>--color-text-link</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-link-hover)"><span class="sg-swatch_chip">Aa</span><code>--color-text-link-hover</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-error)"><span class="sg-swatch_chip">Aa</span><code>--color-text-error</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-warning)"><span class="sg-swatch_chip">Aa</span><code>--color-text-warning</code></li>
+      <li class="sg-swatch sg-swatch--text" style="--sg-value: var(--color-text-success)"><span class="sg-swatch_chip">Aa</span><code>--color-text-success</code></li>
+    </ul>
+
+    <h4>Background</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background)"><span class="sg-swatch_chip"></span><code>--color-background</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-subtle)"><span class="sg-swatch_chip"></span><code>--color-background-subtle</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-muted)"><span class="sg-swatch_chip"></span><code>--color-background-muted</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-inverse)"><span class="sg-swatch_chip"></span><code>--color-background-inverse</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-disabled)"><span class="sg-swatch_chip"></span><code>--color-background-disabled</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-primary)"><span class="sg-swatch_chip"></span><code>--color-background-primary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-primary-hover)"><span class="sg-swatch_chip"></span><code>--color-background-primary-hover</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-primary-subtle)"><span class="sg-swatch_chip"></span><code>--color-background-primary-subtle</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-secondary)"><span class="sg-swatch_chip"></span><code>--color-background-secondary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-secondary-hover)"><span class="sg-swatch_chip"></span><code>--color-background-secondary-hover</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-tertiary)"><span class="sg-swatch_chip"></span><code>--color-background-tertiary</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-tertiary-hover)"><span class="sg-swatch_chip"></span><code>--color-background-tertiary-hover</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-error)"><span class="sg-swatch_chip"></span><code>--color-background-error</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-warning)"><span class="sg-swatch_chip"></span><code>--color-background-warning</code></li>
+      <li class="sg-swatch sg-swatch--background" style="--sg-value: var(--color-background-success)"><span class="sg-swatch_chip"></span><code>--color-background-success</code></li>
+    </ul>
+
+    <h4>Border</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border)"><span class="sg-swatch_chip"></span><code>--color-border</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-strong)"><span class="sg-swatch_chip"></span><code>--color-border-strong</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-selected)"><span class="sg-swatch_chip"></span><code>--color-border-selected</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-error)"><span class="sg-swatch_chip"></span><code>--color-border-error</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-warning)"><span class="sg-swatch_chip"></span><code>--color-border-warning</code></li>
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-border-success)"><span class="sg-swatch_chip"></span><code>--color-border-success</code></li>
+    </ul>
+
+    <h4>Focus</h4>
+    <ul class="sg-swatches">
+      <li class="sg-swatch sg-swatch--border" style="--sg-value: var(--color-focus)"><span class="sg-swatch_chip"></span><code>--color-focus</code></li>
+    </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

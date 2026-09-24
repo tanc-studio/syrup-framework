@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Space &amp; effects — Syrup</title>
+  <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/styleguide/styleguide.css">
+  <script type="module" src="/js/syrup.js"></script>
+  <script type="module" src="/styleguide/styleguide.js"></script>
+</head>
+<body class="sg">
+  <!-- sg-nav -->
+  <nav class="sg-nav" aria-label="Styleguide">
+    <details class="sg-nav_menu">
+      <summary class="sg-nav_title">Syrup v2</summary>
+      <ul class="sg-nav_groups">
+        <li><a href="/styleguide/index.html">Overview</a></li>
+        <li><a href="/styleguide/colour.html" aria-current="true">Foundations</a></li>
+        <li><a href="/styleguide/components/icon.html">Components</a></li>
+      </ul>
+      <ul class="sg-nav_list">
+        <li><a href="/styleguide/colour.html">Colour</a></li>
+        <li><a href="/styleguide/type.html">Type</a></li>
+        <li><a href="/styleguide/space.html" aria-current="page">Space &amp; effects</a>
+          <ul class="sg-nav_sub">
+            <li><a href="#space">Space</a></li>
+            <li><a href="#radius">Radius</a></li>
+            <li><a href="#border-width">Border width</a></li>
+            <li><a href="#shadow">Shadow</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#motion">Motion</a></li>
+          </ul>
+        </li>
+        <li><a href="/styleguide/layout.html">Layout</a></li>
+        <li><a href="/styleguide/elements.html">Elements</a></li>
+      </ul>
+    </details>
+    <button type="button" class="sg-nav_theme" data-theme-toggle>Theme</button>
+  </nav>
+  <!-- /sg-nav -->
+  <main class="sg-main">
+    <h1>Space &amp; effects</h1>
+
+    <h2 id="space">Space</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--size-2</code><span class="sg-bar" style="inline-size: var(--size-2)"></span></li>
+      <li class="sg-row"><code>--size-4</code><span class="sg-bar" style="inline-size: var(--size-4)"></span></li>
+      <li class="sg-row"><code>--size-6</code><span class="sg-bar" style="inline-size: var(--size-6)"></span></li>
+      <li class="sg-row"><code>--size-8</code><span class="sg-bar" style="inline-size: var(--size-8)"></span></li>
+      <li class="sg-row"><code>--size-10</code><span class="sg-bar" style="inline-size: var(--size-10)"></span></li>
+      <li class="sg-row"><code>--size-12</code><span class="sg-bar" style="inline-size: var(--size-12)"></span></li>
+      <li class="sg-row"><code>--size-16</code><span class="sg-bar" style="inline-size: var(--size-16)"></span></li>
+      <li class="sg-row"><code>--size-20</code><span class="sg-bar" style="inline-size: var(--size-20)"></span></li>
+      <li class="sg-row"><code>--size-24</code><span class="sg-bar" style="inline-size: var(--size-24)"></span></li>
+      <li class="sg-row"><code>--size-32</code><span class="sg-bar" style="inline-size: var(--size-32)"></span></li>
+      <li class="sg-row"><code>--size-40</code><span class="sg-bar" style="inline-size: var(--size-40)"></span></li>
+      <li class="sg-row"><code>--size-48</code><span class="sg-bar" style="inline-size: var(--size-48)"></span></li>
+      <li class="sg-row"><code>--size-64</code><span class="sg-bar" style="inline-size: var(--size-64)"></span></li>
+      <li class="sg-row"><code>--size-section-sm</code><span class="sg-bar" style="inline-size: var(--size-section-sm)"></span></li>
+      <li class="sg-row"><code>--size-section-md</code><span class="sg-bar" style="inline-size: var(--size-section-md)"></span></li>
+      <li class="sg-row"><code>--size-section-lg</code><span class="sg-bar" style="inline-size: var(--size-section-lg)"></span></li>
+    </ul>
+
+    <h2 id="radius">Radius</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--border-radius-xs</code><span class="sg-box" style="border-radius: var(--border-radius-xs)"></span></li>
+      <li class="sg-row"><code>--border-radius-sm</code><span class="sg-box" style="border-radius: var(--border-radius-sm)"></span></li>
+      <li class="sg-row"><code>--border-radius-md</code><span class="sg-box" style="border-radius: var(--border-radius-md)"></span></li>
+      <li class="sg-row"><code>--border-radius-lg</code><span class="sg-box" style="border-radius: var(--border-radius-lg)"></span></li>
+      <li class="sg-row"><code>--border-radius-xl</code><span class="sg-box" style="border-radius: var(--border-radius-xl)"></span></li>
+      <li class="sg-row"><code>--border-radius-full</code><span class="sg-box" style="border-radius: var(--border-radius-full)"></span></li>
+    </ul>
+
+    <h2 id="border-width">Border width</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--border-width-sm</code><span class="sg-box sg-box--border" style="border-width: var(--border-width-sm)"></span></li>
+      <li class="sg-row"><code>--border-width-md</code><span class="sg-box sg-box--border" style="border-width: var(--border-width-md)"></span></li>
+    </ul>
+
+    <h2 id="shadow">Shadow</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--box-shadow-sm</code><span class="sg-box sg-box--shadow" style="box-shadow: var(--box-shadow-sm)"></span></li>
+      <li class="sg-row"><code>--box-shadow-md</code><span class="sg-box sg-box--shadow" style="box-shadow: var(--box-shadow-md)"></span></li>
+      <li class="sg-row"><code>--box-shadow-lg</code><span class="sg-box sg-box--shadow" style="box-shadow: var(--box-shadow-lg)"></span></li>
+    </ul>
+
+    <h2 id="focus">Focus</h2>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--outline-width-focus</code><code>--outline-offset-focus</code><span class="sg-box sg-box--focus"></span></li>
+    </ul>
+
+    <h2 id="motion">Motion</h2>
+    <p>Hover a row. Durations are 0 under reduced motion.</p>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--transition-duration-sm</code><span class="sg-track" style="transition-duration: var(--transition-duration-sm)"><span class="sg-dot"></span></span></li>
+      <li class="sg-row"><code>--transition-duration-md</code><span class="sg-track" style="transition-duration: var(--transition-duration-md)"><span class="sg-dot"></span></span></li>
+      <li class="sg-row"><code>--transition-duration-lg</code><span class="sg-track" style="transition-duration: var(--transition-duration-lg)"><span class="sg-dot"></span></span></li>
+    </ul>
+    <ul class="sg-rows">
+      <li class="sg-row"><code>--transition-timing-function-in</code><span class="sg-track" style="transition-timing-function: var(--transition-timing-function-in)"><span class="sg-dot"></span></span></li>
+      <li class="sg-row"><code>--transition-timing-function-out</code><span class="sg-track" style="transition-timing-function: var(--transition-timing-function-out)"><span class="sg-dot"></span></span></li>
+      <li class="sg-row"><code>--transition-timing-function-in-out</code><span class="sg-track" style="transition-timing-function: var(--transition-timing-function-in-out)"><span class="sg-dot"></span></span></li>
+    </ul>
+  </main>
+</body>
+</html>
