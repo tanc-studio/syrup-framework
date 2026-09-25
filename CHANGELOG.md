@@ -4,6 +4,16 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
+## Unreleased
+
+### Figma (outside the repo; no CSS change)
+- Syrup Figma file built from v2: https://www.figma.com/design/NEhzZzGN5FRoUmwtLwRqap
+- Variables: Primitives (53), Colour Light/Dark (32), Size Mobile/Desktop (26); names = CSS names, code syntax `var(--…)`
+- Styles: 16 text styles (`text/*`, `heading/*`, `display/*`, `caption`), `shadow/sm|md|lg`
+- Components, one page each: icon (+ glyphs), btn, btn--icon, form parts, tab/tabs, card. All colours bound to variables; checked light + dark
+
+---
+
 ## 2026-09-24 — v2.0.0
 
 Clean-break rewrite. Not backwards compatible: v1 class and token names are gone. v1 users stay pinned to `@v1.0.1`.
