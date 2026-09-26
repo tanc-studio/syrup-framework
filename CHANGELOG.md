@@ -4,13 +4,31 @@ All notable changes to the Syrup CSS Framework.
 
 ---
 
-## Unreleased
+## 2026-09-27 — v3.0.0
+
+Breaking: every semantic colour token renamed and the colour palette replaced, to match the Syrup Figma file. v2 users stay pinned to `@v2.0.0`.
+
+### CSS
+- base: `html { scroll-behavior: smooth }` (off under reduced motion); `:target` gets `scroll-margin-block-start: 20vb` so anchor jumps clear sticky headers
+- form: textarea `min-block-size` now `calc(3lh + padding)` instead of `6rem` — 3 lines at any font size
+
+### CSS — breaking (v3)
+- Semantic colour tokens renamed to `--color-<part>-<family>-<strength|state>` to match Figma (`default` dropped), e.g. `--color-text` → `--color-text-default`, `--color-text-muted` → `--color-text-subtle`, `--color-background-subtle` → `--color-background-hover`, `--color-background-primary` → `--color-background-brand`, `--color-background-secondary` → `--color-background-neutral`, `--color-background-tertiary` → `--color-background-neutral-subtle`, `--color-background-error` → `--color-background-danger-subtle`, `--color-focus` → `--color-border-brand`. Old `--color-text-subtle` merged in. Values unchanged otherwise
+- Lint: components and base CSS may only use semantic colour tokens (`--color-text|background|border-*`); primitives allowed only in `tokens.css`
+- Palette replaced to match Figma: `--color-white`, `--color-black`, `--color-neutral-50…950`, `--color-brand|red|yellow|green|purple|blue-100…900`. Removed `--color-neutral-1…10`, `--color-primary|secondary|tertiary`, `--color-error|warning|success` and the derived `oklch(from …)` shades. Brand is now magenta (was wireframe grey)
+- Added `--size-80`, `--size-120`
 
 ### Figma (outside the repo; no CSS change)
 - Syrup Figma file built from v2: https://www.figma.com/design/NEhzZzGN5FRoUmwtLwRqap
 - Variables: Primitives (53), Colour Light/Dark (32), Size Mobile/Desktop (26); names = CSS names, code syntax `var(--…)`
 - Styles: 16 text styles (`text/*`, `heading/*`, `display/*`, `caption`), `shadow/sm|md|lg`
 - Components, one page each: icon (+ glyphs), btn, btn--icon, form parts, tab/tabs, card. All colours bound to variables; checked light + dark
+- Fix: btn and btn--icon rebuilt as fresh component sets ("conflicting values" errors: duplicate variant names + btn--icon linked to btn's properties). Card's buttons swapped to the new btn. icon: duplicate `sm` renamed `lg`
+- Variables grouped by what changes them: Primitives (65, one value), Semantic: Colour (32, Light/Dark), Semantic: Size (14, Mobile/Desktop). Fixed `size/*` moved into Primitives; `btn-height` into Semantic: Size. Variable names unchanged; all bindings relinked
+- Rule: Primitives = a value, Semantic = has meaning. `outline-width/focus`, `outline-offset/focus` moved to Semantic: Size. Semantic: Size values now point at `size/*` primitives where one exists (only section md/lg desktop 80/120 and font sizes stay raw)
+- Colour rework (Figma only, CSS not yet matched): new primitive palette (neutral 50–950, brand + hue ramps 100–900); semantic colours relinked, primary/link/focus → brand; `text/subtle` merged into `text/muted`. All text pairs ≥ 4.5:1 in both modes
+- Colour naming final: `part/family-strength-state`, one folder level (after Figma's Simple Design System); no primary/secondary/tertiary in colour names; Colour collection has no `color/` prefix
+- Added primitives `size/80`, `size/120`; section md/lg desktop linked
 
 ---
 

@@ -1,4 +1,4 @@
-/* Syrup v2.0.0 */
+/* Syrup v3.0.0 */
 @layer reset, tokens, base, layout, components, utilities, custom;
 
 @import 'reset.css' layer(reset);

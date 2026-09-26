@@ -33,19 +33,19 @@
   padding-inline: var(--size-12);
   border: var(--border-width-sm) solid var(--color-border-strong);
   border-radius: var(--border-radius-sm);
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-background-default);
+  color: var(--color-text-default);
 
   &::placeholder {
     color: var(--color-text-subtle);
   }
 
   &:user-invalid {
-    border-color: var(--color-border-error);
+    border-color: var(--color-border-danger);
   }
 
   &:disabled {
-    border-color: var(--color-border);
+    border-color: var(--color-border-default);
     background-color: var(--color-background-disabled);
     color: var(--color-text-disabled);
     cursor: not-allowed;
@@ -54,18 +54,18 @@
 
 textarea.form_input {
   block-size: auto;
-  min-block-size: 6rem;
+  min-block-size: calc(3lh + 2 * var(--size-8)); /* 3 lines + padding */
   padding-block: var(--size-8);
   resize: vertical;
 }
 
 .form_message {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text-subtle);
 }
 
-.form_message--error { color: var(--color-text-error); }
-.form_message--success { color: var(--color-text-success); }
+.form_message--error { color: var(--color-text-danger); }
+.form_message--success { color: var(--color-text-positive); }
 
 .form_checkbox-group {
   display: flex;
@@ -84,10 +84,10 @@ textarea.form_input {
   display: flex;
   gap: var(--size-4);
   padding: var(--size-4);
-  border: var(--border-width-sm) solid var(--color-border);
+  border: var(--border-width-sm) solid var(--color-border-default);
   border-radius: var(--border-radius-full);
   position: relative;
-  background-color: var(--color-background-subtle);
+  background-color: var(--color-background-hover);
 }
 
 .form_radio {
@@ -105,17 +105,17 @@ textarea.form_input {
   cursor: pointer;
 
   &:hover {
-    background-color: var(--color-background-muted);
+    background-color: var(--color-background-strong);
   }
 
   /* The only focus rule outside base. See [1] */
   .form_radio:focus-visible + & {
-    outline: var(--outline-width-focus) solid var(--color-focus);
+    outline: var(--outline-width-focus) solid var(--color-border-brand);
     outline-offset: var(--outline-offset-focus);
   }
 
   .form_radio:checked + & {
-    background-color: var(--color-background-primary);
+    background-color: var(--color-background-brand);
     color: var(--color-text-inverse);
   }
 }

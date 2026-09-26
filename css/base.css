@@ -3,22 +3,31 @@
   navigation: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Anchor jumps land clear of sticky headers */
+:target {
+  scroll-margin-block-start: 20vb;
+}
+
 body {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
-  background-color: var(--color-background);
-  color: var(--color-text);
-  accent-color: var(--color-background-primary);
+  background-color: var(--color-background-default);
+  color: var(--color-text-default);
+  accent-color: var(--color-background-brand);
 }
 
 ::selection {
-  background-color: var(--color-background-primary);
+  background-color: var(--color-background-brand);
   color: var(--color-text-inverse);
 }
 
 :focus-visible {
-  outline: var(--outline-width-focus) solid var(--color-focus);
+  outline: var(--outline-width-focus) solid var(--color-border-brand);
   outline-offset: var(--outline-offset-focus);
 }
 
@@ -36,16 +45,16 @@ h6 {
 a:not([class]) {
   text-decoration: underline;
   text-underline-offset: 0.15em;
-  color: var(--color-text-link);
+  color: var(--color-text-brand);
 
   &:hover {
-    color: var(--color-text-link-hover);
+    color: var(--color-text-brand-hover);
   }
 }
 
 hr {
   border: none;
-  border-block-start: var(--border-width-sm) solid var(--color-border);
+  border-block-start: var(--border-width-sm) solid var(--color-border-default);
 }
 
 code,
@@ -60,7 +69,7 @@ pre {
   overflow: auto;
   padding: var(--size-16);
   border-radius: var(--border-radius-md);
-  background-color: var(--color-background-subtle);
+  background-color: var(--color-background-hover);
 }
 
 blockquote {
@@ -76,7 +85,7 @@ table {
 th,
 td {
   padding: var(--size-8) var(--size-12);
-  border-block-end: var(--border-width-sm) solid var(--color-border);
+  border-block-end: var(--border-width-sm) solid var(--color-border-default);
   text-align: start;
 }
 
@@ -87,11 +96,11 @@ summary {
 dialog {
   max-inline-size: min(90vw, 40rem);
   padding: var(--size-24);
-  border: var(--border-width-sm) solid var(--color-border);
+  border: var(--border-width-sm) solid var(--color-border-default);
   border-radius: var(--border-radius-lg);
   margin: auto; /* reset removes the browser's centring */
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-background-default);
+  color: var(--color-text-default);
   box-shadow: var(--box-shadow-lg);
 
   &::backdrop {

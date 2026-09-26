@@ -55,8 +55,8 @@ export default {
     'max-nesting-depth': 2,
     'declaration-no-important': true,
     'declaration-property-value-disallowed-list': [
-      { '/.*/': ['/(^|[\\s(])1px\\b/'] },
-      { message: 'No hardcoded 1px — use a token' },
+      { '/.*/': ['/(^|[\\s(])1px\\b/', '/var\\(--color-(?!(text|background|border)-)/'] },
+      { message: (prop, value) => (value.includes('--color-') ? 'Primitive colour — use a semantic --color-text|background|border-* token' : 'No hardcoded 1px — use a token') },
     ],
     'csstools/use-logical': 'always',
     'order/order': ['custom-properties', 'declarations', 'rules', 'at-rules'],

@@ -21,7 +21,7 @@
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  color: var(--color-text);
+  color: var(--color-text-default);
   cursor: pointer;
   user-select: none;
   transition-property: background-color, border-color, color;
@@ -29,7 +29,7 @@
   transition-timing-function: var(--transition-timing-function-out);
 
   &:hover {
-    background-color: var(--color-background-subtle);
+    background-color: var(--color-background-hover);
   }
 
   & .icon {
@@ -54,31 +54,31 @@
 /* Colour */
 .btn--primary {
   border-color: transparent;
-  background-color: var(--color-background-primary);
+  background-color: var(--color-background-brand);
   color: var(--color-text-inverse);
 
   &:hover {
-    background-color: var(--color-background-primary-hover);
+    background-color: var(--color-background-brand-hover);
   }
 }
 
 .btn--secondary {
   border-color: transparent;
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-neutral);
   color: var(--color-text-inverse);
 
   &:hover {
-    background-color: var(--color-background-secondary-hover);
+    background-color: var(--color-background-neutral-hover);
   }
 }
 
 .btn--tertiary {
   border-color: transparent;
-  background-color: var(--color-background-tertiary);
-  color: var(--color-text);
+  background-color: var(--color-background-neutral-subtle);
+  color: var(--color-text-default);
 
   &:hover {
-    background-color: var(--color-background-tertiary-hover);
+    background-color: var(--color-background-neutral-subtle-hover);
   }
 }
 

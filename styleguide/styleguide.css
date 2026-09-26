@@ -42,7 +42,7 @@
       border-inline-end: 0;
       border-block-end: thin solid color-mix(in oklch, currentcolor 15%, transparent);
       z-index: 1;
-      background-color: var(--color-background);
+      background-color: var(--color-background-default);
     }
   }
 
@@ -126,11 +126,11 @@
     border: var(--border-width-sm) dashed var(--color-border-strong);
     font-family: var(--font-family-mono);
     font-size: var(--font-size-sm);
-    background-color: var(--color-background-subtle);
+    background-color: var(--color-background-hover);
   }
 
   .sg-cell .sg-cell {
-    background-color: var(--color-background-muted);
+    background-color: var(--color-background-strong);
   }
 
   /* Colour swatches */
@@ -156,7 +156,7 @@
     display: grid;
     place-items: center;
     block-size: 4rem;
-    border: var(--border-width-sm) solid var(--color-border);
+    border: var(--border-width-sm) solid var(--color-border-default);
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-xl);
   }
@@ -170,7 +170,7 @@
   }
 
   .sg-swatch--inverse .sg-swatch_chip {
-    background-color: var(--color-background-inverse);
+    background-color: var(--color-background-neutral-strong);
   }
 
   .sg-swatch--border .sg-swatch_chip {
@@ -185,7 +185,7 @@
 
   .sg-panel {
     padding: 1.5rem;
-    border: var(--border-width-sm) solid var(--color-border);
+    border: var(--border-width-sm) solid var(--color-border-default);
     border-radius: var(--border-radius-md);
   }
 
@@ -213,14 +213,14 @@
 
   .sg-bar {
     block-size: 1rem;
-    background-color: var(--color-background-inverse);
+    background-color: var(--color-background-neutral-strong);
   }
 
   .sg-box {
     inline-size: 5rem;
     block-size: 5rem;
     border: var(--border-width-sm) solid var(--color-border-strong);
-    background-color: var(--color-background-subtle);
+    background-color: var(--color-background-hover);
   }
 
   .sg-box--border {
@@ -229,18 +229,18 @@
 
   .sg-box--shadow {
     border: 0;
-    background-color: var(--color-background);
+    background-color: var(--color-background-default);
   }
 
   .sg-box--focus {
-    outline: var(--outline-width-focus) solid var(--color-focus);
+    outline: var(--outline-width-focus) solid var(--color-border-brand);
     outline-offset: var(--outline-offset-focus);
   }
 
   /* Motion: dot slides across its track on row hover */
   .sg-track {
     inline-size: 12rem;
-    border-block-end: var(--border-width-sm) solid var(--color-border);
+    border-block-end: var(--border-width-sm) solid var(--color-border-default);
     transition-duration: var(--transition-duration-lg);
     transition-timing-function: var(--transition-timing-function-in-out);
   }
@@ -250,7 +250,7 @@
     inline-size: 1rem;
     block-size: 1rem;
     border-radius: var(--border-radius-full);
-    background-color: var(--color-background-inverse);
+    background-color: var(--color-background-neutral-strong);
     transition-property: translate;
     transition-duration: inherit;
     transition-timing-function: inherit;

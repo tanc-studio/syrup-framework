@@ -22,6 +22,8 @@
   --size-40: 2.5rem;
   --size-48: 3rem;
   --size-64: 4rem;
+  --size-80: 5rem;
+  --size-120: 7.5rem;
 
   /* Section space — px at smallest → biggest screen. The maths is in scales.css. */
   --size-section-sm-min: 32;
@@ -35,29 +37,89 @@
   --size-wrap-padding-min: 16;
   --size-wrap-padding-max: 32;
 
-  /* Colour — neutral ramp, 1 = lightest */
+  /* Colour primitives — mirror Figma's Primitives collection. Components never use these (lint). */
   --color-white: oklch(100% 0 0deg);
-  --color-neutral-1: oklch(97% 0 0deg);
-  --color-neutral-2: oklch(93% 0 0deg);
-  --color-neutral-3: oklch(87% 0 0deg);
-  --color-neutral-4: oklch(78% 0 0deg);
-  --color-neutral-5: oklch(68% 0 0deg);
-  --color-neutral-6: oklch(55% 0 0deg);
-  --color-neutral-7: oklch(46% 0 0deg);
-  --color-neutral-8: oklch(36% 0 0deg);
-  --color-neutral-9: oklch(26% 0 0deg);
-  --color-neutral-10: oklch(18% 0 0deg);
   --color-black: oklch(0% 0 0deg);
 
-  /* Colour — brand (wireframe greys; projects replace) */
-  --color-primary: oklch(25% 0 0deg);
-  --color-secondary: oklch(55% 0 0deg);
-  --color-tertiary: oklch(85% 0 0deg);
+  --color-neutral-50: oklch(96% 0 0deg);
+  --color-neutral-100: oklch(91.9% 0 0deg);
+  --color-neutral-150: oklch(87.8% 0 0deg);
+  --color-neutral-200: oklch(83.7% 0 0deg);
+  --color-neutral-250: oklch(79.5% 0 0deg);
+  --color-neutral-300: oklch(75.2% 0 0deg);
+  --color-neutral-350: oklch(70.9% 0 0deg);
+  --color-neutral-400: oklch(66.5% 0 0deg);
+  --color-neutral-450: oklch(62.1% 0 0deg);
+  --color-neutral-500: oklch(57.5% 0 0deg);
+  --color-neutral-550: oklch(52.9% 0 0deg);
+  --color-neutral-600: oklch(48.2% 0 0deg);
+  --color-neutral-650: oklch(43.3% 0 0deg);
+  --color-neutral-700: oklch(38.3% 0 0deg);
+  --color-neutral-750: oklch(33.2% 0 0deg);
+  --color-neutral-800: oklch(27.8% 0 0deg);
+  --color-neutral-850: oklch(22.1% 0 0deg);
+  --color-neutral-900: oklch(16.1% 0 0deg);
+  --color-neutral-950: oklch(0% 0 0deg);
 
-  /* Colour — status */
-  --color-error: oklch(55% 0.15 25deg);
-  --color-warning: oklch(70% 0.13 75deg);
-  --color-success: oklch(55% 0.1 150deg);
+  --color-brand-100: oklch(89.9% 0.048 339.2deg);
+  --color-brand-200: oklch(80% 0.098 339.8deg);
+  --color-brand-300: oklch(70.4% 0.15 341.2deg);
+  --color-brand-400: oklch(62.3% 0.196 343.3deg);
+  --color-brand-500: oklch(56% 0.222 346.5deg);
+  --color-brand-600: oklch(47.6% 0.187 346.1deg);
+  --color-brand-700: oklch(38.8% 0.15 345.9deg);
+  --color-brand-800: oklch(29.7% 0.11 345.4deg);
+  --color-brand-900: oklch(19.7% 0.065 344.6deg);
+
+  --color-red-100: oklch(89.2% 0.038 17.9deg);
+  --color-red-200: oklch(78.7% 0.081 19.0deg);
+  --color-red-300: oklch(68.4% 0.127 20.9deg);
+  --color-red-400: oklch(59.6% 0.172 23.9deg);
+  --color-red-500: oklch(53.2% 0.202 27.7deg);
+  --color-red-600: oklch(45.2% 0.17 27.5deg);
+  --color-red-700: oklch(36.8% 0.136 27.1deg);
+  --color-red-800: oklch(28.3% 0.099 26.3deg);
+  --color-red-900: oklch(18.8% 0.058 24.6deg);
+
+  --color-yellow-100: oklch(94.3% 0.035 92.8deg);
+  --color-yellow-200: oklch(88.6% 0.07 93.0deg);
+  --color-yellow-300: oklch(82.7% 0.102 92.8deg);
+  --color-yellow-400: oklch(77.2% 0.127 92.0deg);
+  --color-yellow-500: oklch(72% 0.14 89.7deg);
+  --color-yellow-600: oklch(61% 0.118 89.7deg);
+  --color-yellow-700: oklch(49.6% 0.095 90.1deg);
+  --color-yellow-800: oklch(37.8% 0.07 90.7deg);
+  --color-yellow-900: oklch(24.7% 0.042 92.1deg);
+
+  --color-green-100: oklch(93.6% 0.056 142.7deg);
+  --color-green-200: oklch(87.5% 0.111 142.4deg);
+  --color-green-300: oklch(81.7% 0.163 141.7deg);
+  --color-green-400: oklch(76.7% 0.207 141.6deg);
+  --color-green-500: oklch(72.4% 0.232 141.8deg);
+  --color-green-600: oklch(61.4% 0.195 141.8deg);
+  --color-green-700: oklch(49.8% 0.156 141.7deg);
+  --color-green-800: oklch(37.8% 0.116 141.9deg);
+  --color-green-900: oklch(24.5% 0.069 141.6deg);
+
+  --color-purple-100: oklch(89.5% 0.053 317.1deg);
+  --color-purple-200: oklch(79.1% 0.108 316.9deg);
+  --color-purple-300: oklch(68.8% 0.163 316.6deg);
+  --color-purple-400: oklch(59.7% 0.212 315.9deg);
+  --color-purple-500: oklch(52.3% 0.241 314.1deg);
+  --color-purple-600: oklch(44.5% 0.203 314.4deg);
+  --color-purple-700: oklch(36.4% 0.162 314.6deg);
+  --color-purple-800: oklch(28.1% 0.119 315.0deg);
+  --color-purple-900: oklch(18.8% 0.071 315.9deg);
+
+  --color-blue-100: oklch(88.2% 0.041 279.5deg);
+  --color-blue-200: oklch(76.3% 0.086 278.3deg);
+  --color-blue-300: oklch(64% 0.135 276.2deg);
+  --color-blue-400: oklch(52.4% 0.184 272.6deg);
+  --color-blue-500: oklch(42.3% 0.227 267.3deg);
+  --color-blue-600: oklch(36.2% 0.19 267.6deg);
+  --color-blue-700: oklch(29.8% 0.151 268.2deg);
+  --color-blue-800: oklch(23.5% 0.109 269.5deg);
+  --color-blue-900: oklch(16.4% 0.061 271.3deg);
 
   /* Font family — house fonts (fonts.css), system fallbacks */
   --font-family-sans: geist, system-ui, sans-serif;
@@ -117,55 +179,52 @@
   /* Shared component size — buttons and inputs line up */
   --btn-height: 2.5rem;
 
-  /* Semantic colour — light-dark(light, dark). Components use only these. */
+  /* Semantic colour — light-dark(light, dark); mirrors Figma's Colour collection. Components use only these. */
 
   /* Text */
-  --color-text: light-dark(var(--color-neutral-10), var(--color-neutral-1));
-  --color-text-muted: light-dark(var(--color-neutral-7), var(--color-neutral-4));
-  --color-text-subtle: light-dark(var(--color-neutral-6), var(--color-neutral-5));
-  --color-text-inverse: light-dark(var(--color-white), var(--color-neutral-10));
-  --color-text-disabled: light-dark(var(--color-neutral-5), var(--color-neutral-6));
-  --color-text-link: light-dark(var(--color-primary), var(--color-neutral-1));
-  --color-text-link-hover: light-dark(var(--color-neutral-7), var(--color-neutral-4));
-  --color-text-error: light-dark(oklch(from var(--color-error) calc(l - 0.05) c h), oklch(from var(--color-error) calc(l + 0.15) c h));
-  --color-text-warning: light-dark(oklch(from var(--color-warning) calc(l - 0.2) c h), oklch(from var(--color-warning) calc(l + 0.1) c h));
-  --color-text-success: light-dark(oklch(from var(--color-success) calc(l - 0.05) c h), oklch(from var(--color-success) calc(l + 0.15) c h));
+  --color-text-default: light-dark(var(--color-neutral-900), var(--color-neutral-50));
+  --color-text-subtle: light-dark(var(--color-neutral-600), var(--color-neutral-250));
+  --color-text-inverse: light-dark(var(--color-white), var(--color-neutral-900));
+  --color-text-disabled: light-dark(var(--color-neutral-400), var(--color-neutral-550));
+  --color-text-brand: light-dark(var(--color-brand-500), var(--color-brand-300));
+  --color-text-brand-hover: light-dark(var(--color-brand-700), var(--color-brand-200));
+  --color-text-danger: light-dark(var(--color-red-600), var(--color-red-300));
+  --color-text-warning: light-dark(var(--color-yellow-700), var(--color-yellow-400));
+  --color-text-positive: light-dark(var(--color-green-700), var(--color-green-300));
 
   /* Background */
-  --color-background: light-dark(var(--color-white), var(--color-neutral-10));
-  --color-background-subtle: light-dark(var(--color-neutral-1), var(--color-neutral-9));
-  --color-background-muted: light-dark(var(--color-neutral-2), var(--color-neutral-8));
-  --color-background-inverse: light-dark(var(--color-neutral-10), var(--color-neutral-1));
-  --color-background-disabled: light-dark(var(--color-neutral-2), var(--color-neutral-8));
-  --color-background-primary: light-dark(var(--color-primary), var(--color-neutral-1));
-  --color-background-primary-hover: light-dark(oklch(from var(--color-primary) calc(l + 0.1) c h), var(--color-neutral-3));
-  --color-background-primary-subtle: light-dark(oklch(from var(--color-primary) 95% calc(c * 0.3) h), oklch(from var(--color-primary) 25% calc(c * 0.4) h));
-  --color-background-secondary: light-dark(var(--color-secondary), oklch(from var(--color-secondary) calc(l + 0.15) c h));
-  --color-background-secondary-hover: light-dark(oklch(from var(--color-secondary) calc(l - 0.08) c h), oklch(from var(--color-secondary) calc(l + 0.23) c h));
-  --color-background-tertiary: light-dark(var(--color-tertiary), var(--color-neutral-8));
-  --color-background-tertiary-hover: light-dark(oklch(from var(--color-tertiary) calc(l - 0.06) c h), var(--color-neutral-7));
-  --color-background-error: light-dark(oklch(from var(--color-error) 95% calc(c * 0.3) h), oklch(from var(--color-error) 25% calc(c * 0.4) h));
-  --color-background-warning: light-dark(oklch(from var(--color-warning) 95% calc(c * 0.3) h), oklch(from var(--color-warning) 25% calc(c * 0.4) h));
-  --color-background-success: light-dark(oklch(from var(--color-success) 95% calc(c * 0.3) h), oklch(from var(--color-success) 25% calc(c * 0.4) h));
+  --color-background-default: light-dark(var(--color-white), var(--color-neutral-900));
+  --color-background-hover: light-dark(var(--color-neutral-50), var(--color-neutral-800));
+  --color-background-strong: light-dark(var(--color-neutral-100), var(--color-neutral-700));
+  --color-background-neutral-strong: light-dark(var(--color-neutral-900), var(--color-neutral-50));
+  --color-background-disabled: light-dark(var(--color-neutral-100), var(--color-neutral-700));
+  --color-background-brand: light-dark(var(--color-brand-500), var(--color-brand-300));
+  --color-background-brand-hover: light-dark(var(--color-brand-600), var(--color-brand-200));
+  --color-background-brand-subtle: light-dark(var(--color-brand-100), var(--color-brand-900));
+  --color-background-neutral: light-dark(var(--color-neutral-550), var(--color-neutral-350));
+  --color-background-neutral-hover: light-dark(var(--color-neutral-600), var(--color-neutral-250));
+  --color-background-neutral-subtle: light-dark(var(--color-neutral-200), var(--color-neutral-700));
+  --color-background-neutral-subtle-hover: light-dark(var(--color-neutral-250), var(--color-neutral-600));
+  --color-background-danger-subtle: light-dark(var(--color-red-100), var(--color-red-800));
+  --color-background-warning-subtle: light-dark(var(--color-yellow-100), var(--color-yellow-900));
+  --color-background-positive-subtle: light-dark(var(--color-green-100), var(--color-green-900));
 
   /* Border */
-  --color-border: light-dark(var(--color-neutral-3), var(--color-neutral-8));
-  --color-border-strong: var(--color-neutral-6);
-  --color-border-selected: light-dark(var(--color-neutral-10), var(--color-neutral-1));
-  --color-border-error: var(--color-text-error);
+  --color-border-default: light-dark(var(--color-neutral-150), var(--color-neutral-700));
+  --color-border-strong: var(--color-neutral-550);
+  --color-border-selected: light-dark(var(--color-neutral-900), var(--color-neutral-50));
+  --color-border-danger: var(--color-text-danger);
   --color-border-warning: var(--color-text-warning);
-  --color-border-success: var(--color-text-success);
-
-  /* Focus */
-  --color-focus: light-dark(var(--color-primary), var(--color-neutral-1));
+  --color-border-positive: var(--color-text-positive);
+  --color-border-brand: light-dark(var(--color-brand-500), var(--color-brand-300));
 
   color-scheme: light dark;
 }
 
 /* Theme — any element; see [1] */
 [data-theme] {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-background-default);
+  color: var(--color-text-default);
 }
 
 [data-theme="light"] { color-scheme: light; }
@@ -178,17 +237,16 @@
 
 @media (prefers-contrast: more) {
   :root {
-    --color-text-muted: var(--color-text);
-    --color-text-subtle: var(--color-text);
-    --color-border: var(--color-border-strong);
-    --color-border-strong: light-dark(var(--color-neutral-10), var(--color-neutral-1));
+    --color-text-subtle: var(--color-text-default);
+    --color-border-default: var(--color-border-strong);
+    --color-border-strong: light-dark(var(--color-neutral-900), var(--color-neutral-50));
   }
 }
 
 @media (forced-colors: active) {
   :root {
-    --color-focus: Highlight;
-    --color-border: CanvasText;
+    --color-border-brand: Highlight;
+    --color-border-default: CanvasText;
     --color-border-strong: CanvasText;
   }
 }

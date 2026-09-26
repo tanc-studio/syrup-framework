@@ -6,7 +6,7 @@ A small, semantic, component-first CSS framework. Reset, tokens, base styles, la
 
 - **Cascade layers** — `reset, tokens, base, layout, components, utilities, custom`; no `!important`
 - **BEM, single underscore** — `.block_element--modifier`
-- **Two-tier tokens** — primitives (`--font-size-md`, `--size-16`) and semantic colour (`--color-text-muted`)
+- **Two-tier tokens** — primitives (`--font-size-md`, `--size-16`) and semantic colour (`--color-text-subtle`)
 - **Light/dark without JS** — follows the OS via `light-dark()`; `data-theme="light|dark"` pins any element
 - **Fluid type** — Utopia-style scale calculated live in CSS; `data-sizing="fixed"` locks it
 - **Accessible by default** — one global focus ring, `prefers-contrast`, `forced-colors`, reduced motion, 44px tap areas on touch
@@ -20,8 +20,8 @@ Copy `css/`, `js/`, `fonts/` and `styleguide/` into your project and own them �
 <head>
   <!-- Apply a saved theme before first paint (only needed with the theme toggle) -->
   <script>try { const t = localStorage.getItem('syrup-theme'); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v2.0.0/css/main.css">
-  <script type="module" src="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v2.0.0/js/syrup.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v3.0.0/css/main.css">
+  <script type="module" src="https://cdn.jsdelivr.net/gh/tanc-studio/syrup-framework@v3.0.0/js/syrup.js"></script>
 </head>
 ```
 
